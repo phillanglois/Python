@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Préparer son ordinateur &#8212; Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="11. Exceptions" href="../cm/a3-exceptions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/python.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Prog Python!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  COURS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/0-synthese.html">
+   1. Synthèse introductive à Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/1-fonctions.html">
+   2. Fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/2-boucles-avancees.html">
+   3. Boucles, tableaux et fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/3-ES-fichiers.html">
+   4. Entrées-sorties simples avec des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/5-types_composes.html">
+   5. Les types composés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/7-fonctions-avancees.html">
+   6. Sous-programme et affectation – aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/9-ES-avancees.html">
+   7. Les entrées-sorties (E/S) : aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/11-modules-utiles.html">
+   8. Modules utiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a1-booleens.html">
+   9. Annexe : les booléens en python (&gt;3.6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a2-ndarray.html">
+   10. Les ‘ndarray’ : de vrais tableaux en python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a3-exceptions.html">
+   11. Exceptions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TP
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Préparer son ordinateur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Ftp/0-installation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/tp/0-installation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requis-selon-votre-os">
+   1.1. Pré-requis selon votre OS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mac-os">
+     1.1.1. Mac OS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#windows">
+     1.1.2. Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-etapes-pour-la-premiere-installation">
+   1.2. Les étapes pour la première installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utiliser-votre-environnement">
+   1.3. Utiliser votre environnement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quelques-points-techniques-importants">
+   1.4. Quelques points techniques importants
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concilier-pipenv-et-conda">
+   1.5. Concilier
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pipenv
+    </span>
+   </code>
+   et
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     conda
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autres-references">
+   1.6. Autres références
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pour-finir">
+   1.7. Pour finir
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Préparer son ordinateur</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requis-selon-votre-os">
+   1.1. Pré-requis selon votre OS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mac-os">
+     1.1.1. Mac OS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#windows">
+     1.1.2. Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-etapes-pour-la-premiere-installation">
+   1.2. Les étapes pour la première installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utiliser-votre-environnement">
+   1.3. Utiliser votre environnement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quelques-points-techniques-importants">
+   1.4. Quelques points techniques importants
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concilier-pipenv-et-conda">
+   1.5. Concilier
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pipenv
+    </span>
+   </code>
+   et
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     conda
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autres-references">
+   1.6. Autres références
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pour-finir">
+   1.7. Pour finir
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="preparer-son-ordinateur">
+<span id="tp-0-installation"></span><h1><span class="section-number">1. </span>Préparer son ordinateur<a class="headerlink" href="#preparer-son-ordinateur" title="Permalink to this headline">#</a></h1>
+<p>Ce document détaille les étapes pour disposer sur votre machine personnelle de l’environnement Python utilisé en Master.</p>
+<section id="pre-requis-selon-votre-os">
+<h2><span class="section-number">1.1. </span>Pré-requis selon votre OS<a class="headerlink" href="#pre-requis-selon-votre-os" title="Permalink to this headline">#</a></h2>
+<section id="mac-os">
+<h3><span class="section-number">1.1.1. </span>Mac OS<a class="headerlink" href="#mac-os" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>installer XCode</p></li>
+</ul>
+</section>
+<section id="windows">
+<h3><span class="section-number">1.1.2. </span>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>installer <code class="docutils literal notranslate"><span class="pre">Firefox</span></code> ou <code class="docutils literal notranslate"><span class="pre">Chrome</span></code> car <code class="docutils literal notranslate"><span class="pre">Jupyert</span> <span class="pre">Lab</span></code> ne fonctionne pas avec <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">Explorer</span></code></p></li>
+<li><p><a class="reference external" href="https://gitforwindows.org">installer <code class="docutils literal notranslate"><span class="pre">git</span></code></a></p></li>
+</ul>
+<p>A partir de maintenant, aucune hypothèse est faite sur l’OS utilisé.
+Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).</p>
+</section>
+</section>
+<section id="les-etapes-pour-la-premiere-installation">
+<h2><span class="section-number">1.2. </span>Les étapes pour la première installation<a class="headerlink" href="#les-etapes-pour-la-premiere-installation" title="Permalink to this headline">#</a></h2>
+<p>Sauter cette section une fois l’installation effectuée</p>
+<ol class="simple">
+<li><p>installer la distribution python <strong>3.9</strong> d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a><br />
+a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anadonda</p></li>
+<li><p>récupérer les fichiers suivants :
+a. Pipfile<br />
+b. Pipfile.lock</p></li>
+</ol>
+</section>
+<section id="utiliser-votre-environnement">
+<h2><span class="section-number">1.3. </span>Utiliser votre environnement<a class="headerlink" href="#utiliser-votre-environnement" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Commencer chaque session de travail en activant votre environnement virtuel :</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv shell
+</pre></div>
+</div>
+<p>Votre prompt shell doit maintenant commencer par le nom de l’environnement entre parenthèses, ici ‘(Python)’ :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>Python<span class="o">)</span> bash-3.2$ 
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Lancer Jupyter Lab avec la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> ou <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>Python<span class="o">)</span> bash-3.2$ jupyter lab
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Dans votre browser web, l’interface de Jupyter Lab est similaire à celui-ci.</p></li>
+</ol>
+<p><img alt="accueil Jupyter Lab" src="../_images/accueilJlab.png" /></p>
+<ul class="simple">
+<li><p>Un nouveau notebook peut être créé et lancé par l’icône de la section <code class="docutils literal notranslate"><span class="pre">Notebook</span></code>  (celui qui indique <code class="docutils literal notranslate"><span class="pre">ipython</span></code>) ou bien sûr via le menu Fichier/Nouveau.</p></li>
+<li><p>L’accès et le lancement de notebooks existants s’obtient après avoir cliqué sur l’icône Dossier de la barre latérale (menu vertical à gauche) qui vous permet de vous déplacer dans votre arborescence de travail.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Pour terminer <em>proprement</em> votre session</p></li>
+</ol>
+<p>Une exécution d’un noyau python différent est associé à chaque notebook ouvert.</p>
+<ul class="simple">
+<li><p>Il est conseillé d’arrêter tout ces noyaux en cours d’exécution via l’icône de la barre latérale : <img alt="icone noyau" src="../_images/iconenoyaux.png" /></p></li>
+<li><p>Remarquez que les onglets des notebooks restent ouverts.</p>
+<ul>
+<li><p>Si besoin, vous relancez le noyau du notebook via l’icône</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="quelques-points-techniques-importants">
+<h2><span class="section-number">1.4. </span>Quelques points techniques importants<a class="headerlink" href="#quelques-points-techniques-importants" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="concilier-pipenv-et-conda">
+<h2><span class="section-number">1.5. </span>Concilier <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> et <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#concilier-pipenv-et-conda" title="Permalink to this headline">#</a></h2>
+<p>Suivre <a class="reference external" href="https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions">ce point de la documentation de pipenv</a> ou <a class="reference external" href="https://stackoverflow.com/questions/50546339/pipenv-with-conda">ce post</a>.</p>
+</section>
+<section id="autres-references">
+<h2><span class="section-number">1.6. </span>Autres références<a class="headerlink" href="#autres-references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/">Un tutoriel</a></p></li>
+<li><p><a class="reference external" href="https://www.davidculley.com/installing-python-on-a-mac/">Un autre</a> pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.</p></li>
+</ul>
+<p>Le web est bien sûr plein de tutos et autres sites explicatifs …</p>
+</section>
+<section id="pour-finir">
+<h2><span class="section-number">1.7. </span>Pour finir<a class="headerlink" href="#pour-finir" title="Permalink to this headline">#</a></h2>
+<p>Bon travail : la programmation s’apprend en pratiquant !</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../cm/a3-exceptions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Exceptions</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ph. Langlois<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
