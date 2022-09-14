@@ -1,17 +1,16 @@
----
-title: Installation de l'environnement Python
----
+(tp:0-installation)=
+# Préparer son ordinateur
 
 Ce document détaille les étapes pour disposer sur votre machine personnelle de l'environnement Python utilisé en Master.
 
 
-# Pré-requis selon votre OS
+## Pré-requis selon votre OS
 
-## Mac OS
+### Mac OS
 
 - installer XCode
 
-## Windows
+### Windows
 
 - installer `Firefox` ou `Chrome` car `Jupyert Lab` ne fonctionne pas avec `Internet Explorer`  
 - [installer `git`](https://gitforwindows.org)
@@ -19,7 +18,7 @@ Ce document détaille les étapes pour disposer sur votre machine personnelle de
 A partir de maintenant, aucune hypothèse est faite sur l'OS utilisé.
 Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).
 
-# Les étapes pour la première installation
+## Les étapes pour la première installation
 
 Sauter cette section une fois l'installation effectuée
 
@@ -28,9 +27,9 @@ Sauter cette section une fois l'installation effectuée
 2. récupérer les fichiers suivants :
     a. Pipfile  
     b. Pipfile.lock  
-3.  
 
-# Utiliser votre environnement
+
+## Utiliser votre environnement
 
 1. Commencer chaque session de travail en activant votre environnement virtuel :
 
@@ -53,7 +52,7 @@ Votre prompt shell doit maintenant commencer par le nom de l'environnement entre
 
 3. Dans votre browser web, l'interface de Jupyter Lab est similaire à celui-ci.
 
-![accueil Jupyter Lab](./img/accueilJlab.png)
+![accueil Jupyter Lab](./fig/accueilJlab.png)
 
 - Un nouveau notebook peut être créé et lancé par l'icône de la section `Notebook`  (celui qui indique `ipython`) ou bien sûr via le menu Fichier/Nouveau.
 - L'accès et le lancement de notebooks existants s'obtient après avoir cliqué sur l'icône Dossier de la barre latérale (menu vertical à gauche) qui vous permet de vous déplacer dans votre arborescence de travail.
@@ -62,15 +61,25 @@ Votre prompt shell doit maintenant commencer par le nom de l'environnement entre
 
 Une exécution d'un noyau python différent est associé à chaque notebook ouvert.  
 
-- Il est conseillé d'arrêter tout ces noyaux en cours d'exécution via l'icône de la barre latérale : ![icone noyau](./img/iconenoyaux.png)   
+- Il est conseillé d'arrêter tout ces noyaux en cours d'exécution via l'icône de la barre latérale : ![icone noyau](./fig/iconenoyaux.png)   
 - Remarquez que les onglets des notebooks restent ouverts. 
     - Si besoin, vous relancez le noyau du notebook via l'icône  
 
-# Quelques points techniques importants
+## Quelques points techniques importants
 
 ## Concilier `pipenv` et `conda`
 
 Suivre [ce point de la documentation de pipenv](https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions) ou [ce post](https://stackoverflow.com/questions/50546339/pipenv-with-conda).
 
+## Autres références 
+
+- [Un tutoriel](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/)  
+- [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
+
+Le web est bien sûr plein de tutos et autres sites explicatifs ...
+
+## Pour finir
+
+Bon travail : la programmation s'apprend en pratiquant !
 
 

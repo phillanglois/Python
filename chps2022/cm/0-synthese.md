@@ -1,6 +1,6 @@
----
-title: Introduction à Python
----
+(ch:synthese)=
+# Synthèse introductive à Python
+
 
 _Ce document adapte [ce support](https://github.com/christinaboura/M1-AlgoProg/) aux étudiants du Master CHPS de l'UPVD._ 
 
@@ -11,7 +11,7 @@ Ce mini-tutoriel est une introduction très basique et rapide à la syntaxe et a
 Nous travaillerons avez l'environnement `Jupyter Lab` et l'interpréteur `python3`, le tout au sein d'un environnement virtuel géré par `pipenv`. 
 Tout cela est disponible sur les machines de l'UPVD mais aussi via la distribution [`anaconda`](https://www.anaconda.com/products/distribution) qu'il est conseillée d'installer sur votre machine personnelle. 
 
-Les détails de ces installations sont précisées dans [ce document](./intallation.md) qui vous sera utile pour votre première utilisation.
+Les détails de ces installations sont précisées dans [ce document](tp:0-installation) qui vous sera utile pour votre première utilisation.
 
 
 Cliquez sur `File --> New --> Python 3` pour créer un nouveau *notebook*. Avec cet environnement, il est possible de revenir en arrière et modifier vos lignes de code. Les notebooks sont sauvegardés automatiquement dans des fichiers d'extension `.ipynb`. En les utilisant, vous retrouverez votre travail dans votre espace en ligne d'une semaine sur l'autre.
@@ -46,8 +46,9 @@ True
 True
 ~~~
 
-**:**{:.exercise} Calculer :
+### Exercice
 
+Calculer :
 
 - $$5 \cdot (1293 - 390)$$,
 
@@ -134,9 +135,9 @@ On peut combiner texte et variables dans une même fonction `print()`.
 Le poids du nouveau-né est 3.67 kilos.
 ~~~
 
-**:**{:.exercise}
+### Exercice
 
- Soient deux points de l'espace $$A$$ et $$B$$.  Déclarez 4 variables $$x_A$$, $$x_B$$, $$y_A$$ et $$y_B$$ correspondant aux coordonnées réelles de ces deux points et affectez-leur des valeurs. Calculez la distance entre $$A$$ et $$B$$, donnée par la formule $$\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$, et affichez le résultat à l'écran sous la forme *La distance entre $$A$$ et $$B$$ est : .*
+Soient deux points de l'espace $$A$$ et $$B$$.  Déclarez 4 variables $$x_A$$, $$x_B$$, $$y_A$$ et $$y_B$$ correspondant aux coordonnées réelles de ces deux points et affectez-leur des valeurs. Calculez la distance entre $$A$$ et $$B$$, donnée par la formule $$\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$, et affichez le résultat à l'écran sous la forme *La distance entre $$A$$ et $$B$$ est : .*
 
 **Attention !** Vous devez utiliser pour cet exercice la méthode `math.sqrt()`. Pour utiliser cette méthode il faut d'abord importer le module math, avec l'instruction `import math`.
 
@@ -151,7 +152,7 @@ L'instruction qui est sans doute la plus utile afin de permettre un tel comporte
 ...     print("La personne peut voter.")
 ~~~
 
-#### Indentation
+### Indentation
 
 En Python, les instructions composées (comme c'est le cas de l'instruction `if`, mais aussi des instructions `while`, `for` et des *fonctions* que nous verrons plus tard) ont toujours la même structure : une *ligne d'entête* terminée par un *deux-points*, suivie d'un bloc d'instructions indenté sous la ligne d'entête. Toutes les instructions de ce bloc **doivent être indentées exactement au même niveau**. Une convention très respectée est d'utiliser un décalage de 4 espaces. 
 
@@ -196,13 +197,10 @@ Plutôt que d’emboîter des instructions `if`, on peut utiliser une instructio
 ...     print("Le nombre est négatif") 
 ~~~
 
-**:**{:.exercise}
+### Exercices
 
-Déclarez une variable et affectez lui un entier naturel. Testez en utilisant les instructions `if` et `else` si l'entier est pair ou impair et affichez le résultat.
-
-**:**{:.exercise}
-
-Déclarez trois variables `a`, `b` et `c` correspondant aux coefficients de l'équation quadratique $$ax^2 + bx + c = 0$$. Calculez le discriminant $$\Delta = b^2 - 4ac$$ de l'équation. Testez en utilisant les instructions `if`, `elif` et `else` la valeur du déterminant et calculez la ou les solutions de l'équation. Si le déterminant est négatif, affichez le message "*L'équation n'a pas de solutions*".
+1. Déclarez une variable et affectez lui un entier naturel. Testez en utilisant les instructions `if` et `else` si l'entier est pair ou impair et affichez le résultat.
+2. Déclarez trois variables `a`, `b` et `c` correspondant aux coefficients de l'équation quadratique $$ax^2 + bx + c = 0$$. Calculez le discriminant $$\Delta = b^2 - 4ac$$ de l'équation. Testez en utilisant les instructions `if`, `elif` et `else` la valeur du déterminant et calculez la ou les solutions de l'équation. Si le déterminant est négatif, affichez le message "*L'équation n'a pas de solutions*".
 
 ## Boucles
 
@@ -248,7 +246,9 @@ La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions
 
 Comme on va le voir un peu plus tard, la boucle `for` peut être utilisée très facilement pour parcourir les éléments d'une liste.
 
-**:**{:.exercise} 
+### Exercices
+
+#### 1 
 
 Initialisez deux entiers : `a = 0` et `b = 15`.
 Écrivez une boucle qui affiche et incrémente de 1 la valeur de `a` tant qu’elle reste inférieure
@@ -257,7 +257,7 @@ Initialisez deux entiers : `a = 0` et `b = 15`.
 Écrivez ensuite une autre boucle qui décrémente la valeur de `b` et affiche sa valeur seulement si elle est
 impaire. Itérez tant que `b` est supérieur à 0.
 
-**:**{:.exercise}
+#### 2
 
 Affichez la somme des cubes de tous les multiples de 3 compris entre 0 et 99 inclus. Utilisez pour cela l'instruction `for` et la fonction `range()`.
 
@@ -296,7 +296,7 @@ Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n`.
 
 Vous trouverez plus d'informations sur les fonctions en Python ici : [docs.python.org](https://docs.python.org/3.1/tutorial/controlflow.html#)
 
-**:**{:.exercise}
+### Exercice
 
 Écrivez une fonction `tableDeMultiplication(base, fin)` qui prend en paramètre un entier `base` et un entier `fin`
 et affiche à l'écran les `fin` premiers éléments de la  table de multiplication de l'entier `base`.
@@ -461,7 +461,9 @@ L4 = L1[:]
 L5 = [i for i in L1]
 ~~~
 
-**:**{:.exercise}
+### Exercice
+
+#### 1
 
 Définissez la liste `liste = [34, 0, -17, 5, 18, 9]`, puis effectuez les actions suivantes :
 
@@ -483,18 +485,18 @@ Définissez la liste `liste = [34, 0, -17, 5, 18, 9]`, puis effectuez les action
 
 - Affichez l'avant dernier élément en utilisant un indiçage négatif.
 
-**:**{:.exercise}
+#### 2
 
 Modifier la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie une liste avec les `n` premiers termes de la suite Fibonacci.
 
-# Exercices
+## Exercices
 
 Vous êtes prêts maintenant à écrire par vous mêmes des programmes un peu plus longs et compliqués. Si le notebook est toujours pratique, le mode terminal lui ne l'est plus. L'alternative est d'utiliser des *scripts* pour écrire, sauvegarder et modifier vos programmes. Pour écrire un script il vous suffit de créer un fichier dont le nom se termine par `.py` afin d'indiquer qu'il s'agit bien d'un script Python. Vous pouvez ensuite l'exécuter dans un terminal en écrivant
 ~~~
 python3 script.py
 ~~~
 
-## Crible d'Ératosthène
+### Crible d'Ératosthène
 
 Le crible d'Ératosthène est un algorithme qui permet de trouver tous les nombres premiers qui sont inférieurs à un certain entier naturel $$N$$. Cet algorithme est dû au mathématicien grec Ératosthène de Cyrène qui est également connu pour être la première personne à avoir mesuré le méridien terrestre.
 
@@ -506,7 +508,7 @@ Vous pouvez voir une jolie animation de l'exécution de l'algorithme sur la page
 
 Vous devez maintenant programmer le crible d'Ératosthène en  Python. Écrivez une fonction `eratosthene(N)` qui prend comme paramètre un entier naturel $$N$$ et qui affiche à l'écran la liste de tous les nombres premiers plus petits ou égaux à $$N$$. Il existe plusieurs façons de coder cet algorithme en Python, vous êtes libres de faire à votre propre guise. 
 
-## Recherche dichotomique
+### Recherche dichotomique
 
 La recherche dichotomique est un algorithme très simple et efficace pour rechercher un élément dans une liste triée. 
 
