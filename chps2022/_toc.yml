@@ -1,0 +1,28 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: bonjour
+defaults:  # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: True
+options:
+  numbered: 3
+parts:
+  - caption: COURS
+    numbered: 3
+    chapters:
+    - file: cm/0-synthese
+    - file: cm/1-fonctions
+    - file: cm/2-boucles-avancees
+    - file: cm/3-ES-fichiers
+    - file: cm/5-types_composes
+    - file: cm/7-fonctions-avancees
+    - file: cm/9-ES-avancees
+    - file: cm/11-modules-utiles
+    - file: cm/a1-booleens
+    - file: cm/a2-ndarray
+    - file: cm/a3-exceptions
+  - caption: TP
+    numbered: 3
+    chapters:
+    - file: tp/0-installation

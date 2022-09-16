@@ -16,11 +16,16 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 Ce support regroupe les ressources de la partie Python de l'UE Programmation du semestre 1 en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=6237).
 
 
-:::{important} Dates importantes.
+:::{important} Dates importantes et contrôle des connaissances.
 
 Les numéros des semaines sont celles du calendrier. 
 
-- semaine 38, démarrage
+- semaine 38. Démarrage
+- semaine 42. CC : diffusion du sujet
+- semaine 44. CC : rendu **dead-line : dimanche 6 novembre 2022, minuit**  
+- semaine 48. CT : épreuve sur machine (06.12.22, 15h30-19h30 **à confirmer**)
+
+Note finale partie Python : $0.5 \times (CC+CT)$
 :::
 
 
@@ -103,9 +108,13 @@ Séance 3
 - matplotlib
 - mesure de temps d'exécution
 
+
 ### Semaine 39 
 
 [**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
+
+- Exercices intégrés au chapitre 1 
+- Chapitres 1 à 4
 
 Préparation semaine suivante :
 
