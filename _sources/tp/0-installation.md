@@ -1,8 +1,16 @@
 (tp:0-installation)=
 # Préparer son ordinateur
 
-Ce document détaille les étapes pour disposer sur votre machine personnelle de l'environnement Python utilisé en Master.
+Ce document détaille les étapes pour disposer sur votre machine personnelle de l'environnement Python utile en programmation scientifique et dans le Master.
 
+## Pourquoi installer un environnement sur sa machine ...
+
+... et ne pas simplement utiliser [Google Colab](https://colab.research.google.com/?hl=fr) ?
+
+Il est commode d'utiliser _ponctuellement_ cette ressource. 
+Alors pourquoi  "perdre du temps" à installer un environnement Python _qui fonctionne_ sur sa machine ? 
+La question est légitime et classique. 
+Je partage entièrement les arguments pros/cons développés dans ce [bootcamp](http://justinbois.github.io/bootcamp/2020_fsri/lessons/l00_configuring_your_computer.html#Why-install-on-my-own-machine?) d'apprentissage de la programmation scientifique en Python.
 
 ## Pré-requis selon votre OS
 
@@ -73,8 +81,8 @@ Suivre [ce point de la documentation de pipenv](https://pipenv.pypa.io/en/latest
 
 ## Autres références 
 
-- [Un tutoriel](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/)  
-- [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
+- [Un tutoriel en français](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/) .
+- [Un autre en anglais](https://www.dataquest.io/blog/installing-python-on-mac/) et très complet.
 
 Le web est bien sûr plein de tutos et autres sites explicatifs ...
 
