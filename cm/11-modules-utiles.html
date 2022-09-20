@@ -679,7 +679,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">#</a></h1>
-<p>Mis à jour : Sep 15, 2022, lecture : 8
+<p>Mis à jour : Sep 20, 2022, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -776,7 +776,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.6404173100701226, 0.14030181796861896, 0.08541427707357574, 0.7479228325356267, 0.42016424826027043, 0.028592461571997796, 0.7802742259438131, 0.09523855888868793, 0.21572454304803323, 0.02332910131593191]
+[0.20229731378177607, 0.1566312938201062, 0.10436854334758561, 0.0551199815511354, 0.5180367669469861, 0.3915774497203751, 0.48718923576574646, 0.6001602902258574, 0.21937599925359752, 0.374976227346121]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -940,7 +940,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe70b1efee0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff5798f3eb0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
@@ -961,7 +961,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_75199/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_46805/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#ou fichier pdf : suppose l&#39;existence d&#39;un repertoire ./tmp</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">matplotlib.backends.backend_pdf</span> <span class="kn">import</span> <span class="n">PdfPages</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1067,7 +1067,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fe70c6f7e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ff57a5e9e50&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_29_1.png" src="../_images/11-modules-utiles_29_1.png" />
@@ -1384,26 +1384,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.862e-04 6.451e-04
-6.628e-04 6.545e-04
-6.812e-04 7.007e-04
-6.700e-04 6.548e-04
-1.119e-03 6.393e-04
-6.790e-04 6.479e-04
-6.750e-04 6.481e-04
-6.659e-04 6.552e-04
-7.000e-04 6.501e-04
-6.771e-04 6.529e-04
-6.678e-04 6.585e-04
-6.652e-04 6.473e-04
-6.669e-04 7.010e-04
-7.150e-04 6.422e-04
-6.762e-04 6.472e-04
-6.888e-04 6.441e-04
-6.478e-04 6.500e-04
-6.642e-04 6.472e-04
-6.559e-04 6.473e-04
-6.530e-04 6.519e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.971e-04 6.616e-04
+6.948e-04 6.458e-04
+6.750e-04 6.545e-04
+6.719e-04 6.553e-04
+6.771e-04 6.999e-04
+9.718e-04 6.445e-04
+6.750e-04 6.487e-04
+6.721e-04 6.413e-04
+6.649e-04 6.489e-04
+6.728e-04 6.444e-04
+6.719e-04 6.509e-04
+6.671e-04 6.721e-04
+6.669e-04 6.472e-04
+6.452e-04 7.172e-04
+7.448e-04 6.484e-04
+6.549e-04 6.512e-04
+6.483e-04 6.549e-04
+6.409e-04 6.479e-04
+6.490e-04 6.490e-04
+6.480e-04 6.524e-04
 </pre></div>
 </div>
 </div>
@@ -1496,13 +1496,13 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.676e-06 6.676e-08
 00001000 6.430e-05 6.430e-08
-00010000 6.643e-04 6.643e-08
-00100000 6.749e-03 6.749e-08
-01000000 6.785e-02 6.785e-08
-10000000 6.884e-01 6.884e-08
+00010000 6.631e-04 6.631e-08
+00100000 6.658e-03 6.658e-08
+01000000 6.722e-02 6.722e-08
+10000000 6.866e-01 6.866e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe70c8d9e80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff57ab2ef70&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_61_2.png" src="../_images/11-modules-utiles_61_2.png" />

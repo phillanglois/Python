@@ -519,10 +519,8 @@ Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).</
 <p>Sauter cette section une fois l’installation effectuée</p>
 <ol class="simple">
 <li><p>installer la distribution python <strong>3.9</strong> d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a><br />
-a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anadonda</p></li>
-<li><p>récupérer les fichiers suivants :
-a. Pipfile<br />
-b. Pipfile.lock</p></li>
+a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anaconda</p></li>
+<li><p>créer un environnement virtuel (par exemple <code class="docutils literal notranslate"><span class="pre">monPython</span></code>) en suivant cette <a class="reference external" href="https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/">page</a> ou <a class="reference external" href="https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/">celle-ci</a></p></li>
 </ol>
 </section>
 <section id="utiliser-votre-environnement">
@@ -530,17 +528,17 @@ b. Pipfile.lock</p></li>
 <ol class="simple">
 <li><p>Commencer chaque session de travail en activant votre environnement virtuel :</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv shell
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate monPython
 </pre></div>
 </div>
-<p>Votre prompt shell doit maintenant commencer par le nom de l’environnement entre parenthèses, ici ‘(Python)’ :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>Python<span class="o">)</span> bash-3.2$ 
+<p>Votre prompt shell doit maintenant commencer par le nom de l’environnement entre parenthèses, ici ‘(monPython)’ :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>monPython<span class="o">)</span> bash-3.2$ 
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Lancer Jupyter Lab avec la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> ou <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code></p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>Python<span class="o">)</span> bash-3.2$ jupyter lab
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>monPython<span class="o">)</span> bash-3.2$ jupyter lab
 </pre></div>
 </div>
 <ol class="simple">

@@ -31,10 +31,8 @@ Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).
 Sauter cette section une fois l'installation effectuée
 
 1. installer la distribution python **3.9** d'[anaconda](https://www.anaconda.com/products/distribution)  
-    a. Si anaconda est déjà présent sur votre machine, s'assurer qu'il s'agit bien de la distribution python **3.9**. Dans le cas contraire, [désinstallez](https://docs.anaconda.com/anaconda/install/uninstall/) cette version d'anadonda 
-2. récupérer les fichiers suivants :
-    a. Pipfile  
-    b. Pipfile.lock  
+    a. Si anaconda est déjà présent sur votre machine, s'assurer qu'il s'agit bien de la distribution python **3.9**. Dans le cas contraire, [désinstallez](https://docs.anaconda.com/anaconda/install/uninstall/) cette version d'anaconda 
+2. créer un environnement virtuel (par exemple `monPython`) en suivant cette [page](https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/) ou [celle-ci](https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/)
 
 
 ## Utiliser votre environnement
@@ -42,20 +40,20 @@ Sauter cette section une fois l'installation effectuée
 1. Commencer chaque session de travail en activant votre environnement virtuel :
 
 ```bash
-pipenv shell
+conda activate monPython
 ```
 
-Votre prompt shell doit maintenant commencer par le nom de l'environnement entre parenthèses, ici '(Python)' :
+Votre prompt shell doit maintenant commencer par le nom de l'environnement entre parenthèses, ici '(monPython)' :
 
 ```bash
-(Python) bash-3.2$ 
+(monPython) bash-3.2$ 
 
 ```
 
 2. Lancer Jupyter Lab avec la commande `jupyter lab` ou `jupyter-lab` 
 
 ```bash
-(Python) bash-3.2$ jupyter lab
+(monPython) bash-3.2$ jupyter lab
 ```
 
 3. Dans votre browser web, l'interface de Jupyter Lab est similaire à celui-ci.
