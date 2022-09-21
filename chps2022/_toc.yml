@@ -26,3 +26,9 @@ parts:
     numbered: 3
     chapters:
     - file: tp/0-installation
+  - caption: Compléments
+    numbered: 3
+    chapters:
+    - file: pdf/memento
+
+    
