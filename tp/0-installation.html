@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Memento" href="../pdf/memento.html" />
     <link rel="prev" title="11. Exceptions" href="../cm/a3-exceptions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -183,6 +184,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    1. Préparer son ordinateur
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Compléments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pdf/memento.html">
+   1. Memento
   </a>
  </li>
 </ul>
@@ -356,41 +369,32 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#les-etapes-pour-la-premiere-installation">
    1.3. Les étapes pour la première installation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-concernant-anaconda-sur-windows">
+     1.3.1. Note concernant anaconda sur Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#liste-des-modules-utiles">
+   1.4. Liste des modules utiles
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utiliser-votre-environnement">
-   1.4. Utiliser votre environnement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quelques-points-techniques-importants">
-   1.5. Quelques points techniques importants
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concilier-pipenv-et-conda">
-   1.6. Concilier
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     pipenv
-    </span>
-   </code>
-   et
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     conda
-    </span>
-   </code>
+   1.5. Utiliser votre environnement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#autres-references">
-   1.7. Autres références
+   1.6. Autres références
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pour-finir">
-   1.8. Pour finir
+   1.7. Pour finir
   </a>
  </li>
 </ul>
@@ -438,41 +442,32 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#les-etapes-pour-la-premiere-installation">
    1.3. Les étapes pour la première installation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-concernant-anaconda-sur-windows">
+     1.3.1. Note concernant anaconda sur Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#liste-des-modules-utiles">
+   1.4. Liste des modules utiles
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utiliser-votre-environnement">
-   1.4. Utiliser votre environnement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quelques-points-techniques-importants">
-   1.5. Quelques points techniques importants
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concilier-pipenv-et-conda">
-   1.6. Concilier
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     pipenv
-    </span>
-   </code>
-   et
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     conda
-    </span>
-   </code>
+   1.5. Utiliser votre environnement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#autres-references">
-   1.7. Autres références
+   1.6. Autres références
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pour-finir">
-   1.8. Pour finir
+   1.7. Pour finir
   </a>
  </li>
 </ul>
@@ -493,7 +488,7 @@ title="Print to PDF"
 <p>… et ne pas simplement utiliser <a class="reference external" href="https://colab.research.google.com/?hl=fr">Google Colab</a> ?</p>
 <p>Il est commode d’utiliser <em>ponctuellement</em> cette ressource.
 Alors pourquoi  “perdre du temps” à installer un environnement Python <em>qui fonctionne</em> sur sa machine ?
-La question est légitime et classique.
+La question est légitime.
 Je partage entièrement les arguments pros/cons développés dans ce <a class="reference external" href="http://justinbois.github.io/bootcamp/2020_fsri/lessons/l00_configuring_your_computer.html#Why-install-on-my-own-machine?">bootcamp</a> d’apprentissage de la programmation scientifique en Python.</p>
 </section>
 <section id="pre-requis-selon-votre-os">
@@ -507,24 +502,73 @@ Je partage entièrement les arguments pros/cons développés dans ce <a class="r
 <section id="windows">
 <h3><span class="section-number">1.2.2. </span>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>installer <code class="docutils literal notranslate"><span class="pre">Firefox</span></code> ou <code class="docutils literal notranslate"><span class="pre">Chrome</span></code> car <code class="docutils literal notranslate"><span class="pre">Jupyert</span> <span class="pre">Lab</span></code> ne fonctionne pas avec <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">Explorer</span></code></p></li>
+<li><p>installer <code class="docutils literal notranslate"><span class="pre">Firefox</span></code> ou <code class="docutils literal notranslate"><span class="pre">Chrome</span></code> car <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> ne fonctionne pas avec <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">Explorer</span></code>.</p>
+<ul>
+<li><p><strong>Rmq.</strong> <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> fonctionne avec le browser récent <code class="docutils literal notranslate"><span class="pre">Microsoft</span> <span class="pre">Edge</span></code></p></li>
+</ul>
+</li>
 <li><p><a class="reference external" href="https://gitforwindows.org">installer <code class="docutils literal notranslate"><span class="pre">git</span></code></a></p></li>
 </ul>
 <p>A partir de maintenant, aucune hypothèse est faite sur l’OS utilisé.
-Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).</p>
+Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).
+Selon votre système, quelques différences peuvent exister.</p>
 </section>
 </section>
 <section id="les-etapes-pour-la-premiere-installation">
 <h2><span class="section-number">1.3. </span>Les étapes pour la première installation<a class="headerlink" href="#les-etapes-pour-la-premiere-installation" title="Permalink to this headline">#</a></h2>
 <p>Sauter cette section une fois l’installation effectuée</p>
-<ol class="simple">
-<li><p>installer la distribution python <strong>3.9</strong> d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a><br />
-a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anaconda</p></li>
-<li><p>créer un environnement virtuel (par exemple <code class="docutils literal notranslate"><span class="pre">monPython</span></code>) en suivant cette <a class="reference external" href="https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/">page</a> ou <a class="reference external" href="https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/">celle-ci</a></p></li>
+<p>On va installer une distribution python : <a class="reference external" href="https://www.anaconda.com/">anaconda</a> ou <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> si votre espace disque est réduit.
+Puis on va créer un environnement virtuel qui permet de séparer l’espace de <em>votre</em> travail Python de <a class="reference internal" href="#sec-root"><span class="std std-ref">celui de la distribution</span></a> ou de versions de Python déjà présentes sur votre machine.
+Ainsi vous serez propriétaire et gestionnaire de cet environnement (monPython) dans lequel vous installerez les modules dont vous avez besoin pour votre projet.
+Il est classique de créer un environnement de travail spécifique à chaque projet que l’on développe.</p>
+<ol>
+<li><p>installer la distribution python <strong>3.9</strong> d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a></p>
+<ul class="simple">
+<li><p>Il suffit de télécharger le fichier proposé (ça peut être un peu long) et l’installer simplement en cliquant</p></li>
+<li><p>Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anaconda</p></li>
+<li><p>L’installation prend du temps et nécessite une connection internet. Elle peut régulièrement vous demander d’installer une nouvelle version d’un des nombreux composants de la distribution.</p></li>
+</ul>
+</li>
+<li><p>créer un environnement virtuel (par exemple <code class="docutils literal notranslate"><span class="pre">monPython</span></code>)</p>
+<ul class="simple">
+<li><p>en ligne de commande (si besoin s’aider de cette <a class="reference external" href="https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/">page</a> ou de <a class="reference external" href="https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/">celle-ci</a>) :</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -n monPython <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>ou en utilisant l’interface graphique du navigateur anaconda :
+<img alt="creer environnement via navigateur" src="../_images/navigator-create-environment.png" /></p></li>
+</ul>
+</li>
+<li><p>installer <a class="reference internal" href="#sec-modules"><span class="std std-ref">les modules utiles</span></a> dans <code class="docutils literal notranslate"><span class="pre">(monPython)</span></code></p>
+<ul class="simple">
+<li><p>un à un avec la commande <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">...</span></code></p></li>
+<li><p>ou en utilisant l’interface graphique du navigateur anaconda.</p></li>
+</ul>
+</li>
 </ol>
+<p>Ca y est : vous pouvez enfin commencer à travailler dans un cadre que vous maîtrisez entièrement.</p>
+<section id="note-concernant-anaconda-sur-windows">
+<span id="sec-root"></span><h3><span class="section-number">1.3.1. </span>Note concernant anaconda sur Windows<a class="headerlink" href="#note-concernant-anaconda-sur-windows" title="Permalink to this headline">#</a></h3>
+<p>L’installation d’anaconda sous windows s’effectue en mode <code class="docutils literal notranslate"><span class="pre">root</span></code>.
+Si vous n’êtes pas (<code class="docutils literal notranslate"><span class="pre">root</span></code>) sur votre machine, le lancement de certaines applications peut vous être refusé.
+En revanche, vous êtes propriétaire de tout environnement que vous créez.</p>
+</section>
+</section>
+<section id="liste-des-modules-utiles">
+<span id="sec-modules"></span><h2><span class="section-number">1.4. </span>Liste des modules utiles<a class="headerlink" href="#liste-des-modules-utiles" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab-spellchecker</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab-language-pack-fr-fr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab-mathjax3</span></code></p></li>
+</ul>
 </section>
 <section id="utiliser-votre-environnement">
-<h2><span class="section-number">1.4. </span>Utiliser votre environnement<a class="headerlink" href="#utiliser-votre-environnement" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.5. </span>Utiliser votre environnement<a class="headerlink" href="#utiliser-votre-environnement" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Commencer chaque session de travail en activant votre environnement virtuel :</p></li>
 </ol>
@@ -536,13 +580,20 @@ a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’ag
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Lancer Jupyter Lab avec la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> ou <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code></p></li>
+<li><p>Lancer Jupyter Lab :</p></li>
 </ol>
+<ul class="simple">
+<li><p>en ligne de commande (dans un terminal), avec la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> ou <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code></p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>monPython<span class="o">)</span> bash-3.2$ jupyter lab
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>via l’interface graphique du navigateur anaconda :
+<img alt="jupyterlab par anaconda" src="../_images/anaconda-jupyterlab.png" /></p></li>
+</ul>
 <ol class="simple">
-<li><p>Dans votre browser web, l’interface de Jupyter Lab est similaire à celui-ci.</p></li>
+<li><p>Jupyter Lab s’ouvre dans votre browser web. Son interface est similaire à celle-ci.</p></li>
 </ol>
 <p><img alt="accueil Jupyter Lab" src="../_images/accueilJlab.png" /></p>
 <ul class="simple">
@@ -562,15 +613,8 @@ a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’ag
 </li>
 </ul>
 </section>
-<section id="quelques-points-techniques-importants">
-<h2><span class="section-number">1.5. </span>Quelques points techniques importants<a class="headerlink" href="#quelques-points-techniques-importants" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="concilier-pipenv-et-conda">
-<h2><span class="section-number">1.6. </span>Concilier <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> et <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#concilier-pipenv-et-conda" title="Permalink to this headline">#</a></h2>
-<p>Suivre <a class="reference external" href="https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions">ce point de la documentation de pipenv</a> ou <a class="reference external" href="https://stackoverflow.com/questions/50546339/pipenv-with-conda">ce post</a>.</p>
-</section>
 <section id="autres-references">
-<h2><span class="section-number">1.7. </span>Autres références<a class="headerlink" href="#autres-references" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.6. </span>Autres références<a class="headerlink" href="#autres-references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/">Un tutoriel en français</a> .</p></li>
 <li><p><a class="reference external" href="https://www.dataquest.io/blog/installing-python-on-mac/">Un autre en anglais</a> et très complet.</p></li>
@@ -578,7 +622,7 @@ a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’ag
 <p>Le web est bien sûr plein de tutos et autres sites explicatifs …</p>
 </section>
 <section id="pour-finir">
-<h2><span class="section-number">1.8. </span>Pour finir<a class="headerlink" href="#pour-finir" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.7. </span>Pour finir<a class="headerlink" href="#pour-finir" title="Permalink to this headline">#</a></h2>
 <p>Bon travail : la programmation s’apprend en pratiquant !</p>
 </section>
 </section>
@@ -616,6 +660,13 @@ a. Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’ag
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">11. </span>Exceptions</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../pdf/memento.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Memento</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
