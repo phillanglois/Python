@@ -109,7 +109,7 @@ Séance 3
 - mesure de temps d'exécution
 
 
-### Semaine 39 
+### Semaine 38
 
 [**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
 
