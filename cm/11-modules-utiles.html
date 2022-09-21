@@ -185,7 +185,19 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../tp/0-installation.html">
-   1. Préparer son ordinateur
+   1. Préparer son ordinateur et travailler avec Python et JupyterLab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Compléments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pdf/memento.html">
+   1. Memento
   </a>
  </li>
 </ul>
@@ -679,7 +691,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">#</a></h1>
-<p>Mis à jour : Sep 20, 2022, lecture : 8
+<p>Mis à jour : Sep 21, 2022, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -776,7 +788,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.20229731378177607, 0.1566312938201062, 0.10436854334758561, 0.0551199815511354, 0.5180367669469861, 0.3915774497203751, 0.48718923576574646, 0.6001602902258574, 0.21937599925359752, 0.374976227346121]
+[0.45269790776119334, 0.8042401315294277, 0.34819713951376696, 0.5145248447017831, 0.7474781004316762, 0.04634821927006327, 0.9790268445729466, 0.753306509084294, 0.18812095733437528, 0.9674919225528733]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -940,7 +952,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff5798f3eb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd9ff8f2ee0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
@@ -961,7 +973,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_46805/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_60086/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#ou fichier pdf : suppose l&#39;existence d&#39;un repertoire ./tmp</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">matplotlib.backends.backend_pdf</span> <span class="kn">import</span> <span class="n">PdfPages</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1067,7 +1079,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ff57a5e9e50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fda006e89a0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_29_1.png" src="../_images/11-modules-utiles_29_1.png" />
@@ -1384,26 +1396,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.971e-04 6.616e-04
-6.948e-04 6.458e-04
-6.750e-04 6.545e-04
-6.719e-04 6.553e-04
-6.771e-04 6.999e-04
-9.718e-04 6.445e-04
-6.750e-04 6.487e-04
-6.721e-04 6.413e-04
-6.649e-04 6.489e-04
-6.728e-04 6.444e-04
-6.719e-04 6.509e-04
-6.671e-04 6.721e-04
-6.669e-04 6.472e-04
-6.452e-04 7.172e-04
-7.448e-04 6.484e-04
-6.549e-04 6.512e-04
-6.483e-04 6.549e-04
-6.409e-04 6.479e-04
-6.490e-04 6.490e-04
-6.480e-04 6.524e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.897e-04 6.517e-04
+6.921e-04 6.529e-04
+6.711e-04 6.527e-04
+6.731e-04 7.475e-04
+1.013e-03 6.530e-04
+6.580e-04 6.493e-04
+6.649e-04 6.524e-04
+6.561e-04 6.479e-04
+6.568e-04 6.475e-04
+6.530e-04 6.572e-04
+6.471e-04 8.723e-04
+6.499e-04 1.096e-03
+6.480e-04 8.879e-04
+6.549e-04 7.978e-04
+8.068e-04 6.961e-04
+6.630e-04 6.543e-04
+6.547e-04 6.490e-04
+6.530e-04 6.486e-04
+6.640e-04 6.461e-04
+6.571e-04 7.368e-04
 </pre></div>
 </div>
 </div>
@@ -1494,15 +1506,15 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.676e-06 6.676e-08
-00001000 6.430e-05 6.430e-08
-00010000 6.631e-04 6.631e-08
-00100000 6.658e-03 6.658e-08
-01000000 6.722e-02 6.722e-08
-10000000 6.866e-01 6.866e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.604e-06 6.604e-08
+00001000 6.459e-05 6.459e-08
+00010000 6.597e-04 6.597e-08
+00100000 6.713e-03 6.713e-08
+01000000 6.760e-02 6.760e-08
+10000000 7.322e-01 7.322e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff57ab2ef70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fda01447460&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_61_2.png" src="../_images/11-modules-utiles_61_2.png" />

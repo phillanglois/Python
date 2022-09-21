@@ -1,9 +1,12 @@
 (tp:0-installation)=
-# Préparer son ordinateur
+# Préparer son ordinateur et travailler avec Python et JupyterLab
 
-Ce document détaille les étapes pour disposer sur votre machine personnelle de l'environnement Python utile en programmation scientifique et dans le Master.
+Ce document détaille les étapes pour disposer sur votre machine personnelle de l'environnement Python utile en programmation scientifique et dans le Master, puis comment profiter de l'environnement de développement JupyterLab.
 
-## Pourquoi installer un environnement sur sa machine ...
+
+## Préparer son ordinateur
+
+### Pourquoi installer un environnement sur sa machine ...
 
 ... et ne pas simplement utiliser [Google Colab](https://colab.research.google.com/?hl=fr) ?
 
@@ -12,13 +15,13 @@ Alors pourquoi  "perdre du temps" à installer un environnement Python _qui fonc
 La question est légitime. 
 Je partage entièrement les arguments pros/cons développés dans ce [bootcamp](http://justinbois.github.io/bootcamp/2020_fsri/lessons/l00_configuring_your_computer.html#Why-install-on-my-own-machine?) d'apprentissage de la programmation scientifique en Python.
 
-## Pré-requis selon votre OS
+### Pré-requis selon votre OS
 
-### Mac OS
+#### Mac OS
 
 - installer XCode
 
-### Windows
+#### Windows
 
 - installer `Firefox` ou `Chrome` car `Jupyter Lab` ne fonctionne pas avec `Internet Explorer`. 
     - **Rmq.** `Jupyter Lab` fonctionne avec le browser récent `Microsoft Edge` 
@@ -28,7 +31,7 @@ A partir de maintenant, aucune hypothèse est faite sur l'OS utilisé.
 Ce document a été préparé dans un environnement Mac OS Catalina (10.15.7).
 Selon votre système, quelques différences peuvent exister.
 
-## Les étapes pour la première installation
+### Les étapes pour la première installation
 
 Sauter cette section une fois l'installation effectuée
 
@@ -55,7 +58,7 @@ Il est classique de créer un environnement de travail spécifique à chaque pro
 Ca y est : vous pouvez enfin commencer à travailler dans un cadre que vous maîtrisez entièrement.
 
 (sec:root)=
-### Note concernant anaconda sur Windows
+#### Note concernant anaconda sur Windows
 
 L'installation d'anaconda sous windows s'effectue en mode `root`. 
 Si vous n'êtes pas (`root`) sur votre machine, le lancement de certaines applications peut vous être refusé.
@@ -63,7 +66,7 @@ En revanche, vous êtes propriétaire de tout environnement que vous créez.
 
 
 (sec:modules)=
-## Liste des modules utiles
+### Liste des modules utiles
 
 - `numpy`
 - `matplotlib`
@@ -71,6 +74,14 @@ En revanche, vous êtes propriétaire de tout environnement que vous créez.
 - `jupyterlab-spellchecker`
 - `jupyterlab-language-pack-fr-fr`
 - `jupyterlab-mathjax3`
+
+### Autres références pour l'installation
+
+- [Un tutoriel en français](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/) .
+- [Un autre en anglais](https://www.dataquest.io/blog/installing-python-on-mac/) et très complet.
+
+Le web est bien sûr plein de tutos et autres sites explicatifs ...
+
 
 ## Utiliser votre environnement
 
@@ -99,8 +110,9 @@ Votre prompt shell doit maintenant commencer par le nom de l'environnement entre
 
 ![accueil Jupyter Lab](./fig/accueilJlab.png)
 
-- Un nouveau notebook peut être créé et lancé par l'icône de la section `Notebook`  (celui qui indique `ipython`) ou bien sûr via le menu Fichier/Nouveau.
+- Un nouveau notebook peut être créé et lancé par l'icône de la section `Notebook`  (celui qui indique `ipykernel`) ou bien sûr via le menu Fichier/Nouveau.
 - L'accès et le lancement de notebooks existants s'obtient après avoir cliqué sur l'icône Dossier de la barre latérale (menu vertical à gauche) qui vous permet de vous déplacer dans votre arborescence de travail.
+- L'interface de `Jupyter Lab` permet de créer des fichiers d'un format différent de celui des notebooks (`.ipynb`) : markdown (`.md`), pyhtin (`.py`) ou texte (`.txt`) plus simplement, de lancer une session terminal (dans votre environnement (monPython))  
 
 4. Pour terminer _proprement_ votre session 
 
@@ -110,12 +122,35 @@ Une exécution d'un noyau python différent est associé à chaque notebook ouve
 - Remarquez que les onglets des notebooks restent ouverts. 
     - Si besoin, vous relancez le noyau du notebook via l'icône  
 
-## Autres références 
+(sec:jupyter)=
+## Jupyter et ses notebooks
 
-- [Un tutoriel en français](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/) .
-- [Un autre en anglais](https://www.dataquest.io/blog/installing-python-on-mac/) et très complet.
+Ce [chapitre sur Jupyter](https://python.sdv.univ-paris-diderot.fr/18_jupyter/) extrait du cours en ligne du master de Biologie Informatique de l'université Paris Diderot - Paris 7 (devenue Université Paris Cité) vous permettra d'utiliser rapidement les notebooks de `Jupyter Lab` ou de `Jupyter` son prédécesseur.
 
-Le web est bien sûr plein de tutos et autres sites explicatifs ...
+Vous étudierez en particulier les sections suivantes.
+
+### Créer et utiliser des notebooks
+
+On a montré plus haut comment créer un notebook dans `Jupyter Lab`.
+Ensuite, l'utilisation des notebooks est identique dans `Jupyter Lab` et `Jupyter`.
+Les [principes de création et d'utilisation des notebooks](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#182-lancement-de-jupyter-et-creation-dun-notebook) sont présentés ici dans l'environnement `Jupyter`. 
+
+### Jupyter Lab
+
+Les spécificités de [Jupyter Lab](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#186-jupyterlab) par rapport à `Jupyter` y sont rapidement présentées.
+
+### Le format markdown
+
+Le [format markdown](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#183-le-format-markdown) permet d'écrire du texte mis en forme de fort belle façon pour une sortie à l'écran, en html ou en pdf. 
+Il est décliné dans plusieurs variantes -- par exemple [GitHub Flavored Markdown](https://fr.wikipedia.org/wiki/GitHub_Flavored_Markdown) utilisée dans [github](https://github.com).
+Ce langage de balisage léger s'utilise facilement dans le notebook jupyter ou "seul". 
+Dans ce cas, on profitera du très puissant convertisseur de formats de documents [pandoc](https://pandoc.org).
+
+
+### Compléments
+
+Et dans un second temps, vous lirez les sections plus spécifiques sur les [graphiques dans les notebooks](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#184-des-graphiques-dans-les-notebooks) et les très pratiques [_magic commands_](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#185-les-magic-commands).
+
 
 ## Pour finir
 
