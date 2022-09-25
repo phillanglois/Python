@@ -26,6 +26,7 @@ parts:
     numbered: 3
     chapters:
     - file: tp/0-installation
+    - file: tp/1-bases
   - caption: Compléments
     numbered: 3
     chapters:
