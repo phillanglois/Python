@@ -109,7 +109,7 @@ Séance 3
 - mesure de temps d'exécution
 
 
-### Semaine 39 
+### Semaine 38
 
 [**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
 
@@ -121,6 +121,17 @@ Préparation semaine suivante :
 - Compétences : Savoir faire et pré-requis technique
 - TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD
 
+### Semaine 36
+
+**Motto** : écrire une fonction dans cet ordre :
+
+1. spécification avec annotations de types
+2. appels sur premiers tests unitaires
+3. corps de la fonction
+4. vérification des tests unitaires avec des `assert` 
+
+- Chapitres 5, 6 et 7
+- Feuille TP 1 
 
 
 <!-- #endregion -->
