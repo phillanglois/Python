@@ -90,23 +90,23 @@ Tel est l'objet de [ce document](tp:0-installation)
 
 ### CM
 
-Séance 1:
+**Séance 1**
 
 - types de données et structures de contrôle de base
 - fonctions, modules 
 - ES de base
 
-Séance 2
+**Séance 2**
 
 - types de données avancés
 - sous-programmes et affectations : aspects avancés
 - ES avancées 
 
-Séance 3
+**Séance 3**
 
-- numpy et ndarray
-- matplotlib
-- mesure de temps d'exécution
+- `numpy`, ses `ndarray`, `scypi` : structures de données et traitements de calcul scientifique
+- `matplotlib` : courbes et graphiques
+- `time ` : mesure de temps d'exécution
 
 
 ### Semaine 38
@@ -133,5 +133,8 @@ Préparation semaine suivante :
 - Chapitres 5, 6 et 7
 - Feuille TP 1 
 
+### Semaine 40
+
+- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`)S
 
 <!-- #endregion -->

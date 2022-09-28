@@ -696,7 +696,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">#</a></h1>
-<p>Mis à jour : Sep 25, 2022, lecture : 8
+<p>Mis à jour : Sep 28, 2022, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -793,7 +793,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.8856926298328249, 0.6061248932110809, 0.9697953731726586, 0.6875165964406753, 0.32102267967507125, 0.9737789245274773, 0.29477296577182344, 0.9763585398290412, 0.14945199811674914, 0.5285076208721057]
+[0.05238410645293934, 0.8126688067279872, 0.6893762940225628, 0.8192012390691013, 0.6298963580114144, 0.6260658876418524, 0.9967084428425973, 0.5346772804759685, 0.07243281883378372, 0.6520238806480892]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -857,8 +857,9 @@ même figure.</p></li>
 </ul>
 <p>De façon plus guidée :</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/">cette présentation</a> en français</p></li>
-<li><p><a class="reference external" href="https://realpython.com/python-matplotlib-guide/">celle ci</a>, en anglais et extraite du site de qualité <a class="reference external" href="https://realpython.com">realpython.com</a></p></li>
+<li><p>le chapitre <a class="reference external" href="https://pnavaro.github.io/python-notebooks/12-Matplotlib.html">Matplotlib</a> de ce cours orienté “Calcul scientifique”</p></li>
+<li><p><a class="reference external" href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/">cette autre présentation</a> en français</p></li>
+<li><p>ou <a class="reference external" href="https://realpython.com/python-matplotlib-guide/">celle ci</a>, en anglais et extraite du site de qualité <a class="reference external" href="https://realpython.com">realpython.com</a></p></li>
 <li><p>les “tutoriaux” de <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> en anglais mais par niveau : <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html">débutant</a>, <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html#intermediate">intermédiaire</a> ou <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html#advanced">avancé</a></p></li>
 <li><p>ou enfin le chapitre 3 du <a class="reference external" href="https://matplotlib.org/contents.html"><em>user guide</em></a> (qui comporte plus de 2500 pages).</p></li>
 </ul>
@@ -957,7 +958,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fbc030f1f10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9be49f3eb0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
@@ -978,7 +979,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_42233/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_2548/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#ou fichier pdf : suppose l&#39;existence d&#39;un repertoire ./tmp</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">matplotlib.backends.backend_pdf</span> <span class="kn">import</span> <span class="n">PdfPages</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1084,7 +1085,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fbc03ec7eb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9be55ef9d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_29_1.png" src="../_images/11-modules-utiles_29_1.png" />
@@ -1401,26 +1402,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.896e-03 1.194e-03
-1.845e-03 9.368e-04
-8.340e-04 8.431e-04
-8.318e-04 8.899e-04
-8.211e-04 8.371e-04
-8.230e-04 8.251e-04
-8.199e-04 9.116e-04
-8.209e-04 8.416e-04
-9.050e-04 8.236e-04
-8.371e-04 8.250e-04
-8.228e-04 8.240e-04
-8.240e-04 8.172e-04
-8.211e-04 8.242e-04
-1.067e-03 8.295e-04
-8.309e-04 8.999e-04
-8.352e-04 8.233e-04
-8.409e-04 8.286e-04
-8.221e-04 8.400e-04
-8.233e-04 8.309e-04
-1.307e-03 8.326e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.731e-04 5.946e-04
+6.258e-04 5.874e-04
+5.980e-04 6.972e-04
+6.039e-04 6.568e-04
+5.941e-04 8.268e-04
+6.249e-04 6.749e-04
+1.140e-03 5.947e-04
+6.473e-04 5.967e-04
+6.049e-04 5.937e-04
+6.039e-04 5.943e-04
+5.910e-04 5.909e-04
+5.908e-04 5.952e-04
+5.949e-04 6.001e-04
+5.949e-04 7.318e-04
+5.972e-04 6.006e-04
+6.032e-04 6.583e-04
+7.839e-04 6.013e-04
+5.932e-04 5.905e-04
+5.949e-04 5.896e-04
+6.030e-04 5.938e-04
 </pre></div>
 </div>
 </div>
@@ -1511,15 +1512,15 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 7.296e-06 7.296e-08
-00001000 1.413e-04 1.413e-07
-00010000 1.447e-03 1.447e-07
-00100000 1.073e-02 1.073e-07
-01000000 8.270e-02 8.270e-08
-10000000 8.179e-01 8.179e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.986e-06 6.986e-08
+00001000 6.421e-05 6.421e-08
+00010000 6.733e-04 6.733e-08
+00100000 6.727e-03 6.727e-08
+01000000 6.738e-02 6.738e-08
+10000000 7.474e-01 7.474e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fbc0425cc40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9be617abe0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_61_2.png" src="../_images/11-modules-utiles_61_2.png" />
