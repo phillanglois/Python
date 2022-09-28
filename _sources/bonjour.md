@@ -121,14 +121,14 @@ Préparation semaine suivante :
 - Compétences : Savoir faire et pré-requis technique
 - TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD
 
-### Semaine 36
+### Semaine 39
 
-**Motto** : écrire une fonction dans cet ordre :
+**Motto** : Ecrire une fonction dans l'ordre suivant. 
 
 1. spécification avec annotations de types
-2. appels sur premiers tests unitaires
+2. appels sur premiers tests unitaires avec des `assert`
 3. corps de la fonction
-4. vérification des tests unitaires avec des `assert` 
+4. vérification des tests unitaires
 
 - Chapitres 5, 6 et 7
 - Feuille TP 1 
