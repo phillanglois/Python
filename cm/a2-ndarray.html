@@ -1118,7 +1118,7 @@ size : 6
 <p>Ainsi ces fonctions retournent des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de forme induite par celles des opérandes.</p>
 <ul class="simple">
 <li><p>opérateurs arithmétiques (surchargés et s’appliquant element-wise)  : <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>,  <code class="docutils literal notranslate"><span class="pre">//</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">divmod()</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>, <code class="docutils literal notranslate"><span class="pre">pow()</span></code></p></li>
-<li><p>opérateurs logiques : <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">^,</span> </code>|<code class="docutils literal notranslate"><span class="pre">,</span> </code>~`</p></li>
+<li><p>opérateurs logiques : <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">~</span></code></p></li>
 <li><p>comparaisons : <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code></p></li>
 <li><p>fonctions : <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code>, <code class="docutils literal notranslate"><span class="pre">exp()</span></code>, …</p></li>
 </ul>
@@ -1312,10 +1312,10 @@ Ce nouveau tableau est obtenu lors de l’affectation du résultat (de la foncti
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>comparaison : False
 shapes : (4, 3) (6, 2)
-id : 140555380174640 140555380318544
+id : 140352779558800 140352779557552
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_42301/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_1564/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
   print(&quot;comparaison :&quot;, t12 == t12bis)
 </pre></div>
 </div>
@@ -1401,7 +1401,7 @@ int64
 <div class="alert alert-block alert-warning">
 <p><strong>Création <span class="math notranslate nohighlight">\(\neq\)</span> affectation.</strong></p>
 <p>L’affectation entre <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> :<code class="docutils literal notranslate"><span class="pre">tab2</span> <span class="pre">=</span> <span class="pre">tab1</span></code> ne créé pas un nouvel <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> <code class="docutils literal notranslate"><span class="pre">tab2</span></code>.</p>
-<p>On retrouvera ce comportement avec <strong>types mutables</strong> python : <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">dict</span></code>.</p>
+<p>On retrouve le comportement des <strong>types mutables</strong> python : <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">dict</span></code>.</p>
 <p>En revanche, les précédentes fonctions de création produisent l’effet attendu.</p>
 </div></section>
 <section id="autres-fonctions-et-methodes-utiles">
@@ -1445,8 +1445,8 @@ int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.0000000e+00  1.5845633e+29  3.4900426e+15]
- [-4.6577481e-10  7.0064923e-45  0.0000000e+00]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.000000e+00 -8.589935e+09  0.000000e+00]
+ [-8.589935e+09  4.203895e-45  0.000000e+00]] 
  on vous aura prévenu !
 float32
 
