@@ -90,23 +90,23 @@ Tel est l'objet de [ce document](tp:0-installation)
 
 ### CM
 
-Séance 1:
+**Séance 1**
 
 - types de données et structures de contrôle de base
 - fonctions, modules 
 - ES de base
 
-Séance 2
+**Séance 2**
 
 - types de données avancés
 - sous-programmes et affectations : aspects avancés
 - ES avancées 
 
-Séance 3
+**Séance 3**
 
-- numpy et ndarray
-- matplotlib
-- mesure de temps d'exécution
+- `numpy`, ses `ndarray`, `scypi` : structures de données et traitements de calcul scientifique
+- `matplotlib` : courbes et graphiques
+- `time ` : mesure de temps d'exécution
 
 
 ### Semaine 38
@@ -121,17 +121,23 @@ Préparation semaine suivante :
 - Compétences : Savoir faire et pré-requis technique
 - TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD
 
-### Semaine 36
+### Semaine 39
 
-**Motto** : écrire une fonction dans cet ordre :
+**Motto** : Ecrire une fonction dans l'ordre suivant. 
 
 1. spécification avec annotations de types
-2. appels sur premiers tests unitaires
+2. appels sur premiers tests unitaires avec des `assert`
 3. corps de la fonction
-4. vérification des tests unitaires avec des `assert` 
+4. vérification des tests unitaires
 
 - Chapitres 5, 6 et 7
 - Feuille TP 1 
 
+### Semaine 40
+
+**Motto** : Limiter les `import` aux ressources effectivement utilisées 
+
+- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
+- Feuille TP1
 
 <!-- #endregion -->
