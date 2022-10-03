@@ -135,6 +135,9 @@ Préparation semaine suivante :
 
 ### Semaine 40
 
-- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`)S
+**Motto** : Limiter les `import` aux ressources effectivement utilisées 
+
+- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
+- Feuille TP1
 
 <!-- #endregion -->
