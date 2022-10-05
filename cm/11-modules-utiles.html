@@ -193,6 +193,11 @@ const thebe_selector_output = ".output, .cell_output"
    2. Feuille 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tp/2-knn.html">
+   3. Etape 1 : commençons par trier
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -696,7 +701,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">#</a></h1>
-<p>Mis à jour : Oct 03, 2022, lecture : 8
+<p>Mis à jour : Oct 05, 2022, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -793,7 +798,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.6514064199328803, 0.26240131687706747, 0.3362966743770235, 0.7398934224988952, 0.06487206040064175, 0.4917893713445797, 0.48548447283717866, 0.9566444777288116, 0.3824763517605019, 0.23703446431882857]
+[0.3790982382702057, 0.4202242636983682, 0.8148472260171397, 0.6940879953637402, 0.14550986824992052, 0.23072248907808546, 0.5518759542448859, 0.6272020214001569, 0.9397071766107904, 0.7772445318814353]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -958,7 +963,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f990d9f6eb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa085143550&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
@@ -979,7 +984,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_28847/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_62431/1217485147.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#ou fichier pdf : suppose l&#39;existence d&#39;un repertoire ./tmp</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">matplotlib.backends.backend_pdf</span> <span class="kn">import</span> <span class="n">PdfPages</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -987,11 +992,11 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pp</span> <span class="o">=</span> <span class="n">PdfPages</span><span class="p">(</span><span class="s1">&#39;./tmp/plt-complexites.pdf&#39;</span><span class="p">)</span>
 
 <span class="o">~/.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">virtualenvs</span><span class="o">/</span><span class="n">Python</span><span class="o">-</span><span class="n">RIyjAoYI</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">backends</span><span class="o">/</span><span class="n">backend_pdf</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="kn">from</span> <span class="nn">matplotlib.dates</span> <span class="kn">import</span> <span class="n">UTC</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_path</span>
-<span class="ne">---&gt; </span><span class="mi">47</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_backend_pdf_ps</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> 
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span> <span class="kn">from</span> <span class="nn">matplotlib.dates</span> <span class="kn">import</span> <span class="n">UTC</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_path</span>
+<span class="ne">---&gt; </span><span class="mi">43</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_backend_pdf_ps</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span> 
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="o">~/.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">virtualenvs</span><span class="o">/</span><span class="n">Python</span><span class="o">-</span><span class="n">RIyjAoYI</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">backends</span><span class="o">/</span><span class="n">_backend_pdf_ps</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">functools</span>
@@ -1085,7 +1090,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f990e5e1fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fa085cc88e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_29_1.png" src="../_images/11-modules-utiles_29_1.png" />
@@ -1402,26 +1407,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.391e-04 6.718e-04
-7.081e-04 6.729e-04
-7.007e-04 7.745e-04
-6.940e-04 6.726e-04
-6.702e-04 6.730e-04
-1.067e-03 6.863e-04
-6.912e-04 7.549e-04
-7.000e-04 7.497e-04
-6.599e-04 6.787e-04
-6.669e-04 6.822e-04
-7.350e-04 6.466e-04
-6.800e-04 7.129e-04
-6.659e-04 6.469e-04
-7.713e-04 6.460e-04
-6.890e-04 6.544e-04
-7.689e-04 6.559e-04
-6.669e-04 6.563e-04
-6.709e-04 6.632e-04
-6.721e-04 6.490e-04
-6.750e-04 7.042e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.069e-04 6.695e-04
+6.819e-04 7.684e-04
+6.769e-04 6.584e-04
+6.809e-04 6.647e-04
+9.782e-04 6.760e-04
+6.931e-04 6.488e-04
+6.912e-04 6.455e-04
+6.959e-04 6.466e-04
+6.649e-04 6.519e-04
+6.640e-04 7.077e-04
+6.709e-04 6.576e-04
+6.700e-04 6.499e-04
+8.361e-04 6.499e-04
+6.759e-04 6.463e-04
+6.709e-04 6.454e-04
+6.678e-04 6.462e-04
+6.981e-04 6.467e-04
+6.862e-04 6.514e-04
+7.010e-04 6.895e-04
+7.229e-04 6.422e-04
 </pre></div>
 </div>
 </div>
@@ -1512,15 +1517,15 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.986e-06 6.986e-08
-00001000 6.630e-05 6.630e-08
-00010000 7.485e-04 7.485e-08
-00100000 6.979e-03 6.979e-08
-01000000 7.335e-02 7.335e-08
-10000000 6.984e-01 6.984e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.604e-06 6.604e-08
+00001000 6.592e-05 6.592e-08
+00010000 6.701e-04 6.701e-08
+00100000 6.794e-03 6.794e-08
+01000000 6.877e-02 6.877e-08
+10000000 6.812e-01 6.812e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f990ea22a60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa0860688e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_61_2.png" src="../_images/11-modules-utiles_61_2.png" />
