@@ -119,7 +119,7 @@ Tel est l'objet de [ce document](tp:0-installation)
 Préparation semaine suivante :
 
 - Compétences : Savoir faire et pré-requis technique
-- TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD
+- TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD (Feuille 0)
 
 ### Semaine 39
 
@@ -131,13 +131,19 @@ Préparation semaine suivante :
 4. vérification des tests unitaires
 
 - Chapitres 5, 6 et 7
-- Feuille TP 1 
+- TP feuille 1 
 
 ### Semaine 40
 
 **Motto** : Limiter les `import` aux ressources effectivement utilisées 
 
 - Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
-- Feuille TP1
+- TP feuille 1
+
+### Semaine 41
+
+**Motto** : les `assert` pour vos tests unitaires 
+
+- TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
 
 <!-- #endregion -->
