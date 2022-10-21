@@ -146,4 +146,11 @@ Préparation semaine suivante :
 
 - TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
 
+
+### Semaine 42
+
+**Motto** : valider ses traitements avec des cas extrêmes
+
+- TP feuille 3 : enveloppe convexe de $n$ points du plan
+
 <!-- #endregion -->
