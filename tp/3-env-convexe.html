@@ -266,6 +266,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/tp/3-env-convexe.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -301,7 +330,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/tp/3-env-convexe.md"
+        <a href="../_sources/tp/3-env-convexe.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -312,7 +341,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -361,7 +390,7 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-points-du-plan-relation-d-ordre">
+  <a class="reference internal nav-link" href="#points-points-du-plan-relation-dordre">
    4.1.
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -372,8 +401,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question">
-     4.1.1. Question
+    <a class="reference internal nav-link" href="#points">
+     4.1.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       points
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -390,33 +424,63 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     4.2.1. Question
+    <a class="reference internal nav-link" href="#nuage">
+     4.2.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       nuage
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     4.2.2. Question
+    <a class="reference internal nav-link" href="#un-nuage-random">
+     4.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       un_nuage_random()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     4.2.3. Question
+    <a class="reference internal nav-link" href="#trier-nuage">
+     4.2.3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       trier_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     4.2.4. Question
+    <a class="reference internal nav-link" href="#write-nuage">
+     4.2.4.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       write_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     4.2.5. Question
+    <a class="reference internal nav-link" href="#read-nuage">
+     4.2.5.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       read_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     4.2.6. Question
+    <a class="reference internal nav-link" href="#aff-nuage">
+     4.2.6.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       aff_nuage()
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -433,7 +497,7 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id7">
+    <a class="reference internal nav-link" href="#question">
      4.3.1. Question
     </a>
    </li>
@@ -456,12 +520,12 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
+    <a class="reference internal nav-link" href="#id1">
      4.4.2. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id9">
+    <a class="reference internal nav-link" href="#id2">
      4.4.3. Question
     </a>
    </li>
@@ -479,12 +543,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id10">
+    <a class="reference internal nav-link" href="#id3">
      4.5.1. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id11">
+    <a class="reference internal nav-link" href="#id4">
      4.5.2. Question
     </a>
    </li>
@@ -502,17 +566,17 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id12">
+    <a class="reference internal nav-link" href="#id5">
      4.6.1. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id13">
+    <a class="reference internal nav-link" href="#id6">
      4.6.2. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id14">
+    <a class="reference internal nav-link" href="#id7">
      4.6.3. Question
     </a>
    </li>
@@ -538,7 +602,7 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-points-du-plan-relation-d-ordre">
+  <a class="reference internal nav-link" href="#points-points-du-plan-relation-dordre">
    4.1.
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -549,8 +613,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question">
-     4.1.1. Question
+    <a class="reference internal nav-link" href="#points">
+     4.1.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       points
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -567,33 +636,63 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     4.2.1. Question
+    <a class="reference internal nav-link" href="#nuage">
+     4.2.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       nuage
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     4.2.2. Question
+    <a class="reference internal nav-link" href="#un-nuage-random">
+     4.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       un_nuage_random()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     4.2.3. Question
+    <a class="reference internal nav-link" href="#trier-nuage">
+     4.2.3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       trier_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     4.2.4. Question
+    <a class="reference internal nav-link" href="#write-nuage">
+     4.2.4.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       write_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     4.2.5. Question
+    <a class="reference internal nav-link" href="#read-nuage">
+     4.2.5.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       read_nuage()
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     4.2.6. Question
+    <a class="reference internal nav-link" href="#aff-nuage">
+     4.2.6.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       aff_nuage()
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -610,7 +709,7 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id7">
+    <a class="reference internal nav-link" href="#question">
      4.3.1. Question
     </a>
    </li>
@@ -633,12 +732,12 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
+    <a class="reference internal nav-link" href="#id1">
      4.4.2. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id9">
+    <a class="reference internal nav-link" href="#id2">
      4.4.3. Question
     </a>
    </li>
@@ -656,12 +755,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id10">
+    <a class="reference internal nav-link" href="#id3">
      4.5.1. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id11">
+    <a class="reference internal nav-link" href="#id4">
      4.5.2. Question
     </a>
    </li>
@@ -679,17 +778,17 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id12">
+    <a class="reference internal nav-link" href="#id5">
      4.6.1. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id13">
+    <a class="reference internal nav-link" href="#id6">
      4.6.2. Question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id14">
+    <a class="reference internal nav-link" href="#id7">
      4.6.3. Question
     </a>
    </li>
@@ -707,157 +806,588 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="feuille-3">
 <h1><span class="section-number">4. </span>Feuille 3<a class="headerlink" href="#feuille-3" title="Permalink to this headline">#</a></h1>
-<p>L’objectif de ce TP est de <strong>calculer et tracer l’enveloppe convexe d’un nuage de points du plan</strong>.
-L’algorithme de ce calcul utilise des piles.
+<p>L’objectif de ce TP est de <strong>calculer et tracer l’enveloppe convexe d’un
+nuage de points du plan</strong>. L’algorithme de ce calcul utilise des piles.
 Les notions utiles seront introduites au fur et à mesure.</p>
 <ul class="simple">
-<li><p>Ce TP peut profiter d’une implémentation python du type de données abstrait <em>pile LIFO</em>.</p></li>
-<li><p>Le travail demandé sera effectué dans un notebook jupyter basé sur ce sujet en format markdown.</p></li>
-<li><p>Dans le notebook, les <em>modules</em> demandés pourront être codés par des fonctions ou des traitements regroupés dans une cellule. Dans ce dernier cas, ces cellules pourront être dupliquées (par recopie) “plus loin” dans le notebook.</p></li>
-<li><p>Dans un second temps, les traitements demandés pourront être regroupé dans des fichiers python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) exécutables dpuis la ligne de commande.</p></li>
+<li><p>Ce TP peut profiter d’une implémentation python du type de données
+abstrait <em>pile LIFO</em>.</p></li>
+<li><p>Le travail demandé sera effectué dans un notebook jupyter basé sur
+ce sujet en format markdown.</p></li>
+<li><p>Dans le notebook, les <em>modules</em> demandés pourront être codés par des
+fonctions ou des traitements regroupés dans une cellule. Dans ce
+dernier cas, ces cellules pourront être dupliquées (par recopie)
+“plus loin” dans le notebook.</p></li>
+<li><p>Dans un second temps, les traitements demandés pourront être
+regroupé dans des fichiers python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) exécutables dpuis la ligne
+de commande.</p></li>
 </ul>
-<section id="points-points-du-plan-relation-d-ordre">
-<h2><span class="section-number">4.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code>: points du plan, relation d’ordre<a class="headerlink" href="#points-points-du-plan-relation-d-ordre" title="Permalink to this headline">#</a></h2>
-<p>Un <em>point</em> du plan est un couple  <span class="math notranslate nohighlight">\((x, y)\)</span> (de nombres flottants).<br />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on regroupe les imports utiles</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="points-points-du-plan-relation-dordre">
+<h2><span class="section-number">4.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code>: points du plan, relation d’ordre<a class="headerlink" href="#points-points-du-plan-relation-dordre" title="Permalink to this headline">#</a></h2>
+<p>Un <em>point</em> du plan est un couple <span class="math notranslate nohighlight">\((x, y)\)</span> (de nombres flottants).<br />
 On définit la relation d’ordre suivante entre 2 points du plan :<br />
 $<span class="math notranslate nohighlight">\((x,y) \le (x',y') \iff x &lt; x' \text{ ou } (x = x' \text{ et } y \le y').\)</span>$<br />
 Un <em>nuage de points</em> est un ensemble fini de points.</p>
-<section id="question">
-<h3><span class="section-number">4.1.1. </span>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h3>
-<p>Concevoir et coder un module <code class="docutils literal notranslate"><span class="pre">points</span></code> qui permet de définir des points, de les comparer, d’afficher leurs coordonnées <span class="math notranslate nohighlight">\((x,y)\)</span> à l’écran.</p>
+<section id="points">
+<h3><span class="section-number">4.1.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code><a class="headerlink" href="#points" title="Permalink to this headline">#</a></h3>
+<p>Concevoir et coder un module <code class="docutils literal notranslate"><span class="pre">points</span></code> qui permet de définir des points,
+de les comparer, d’afficher leurs coordonnées <span class="math notranslate nohighlight">\((x,y)\)</span> à l’écran.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># points</span>
+
+<span class="c1"># annotations de type : on utilise un alias de type </span>
+<span class="n">Points</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+
+<span class="c1"># d&#39;autres solutions sont possibles, </span>
+<span class="c1"># en particulier a définition de véritables nouveaux types comme :</span>
+<span class="c1">#from typing import NewType</span>
+<span class="c1">#Points = NewType(&#39;Points&#39;, tuple[float])</span>
+
+<span class="k">def</span> <span class="nf">point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Points</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">Points</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">le</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span> <span class="n">Points</span><span class="p">,</span> <span class="n">p2</span><span class="p">:</span> <span class="n">Points</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tests unitaires        </span>
+<span class="n">origine</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="mf">0.</span> <span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="n">p_i</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="n">p_j</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+<span class="n">p_11</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+<span class="n">p_sq2</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">p_sq22</span> <span class="o">=</span> <span class="n">point</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">(</span><span class="n">origine</span><span class="p">,</span> <span class="n">p_i</span><span class="p">,</span> <span class="n">p_j</span><span class="p">):</span>
+    <span class="n">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Comparaison avec origine)&quot;</span><span class="p">)</span>    
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">(</span><span class="n">origine</span><span class="p">,</span> <span class="n">p_i</span><span class="p">,</span> <span class="n">p_j</span><span class="p">,</span> <span class="n">p_11</span><span class="p">,</span> <span class="n">p_sq2</span><span class="p">,</span> <span class="n">p_sq22</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">le</span><span class="p">(</span><span class="n">origine</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 0.0)
+(1.0, 0.0)
+(0.0, 1.0)
+Comparaison avec origine)
+(0.0, 0.0) True
+(1.0, 0.0) True
+(0.0, 1.0) True
+(1.0, 1.0) True
+(1.4142135623730951, 1.4142135623730951) True
+(0.7071067811865476, 0.7071067811865476) True
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="nuage-nuage-de-points-generer-trier-afficher-stocker-tracer">
-<h2><span class="section-number">4.2. </span><code class="docutils literal notranslate"><span class="pre">nuage</span> </code> : nuage de points : générer, trier, afficher, stocker, tracer<a class="headerlink" href="#nuage-nuage-de-points-generer-trier-afficher-stocker-tracer" title="Permalink to this headline">#</a></h2>
-<section id="id1">
-<h3><span class="section-number">4.2.1. </span>Question<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<p>Ecrire un module <code class="docutils literal notranslate"><span class="pre">nuage</span></code>  qui permet de définir un nuage de points de taille paramétrable et de d’afficher les coordonnées de ses points à l’écran.</p>
-<p><img alt="Un nuage de points aléatoires" src="../_images/nuage.png" /></p>
+<h2><span class="section-number">4.2. </span><code class="docutils literal notranslate"><span class="pre">nuage</span></code> : nuage de points : générer, trier, afficher, stocker, tracer<a class="headerlink" href="#nuage-nuage-de-points-generer-trier-afficher-stocker-tracer" title="Permalink to this headline">#</a></h2>
+<section id="nuage">
+<h3><span class="section-number">4.2.1. </span><code class="docutils literal notranslate"><span class="pre">nuage</span></code><a class="headerlink" href="#nuage" title="Permalink to this headline">#</a></h3>
+<p>Ecrire un module <code class="docutils literal notranslate"><span class="pre">nuage</span></code> qui permet de définir un nuage de points de
+taille paramétrable et de d’afficher les coordonnées de ses points à
+l’écran.</p>
+<p><img alt="Un nuage de points aléatoires" src="tp/attachment:fig/nuage.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># annotation de type</span>
+<span class="n">Nuages</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">Points</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">creer_nuage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Nuages</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="n">point</span><span class="p">:</span> <span class="n">Points</span><span class="p">,</span> <span class="n">nuage</span><span class="p">:</span> <span class="n">Nuages</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">nuage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">nb_points</span><span class="p">(</span><span class="n">nuage</span><span class="p">:</span> <span class="n">Nuages</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">nuage</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_nuage</span><span class="p">(</span><span class="n">nuage</span> <span class="p">:</span> <span class="n">Nuages</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nuage</span><span class="p">:</span>
+        <span class="n">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_point</span><span class="p">(</span><span class="n">origine</span><span class="p">)</span>
+
+<span class="n">nuage0</span> <span class="o">=</span> <span class="n">creer_nuage</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb_points</span><span class="p">(</span><span class="n">nuage0</span><span class="p">))</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+
+<span class="n">ajouter</span><span class="p">(</span><span class="n">origine</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb_points</span><span class="p">(</span><span class="n">nuage0</span><span class="p">))</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+
+<span class="n">ajouter</span><span class="p">(</span><span class="n">p_i</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+<span class="n">ajouter</span><span class="p">(</span><span class="n">p_11</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+<span class="n">ajouter</span><span class="p">(</span><span class="n">p_sq2</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+<span class="n">ajouter</span><span class="p">(</span><span class="n">p_j</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+<span class="n">ajouter</span><span class="p">(</span><span class="n">p_sq22</span><span class="p">,</span> <span class="n">nuage0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nb_points</span><span class="p">(</span><span class="n">nuage0</span><span class="p">))</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 0.0)
+0
+1
+(0.0, 0.0)
+6
+(0.0, 0.0)
+(1.0, 0.0)
+(1.0, 1.0)
+(1.4142135623730951, 1.4142135623730951)
+(0.0, 1.0)
+(0.7071067811865476, 0.7071067811865476)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="id2">
-<h3><span class="section-number">4.2.2. </span>Question<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p>Compléter ce module de façon à pouvoir générer aléatoirement un nuage de points de taille arbitraire et contenu dans le carré
+<section id="un-nuage-random">
+<h3><span class="section-number">4.2.2. </span><code class="docutils literal notranslate"><span class="pre">un_nuage_random()</span></code><a class="headerlink" href="#un-nuage-random" title="Permalink to this headline">#</a></h3>
+<p>Compléter ce module de façon à pouvoir générer aléatoirement un nuage de
+points de taille arbitraire et contenu dans le carré
 <span class="math notranslate nohighlight">\([0,1] \times [0,1]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">un_nuage_random</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Nuages</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="p">())</span> <span class="p">)</span>  <span class="c1"># parenthese autour de tuple nécessaire comme argument de .append</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuage1</span> <span class="o">=</span> <span class="n">un_nuage_random</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nuage1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0.7722125447654741, 0.9854469707730048), (0.5025901635666188, 0.6792457340174722), (0.6106096863120762, 0.32082001587828934), (0.05684991948024343, 0.19531499916502693), (0.8695354004752183, 0.0052950226191021965), (0.8790013329494382, 0.6370400935869487), (0.24453112965250068, 0.6590167380277426), (0.8641293618947311, 0.621945539212875), (0.6074360873313523, 0.5685557201172367), (0.6318671984581694, 0.3713044214788751)]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="id3">
-<h3><span class="section-number">4.2.3. </span>Question<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="trier-nuage">
+<h3><span class="section-number">4.2.3. </span><code class="docutils literal notranslate"><span class="pre">trier_nuage()</span></code><a class="headerlink" href="#trier-nuage" title="Permalink to this headline">#</a></h3>
 <p>Compléter ce module de façon à pouvoir trier les points d’un nuage donné selon l’ordre croissant défini sur les points du plan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on utilise les faciltés des tri de listes</span>
+<span class="c1"># section Sort Stability and Complex Sorts de</span>
+<span class="c1"># https://docs.python.org/3/howto/sorting.html</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+
+<span class="k">def</span> <span class="nf">trier_nuage</span><span class="p">(</span><span class="n">nuage</span> <span class="p">:</span> <span class="n">Nuages</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Nuages</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;ce tri en place modifie nuage&#39;&#39;&#39;</span>
+    <span class="c1">#res = sorted(nuage, key=itemgetter(0, 1)) # tri abscisses puis ordonnées</span>
+    <span class="c1">#return res</span>
+    <span class="k">return</span> <span class="n">nuage</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># tri ordonnées</span>
+                   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+<span class="n">nuage0_save</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nuage0</span><span class="p">]</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0_save</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- on trie&quot;</span><span class="p">)</span>
+<span class="n">trier_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 0.0)
+(1.0, 0.0)
+(1.0, 1.0)
+(1.4142135623730951, 1.4142135623730951)
+(0.0, 1.0)
+(0.7071067811865476, 0.7071067811865476)
+---
+(0.0, 0.0)
+(1.0, 0.0)
+(1.0, 1.0)
+(1.4142135623730951, 1.4142135623730951)
+(0.0, 1.0)
+(0.7071067811865476, 0.7071067811865476)
+--- on trie
+(0.0, 0.0)
+(0.0, 1.0)
+(0.7071067811865476, 0.7071067811865476)
+(1.0, 0.0)
+(1.0, 1.0)
+(1.4142135623730951, 1.4142135623730951)
+---
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage1</span><span class="p">)</span>
+<span class="n">trier_nuage</span><span class="p">(</span><span class="n">nuage1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">nuage1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.7722125447654741, 0.9854469707730048)
+(0.5025901635666188, 0.6792457340174722)
+(0.6106096863120762, 0.32082001587828934)
+(0.05684991948024343, 0.19531499916502693)
+(0.8695354004752183, 0.0052950226191021965)
+(0.8790013329494382, 0.6370400935869487)
+(0.24453112965250068, 0.6590167380277426)
+(0.8641293618947311, 0.621945539212875)
+(0.6074360873313523, 0.5685557201172367)
+(0.6318671984581694, 0.3713044214788751)
+---
+(0.05684991948024343, 0.19531499916502693)
+(0.24453112965250068, 0.6590167380277426)
+(0.5025901635666188, 0.6792457340174722)
+(0.6074360873313523, 0.5685557201172367)
+(0.6106096863120762, 0.32082001587828934)
+(0.6318671984581694, 0.3713044214788751)
+(0.7722125447654741, 0.9854469707730048)
+(0.8641293618947311, 0.621945539212875)
+(0.8695354004752183, 0.0052950226191021965)
+(0.8790013329494382, 0.6370400935869487)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="id4">
-<h3><span class="section-number">4.2.4. </span>Question<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
-<p>Compléter ce module  de façon à pouvoir enregistrer un nuage de points de taille arbitraire dans un fichier de texte.
-La taille du nuage sera aussi enregistrée dans ce fichier.<br />
-Les fichiers <code class="docutils literal notranslate"><span class="pre">data_nuage_10.txt</span></code> et  <code class="docutils literal notranslate"><span class="pre">data_nuage_100.txt</span></code> fournis dans l’archive <code class="docutils literal notranslate"><span class="pre">3-data-nuage.zip</span></code> sont des exemples de tels fichiers.</p>
+<section id="write-nuage">
+<h3><span class="section-number">4.2.4. </span><code class="docutils literal notranslate"><span class="pre">write_nuage()</span></code><a class="headerlink" href="#write-nuage" title="Permalink to this headline">#</a></h3>
+<p>Compléter ce module de façon à pouvoir enregistrer un nuage de points de taille arbitraire dans un fichier de texte. La taille du nuage sera aussi enregistrée dans ce fichier.<br />
+Les fichiers <code class="docutils literal notranslate"><span class="pre">data_nuage_10.txt</span></code> et <code class="docutils literal notranslate"><span class="pre">data_nuage_100.txt</span></code> fournis dans l’archive <code class="docutils literal notranslate"><span class="pre">3-data-nuage.zip</span></code> sont des exemples de tels fichiers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat data_nuage/data_nuage_10.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+0.35044662517603453 0.752560409100197
+0.6146125291700566 0.1718278220287821
+0.9915968568508445 0.9052980181746246
+0.1790001243833701 0.907928983038507
+0.8368299880640415 0.36796327718527777
+0.8516626625874057 0.7303199659087892
+0.18886854415967946 0.11372868297214234
+0.6143614302562758 0.2253364938577207
+0.6157591487827003 0.2649481888932087
+0.4391048164290956 0.47542006680084614
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">write_nuage</span><span class="p">(</span><span class="n">nuage</span> <span class="p">:</span> <span class="n">Nuages</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="c1"># association/ouverture/fermeture avec clause with</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./tmp/&quot;</span><span class="o">+</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nuage</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nuage</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">write_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">,</span> <span class="s2">&quot;nuage0.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat ./tmp/nuage0.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+0.0 0.0
+0.0 1.0
+0.7071067811865476 0.7071067811865476
+1.0 0.0
+1.0 1.0
+1.4142135623730951 1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="id5">
-<h3><span class="section-number">4.2.5. </span>Question<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
-<p>Compléter ce module  de façon à pouvoir lire un nuage de points de taille arbitraire à partir d’un fichier de texte selon le
-format défini ci-dessus.</p>
+<section id="read-nuage">
+<h3><span class="section-number">4.2.5. </span><code class="docutils literal notranslate"><span class="pre">read_nuage()</span></code><a class="headerlink" href="#read-nuage" title="Permalink to this headline">#</a></h3>
+<p>Compléter ce module de façon à pouvoir lire un nuage de points de taille arbitraire à partir d’un fichier de texte selon le format défini ci-dessus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_nuage</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Nuages</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">creer_nuage</span><span class="p">()</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>        
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">ligne</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1">#une list de 2 str</span>
+            <span class="n">ajouter</span><span class="p">(</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">ligne</span><span class="p">[</span><span class="mi">1</span><span class="p">])),</span> <span class="n">res</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuage0_cp</span> <span class="o">=</span> <span class="n">read_nuage</span><span class="p">(</span><span class="s2">&quot;./tmp/nuage0.txt&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">nuage0_cp</span> <span class="o">==</span> <span class="n">nuage0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n10</span> <span class="o">=</span> <span class="n">read_nuage</span><span class="p">(</span><span class="s2">&quot;./data_nuage/data_nuage_10.txt&quot;</span><span class="p">)</span>
+<span class="n">print_nuage</span><span class="p">(</span><span class="n">n10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.35044662517603453, 0.752560409100197)
+(0.6146125291700566, 0.1718278220287821)
+(0.9915968568508445, 0.9052980181746246)
+(0.1790001243833701, 0.907928983038507)
+(0.8368299880640415, 0.36796327718527777)
+(0.8516626625874057, 0.7303199659087892)
+(0.18886854415967946, 0.11372868297214234)
+(0.6143614302562758, 0.2253364938577207)
+(0.6157591487827003, 0.2649481888932087)
+(0.4391048164290956, 0.47542006680084614)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="id6">
-<h3><span class="section-number">4.2.6. </span>Question<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
-<p>Compléter ce module  de façon à pouvoir tracer graphiquement un nuage de points donné. Le tracé sera effectué  à l’écran par défaut. Il permettra aussi de stocker ce tracé  dans un fichier <code class="docutils literal notranslate"><span class="pre">jpeg</span></code>.</p>
+<section id="aff-nuage">
+<h3><span class="section-number">4.2.6. </span><code class="docutils literal notranslate"><span class="pre">aff_nuage()</span></code><a class="headerlink" href="#aff-nuage" title="Permalink to this headline">#</a></h3>
+<p>Compléter ce module de façon à pouvoir tracer graphiquement un nuage de
+points donné. Le tracé sera effectué à l’écran par défaut. Il permettra
+aussi de stocker ce tracé dans un fichier <code class="docutils literal notranslate"><span class="pre">jpeg</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">aff_nuage</span><span class="p">(</span><span class="n">nuage</span> <span class="p">:</span> <span class="n">Nuages</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nuage</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nuage</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s2">&quot;.jpeg&quot;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print_nuage(nuage0)</span>
+
+<span class="n">aff_nuage</span><span class="p">(</span><span class="n">nuage0</span><span class="p">,</span> <span class="s2">&quot;nuage 0&quot;</span><span class="p">)</span>
+<span class="c1">#aff_nuage(nuage0, &quot;./fig_nuage/nuage0&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3-env-convexe_26_0.png" src="../_images/3-env-convexe_26_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aff_nuage</span><span class="p">(</span><span class="n">n10</span><span class="p">,</span> <span class="s2">&quot;data_nuage/data_nuage_10.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3-env-convexe_27_0.png" src="../_images/3-env-convexe_27_0.png" />
+</div>
+</div>
 <p>On va développer progressivement un module <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>.</p>
 </section>
 </section>
 <section id="geometrie2d-orientation-de-3-points-du-plan">
 <h2><span class="section-number">4.3. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: orientation de 3 points du plan<a class="headerlink" href="#geometrie2d-orientation-de-3-points-du-plan" title="Permalink to this headline">#</a></h2>
-<p><img alt="Orientations d'un triplet (p,q,r)" src="../_images/orientation_pqr.png" /></p>
-<p>Un triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> de points <em>non alignés</em> du plan est <em>orienté positivement</em> si l’angle des vecteurs <code class="docutils literal notranslate"><span class="pre">(pq,</span> <span class="pre">pr)</span></code> est dans <span class="math notranslate nohighlight">\(]0, \pi \ [\)</span> (modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). Sinon, il est <em>orienté négativement</em>.</p>
-<p>On vérifie l’orientation du triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> en calculant le signe du déterminant 2x2 <span class="math notranslate nohighlight">\(det(pq,pr)\)</span> des vecteurs <code class="docutils literal notranslate"><span class="pre">pq</span></code> et <code class="docutils literal notranslate"><span class="pre">pr</span></code>. Signe du déterminant et sens d’orientation coïncident.</p>
+<p><img alt="Orientations d’un triplet (p,q,r)" src="tp/attachment:fig/orientation_pqr.png" /></p>
+<p>Un triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> de points <em>non alignés</em> du plan est <em>orienté
+positivement</em> si l’angle des vecteurs <code class="docutils literal notranslate"><span class="pre">(pq,</span> <span class="pre">pr)</span></code> est dans <span class="math notranslate nohighlight">\(]0, \pi \ [\)</span>
+(modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). Sinon, il est <em>orienté négativement</em>.</p>
+<p>On vérifie l’orientation du triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> en calculant le signe du
+déterminant 2x2 <span class="math notranslate nohighlight">\(det(pq,pr)\)</span> des vecteurs <code class="docutils literal notranslate"><span class="pre">pq</span></code> et <code class="docutils literal notranslate"><span class="pre">pr</span></code>. Signe du
+déterminant et sens d’orientation coïncident.</p>
 <p>On rappelle que :
 $<span class="math notranslate nohighlight">\(det(pq,pr) = (x_q - x_p)\times(y_r - y_p) - (y_q - y_p)\times(x_r -
 x_p).\)</span>$</p>
-<section id="id7">
-<h3><span class="section-number">4.3.1. </span>Question<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
-<p>Commencer le  module <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code> avec une fonction qui calcule l’orientation d’un triplet de points du plan.</p>
+<section id="question">
+<h3><span class="section-number">4.3.1. </span>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h3>
+<p>Commencer le module <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code> avec une fonction qui calcule
+l’orientation d’un triplet de points du plan.</p>
 </section>
 </section>
 <section id="geometrie2d-enveloppe-convexe-superieure">
 <h2><span class="section-number">4.4. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe supérieure<a class="headerlink" href="#geometrie2d-enveloppe-convexe-superieure" title="Permalink to this headline">#</a></h2>
-<p>Un ensemble <span class="math notranslate nohighlight">\(C\)</span> est <em>convexe</em>  si le segment [p,q] qui relie deux points quelconques de <span class="math notranslate nohighlight">\(C\)</span> est inclus dans <span class="math notranslate nohighlight">\(C\)</span>.</p>
-<p><img alt="exemple d'ensembles convexes et non convexe" src="../_images/convexes.png" /></p>
-<p>L’<em>enveloppe convexe</em> <span class="math notranslate nohighlight">\(Conv(N)\)</span> d’un nuage de points <span class="math notranslate nohighlight">\(N\)</span> est le plus petit polygone convexe qui contient tous les points de <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p><img alt="L'enveloppe convexe du nuage de points 'data_nuage_10.txt'" src="../_images/env_conv10.png" />
-<img alt="L'enveloppe convexe du nuage de points 'data_nuage_100.txt'" src="../_images/env_conv100.png" /></p>
-<p><strong>Construire l’enveloppe convexe d’un nuage de points.</strong>
-On construit <span class="math notranslate nohighlight">\(Conv(N)\)</span> en balayant de gauche à droite avec une droite verticale le nuage <span class="math notranslate nohighlight">\(N\)</span> (préalablement trié par ordre croissant). On convient ainsi que p0 est le plus petit point de N, <em>ie.</em> celui le plus à
-gauche.</p>
-<p>Chaque point p rencontré par la droite met à jour l’enveloppe convexe du sous-nuage à gauche du point p.
-Cette mise à jour s’effectue en distinguant une partie supérieure et une partie inférieure de l’enveloppe convexe.</p>
-<p>L’<em>enveloppe supérieure</em>  est au dessus du segment [p0, p].
-Cette enveloppe <code class="docutils literal notranslate"><span class="pre">ES</span></code> est modifiée par l’algorithme suivant qui justifie de stocker <code class="docutils literal notranslate"><span class="pre">ES</span></code> comme une pile de base p0.
-On ajoute aussi à <code class="docutils literal notranslate"><span class="pre">ES</span></code>, p1 le point immédiatement supérieur à p0 (<em>ie.</em> immédiatement à droite de p0).
+<p>Un ensemble <span class="math notranslate nohighlight">\(C\)</span> est <em>convexe</em> si le segment [p,q] qui relie deux
+points quelconques de <span class="math notranslate nohighlight">\(C\)</span> est inclus dans <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p><img alt="exemple d’ensembles convexes et nonconvexe" src="tp/attachment:fig/convexes.png" /></p>
+<p>L’<em>enveloppe convexe</em> <span class="math notranslate nohighlight">\(Conv(N)\)</span> d’un nuage de points <span class="math notranslate nohighlight">\(N\)</span> est le plus
+petit polygone convexe qui contient tous les points de <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p><img alt="L’enveloppe convexe du nuage de points‘data_nuage_10.txt’" src="tp/attachment:fig/env_conv10.png" /> <img alt="L’enveloppeconvexe du nuage de points‘data_nuage_100.txt’" src="tp/attachment:fig/env_conv100.png" /></p>
+<p><strong>Construire l’enveloppe convexe d’un nuage de points.</strong> On construit
+<span class="math notranslate nohighlight">\(Conv(N)\)</span> en balayant de gauche à droite avec une droite verticale le
+nuage <span class="math notranslate nohighlight">\(N\)</span> (préalablement trié par ordre croissant). On convient ainsi
+que p0 est le plus petit point de N, <em>ie.</em> celui le plus à gauche.</p>
+<p>Chaque point p rencontré par la droite met à jour l’enveloppe convexe du
+sous-nuage à gauche du point p.  Cette mise à jour s’effectue en
+distinguant une partie supérieure et une partie inférieure de
+l’enveloppe convexe.</p>
+<p>L’<em>enveloppe supérieure</em> est au dessus du segment [p0, p]. Cette
+enveloppe <code class="docutils literal notranslate"><span class="pre">ES</span></code> est modifiée par l’algorithme suivant qui justifie de
+stocker <code class="docutils literal notranslate"><span class="pre">ES</span></code> comme une pile de base p0. On ajoute aussi à <code class="docutils literal notranslate"><span class="pre">ES</span></code>, p1 le
+point immédiatement supérieur à p0 (<em>ie.</em> immédiatement à droite de p0).
 La pile <code class="docutils literal notranslate"><span class="pre">ES</span></code> est ainsi composée d’au moins deux éléments.</p>
 <section id="algorithme">
 <h3><span class="section-number">4.4.1. </span>Algorithme<a class="headerlink" href="#algorithme" title="Permalink to this headline">#</a></h3>
-<p>Soit p le point rencontré par le balayage de N.
-Notons q et r les deux derniers points ajoutés à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – q est au sommet.</p>
+<p>Soit p le point rencontré par le balayage de N. Notons q et r les deux
+derniers points ajoutés à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – q est au sommet.</p>
 <ul class="simple">
-<li><p>Si le triplet (p,q,r) est orienté positivement  alors p est ajouté à   <code class="docutils literal notranslate"><span class="pre">ES</span></code>. Ce qui termine la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p></li>
-<li><p>Sinon q est retiré de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et on reprend le test d’orientation et le traitement précédent pour
-<strong>un nouveau triplet (p,q,r)</strong> jusqu’à terminer la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code> :</p>
+<li><p>Si le triplet (p,q,r) est orienté positivement alors p est ajouté à
+<code class="docutils literal notranslate"><span class="pre">ES</span></code>. Ce qui termine la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p></li>
+<li><p>Sinon q est retiré de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et on reprend le test d’orientation et le
+traitement précédent pour <strong>un nouveau triplet (p,q,r)</strong> jusqu’à
+terminer la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code> :</p>
 <ul>
 <li><p>par l’ajout de p à <code class="docutils literal notranslate"><span class="pre">ES</span></code></p></li>
-<li><p>ou parce qu’il ne reste que p0 dans <code class="docutils literal notranslate"><span class="pre">ES</span></code>.
-Dans ce cas, on termine en ajoutant  p à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – qui est ainsi toujours composée d’au moins deux éléments.</p></li>
+<li><p>ou parce qu’il ne reste que p0 dans <code class="docutils literal notranslate"><span class="pre">ES</span></code>. Dans ce cas, on
+termine en ajoutant p à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – qui est ainsi toujours composée
+d’au moins deux éléments.</p></li>
 </ul>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> contient l’enveloppe convexe supérieure du nuage N une fois tous les points p de N balayés.</p>
-<p>On convient aisément que le point le plus à droite de N est le dernier point ajouté à <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> contient l’enveloppe convexe supérieure du nuage N une fois tous
+les points p de N balayés.</p>
+<p>On convient aisément que le point le plus à droite de N est le dernier
+point ajouté à <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p>
 <p><strong>Illustration graphique.</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5,6}, début du traitement de p = 7</p>
-<p><img alt="Orientation (7,6,5) négative" src="../_images/ES-1.png" /></p>
+<p><img alt="Orientation (7,6,5) négative" src="tp/attachment:fig/ES-1.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5}, p = 7</p>
-<p><img alt="Orientation (7,5,1) négative" src="../_images/ES-2.png" /></p>
+<p><img alt="Orientation (7,5,1) négative" src="tp/attachment:fig/ES-2.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1}, p = 7</p>
-<p><img alt="Orientation (7,1,0) positive" src="../_images/ES-3.png" /></p>
+<p><img alt="Orientation (7,1,0) positive" src="tp/attachment:fig/ES-3.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,7}, fin du traitement de p = 7.</p>
 </section>
-<section id="id8">
-<h3><span class="section-number">4.4.2. </span>Question<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
-<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majES(pile,</span> <span class="pre">point)</span></code> qui effectue la mise à jour de la pile <code class="docutils literal notranslate"><span class="pre">ES</span></code> lors du traitement du point p.</p>
+<section id="id1">
+<h3><span class="section-number">4.4.2. </span>Question<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majES(pile,</span> <span class="pre">point)</span></code> qui
+effectue la mise à jour de la pile <code class="docutils literal notranslate"><span class="pre">ES</span></code> lors du traitement du point p.</p>
 </section>
-<section id="id9">
-<h3><span class="section-number">4.4.3. </span>Question<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3><span class="section-number">4.4.3. </span>Question<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Valider cette fonction sur des nuages de 4 ou 5 points par exemple.</p>
 </section>
 </section>
 <section id="geometrie2d-enveloppe-convexe-inferieure">
 <h2><span class="section-number">4.5. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe inférieure<a class="headerlink" href="#geometrie2d-enveloppe-convexe-inferieure" title="Permalink to this headline">#</a></h2>
-<p>L’<em>enveloppe convexe inférieure</em> est obtenue de façon similaire avec une (autre) pile ‘EI’ et un test d’orientation inverse.</p>
-<section id="id10">
-<h3><span class="section-number">4.5.1. </span>Question<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
-<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majEI(pile,</span> <span class="pre">point)</span></code> qui effectue la mise à jour de la pile ‘EI’ lors du traitement du point p.</p>
+<p>L’<em>enveloppe convexe inférieure</em> est obtenue de façon similaire avec une
+(autre) pile ‘EI’ et un test d’orientation inverse.</p>
+<section id="id3">
+<h3><span class="section-number">4.5.1. </span>Question<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majEI(pile,</span> <span class="pre">point)</span></code> qui
+effectue la mise à jour de la pile ‘EI’ lors du traitement du point p.</p>
 </section>
-<section id="id11">
-<h3><span class="section-number">4.5.2. </span>Question<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<section id="id4">
+<h3><span class="section-number">4.5.2. </span>Question<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>Valider cette fonction sur des nuages de 4 ou 5 points par exemple.</p>
 </section>
 </section>
 <section id="geometrie2d-enveloppe-convexe">
 <h2><span class="section-number">4.6. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe<a class="headerlink" href="#geometrie2d-enveloppe-convexe" title="Permalink to this headline">#</a></h2>
-<p>L’enveloppe convexe <span class="math notranslate nohighlight">\(Conv(N)\)</span> est une (autre) pile construite à partir de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et ‘EI’ en stockant successivement chaque point visité par les 2 parcours suivants :</p>
+<p>L’enveloppe convexe <span class="math notranslate nohighlight">\(Conv(N)\)</span> est une (autre) pile construite à partir
+de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et ‘EI’ en stockant successivement chaque point visité par les 2
+parcours suivants :</p>
 <ul class="simple">
-<li><p>L’enveloppe convexe supérieure est parcourue de la gauche vers la droite,</p></li>
-<li><p>l’enveloppe convexe inférieure est parcourue de la droite vers la gauche;<br />
+<li><p>L’enveloppe convexe supérieure est parcourue de la gauche vers la
+droite,</p></li>
+<li><p>l’enveloppe convexe inférieure est parcourue de la droite vers la
+gauche;<br />
 et modifié comme suit :</p></li>
-<li><p>l’extrémité droite de l’une et de l’autre de ces enveloppes n’est pas répétée,</p></li>
+<li><p>l’extrémité droite de l’une et de l’autre de ces enveloppes n’est pas
+répétée,</p></li>
 <li><p>le sommet de <span class="math notranslate nohighlight">\(Conv(N)\)</span> répète sa base p0.</p></li>
 </ul>
-<section id="id12">
-<h3><span class="section-number">4.6.1. </span>Question<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
-<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">env_convexe(nuage)</span></code> qui construit l’enveloppe convexe d’un nuage de points arbitraire.</p>
+<section id="id5">
+<h3><span class="section-number">4.6.1. </span>Question<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">env_convexe(nuage)</span></code> qui
+construit l’enveloppe convexe d’un nuage de points arbitraire.</p>
 </section>
-<section id="id13">
-<h3><span class="section-number">4.6.2. </span>Question<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
-<p>Compléter le module précédent avec une fonction qui permet d’afficher l’enveloppe convexe ainsi construite.</p>
+<section id="id6">
+<h3><span class="section-number">4.6.2. </span>Question<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<p>Compléter le module précédent avec une fonction qui permet d’afficher
+l’enveloppe convexe ainsi construite.</p>
 </section>
-<section id="id14">
-<h3><span class="section-number">4.6.3. </span>Question<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h3>
-<p>Compléter le module précédent avec une fonction qui permet de tracer graphiquement cette enveloppe convexe, d’abord sans le nuage
-de points associé, puis avec.</p>
+<section id="id7">
+<h3><span class="section-number">4.6.3. </span>Question<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<p>Compléter le module précédent avec une fonction qui permet de tracer
+graphiquement cette enveloppe convexe, d’abord sans le nuage de points
+associé, puis avec.</p>
 </section>
 </section>
 </section>
