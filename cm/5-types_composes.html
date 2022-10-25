@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../tp/3-env-convexe.html">
+  <a class="reference internal" href="../tp/3-env-convexe-sujet.html">
    4. Feuille 3
   </a>
  </li>
@@ -1503,17 +1503,15 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 1, 2] [3, 1, 2]
-140582452111360 140582452111360
+[3, 1, 2] [3, 1, 2]
+140505161837568 140505161837568
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140582452101184 140582452111360
+140505161460800 140505161837568
 </pre></div>
 </div>
 </div>
@@ -1655,7 +1653,9 @@ non: False
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;le_mechant&#39;: &#39;Jo&#39;, &#39;2&#39;: &#39;Jack&#39;, 3: &#39;William&#39;, &#39;le_cretin&#39;: &#39;Averell&#39;}
-dict_keys([&#39;le_mechant&#39;, &#39;2&#39;, 3, &#39;le_cretin&#39;])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;le_mechant&#39;, &#39;2&#39;, 3, &#39;le_cretin&#39;])
 &lt;class &#39;dict_keys&#39;&gt;
 dict_values([&#39;Jo&#39;, &#39;Jack&#39;, &#39;William&#39;, &#39;Averell&#39;]) &lt;class &#39;dict_values&#39;&gt;
 dict_items([(&#39;le_mechant&#39;, &#39;Jo&#39;), (&#39;2&#39;, &#39;Jack&#39;), (3, &#39;William&#39;), (&#39;le_cretin&#39;, &#39;Averell&#39;)]) &lt;class &#39;dict_items&#39;&gt;
@@ -1825,9 +1825,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140582409469680
-abc 140582409469680
-abcdef 140582452087728
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140505107398384
+abc 140505107398384
+abcdef 140505161725488
 </pre></div>
 </div>
 </div>
@@ -1928,10 +1928,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140582452051504
-140582452051504
-140582452033904
-140582452033904
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140505161777072
+140505161777072
+140505161776752
+140505161776752
 </pre></div>
 </div>
 </div>
@@ -2179,19 +2179,19 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;u&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;y&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;i&#39;, &#39;u&#39;}
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 6
 True
 False
-aie : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
-voyelles : {&#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;u&#39;}
-union : {&#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;u&#39;}
-autre union : {&#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;b&#39;, &#39;u&#39;, &#39;f&#39;}
-intersection : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
+aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+voyelles : {&#39;y&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;i&#39;, &#39;u&#39;}
+union : {&#39;y&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;i&#39;, &#39;u&#39;}
+autre union : {&#39;y&#39;, &#39;f&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;i&#39;, &#39;b&#39;, &#39;u&#39;}
+intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;y&#39;, &#39;o&#39;, &#39;u&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2318,9 +2318,6 @@ Ces derniers ayant été représentés en python par le type (composé) <em>list
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
