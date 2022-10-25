@@ -18,15 +18,20 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 
 :::{important} Dates importantes et contrôle des connaissances.
 
+**Section modifiée le 25.10.2022 suite dernière séance de la veille.**
+
 Les numéros des semaines sont celles du calendrier. 
 
 - semaine 38. Démarrage
-- semaine 42. CC : diffusion du sujet
-- semaine 44. CC : rendu **dead-line : dimanche 6 novembre 2022, minuit**  
+- semaine 42. CC : sujet = tp knn et tp enveloppe convexe 
+- semaine 44. CC : interactions individuelles. Le planning sera annoncé par e-mail.
+- semaine 45. CC : remise **dead-line : lundi 7 novembre 2022, 10h15**  
 - semaine 48. CT : épreuve sur machine (06.12.22, 15h30-19h30 **date et durée à confirmer**)
 
 Note finale partie Python : $0.5 \times (CC+CT)$
 :::
+
+![photo tableau](./MCCAlgoPython2022.jpeg)
 
 
 ## Travailler en python
@@ -145,5 +150,12 @@ Préparation semaine suivante :
 **Motto** : les `assert` pour vos tests unitaires 
 
 - TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
+
+
+### Semaine 42
+
+**Motto** : valider ses traitements avec des cas extrêmes
+
+- TP feuille 3 : enveloppe convexe de $n$ points du plan
 
 <!-- #endregion -->

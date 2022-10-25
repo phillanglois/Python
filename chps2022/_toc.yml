@@ -23,10 +23,12 @@ parts:
     - file: cm/a2-ndarray
     - file: cm/a3-exceptions
   - caption: TP
-    numbered: 3
+    numbered: 5
     chapters:
     - file: tp/0-installation
     - file: tp/1-bases
+    - file: tp/2-knn
+    - file: tp/3-env-convexe
   - caption: Compléments
     numbered: 3
     chapters:
