@@ -390,7 +390,7 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-points-du-plan-relation-dordre">
+  <a class="reference internal nav-link" href="#points-points-du-plan-relation-d-ordre">
    4.1.
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -567,7 +567,7 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-points-du-plan-relation-dordre">
+  <a class="reference internal nav-link" href="#points-points-du-plan-relation-d-ordre">
    4.1.
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -752,8 +752,8 @@ dernier cas, ces cellules pourront être dupliquées (par recopie)
 regroupé dans des fichiers python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) exécutables dpuis la ligne
 de commande.</p></li>
 </ul>
-<section id="points-points-du-plan-relation-dordre">
-<h2><span class="section-number">4.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code>: points du plan, relation d’ordre<a class="headerlink" href="#points-points-du-plan-relation-dordre" title="Permalink to this headline">#</a></h2>
+<section id="points-points-du-plan-relation-d-ordre">
+<h2><span class="section-number">4.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code>: points du plan, relation d’ordre<a class="headerlink" href="#points-points-du-plan-relation-d-ordre" title="Permalink to this headline">#</a></h2>
 <p>Un <em>point</em> du plan est un couple <span class="math notranslate nohighlight">\((x, y)\)</span> (de nombres flottants).<br />
 On définit la relation d’ordre suivante entre 2 points du plan :<br />
 $<span class="math notranslate nohighlight">\((x,y) \le (x',y') \iff x &lt; x' \text{ ou } (x = x' \text{ et } y \le y').\)</span>$<br />
@@ -808,7 +808,7 @@ aussi de stocker ce tracé dans un fichier <code class="docutils literal notrans
 </section>
 <section id="geometrie2d-orientation-de-3-points-du-plan">
 <h2><span class="section-number">4.3. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: orientation de 3 points du plan<a class="headerlink" href="#geometrie2d-orientation-de-3-points-du-plan" title="Permalink to this headline">#</a></h2>
-<p><img alt="Orientations d’un triplet (p,q,r)" src="../_images/orientation_pqr.png" /></p>
+<p><img alt="Orientations d'un triplet (p,q,r)" src="../_images/orientation_pqr.png" /></p>
 <p>Un triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> de points <em>non alignés</em> du plan est <em>orienté
 positivement</em> si l’angle des vecteurs <code class="docutils literal notranslate"><span class="pre">(pq,</span> <span class="pre">pr)</span></code> est dans <span class="math notranslate nohighlight">\(]0, \pi \ [\)</span>
 (modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). Sinon, il est <em>orienté négativement</em>.</p>
@@ -828,10 +828,10 @@ l’orientation d’un triplet de points du plan.</p>
 <h2><span class="section-number">4.4. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe supérieure<a class="headerlink" href="#geometrie2d-enveloppe-convexe-superieure" title="Permalink to this headline">#</a></h2>
 <p>Un ensemble <span class="math notranslate nohighlight">\(C\)</span> est <em>convexe</em> si le segment [p,q] qui relie deux
 points quelconques de <span class="math notranslate nohighlight">\(C\)</span> est inclus dans <span class="math notranslate nohighlight">\(C\)</span>.</p>
-<p><img alt="exemple d’ensembles convexes et nonconvexe" src="../_images/convexes.png" /></p>
+<p><img alt="exemple d'ensembles convexes et nonconvexe" src="../_images/convexes.png" /></p>
 <p>L’<em>enveloppe convexe</em> <span class="math notranslate nohighlight">\(Conv(N)\)</span> d’un nuage de points <span class="math notranslate nohighlight">\(N\)</span> est le plus
 petit polygone convexe qui contient tous les points de <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p><img alt="L’enveloppe convexe du nuage de points‘data_nuage_10.txt’" src="../_images/env_conv10.png" /> <img alt="L’enveloppeconvexe du nuage de points‘data_nuage_100.txt’" src="../_images/env_conv100.png" /></p>
+<p><img alt="L'enveloppe convexe du nuage de points‘data_nuage_10.txt'" src="../_images/env_conv10.png" /> <img alt="L'enveloppeconvexe du nuage de points‘data_nuage_100.txt'" src="../_images/env_conv100.png" /></p>
 <p><strong>Construire l’enveloppe convexe d’un nuage de points.</strong> On construit
 <span class="math notranslate nohighlight">\(Conv(N)\)</span> en balayant de gauche à droite avec une droite verticale le
 nuage <span class="math notranslate nohighlight">\(N\)</span> (préalablement trié par ordre croissant). On convient ainsi
