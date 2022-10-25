@@ -771,7 +771,7 @@ de les comparer, d’afficher leurs coordonnées <span class="math notranslate n
 <p>Ecrire un module <code class="docutils literal notranslate"><span class="pre">nuage</span></code> qui permet de définir un nuage de points de
 taille paramétrable et de d’afficher les coordonnées de ses points à
 l’écran.</p>
-<p><img alt="Un nuage de points aléatoires" src="tp/attachment:fig/nuage.png" /></p>
+<p><img alt="Un nuage de points aléatoires" src="../_images/nuage.png" /></p>
 </section>
 <section id="id2">
 <h3><span class="section-number">4.2.2. </span>Question<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
@@ -808,7 +808,7 @@ aussi de stocker ce tracé dans un fichier <code class="docutils literal notrans
 </section>
 <section id="geometrie2d-orientation-de-3-points-du-plan">
 <h2><span class="section-number">4.3. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: orientation de 3 points du plan<a class="headerlink" href="#geometrie2d-orientation-de-3-points-du-plan" title="Permalink to this headline">#</a></h2>
-<p><img alt="Orientations d’un triplet (p,q,r)" src="tp/attachment:fig/orientation_pqr.png" /></p>
+<p><img alt="Orientations d’un triplet (p,q,r)" src="../_images/orientation_pqr.png" /></p>
 <p>Un triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> de points <em>non alignés</em> du plan est <em>orienté
 positivement</em> si l’angle des vecteurs <code class="docutils literal notranslate"><span class="pre">(pq,</span> <span class="pre">pr)</span></code> est dans <span class="math notranslate nohighlight">\(]0, \pi \ [\)</span>
 (modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). Sinon, il est <em>orienté négativement</em>.</p>
@@ -828,10 +828,10 @@ l’orientation d’un triplet de points du plan.</p>
 <h2><span class="section-number">4.4. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe supérieure<a class="headerlink" href="#geometrie2d-enveloppe-convexe-superieure" title="Permalink to this headline">#</a></h2>
 <p>Un ensemble <span class="math notranslate nohighlight">\(C\)</span> est <em>convexe</em> si le segment [p,q] qui relie deux
 points quelconques de <span class="math notranslate nohighlight">\(C\)</span> est inclus dans <span class="math notranslate nohighlight">\(C\)</span>.</p>
-<p><img alt="exemple d’ensembles convexes et nonconvexe" src="tp/attachment:fig/convexes.png" /></p>
+<p><img alt="exemple d’ensembles convexes et nonconvexe" src="../_images/convexes.png" /></p>
 <p>L’<em>enveloppe convexe</em> <span class="math notranslate nohighlight">\(Conv(N)\)</span> d’un nuage de points <span class="math notranslate nohighlight">\(N\)</span> est le plus
 petit polygone convexe qui contient tous les points de <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p><img alt="L’enveloppe convexe du nuage de points‘data_nuage_10.txt’" src="tp/attachment:fig/env_conv10.png" /> <img alt="L’enveloppeconvexe du nuage de points‘data_nuage_100.txt’" src="tp/attachment:fig/env_conv100.png" /></p>
+<p><img alt="L’enveloppe convexe du nuage de points‘data_nuage_10.txt’" src="../_images/env_conv10.png" /> <img alt="L’enveloppeconvexe du nuage de points‘data_nuage_100.txt’" src="../_images/env_conv100.png" /></p>
 <p><strong>Construire l’enveloppe convexe d’un nuage de points.</strong> On construit
 <span class="math notranslate nohighlight">\(Conv(N)\)</span> en balayant de gauche à droite avec une droite verticale le
 nuage <span class="math notranslate nohighlight">\(N\)</span> (préalablement trié par ordre croissant). On convient ainsi
@@ -869,11 +869,11 @@ les points p de N balayés.</p>
 point ajouté à <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p>
 <p><strong>Illustration graphique.</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5,6}, début du traitement de p = 7</p>
-<p><img alt="Orientation (7,6,5) négative" src="tp/attachment:fig/ES-1.png" /></p>
+<p><img alt="Orientation (7,6,5) négative" src="../_images/ES-1.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5}, p = 7</p>
-<p><img alt="Orientation (7,5,1) négative" src="tp/attachment:fig/ES-2.png" /></p>
+<p><img alt="Orientation (7,5,1) négative" src="../_images/ES-2.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1}, p = 7</p>
-<p><img alt="Orientation (7,1,0) positive" src="tp/attachment:fig/ES-3.png" /></p>
+<p><img alt="Orientation (7,1,0) positive" src="../_images/ES-3.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,7}, fin du traitement de p = 7.</p>
 </section>
 <section id="id8">
