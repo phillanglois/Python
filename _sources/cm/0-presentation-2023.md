@@ -1,5 +1,5 @@
 (ch:intro)=
-# Algorithmique et Programmation en 2022
+# Algorithmique et Programmation en 2023
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
@@ -9,13 +9,13 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 - Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
 - Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
 
-## Algo-Prog : version 2023
+## Algo-Prog 2023
 
 
 - Les [supports du CM](https://phillanglois.github.io/Algo-Prog/) régulièrement mis à jour.
 - Les autres ressources sont sur l'espace moodle de cet enseignement.
 
-### Version 2022
+### Cette année
 
 - nouvelle offre de formation 2021-2025 : algo + prog = 1 UE
 - 12 séances de CM : 3h/semaine 
