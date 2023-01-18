@@ -1,161 +1,279 @@
 <!-- #region -->
 (ch:bonjour)=
-# Bienvenu en Prog Python!
+# Bienvenu en Algo-Prog !
 
 **Ce support est en évolution tout au long du semestre.**
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
-
-- Vous : **M1 CHPS**  
-- Moi : **Philippe Langlois**   
-- Comment me contacter : ![](./cm/fig/mail_phl.png)  
-- Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
-- Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
-
-Ce support regroupe les ressources de la partie Python de l'UE Programmation du semestre 1 en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=6237).
+Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
 
 
-:::{important} Dates importantes et contrôle des connaissances.
+:::{important} Rappels des dates importantes
 
-**Section modifiée le 25.10.2022 suite dernière séance de la veille.**
-
-Les numéros des semaines sont celles du calendrier. 
-
-- semaine 38. Démarrage
-- semaine 42. CC : sujet = tp knn et tp enveloppe convexe 
-- semaine 44. CC : interactions individuelles. Le planning sera annoncé par e-mail.
-- semaine 45. CC : remise **dead-line : lundi 7 novembre 2022, 10h15**  
-- semaine 48. CT : épreuve sur machine (06.12.22, 15h30-19h30 **date et durée à confirmer**)
-
-Note finale partie Python : $0.5 \times (CC+CT)$
+- semaine 10, lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)
+- semaine 11, mercredi 16 mars 2022 : écrit mi-parcours (CC2)
+- **semaine 15, vendredi 15 avril 2022 : TP2 en temps limité (pour CC1)**
+- semaine 19, mardi 10 mai 2022 : TP3 en temps limité (pour CC1)
+- semaines 20 ou 21, du 16 ou 23 mai 2022 : écrit de fin de semestre (CT)
 :::
 
-![photo tableau](./MCCAlgoPython2022.jpeg)
+:::{note}
+- Les numéros des semaines sont celles du calendrier. 
+La première séance de CM a eu lieu en semaine 3.
+- les items indiqués d'une ($\star$) correspondent aux activités _objectif 20_
+:::
+ 
+## Semaine 3 
 
+Avant le CM : 
 
-## Travailler en python
-
-Il est indispensable :
-
-- d'avoir accès à un environnement de programmation python, si possible assez complet,
-
-- d'avoir son propre ordinateur configuré de façon complète et selon vos préférences.    
-
-Il y a 3 choix d'OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l'UPVD.
-Les [distributions python](#En%20pratique) sont assez variées, et peuvent différer selon les OS.
-Cependant nous décrirons une solution aussi générique que possible.
-
-
-**De quoi a-t-on _absolument_ besoin ?**
-
-Ce qui suit est une liste minimale de composants utiles ce deux années
-Elle peut sembler longue, mais en pratique ces composants "arrivent" d'un seul coup avec une distribution -- cf. paragraphe suivant.  
-
-- `python` version `**3.9**`
-
-- l'`IDLE` python 3  
-    - éditeur, interpréteur, débugger 
-
-- `Jupyter Lab` le successeur de `jupyter notebook`  
-    - pour intégrer dans _un unique fichier_ du texte, des maths ($\LaTeX$) et du code python qui s'exécute, les résultats de ces éxecutions (valeurs, courbes, images, ...) et exporter tout ça en `html`ou `pdf` ou en `slide`  
-    - très utile pour les exercices 
-    - utilisé pour les TP de programmation
-    - utilisable dans toutes les matières ou presque    
-    
-- les gestionnaire de paquets (modules) python pour compléter et mettre à jour son environnement
-    - `conda`: plus complet si distribution anaconda utilisée (solution recommandée)  
-    - `pip` : autre gestionnaire classique   
-    - Exemple d'utilisation : 
-        - `conda` : `conda list`, `conda install le_module_que_je_veux` et voilà, c'est fini ! 
-        - `pip` : pareil `list`, `update`, `install`  
-
-- les modules indispensables 
-    - `numpy ` : fournit des _vrais_ tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul
-    - `matplotlib`: pour le traitement graphique de données, et en particulier :
-        -  `matplotlib.pyplot` pour des affichages élaborés
-        -  `matplotlib.image`  pour le traitement d'images
-    - `tkinter` : pour réaliser des interfaces graphiques  
-    
-- un module utile  
-    - `scipy `: scientific python qui rassemble des modules de calcul scientifiques (dont `numpy`) 
-
-**Pièges**
-- Ne pas confondre `python 2` et `python 3` 
-
-**Conseil**
-- Choisir une distribution la plus complète possible dès le début.   
-
-**Comment s'y prendre**
-
-Tel est l'objet de [ce document](tp:0-installation)
-
-
-## Programme de travail
-
-### CM
-
-**Séance 1**
-
-- types de données et structures de contrôle de base
-- fonctions, modules 
-- ES de base
-
-**Séance 2**
-
-- types de données avancés
-- sous-programmes et affectations : aspects avancés
-- ES avancées 
-
-**Séance 3**
-
-- `numpy`, ses `ndarray`, `scypi` : structures de données et traitements de calcul scientifique
-- `matplotlib` : courbes et graphiques
-- `time ` : mesure de temps d'exécution
-
-
-### Semaine 38
-
-[**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
-
-- Exercices intégrés au chapitre 1 
-- Chapitres 1 à 4
+- lire le chapitre "Fonctions, procédures et sous-programmes"
 
 Préparation semaine suivante :
 
+- CM : lire en entier le chapitre "Fonctions, procédures et sous-programmes"
 - Compétences : Savoir faire et pré-requis technique
-- TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD (Feuille 0)
+- TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne
 
-### Semaine 39
+## Semaine 4 
 
-**Motto** : Ecrire une fonction dans l'ordre suivant. 
+[**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Séparer les entrées-sorties des traitements"
 
-1. spécification avec annotations de types
-2. appels sur premiers tests unitaires avec des `assert`
-3. corps de la fonction
-4. vérification des tests unitaires
+Objectifs semaine :
 
-- Chapitres 5, 6 et 7
-- TP feuille 1 
+- savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter
+- savoir documenter cette programmation (énoncés, descriptions, …) avec markdown
+- mettre sous forme de fonctions des traitements simples avec des paramètres scalaires 
+- application de ces 3 aspects au sujet d'examen du semestre 1
 
-### Semaine 40
+Conseils avant TD/CM 
 
-**Motto** : Limiter les `import` aux ressources effectivement utilisées 
+-  reprendre en entier le sujet d'examen du semestre 1 (en ligne sous moodle)
+- ($\star$) faire ce travail sous jupyter notebook 
+- étudier chapitre "Fonctions" 
 
-- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
-- TP feuille 1
+Objectifs séance de TD 
 
-### Semaine 41
+- sujet d'examen du semestre 1 sous jupyter notebook : résolution avec des fonctions des exercices 2, 3 et 6
+- ($\star$)  résolution avec des fonctions de l'exercice 5 avec un choix pertinent des paramètres (les  exercices 7, 8, 9 seront traités avec des fonctions après le chapitre suivant).
+- ($\star$) exercices feuille 1
 
-**Motto** : les `assert` pour vos tests unitaires 
+## Semaine 5
 
-- TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
+**Motto** : "Ordre des trois étapes successives de l'écriture d'une fonction :
+
+1. spécification 
+2. appels 
+3. corps"  
+
+Objectifs semaine : fonction à paramètres scalaires
+
+- Savoir reconnaître et distinguer les notions suivantes : définition/appel, spécification (en-tête, signature)/implémentation (corps), paramètres formels/effectifs, return/print
+- Comprendre les effets d'un appel de fonction
+- Savoir définir et écrire la spécification d'une fonction à paramètres scalaires, son implémentation, des appels simples (tests unitaires) 
+- Exercices : 80% de la feuille 1 selon vos objectifs 
+
+Conseils avant TD/CM 
+
+- Lire chapitre "Boucles, tableaux et fonctions"
 
 
-### Semaine 42
+Objectifs séance de TD 
 
-**Motto** : valider ses traitements avec des cas extrêmes
+- exercices feuille 1 
+- ($\star$) exercices feuille 2
 
-- TP feuille 3 : enveloppe convexe de $n$ points du plan
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 1 : fonction 
+
+## Semaine 6
+
+**Motto** : "Spécifier le type des paramètres formels d'une fonction et la taille des paramètres tableaux"
+
+Objectifs semaine : Tableaux, boucles avancées et fonctions
+
+- Savoir définir et écrire un traitement classique de tableau multidimensionnel  : parcours simple, parcours conditionnel 
+- Savoir écrire une initialisation de tableau multidimensionnel en python (représenté par des listes)
+- Savoir définir et écrire une spécification de fonction avec des paramètres de type tableau  
+- Savoir identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide
+
+Conseils avant TD/CM 
+
+- étudier chapitre "Boucles, tableaux et fonctions"
+
+Avant le CM 
+ 
+- lire le chapitre "ES simples avec fichiers"
+
+Objectifs séance de TD 
+
+- exercices feuille 2 selon votre objectif 
+
+
+## Semaine 7
+
+**Motto** : "Appeler une fonction avec des paramètres effectifs différents des paramètres formels"
+
+Objectifs semaine : Tableaux, boucles avancées et fonctions  (identiques semaine 6) 
+
+Conseils avant TD/CM 
+
+- Finir les exercices des feuilles 1 et 2 selon vos objectifs 
+
+Après le CM :
+ 
+- Lire plusieurs fois le chapitre _Complexités_
+
+Objectifs séance de TD 
+
+- exercices feuille 2 selon votre objectif
+- ($\star$) exercices feuille 3
+
+## Semaine 8
+
+**Motto** : "Dans l'en-tête d'une fonction qui contient un ou plusieurs paramètres formels de type tableau, ajouter autant de paramètres supplémentaires pour définir la taille de ces tableaux"
+
+Objectifs semaine : 
+
+- Finir les exercices des feuilles 1, 2 et 3 selon vos objectifs 
+- Etudier le chapitre _Complexités_
+- Relire, comprendre et appliquer tous les motto.
+
+Avant le CM :
+ 
+- Lire le chapitre _Modules utiles_
+
+Objectifs séance de TD 
+
+- (annulé) ~~tp de démonstration~~
+- Feuille 3 selon vos objectifs  
+
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 2 : boucles avancées 
+
+## Semaine 9 (vacances d'hiver)
+
+**Motto** : Prendre du recul.
+
+Objectifs semaine : 
+
+- Maîtrise des compétences des chapitres _Fonctions_, _Boucles avancées_ et _Entrées-sorties simples_
+- Prise en main des compétences des chapitres _Complexités_ et _Modules utiles_
+
+**Valider l'acquisition de ses connaissances**
+
+- **CC1 : TP noté du 7 mars 2022**
+
+## Semaine 10 
+
+**Motto** : Relire le cours encore et encore.
+
+Objectifs semaine : 
+
+- Maîtrise des compétences du chapitre _Complexités_
+
+Avant le CM :
+ 
+- Lire le chapitre _Les types composés_
+
+Objectifs séance de TD 
+
+- Feuille 4 selon vos objectifs  
+
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 3 : complexité 
+
+
+## Semaine 11
+
+**Motto** : Je vérifie que j'ai bien acquis les compétences des chapitres étudiés à ce jour.
+
+Objectifs semaine :
+
+- Vérifier compétences acquises en _reprenant_ les quiz _Fonctions_, _Boucles avancées_ et (surtout) _Complexité_
+
+Objectif séance de TP :
+
+- TP _Bin packing_ (moodle).  
+
+**Valider l'acquisition de ses connaissances**
+
+- **CC2 : Contrôle continu écrit et noté du 16 mars 2022**
+
+
+## Semaine 12
+
+**Motto** : 
+
+1. Lire l'énoncé en entier avant de commencer à coder/à répondre. 
+2. Comprendre _vraiment_ un algorithme en l'appliquant _à la main sur une feuille_ à un ou plusieurs petits problèmes exemples dont la solution est connue.  
+
+Objectifs semaine :
+
+- Prise en main des compétences du chapitre _Types composés_
+
+Avant le CM :
+ 
+- Lire le chapitre _Les types composés_ en entier
+
+Objectif séance de TP :
+
+- Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
+
+## Semaine 13
+
+**Motto** : Attention aux affectations de listes !
+
+Objectifs semaine :
+
+- Maîtrise des compétences du chapitre _Types composés_
+
+Avant le CM :
+ 
+- Lire le chapitre _Récursivité_ jusqu'à la section "Fibonnaci ou l'inefficacité de la récursion"  (section comprise)
+
+Objectif séance de TP :
+
+- Finir le TP _Structures de données_ (moodle).  
+
+## Semaine 14
+
+**Motto** : Commencer par la terminaison (de la récursion) !
+
+Objectifs semaine :
+
+- Maîtrise des compétences du chapitre _Récursivité_
+
+Avant le CM :
+ 
+- Lire le chapitre _Rechercher_ 
+
+Objectif séance de TP :
+
+- Feuille 5 selon vos objectifs  
+
+## Semaine 15
+
+**Motto** : Avoir confiance en ses acquis !
+
+Objectifs semaine :
+
+- **Auto-**valider l'acquisition de ses connaissances
+    - Quiz 4 : récursivité 
+    - Refaire les quiz 1, 2 et 3
+- Maîtrise des compétences du chapitre _Rechercher_ 
+
+Avant le CM :
+ 
+- Lire le chapitre _Trier_ 
+
+**Valider l'acquisition de ses connaissances**
+
+- **CC1 : TP noté du 15 avril 2022**
+
 
 <!-- #endregion -->

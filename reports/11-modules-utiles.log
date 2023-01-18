@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/client.py", line 1085, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/client.py", line 551, in async_execute
+    await self.async_execute_cell(
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/client.py", line 846, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/langlois/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/nbclient/client.py", line 748, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+### trace
+#plt.figure()
+plt.semilogy(basey=10)
+plt.plot(t_time, 'ro-', label="time")
+plt.plot(t_tsc, 'b+-', label="perf_counter")
+#
+plt.legend(loc='upper right')
+plt.title('20 mesures répétées')
+plt.show()
+#plt.close()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [15][0m, in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [38;5;66;03m### trace[39;00m
+[1;32m      2[0m [38;5;66;03m#plt.figure()[39;00m
+[0;32m----> 3[0m [43mplt[49m[38;5;241;43m.[39;49m[43msemilogy[49m[43m([49m[43mbasey[49m[38;5;241;43m=[39;49m[38;5;241;43m10[39;49m[43m)[49m
+[1;32m      4[0m plt[38;5;241m.[39mplot(t_time, [38;5;124m'[39m[38;5;124mro-[39m[38;5;124m'[39m, label[38;5;241m=[39m[38;5;124m"[39m[38;5;124mtime[39m[38;5;124m"[39m)
+[1;32m      5[0m plt[38;5;241m.[39mplot(t_tsc, [38;5;124m'[39m[38;5;124mb+-[39m[38;5;124m'[39m, label[38;5;241m=[39m[38;5;124m"[39m[38;5;124mperf_counter[39m[38;5;124m"[39m)
+
+File [0;32m~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/pyplot.py:2825[0m, in [0;36msemilogy[0;34m(*args, **kwargs)[0m
+[1;32m   2823[0m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes[38;5;241m.[39msemilogy)
+[1;32m   2824[0m [38;5;28;01mdef[39;00m [38;5;21msemilogy[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[0;32m-> 2825[0m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[43msemilogy[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axes/_axes.py:1863[0m, in [0;36mAxes.semilogy[0;34m(self, *args, **kwargs)[0m
+[1;32m   1823[0m [38;5;124;03m"""[39;00m
+[1;32m   1824[0m [38;5;124;03mMake a plot with log scaling on the y axis.[39;00m
+[1;32m   1825[0m 
+[0;32m   (...)[0m
+[1;32m   1858[0m [38;5;124;03m    Objects representing the plotted data.[39;00m
+[1;32m   1859[0m [38;5;124;03m"""[39;00m
+[1;32m   1860[0m d [38;5;241m=[39m {k: v [38;5;28;01mfor[39;00m k, v [38;5;129;01min[39;00m kwargs[38;5;241m.[39mitems()
+[1;32m   1861[0m      [38;5;28;01mif[39;00m k [38;5;129;01min[39;00m [[38;5;124m'[39m[38;5;124mbase[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124msubs[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mnonpositive[39m[38;5;124m'[39m,
+[1;32m   1862[0m               [38;5;124m'[39m[38;5;124mbasey[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124msubsy[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mnonposy[39m[38;5;124m'[39m]}
+[0;32m-> 1863[0m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mset_yscale[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mlog[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43md[49m[43m)[49m
+[1;32m   1864[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39mplot(
+[1;32m   1865[0m     [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39m{k: v [38;5;28;01mfor[39;00m k, v [38;5;129;01min[39;00m kwargs[38;5;241m.[39mitems() [38;5;28;01mif[39;00m k [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m d})
+
+File [0;32m~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axes/_base.py:4108[0m, in [0;36m_AxesBase.set_yscale[0;34m(self, value, **kwargs)[0m
+[1;32m   4106[0m g [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mget_shared_y_axes()
+[1;32m   4107[0m [38;5;28;01mfor[39;00m ax [38;5;129;01min[39;00m g[38;5;241m.[39mget_siblings([38;5;28mself[39m):
+[0;32m-> 4108[0m     [43max[49m[38;5;241;43m.[39;49m[43myaxis[49m[38;5;241;43m.[39;49m[43m_set_scale[49m[43m([49m[43mvalue[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m   4109[0m     ax[38;5;241m.[39m_update_transScale()
+[1;32m   4110[0m     ax[38;5;241m.[39mstale [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+
+File [0;32m~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axis.py:761[0m, in [0;36mAxis._set_scale[0;34m(self, value, **kwargs)[0m
+[1;32m    759[0m [38;5;28;01mdef[39;00m [38;5;21m_set_scale[39m([38;5;28mself[39m, value, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m    760[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(value, mscale[38;5;241m.[39mScaleBase):
+[0;32m--> 761[0m         [38;5;28mself[39m[38;5;241m.[39m_scale [38;5;241m=[39m [43mmscale[49m[38;5;241;43m.[39;49m[43mscale_factory[49m[43m([49m[43mvalue[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    762[0m     [38;5;28;01melse[39;00m:
+[1;32m    763[0m         [38;5;28mself[39m[38;5;241m.[39m_scale [38;5;241m=[39m value
+
+File [0;32m~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/scale.py:597[0m, in [0;36mscale_factory[0;34m(scale, axis, **kwargs)[0m
+[1;32m    595[0m     scale [38;5;241m=[39m scale[38;5;241m.[39mlower()
+[1;32m    596[0m scale_cls [38;5;241m=[39m _api[38;5;241m.[39mcheck_getitem(_scale_mapping, scale[38;5;241m=[39mscale)
+[0;32m--> 597[0m [38;5;28;01mreturn[39;00m [43mscale_cls[49m[43m([49m[43maxis[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+[0;31mTypeError[0m: __init__() got an unexpected keyword argument 'basey'
+TypeError: __init__() got an unexpected keyword argument 'basey'
+
