@@ -1544,17 +1544,15 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 1, 2] [3, 1, 2]
-140479056492672 140479056492672
+[3, 1, 2] [3, 1, 2]
+140292996083648 140292996083648
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140479056493120 140479056492672
+140292996083008 140292996083648
 </pre></div>
 </div>
 </div>
@@ -1866,9 +1864,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140479002050352
-abc 140479002050352
-abcdef 140479056430704
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140292942724912
+abc 140292942724912
+abcdef 140292995970992
 </pre></div>
 </div>
 </div>
@@ -1969,10 +1967,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140479056409392
-140479056409392
-140479056431152
-140479056431152
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140292995987888
+140292995987888
+140292995721968
+140292995721968
 </pre></div>
 </div>
 </div>
@@ -2166,9 +2164,6 @@ Bonjour &quot;collègue&quot; !
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </section>
@@ -2223,16 +2218,16 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;y&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;a&#39;, &#39;o&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;u&#39;, &#39;i&#39;, &#39;y&#39;} 6
 True
 False
-aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
-voyelles : {&#39;y&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;a&#39;, &#39;o&#39;}
-union : {&#39;y&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;a&#39;, &#39;o&#39;}
-autre union : {&#39;y&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;f&#39;, &#39;a&#39;, &#39;o&#39;, &#39;b&#39;}
-intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
+aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+voyelles : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;u&#39;, &#39;i&#39;, &#39;y&#39;}
+union : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;u&#39;, &#39;i&#39;, &#39;y&#39;}
+autre union : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;b&#39;, &#39;u&#39;, &#39;f&#39;, &#39;i&#39;, &#39;y&#39;}
+intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;u&#39;, &#39;o&#39;, &#39;y&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
