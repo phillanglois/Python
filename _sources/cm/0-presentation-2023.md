@@ -3,13 +3,13 @@
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
-- Vous : **L1 math-info**  
+- Vous : **L1 math-info-santé**  
 - Moi : **Philippe Langlois**   
 - Comment me contacter : ![](./fig/mail_phl.png)  
 - Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
 - Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
 
-## Algo-Prog : version 2022 
+## Algo-Prog : version 2023
 
 
 - Les [supports du CM](https://phillanglois.github.io/Algo-Prog/) régulièrement mis à jour.
@@ -20,8 +20,9 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 - nouvelle offre de formation 2021-2025 : algo + prog = 1 UE
 - 12 séances de CM : 3h/semaine 
 - 12 séances de TD-TP : 3h/semaine 
+- 10 séances de médiations : 1.5h/semaine
 - chargés de TD : Ph. Langlois (2), Vincent Zucca
-- Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s9, s17-s18
+- Démarrage : CM en semaine 3 (`sd`=s3), TD et médiation en s4, vacances en s9, s17-s18
 
 
 ### Contrôle de connaissances et dates importantes
@@ -49,7 +50,7 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 - 11 chapitres, 11 semaines, 11 séances de CM, 11 séances de TD ou TP
 - "12ème séance" : écrit mi-parcours, TP de fin de semestre
 - Chaque chapitre :
-    - explicitation des compétences : savoirs, savoir-faires
+    - explicitation des compétences : savoirs, savoirs-faire
     - un quizz d'aide à la compréhension et la mémorisation de ces compétences
     - _l'enseignant_ ... présente et explique des exercices détaillés en CM
     - _vous_ ... travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
@@ -179,9 +180,11 @@ Alternance de séquence pour séance de 3 heures :
 
 ## Programme détaillé : aspects plutôt algorithmique
 
+Les _notions en italiques_ sont des acquis du semestre 1. 
+
 - Utilisation avancée de boucles et de tableaux
-    - boucles imbriquées, indépendantes ou non
-    - traitements divers avec des tableaux 1D ou plus 
+    - _boucles imbriquées, indépendantes ou non_
+    - _traitements divers avec des tableaux 1D ou plus_ 
     - premières estimations de complexité 
 
 - Complexité
@@ -221,7 +224,7 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
 
 ## Programme détaillé : aspects plus programmation 
 
-- Types de donnnées scalaires
+- Types de données scalaires
     - rappels 
     - approfondissement : introspection  
 
