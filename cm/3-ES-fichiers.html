@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Entrées-sorties simples avec des fichiers &#8212; Algo-Prog 2023</title>
-    
+    <title>4. Entrées-sorties simples avec des fichiers &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,1024 +64,403 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/3-ES-fichiers';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Complexités" href="4-complexite.html" />
-    <link rel="prev" title="1. Fonctions" href="1-fonctions.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="5. Les types composés" href="5-types_composes.html" />
+    <link rel="prev" title="3. Boucles, tableaux et fonctions" href="2-boucles-avancees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo2023.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Algo-Prog 2023</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Algo-Prog !
+                    Bienvenu en Prog Python!
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Présentation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="0-presentation-2023.html">
-   1. Algorithmique et Programmation en 2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="competences.html">
-   2. Compétences
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Les bases
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1-fonctions.html">
-   1. Fonctions
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Entrées-sorties simples avec des fichiers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">11. Exceptions</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithmique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="4-complexite.html">
-   1. Complexités
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="6-recursivite.html">
-   2. Récursivité
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programmation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="5-types_composes.html">
-   1. Les types composés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="7-fonctions-avancees.html">
-   2. Sous-programme et affectation – aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="9-ES-avancees.html">
-   3. Les entrées-sorties (E/S) : aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11-modules-utiles.html">
-   4. Modules utiles
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Annexes
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a0-boucles-avancees.html">
-   1. Boucles, tableaux et fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a1-booleens.html">
-   2. Annexe : les booléens en python (&gt;3.6)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a2-ndarray.html">
-   3. Les ‘ndarray’ : de vrais tableaux en python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3-exceptions.html">
-   4. Exceptions
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  TD
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/prealable-td.html">
-   1. Préalables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td1.html">
-   2. Feuille 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td2.html">
-   3. Feuille 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td3.html">
-   4. Feuille 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td4.html">
-   5. Feuille 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td5.html">
-   6. Feuille 5
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2023/main?urlpath=tree/Algo-Prog-2023/cm/3-ES-fichiers.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/cm/3-ES-fichiers.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Fcm/3-ES-fichiers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/phillanglois/Algo-Prog-2023/issues/new?title=Issue%20on%20page%20%2Fcm/3-ES-fichiers.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/cm/3-ES-fichiers.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/3-ES-fichiers.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notions-generales-et-vocabulaire-important">
-   2.1. Notions générales et vocabulaire important
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fichier-fichier-texte-et-fichier-binaire">
-     2.1.1. Fichier, fichier texte et fichier binaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#programmer-avec-des-fichier-principes">
-     2.1.2. Programmer avec des fichier : principes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trois-exemples-simples-pour-savoir-faire">
-   2.2. Trois exemples simples pour savoir faire
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#premier-exemple-lectures-de-str">
-     2.2.1. Premier exemple : lectures de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#objectif">
-       Objectif
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#deux-fichiers-de-test">
-       Deux fichiers de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne">
-       Lecture ligne à ligne avec
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .readline()
-        </span>
-       </code>
-       qui fournit une
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         str
-        </span>
-       </code>
-       par ligne
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne">
-       Nettoyage des caractères spéciaux de fin de ligne
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#traitement-le-premier-test-de-nb-occ">
-       Traitement : le premier test de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         nb_occ()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation-du-second-fichier">
-       Exploitation du second fichier
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques">
-     2.2.2. Deuxième exemple : lecture
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .readline()
-      </span>
-     </code>
-     avec conversion de type et effets dynamiques
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Objectif
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#la-forme-d-un-fichier-de-test">
-       La forme d’un fichier de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conversions-et-effets-dynamiques">
-       Conversions et effets dynamiques
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-avec-la-clause-with">
-       Lecture avec la clause
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         with
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-readline-avec-with-et-typage">
-       Lecture
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .readline()
-        </span>
-       </code>
-       avec
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         with
-        </span>
-       </code>
-       et typage
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-unitaire-de-prod-scal">
-       Test unitaire de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         prod_scal()
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troisieme-exemple-ecritures-simples-avec-write">
-     2.2.3. Troisième exemple : écritures simples avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .write()
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#construction-d-un-cas-test-de-nb-occ">
-       Construction d’un cas test de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         nb_occ()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enregistrement-dans-un-fichier-de-test">
-       Enregistrement dans un fichier de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation-du-fichier-de-test">
-       Exploitation du fichier de test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthese-et-minimum-a-savoir-faire">
-     2.2.4. Synthèse et minimum à savoir-faire
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complements">
-   2.3. Compléments
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-complete-read-fournit-une-str">
-     2.3.1. Lecture complète :
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .read()
-      </span>
-     </code>
-     fournit une
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principe">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-classique">
-       Exemple classique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-complete-readlines-fournit-une-list-de-str">
-     2.3.2. Lecture complète :
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       readlines()
-      </span>
-     </code>
-     fournit une
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       list
-      </span>
-     </code>
-     de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#star-exemple-classique">
-       (
-       <span class="math notranslate nohighlight">
-        \(\star\)
-       </span>
-       ) Exemple classique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#origine-classique-des-problemes-d-es">
-     2.3.3. Origine classique des problèmes d’ES
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bien-controler-ses-print">
-     2.3.4. Bien contrôler ses
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       print()
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   2.4. Synthèse
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
-     2.4.1. Avoir les idées claires
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-faire">
-     2.4.2. Savoir-faire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-dernier-conseil">
-     2.4.3. Un dernier conseil
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-restera-a-voir">
-     2.4.4. Ce qu’il restera à voir
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Entrées-sorties simples avec des fichiers</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notions-generales-et-vocabulaire-important">
-   2.1. Notions générales et vocabulaire important
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fichier-fichier-texte-et-fichier-binaire">
-     2.1.1. Fichier, fichier texte et fichier binaire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#programmer-avec-des-fichier-principes">
-     2.1.2. Programmer avec des fichier : principes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trois-exemples-simples-pour-savoir-faire">
-   2.2. Trois exemples simples pour savoir faire
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#premier-exemple-lectures-de-str">
-     2.2.1. Premier exemple : lectures de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#objectif">
-       Objectif
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#deux-fichiers-de-test">
-       Deux fichiers de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne">
-       Lecture ligne à ligne avec
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .readline()
-        </span>
-       </code>
-       qui fournit une
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         str
-        </span>
-       </code>
-       par ligne
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne">
-       Nettoyage des caractères spéciaux de fin de ligne
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#traitement-le-premier-test-de-nb-occ">
-       Traitement : le premier test de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         nb_occ()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation-du-second-fichier">
-       Exploitation du second fichier
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques">
-     2.2.2. Deuxième exemple : lecture
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .readline()
-      </span>
-     </code>
-     avec conversion de type et effets dynamiques
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Objectif
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#la-forme-d-un-fichier-de-test">
-       La forme d’un fichier de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conversions-et-effets-dynamiques">
-       Conversions et effets dynamiques
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-avec-la-clause-with">
-       Lecture avec la clause
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         with
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lecture-readline-avec-with-et-typage">
-       Lecture
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .readline()
-        </span>
-       </code>
-       avec
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         with
-        </span>
-       </code>
-       et typage
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-unitaire-de-prod-scal">
-       Test unitaire de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         prod_scal()
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troisieme-exemple-ecritures-simples-avec-write">
-     2.2.3. Troisième exemple : écritures simples avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .write()
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#construction-d-un-cas-test-de-nb-occ">
-       Construction d’un cas test de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         nb_occ()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enregistrement-dans-un-fichier-de-test">
-       Enregistrement dans un fichier de test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation-du-fichier-de-test">
-       Exploitation du fichier de test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthese-et-minimum-a-savoir-faire">
-     2.2.4. Synthèse et minimum à savoir-faire
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complements">
-   2.3. Compléments
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-complete-read-fournit-une-str">
-     2.3.1. Lecture complète :
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .read()
-      </span>
-     </code>
-     fournit une
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principe">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-classique">
-       Exemple classique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-complete-readlines-fournit-une-list-de-str">
-     2.3.2. Lecture complète :
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       readlines()
-      </span>
-     </code>
-     fournit une
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       list
-      </span>
-     </code>
-     de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       str
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#star-exemple-classique">
-       (
-       <span class="math notranslate nohighlight">
-        \(\star\)
-       </span>
-       ) Exemple classique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#origine-classique-des-problemes-d-es">
-     2.3.3. Origine classique des problèmes d’ES
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bien-controler-ses-print">
-     2.3.4. Bien contrôler ses
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       print()
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   2.4. Synthèse
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
-     2.4.1. Avoir les idées claires
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-faire">
-     2.4.2. Savoir-faire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#un-dernier-conseil">
-     2.4.3. Un dernier conseil
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-restera-a-voir">
-     2.4.4. Ce qu’il restera à voir
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Entrées-sorties simples avec des fichiers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-generales-et-vocabulaire-important">4.1. Notions générales et vocabulaire important</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-fichier-texte-et-fichier-binaire">4.1.1. Fichier, fichier texte et fichier binaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programmer-avec-des-fichier-principes">4.1.2. Programmer avec des fichier : principes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-exemples-simples-pour-savoir-faire">4.2. Trois exemples simples pour savoir faire</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-lectures-de-str">4.2.1. Premier exemple : lectures de <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">Objectif</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-fichiers-de-test">Deux fichiers de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne">Lecture ligne à ligne avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> qui fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code> par ligne</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne">Nettoyage des caractères spéciaux de fin de ligne</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-le-premier-test-de-nb-occ">Traitement : le premier test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-du-second-fichier">Exploitation du second fichier</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques">4.2.2. Deuxième exemple : lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec conversion de type et effets dynamiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Objectif</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#la-forme-d-un-fichier-de-test">La forme d’un fichier de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conversions-et-effets-dynamiques">Conversions et effets dynamiques</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-avec-la-clause-with">Lecture avec la clause <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-readline-avec-with-et-typage">Lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec <code class="docutils literal notranslate"><span class="pre">with</span></code> et typage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-unitaire-de-prod-scal">Test unitaire de <code class="docutils literal notranslate"><span class="pre">prod_scal()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troisieme-exemple-ecritures-simples-avec-write">4.2.3. Troisième exemple : écritures simples avec <code class="docutils literal notranslate"><span class="pre">.write()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-d-un-cas-test-de-nb-occ">Construction d’un cas test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#enregistrement-dans-un-fichier-de-test">Enregistrement dans un fichier de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-du-fichier-de-test">Exploitation du fichier de test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-et-minimum-a-savoir-faire">4.2.4. Synthèse et minimum à savoir-faire</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">4.3. Compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-complete-read-fournit-une-str">4.3.1. Lecture complète : <code class="docutils literal notranslate"><span class="pre">.read()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-classique">Exemple classique</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-complete-readlines-fournit-une-list-de-str">4.3.2. Lecture complète : <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">list</span></code> de  <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Principe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exemple-classique">(<span class="math notranslate nohighlight">\(\star\)</span>) Exemple classique</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-classique-des-problemes-d-es">4.3.3. Origine classique des problèmes d’ES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-controler-ses-print">4.3.4. Bien contrôler ses <code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">4.4. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">4.4.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">4.4.2. Savoir-faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-dernier-conseil">4.4.3. Un dernier conseil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-restera-a-voir">4.4.4. Ce qu’il restera à voir</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="entrees-sorties-simples-avec-des-fichiers">
-<span id="ch-es-fichiers"></span><h1><span class="section-number">2. </span>Entrées-sorties simples avec des fichiers<a class="headerlink" href="#entrees-sorties-simples-avec-des-fichiers" title="Permalink to this headline">#</a></h1>
-<p>Mis à jour : Jan 18, 2023, lecture : 15 minutes minimum, PhL.</p>
+<span id="ch-es-fichiers"></span><h1><span class="section-number">4. </span>Entrées-sorties simples avec des fichiers<a class="headerlink" href="#entrees-sorties-simples-avec-des-fichiers" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Sep 22, 2023, lecture : 15 minutes minimum, PhL.</p>
 <p>Chapitre où on étudie comment effectuer des entrées-sorties (E/S) simples à l’aide de fichiers.</p>
 <p>Jusqu’à présent les entrées-sorties ont été générées à grands coups de <code class="docutils literal notranslate"><span class="pre">print()</span></code> et d’<code class="docutils literal notranslate"> <span class="pre">input()</span></code> pour interagir avec l’écran ou le clavier.
 Les entrées-sorties ne sont pas limitées au couple écran-clavier.
 Bien au contraire, ces derniers ne sont que des cas particuliers d’une notion plus générale : celle de <em>fichier</em>.</p>
 <section id="notions-generales-et-vocabulaire-important">
-<h2><span class="section-number">2.1. </span>Notions générales et vocabulaire important<a class="headerlink" href="#notions-generales-et-vocabulaire-important" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span>Notions générales et vocabulaire important<a class="headerlink" href="#notions-generales-et-vocabulaire-important" title="Permalink to this heading">#</a></h2>
 <section id="fichier-fichier-texte-et-fichier-binaire">
-<h3><span class="section-number">2.1.1. </span>Fichier, fichier texte et fichier binaire<a class="headerlink" href="#fichier-fichier-texte-et-fichier-binaire" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Fichier, fichier texte et fichier binaire<a class="headerlink" href="#fichier-fichier-texte-et-fichier-binaire" title="Permalink to this heading">#</a></h3>
 <p>A la différence de la mémoire de l’ordinateur, le fichier (<em>file</em> en anglais) permet de stocker de l’information et la retrouver si l’alimentation électrique de l’ordinateur est interrompue.<br />
 Par information, on entend des données de tout type (nombres, sons, images,…), des programmes, des bibliothèques de composants du logiciel, …<br />
 “Physiquement”, les <a class="reference external" href="https://fr.wikipedia.org/wiki/M%C3%A9moire_de_masse">supports matériels de ces fichiers</a> sont variés et évoluent selon les technologies disponibles : cartes perforées, bandes magnétiques, disques optiques, mémoires flash …</p>
@@ -1082,7 +473,7 @@ Par information, on entend des données de tout type (nombres, sons, images,…)
 Dans ce chapitre, l’accent sera surtout mis sur les fichiers de texte utiles pour nos développements de taille modeste.</p>
 </section>
 <section id="programmer-avec-des-fichier-principes">
-<h3><span class="section-number">2.1.2. </span>Programmer avec des fichier : principes<a class="headerlink" href="#programmer-avec-des-fichier-principes" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.2. </span>Programmer avec des fichier : principes<a class="headerlink" href="#programmer-avec-des-fichier-principes" title="Permalink to this heading">#</a></h3>
 <p>La plupart des langages de programmation distinguent les fichiers (dits) logiques des fichiers (dits) physiques.</p>
 <ul class="simple">
 <li><p>Les <strong>fichiers logiques</strong> sont des variables manipulées par le programme</p>
@@ -1098,7 +489,7 @@ Dans ce chapitre, l’accent sera surtout mis sur les fichiers de texte utiles p
 </li>
 </ul>
 <p><strong>Utiliser un fichier</strong> (en lecture, écriture ou lecture-écriture) consiste en les 4 étapes suivantes.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><strong>associer le fichier logique</strong> à <strong>un fichier physique</strong></p></li>
 <li><p><strong>ouvrir</strong> le fichier logique</p></li>
 <li><p>effectuer les <strong>traitements</strong> désirés sur le fichier logique</p></li>
@@ -1140,7 +531,7 @@ Historiquement, les fichiers stockés sur des bandes magnétiques (!) étaient �
 </details></section>
 </section>
 <section id="trois-exemples-simples-pour-savoir-faire">
-<h2><span class="section-number">2.2. </span>Trois exemples simples pour savoir faire<a class="headerlink" href="#trois-exemples-simples-pour-savoir-faire" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span>Trois exemples simples pour savoir faire<a class="headerlink" href="#trois-exemples-simples-pour-savoir-faire" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-info">
 <p>Objectif 10 : On se limite à des manipulations simples (lecture ou écriture) de fichier de texte.</p>
 </div><p>Un premier objectif de ce chapitre est de faciliter les tests de vos développements en limitant la perte de temps liée à la saisie au clavier, perte de temps qui est d’autant plus élevée que le nombre de saisies est élevé (nombreuses valeurs ou nombreux essais).</p>
@@ -1155,14 +546,14 @@ En contre-partie, le fichier simple sera souvent moins commode à manipuler via 
 <li><p>Le troisième effectue des écritures d’entiers et de flottants</p></li>
 </ul>
 <section id="premier-exemple-lectures-de-str">
-<h3><span class="section-number">2.2.1. </span>Premier exemple : lectures de <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#premier-exemple-lectures-de-str" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.2.1. </span>Premier exemple : lectures de <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#premier-exemple-lectures-de-str" title="Permalink to this heading">#</a></h3>
 <section id="objectif">
-<h4>Objectif<a class="headerlink" href="#objectif" title="Permalink to this headline">#</a></h4>
+<h4>Objectif<a class="headerlink" href="#objectif" title="Permalink to this heading">#</a></h4>
 <p>Je veux tester la fonction <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code> qui compte le nombre d’occurrences d’une lettre dans une chaîne de caractères.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nb_occ</span> <span class="p">(</span><span class="n">char</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">texte</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;calcule et retourne le nombre d&#39;occurrences de char dans texte&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule et retourne le nombre d&#39;occurrences de char dans texte&#39;&#39;&#39;</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">char</span><span class="p">:</span>
@@ -1174,7 +565,7 @@ En contre-partie, le fichier simple sera souvent moins commode à manipuler via 
 </div>
 </section>
 <section id="deux-fichiers-de-test">
-<h4>Deux fichiers de test<a class="headerlink" href="#deux-fichiers-de-test" title="Permalink to this headline">#</a></h4>
+<h4>Deux fichiers de test<a class="headerlink" href="#deux-fichiers-de-test" title="Permalink to this heading">#</a></h4>
 <p>Je décide de compléter plusieurs fichiers texte composés de 2 lignes selon le modèle suivant :</p>
 <blockquote>
 <div><p>le caractère cherché<br />
@@ -1183,7 +574,7 @@ la chaîne de caractères à explorer</p>
 <p>Les fichiers <code class="docutils literal notranslate"><span class="pre">test_nb_occ0.txt</span></code> et <code class="docutils literal notranslate"><span class="pre">test_nb_occ1.txt</span></code> sont deux exemples de tels fichiers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat tmp/test_nb_occ0.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>tmp/test_nb_occ0.txt
 </pre></div>
 </div>
 </div>
@@ -1196,7 +587,7 @@ anticonstitutionnellement
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat tmp/test_nb_occ1.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>tmp/test_nb_occ1.txt
 </pre></div>
 </div>
 </div>
@@ -1209,7 +600,7 @@ anticonstitutionnellement
 </div>
 </section>
 <section id="lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne">
-<h4>Lecture ligne à ligne avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> qui fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code> par ligne<a class="headerlink" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne" title="Permalink to this headline">#</a></h4>
+<h4>Lecture ligne à ligne avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> qui fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code> par ligne<a class="headerlink" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne" title="Permalink to this heading">#</a></h4>
 <p>La fonction-méthode python <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> permet :</p>
 <ul class="simple">
 <li><p>de parcourir séquentiellement le fichier ligne après ligne,</p></li>
@@ -1249,7 +640,7 @@ On parlera donc de <em>fonction-méthode</em>.</p>
 <p>Le traitement des entrées n’est pourtant <strong>pas terminé</strong>.</p>
 </section>
 <section id="nettoyage-des-caracteres-speciaux-de-fin-de-ligne">
-<h4>Nettoyage des caractères spéciaux de fin de ligne<a class="headerlink" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne" title="Permalink to this headline">#</a></h4>
+<h4>Nettoyage des caractères spéciaux de fin de ligne<a class="headerlink" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne" title="Permalink to this heading">#</a></h4>
 <p>Observons plus en détail ce qui a été <em>effectivement</em> lu.<br />
 Un focus sur le caractère <code class="docutils literal notranslate"><span class="pre">c</span></code> lu à la première ligne du fichier suffit à comprendre.</p>
 <div class="cell docutils container">
@@ -1322,7 +713,7 @@ C’est très souvent le cas.</p>
 </ul>
 </section>
 <section id="traitement-le-premier-test-de-nb-occ">
-<h4>Traitement : le premier test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code><a class="headerlink" href="#traitement-le-premier-test-de-nb-occ" title="Permalink to this headline">#</a></h4>
+<h4>Traitement : le premier test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code><a class="headerlink" href="#traitement-le-premier-test-de-nb-occ" title="Permalink to this heading">#</a></h4>
 <p>Passons enfin au traitement proprement dit, ici le test le la fonction <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1335,11 +726,11 @@ C’est très souvent le cas.</p>
 <p><strong>Rmq.</strong> Les fichiers <em>physiques</em> doivent exister pour être ouverts, lus, modifiés, fermés.</p>
 </section>
 <section id="exploitation-du-second-fichier">
-<h4>Exploitation du second fichier<a class="headerlink" href="#exploitation-du-second-fichier" title="Permalink to this headline">#</a></h4>
+<h4>Exploitation du second fichier<a class="headerlink" href="#exploitation-du-second-fichier" title="Permalink to this heading">#</a></h4>
 <p>On recommence lecture et test pour le second fichier de test où 5 occurrences de la lettre <code class="docutils literal notranslate"><span class="pre">n</span></code> sont attendus.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat tmp/test_nb_occ1.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>tmp/test_nb_occ1.txt
 </pre></div>
 </div>
 </div>
@@ -1379,14 +770,14 @@ anticonstitutionnellement
 </section>
 </section>
 <section id="deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques">
-<h3><span class="section-number">2.2.2. </span>Deuxième exemple : lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec conversion de type et effets dynamiques<a class="headerlink" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.2.2. </span>Deuxième exemple : lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec conversion de type et effets dynamiques<a class="headerlink" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques" title="Permalink to this heading">#</a></h3>
 <section id="id1">
-<h4>Objectif<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4>Objectif<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Je veux tester la fonction de produit scalaire suivante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prod_scal</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">v</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;calcule et retourne le produit scalaire u^t.v où u et v sont de taille n&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule et retourne le produit scalaire u^t.v où u et v sont de taille n&#39;&#39;&#39;</span>
     <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span>
     <span class="n">res</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1398,7 +789,7 @@ anticonstitutionnellement
 </div>
 </section>
 <section id="la-forme-d-un-fichier-de-test">
-<h4>La forme d’un fichier de test<a class="headerlink" href="#la-forme-d-un-fichier-de-test" title="Permalink to this headline">#</a></h4>
+<h4>La forme d’un fichier de test<a class="headerlink" href="#la-forme-d-un-fichier-de-test" title="Permalink to this heading">#</a></h4>
 <p>Je décide de compléter un fichier texte selon le modèle suivant :</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(n\)</span><br />
@@ -1407,7 +798,7 @@ anticonstitutionnellement
 <span class="math notranslate nohighlight">\(u^t v\)</span></p>
 </div></blockquote>
 <p>Ainsi :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>la première donne la taille <span class="math notranslate nohighlight">\(n\)</span> des vecteurs,</p></li>
 <li><p>les <span class="math notranslate nohighlight">\(n\)</span> lignes suivantes donne les composantes de <span class="math notranslate nohighlight">\(u\)</span>,</p></li>
 <li><p>les <span class="math notranslate nohighlight">\(n\)</span> lignes suivantes celles de <span class="math notranslate nohighlight">\(v\)</span>,</p></li>
@@ -1417,7 +808,7 @@ anticonstitutionnellement
 <p><code class="docutils literal notranslate"><span class="pre">test_prod_scal.txt</span></code> est un exemple d’un premier cas test : 2 vecteurs de taille 4 de produit scalaire égal à 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat ./tmp/test_prod_scal.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>./tmp/test_prod_scal.txt
 </pre></div>
 </div>
 </div>
@@ -1438,9 +829,9 @@ anticonstitutionnellement
 </div>
 </section>
 <section id="conversions-et-effets-dynamiques">
-<h4>Conversions et effets dynamiques<a class="headerlink" href="#conversions-et-effets-dynamiques" title="Permalink to this headline">#</a></h4>
+<h4>Conversions et effets dynamiques<a class="headerlink" href="#conversions-et-effets-dynamiques" title="Permalink to this heading">#</a></h4>
 <p><strong>Analyse préliminaire</strong></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Conversions <code class="docutils literal notranslate"><span class="pre">str</span></code> <span class="math notranslate nohighlight">\(\to\)</span> valeurs numériques</p>
 <ul class="simple">
 <li><p>Le fichier de texte contient <em>uniquement</em> des caractères, des <code class="docutils literal notranslate"><span class="pre">str</span></code> en python.</p></li>
@@ -1474,7 +865,7 @@ anticonstitutionnellement
 </ul>
 </section>
 <section id="lecture-avec-la-clause-with">
-<h4>Lecture avec la clause <code class="docutils literal notranslate"><span class="pre">with</span></code><a class="headerlink" href="#lecture-avec-la-clause-with" title="Permalink to this headline">#</a></h4>
+<h4>Lecture avec la clause <code class="docutils literal notranslate"><span class="pre">with</span></code><a class="headerlink" href="#lecture-avec-la-clause-with" title="Permalink to this heading">#</a></h4>
 <p>Cette lecture de la première ligne uniquement pour commencer en illustrant cette nouvelle construction très utile en pratique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1502,7 +893,7 @@ anticonstitutionnellement
 <p>Occupons-nous maintenant du typage des valeurs lues.</p>
 </section>
 <section id="lecture-readline-avec-with-et-typage">
-<h4>Lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec <code class="docutils literal notranslate"><span class="pre">with</span></code> et typage<a class="headerlink" href="#lecture-readline-avec-with-et-typage" title="Permalink to this headline">#</a></h4>
+<h4>Lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec <code class="docutils literal notranslate"><span class="pre">with</span></code> et typage<a class="headerlink" href="#lecture-readline-avec-with-et-typage" title="Permalink to this heading">#</a></h4>
 <p>Le nettoyage de chaque ligne étant effectué après la lecture et avant l’affectation, le typage est aisé : d’abord un <code class="docutils literal notranslate"><span class="pre">int</span></code> puis des <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1529,7 +920,7 @@ anticonstitutionnellement
 <p>Il ne reste plus qu’à tester.</p>
 </section>
 <section id="test-unitaire-de-prod-scal">
-<h4>Test unitaire de <code class="docutils literal notranslate"><span class="pre">prod_scal()</span></code><a class="headerlink" href="#test-unitaire-de-prod-scal" title="Permalink to this headline">#</a></h4>
+<h4>Test unitaire de <code class="docutils literal notranslate"><span class="pre">prod_scal()</span></code><a class="headerlink" href="#test-unitaire-de-prod-scal" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">prod_scal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">ps_exact</span>
@@ -1543,7 +934,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </section>
 </section>
 <section id="troisieme-exemple-ecritures-simples-avec-write">
-<h3><span class="section-number">2.2.3. </span>Troisième exemple : écritures simples avec <code class="docutils literal notranslate"><span class="pre">.write()</span></code><a class="headerlink" href="#troisieme-exemple-ecritures-simples-avec-write" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.2.3. </span>Troisième exemple : écritures simples avec <code class="docutils literal notranslate"><span class="pre">.write()</span></code><a class="headerlink" href="#troisieme-exemple-ecritures-simples-avec-write" title="Permalink to this heading">#</a></h3>
 <p>On termine en montrant comment l’écriture simple <em>dans</em> des fichiers textes s’obtient de façon très similaire avec la fonction méthode <code class="docutils literal notranslate"><span class="pre">.write()</span></code>.</p>
 <p>Toujours les 4 étapes mais :</p>
 <ul class="simple">
@@ -1557,7 +948,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </li>
 </ul>
 <section id="construction-d-un-cas-test-de-nb-occ">
-<h4>Construction d’un cas test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code><a class="headerlink" href="#construction-d-un-cas-test-de-nb-occ" title="Permalink to this headline">#</a></h4>
+<h4>Construction d’un cas test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code><a class="headerlink" href="#construction-d-un-cas-test-de-nb-occ" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Préparation des données à stocker</span>
@@ -1581,14 +972,14 @@ On vous invite à continuer en ce sens en exercice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 [1.0, 2.0, 3.0, 4.0] [1.0, 0.5, 0.3333333333333333, 0.25] 4.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0] [1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666, 0.14285714285714285, 0.125, 0.1111111111111111] 9.0
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="enregistrement-dans-un-fichier-de-test">
-<h4>Enregistrement dans un fichier de test<a class="headerlink" href="#enregistrement-dans-un-fichier-de-test" title="Permalink to this headline">#</a></h4>
+<h4>Enregistrement dans un fichier de test<a class="headerlink" href="#enregistrement-dans-un-fichier-de-test" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># association/ouverture/fermeture avec clause with</span>
@@ -1606,36 +997,46 @@ On vous invite à continuer en ce sens en exercice.</p>
 <p>On vérifie que le fichier <code class="docutils literal notranslate"> <span class="pre">./tmp/test_prod_scal_write.txt</span></code> a bien été créé et son contenu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls -l tmp/test_prod_scal*.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>-l<span class="w"> </span>tmp/test_prod_scal*.txt
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 langlois  staff  30 18 jan 19:53 tmp/test_prod_scal.txt
--rw-r--r--  1 langlois  staff  91 18 jan 19:53 tmp/test_prod_scal2.txt
--rw-r--r--  1 langlois  staff  97 18 jan 19:53 tmp/test_prod_scal3.txt
--rw-r--r--  1 langlois  staff  54 18 jan 19:59 tmp/test_prod_scal_write.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 langlois  staff   30 12 sep  2022 tmp/test_prod_scal.txt
+-rw-r--r--  1 langlois  staff   91 12 sep  2022 tmp/test_prod_scal2.txt
+-rw-r--r--  1 langlois  staff   97 12 sep  2022 tmp/test_prod_scal3.txt
+-rw-r--r--  1 langlois  staff  143 22 sep 20:18 tmp/test_prod_scal_write.txt
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat tmp/test_prod_scal_write.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>tmp/test_prod_scal_write.txt
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
 1.0
 2.0
 3.0
 4.0
+5.0
+6.0
+7.0
+8.0
+9.0
 1.0
 0.5
 0.3333333333333333
 0.25
-4.0
+0.2
+0.16666666666666666
+0.14285714285714285
+0.125
+0.1111111111111111
+9.0
 </pre></div>
 </div>
 </div>
@@ -1646,7 +1047,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </div>
 </section>
 <section id="exploitation-du-fichier-de-test">
-<h4>Exploitation du fichier de test<a class="headerlink" href="#exploitation-du-fichier-de-test" title="Permalink to this headline">#</a></h4>
+<h4>Exploitation du fichier de test<a class="headerlink" href="#exploitation-du-fichier-de-test" title="Permalink to this heading">#</a></h4>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
@@ -1679,7 +1080,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </details></section>
 </section>
 <section id="synthese-et-minimum-a-savoir-faire">
-<h3><span class="section-number">2.2.4. </span>Synthèse et minimum à savoir-faire<a class="headerlink" href="#synthese-et-minimum-a-savoir-faire" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.2.4. </span>Synthèse et minimum à savoir-faire<a class="headerlink" href="#synthese-et-minimum-a-savoir-faire" title="Permalink to this heading">#</a></h3>
 <p>Pour ce qui concerne les entrées en se limitant à des fichiers où chaque valeur est stockée sur une ligne, on a vu :</p>
 <ul class="simple">
 <li><p>les 4 étapes classiques association/ouverture/lecture/fermeture,</p></li>
@@ -1696,7 +1097,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </section>
 </section>
 <section id="complements">
-<h2><span class="section-number">2.3. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-warning">
 <p>A lire en seconde lecture</p>
 </div><p>Cette section pour introduire d’autres fonctions de lecture-écriture que <code class="docutils literal notranslate"><span class="pre">.readline()</span></code>et <code class="docutils literal notranslate"><span class="pre">.write()</span></code>.</p>
@@ -1724,10 +1125,10 @@ On vous invite à continuer en ce sens en exercice.</p>
 <p>Noter le <code class="docutils literal notranslate"><span class="pre">s</span></code> dans <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code>, et de façon symétrique dans <code class="docutils literal notranslate"><span class="pre">.writelines()</span></code>.</p>
 </div>
 <section id="lecture-complete-read-fournit-une-str">
-<h3><span class="section-number">2.3.1. </span>Lecture complète : <code class="docutils literal notranslate"><span class="pre">.read()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#lecture-complete-read-fournit-une-str" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.1. </span>Lecture complète : <code class="docutils literal notranslate"><span class="pre">.read()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#lecture-complete-read-fournit-une-str" title="Permalink to this heading">#</a></h3>
 <p>Les fichiers de test précédents peuvent bien sûr être “lu d’une seule fois” : lecture complète <em>vs.</em> lecture ligne à ligne.</p>
 <section id="principe">
-<h4>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">#</a></h4>
+<h4>Principe<a class="headerlink" href="#principe" title="Permalink to this heading">#</a></h4>
 <p>La fonction-méthode <code class="docutils literal notranslate"><span class="pre">.read()</span></code> effectue cette lecture complète et retourne une chaîne de caractères <em>unique</em>.</p>
 <p>Un exemple sur un de nos précédents fichiers.</p>
 <div class="cell docutils container">
@@ -1795,7 +1196,7 @@ Un <code class="docutils literal notranslate"><span class="pre">print()</span></
 <p>Bien sûr, nos précédents fichiers et traitements ne sont pas adaptés à cette lecture complète et la <code class="docutils literal notranslate"><span class="pre">str</span></code> unique qui en découle. En revanche, un exemple classique de l’intérêt de <code class="docutils literal notranslate"><span class="pre">.read()</span></code> est la lecture complète d’un fichier qui contient un texte (même long) enregistré dans un format brut : utf-8 par exemple, voir <a class="reference external" href="https://zestedesavoir.com/tutoriels/1114/comprendre-les-encodages/2-histoire/">cet article facile à lire</a> pour plus de détails.</p>
 </section>
 <section id="exemple-classique">
-<h4>Exemple classique<a class="headerlink" href="#exemple-classique" title="Permalink to this headline">#</a></h4>
+<h4>Exemple classique<a class="headerlink" href="#exemple-classique" title="Permalink to this heading">#</a></h4>
 <p>L’exemple suivant illustre l’utilisation classique du <code class="docutils literal notranslate"><span class="pre">.read().</span></code></p>
 <p>Le roman <em>La disparition</em> de G. Perec (1968) est
 <a class="reference external" href="https://fr.wikipedia.org/wiki/La_Disparition_(roman)">bien connu</a>
@@ -1822,7 +1223,7 @@ pour l’absence de la lettre <code class="docutils literal notranslate"><span c
 <p>En effet, il y a 5 occurrences de trop de la lettre <code class="docutils literal notranslate"><span class="pre">e</span></code> dans ce roman (j’ai laissé le titre et le nom de l’auteur en début de fichier).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head -3 ./tmp/ladisparition.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head<span class="w"> </span>-3<span class="w"> </span>./tmp/ladisparition.txt
 </pre></div>
 </div>
 </div>
@@ -1836,9 +1237,9 @@ La disparition
 </section>
 </section>
 <section id="lecture-complete-readlines-fournit-une-list-de-str">
-<h3><span class="section-number">2.3.2. </span>Lecture complète : <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">list</span></code> de  <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#lecture-complete-readlines-fournit-une-list-de-str" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.2. </span>Lecture complète : <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">list</span></code> de  <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#lecture-complete-readlines-fournit-une-list-de-str" title="Permalink to this heading">#</a></h3>
 <section id="id2">
-<h4>Principe<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<h4>Principe<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <p>De façon similaire, <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> (avec un ‘s’ à la fin) effectue une lecture complète du fichier et retourne une liste de <code class="docutils literal notranslate"><span class="pre">str</span></code>, liste composée de chaque ligne du fichier.</p>
 <p>L’exemple suivant nous aide à exhiber les caractère spéciaux <code class="docutils literal notranslate"><span class="pre">\n</span></code> non encore “nettoyés”.</p>
 <div class="cell docutils container">
@@ -1914,7 +1315,7 @@ Réponse.<div class="sd-summary-down docutils">
 </div>
 </details></section>
 <section id="star-exemple-classique">
-<h4>(<span class="math notranslate nohighlight">\(\star\)</span>) Exemple classique<a class="headerlink" href="#star-exemple-classique" title="Permalink to this headline">#</a></h4>
+<h4>(<span class="math notranslate nohighlight">\(\star\)</span>) Exemple classique<a class="headerlink" href="#star-exemple-classique" title="Permalink to this heading">#</a></h4>
 <p>On peut maintenant traiter des fichiers plus commodes pour tester <code class="docutils literal notranslate"><span class="pre">prod_scal()</span></code>.</p>
 <p>Plusieurs cas-tests sont regroupés dans le suivant de façon plus lisible :</p>
 <ul class="simple">
@@ -1924,7 +1325,7 @@ Réponse.<div class="sd-summary-down docutils">
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat ./tmp/test_prod_scal3.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>./tmp/test_prod_scal3.txt
 </pre></div>
 </div>
 </div>
@@ -2020,7 +1421,7 @@ Il est maintenant facile d’étendre les cas tests de <code class="docutils lit
 </section>
 </section>
 <section id="origine-classique-des-problemes-d-es">
-<h3><span class="section-number">2.3.3. </span>Origine classique des problèmes d’ES<a class="headerlink" href="#origine-classique-des-problemes-d-es" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.3. </span>Origine classique des problèmes d’ES<a class="headerlink" href="#origine-classique-des-problemes-d-es" title="Permalink to this heading">#</a></h3>
 <p>La gestion des caractères spéciaux, <code class="docutils literal notranslate"><span class="pre">\n</span></code> entre autres.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f.read()</span></code> peut lire et retourner le caractère <code class="docutils literal notranslate"><span class="pre">\n</span></code> ou  la chaîne vide <code class="docutils literal notranslate"><span class="pre">''</span></code>, ce qui est différent :</p>
@@ -2043,9 +1444,9 @@ Il est maintenant facile d’étendre les cas tests de <code class="docutils lit
 </ul>
 </section>
 <section id="bien-controler-ses-print">
-<span id="sec-print"></span><h3><span class="section-number">2.3.4. </span>Bien contrôler ses <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#bien-controler-ses-print" title="Permalink to this headline">#</a></h3>
+<span id="sec-print"></span><h3><span class="section-number">4.3.4. </span>Bien contrôler ses <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#bien-controler-ses-print" title="Permalink to this heading">#</a></h3>
 <p>Deux exemples pour :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>rappeler comment utiliser <code class="docutils literal notranslate"><span class="pre">sep</span></code> et <code class="docutils literal notranslate"><span class="pre">end</span></code></p></li>
 <li><p>expliciter l’effet du caractère spécial <code class="docutils literal notranslate"><span class="pre">\n</span></code> (nouvelle ligne) dans l’affichage d’une chaîne de caractères avec <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p></li>
 </ol>
@@ -2095,7 +1496,7 @@ tyuiop--
 <p>Nous reviendrons sur les caractères spéciaux dans le chapitre sur les chaînes de caratères.</p>
 <p><strong>Quiz</strong></p>
 <p>Quelle est la dernière ligne du fichier <code class="docutils literal notranslate"><span class="pre">./tmp/fichier_entrees.txt</span></code> ?</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>188</p></li>
 <li><p>188\n</p></li>
 <li><p>\n</p></li>
@@ -2103,7 +1504,7 @@ tyuiop--
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat ./tmp/fichier_entrees.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>./tmp/fichier_entrees.txt
 </pre></div>
 </div>
 </div>
@@ -2133,16 +1534,16 @@ tyuiop--
 <span class="nb">print</span><span class="p">(</span><span class="n">l_st</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s1">&#39;6\n&#39;</span>, <span class="s1">&#39;99\n&#39;</span>, <span class="s1">&#39;21\n&#39;</span>, <span class="s1">&#39;33\n&#39;</span>, <span class="s1">&#39;44\n&#39;</span>, <span class="s1">&#39;33\n&#39;</span>, <span class="s1">&#39;188\n&#39;</span><span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="s1">&#39;6\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;99\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;21\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;33\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;44\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;33\n&#39;</span>,<span class="w"> </span><span class="s1">&#39;188\n&#39;</span><span class="o">]</span>
 </pre></div>
 </div>
 </div>
 </details></section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">2.4. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.4. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <section id="avoir-les-idees-claires">
-<h3><span class="section-number">2.4.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Distinguer fichier logique <em>vs.</em> physique, texte <em>vs.</em> binaire, mode lecture <em>vs.</em> écriture (<em>vs.</em> lecture-écriture)</p></li>
 <li><p>Connaître les 4 étapes de manipulation d’un fichier : association/ouverture/lecture-écriture/fermeture</p></li>
@@ -2150,7 +1551,7 @@ tyuiop--
 </ul>
 </section>
 <section id="savoir-faire">
-<h3><span class="section-number">2.4.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Savoir écrire les lectures-écritures simples de fichier texte avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> et <code class="docutils literal notranslate"><span class="pre">.write()</span></code></p></li>
 <li><p>Comprendre et gérer l’effet des caractères spéciaux</p></li>
@@ -2158,19 +1559,19 @@ tyuiop--
 </ul>
 </section>
 <section id="un-dernier-conseil">
-<h3><span class="section-number">2.4.3. </span>Un dernier conseil<a class="headerlink" href="#un-dernier-conseil" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.3. </span>Un dernier conseil<a class="headerlink" href="#un-dernier-conseil" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Le risque d’erreur lors de la mise au point du traitement d’ES sur fichier est important.</p></li>
 <li><p>Il n’est pas rare de perdre tout ou partie d’un fichier à lire.</p></li>
 <li><p>On ne peut donc que conseiller :</p></li>
 </ul>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>de <strong>commencer par</strong> effectuer une copie de sauvegarde des fichiers originaux avant tout développement de code d’ES</p></li>
 <li><p>de vérifier pas à pas la mise au point de ces traitement avec des <code class="docutils literal notranslate"><span class="pre">print()</span></code> bien choisis – qui seront bien sûr commentés une fois le traitement validé.</p></li>
 </ol>
 </section>
 <section id="ce-qu-il-restera-a-voir">
-<h3><span class="section-number">2.4.4. </span>Ce qu’il restera à voir<a class="headerlink" href="#ce-qu-il-restera-a-voir" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.4. </span>Ce qu’il restera à voir<a class="headerlink" href="#ce-qu-il-restera-a-voir" title="Permalink to this heading">#</a></h3>
 <p>Ce chapitre s’est limité à la manipulation de fichiers texte.
 Lorsque les données à sauvegarder sont volumineuses et souvent accédées, il est classique d’avoir recours à des <strong>fichiers binaires</strong>. En python, ces fichiers sont définis en ajoutant la caractéristique <code class="docutils literal notranslate"><span class="pre">b</span></code>  au mode <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code>, ou <code class="docutils literal notranslate"><span class="pre">a</span></code> lors de l’association/ouverture du fichier. Ensuite, les traitements décrits dans ce chapitre s’appliquent globalement.</p>
 <p>Le chapitre <a class="reference internal" href="9-ES-avancees.html#ch-es-avancees"><span class="std std-ref">ES avancées</span></a> complète celui-ci en présentant comment <em>formater</em> les données lues ou écrites dans les fichiers.</p>
@@ -2198,7 +1599,7 @@ Il est utile de compléter ces traitements par de la <em>manipulation</em> de fi
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./cm"
         },
         predefinedOutput: true
@@ -2206,49 +1607,148 @@ Il est utile de compléter ces traitements par de la <em>manipulation</em> de fi
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1-fonctions.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Fonctions</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="4-complexite.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Complexités</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ph. Langlois<br/>
-  
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2-boucles-avancees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Boucles, tableaux et fonctions</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="5-types_composes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Les types composés</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-generales-et-vocabulaire-important">4.1. Notions générales et vocabulaire important</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-fichier-texte-et-fichier-binaire">4.1.1. Fichier, fichier texte et fichier binaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programmer-avec-des-fichier-principes">4.1.2. Programmer avec des fichier : principes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-exemples-simples-pour-savoir-faire">4.2. Trois exemples simples pour savoir faire</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-lectures-de-str">4.2.1. Premier exemple : lectures de <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">Objectif</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-fichiers-de-test">Deux fichiers de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-ligne-a-ligne-avec-readline-qui-fournit-une-str-par-ligne">Lecture ligne à ligne avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> qui fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code> par ligne</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nettoyage-des-caracteres-speciaux-de-fin-de-ligne">Nettoyage des caractères spéciaux de fin de ligne</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-le-premier-test-de-nb-occ">Traitement : le premier test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-du-second-fichier">Exploitation du second fichier</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deuxieme-exemple-lecture-readline-avec-conversion-de-type-et-effets-dynamiques">4.2.2. Deuxième exemple : lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec conversion de type et effets dynamiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Objectif</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#la-forme-d-un-fichier-de-test">La forme d’un fichier de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conversions-et-effets-dynamiques">Conversions et effets dynamiques</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-avec-la-clause-with">Lecture avec la clause <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-readline-avec-with-et-typage">Lecture <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> avec <code class="docutils literal notranslate"><span class="pre">with</span></code> et typage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-unitaire-de-prod-scal">Test unitaire de <code class="docutils literal notranslate"><span class="pre">prod_scal()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troisieme-exemple-ecritures-simples-avec-write">4.2.3. Troisième exemple : écritures simples avec <code class="docutils literal notranslate"><span class="pre">.write()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-d-un-cas-test-de-nb-occ">Construction d’un cas test de <code class="docutils literal notranslate"><span class="pre">nb_occ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#enregistrement-dans-un-fichier-de-test">Enregistrement dans un fichier de test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-du-fichier-de-test">Exploitation du fichier de test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-et-minimum-a-savoir-faire">4.2.4. Synthèse et minimum à savoir-faire</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">4.3. Compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-complete-read-fournit-une-str">4.3.1. Lecture complète : <code class="docutils literal notranslate"><span class="pre">.read()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-classique">Exemple classique</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-complete-readlines-fournit-une-list-de-str">4.3.2. Lecture complète : <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> fournit une <code class="docutils literal notranslate"><span class="pre">list</span></code> de  <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Principe</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exemple-classique">(<span class="math notranslate nohighlight">\(\star\)</span>) Exemple classique</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origine-classique-des-problemes-d-es">4.3.3. Origine classique des problèmes d’ES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-controler-ses-print">4.3.4. Bien contrôler ses <code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">4.4. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">4.4.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">4.4.2. Savoir-faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-dernier-conseil">4.4.3. Un dernier conseil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-restera-a-voir">4.4.4. Ce qu’il restera à voir</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

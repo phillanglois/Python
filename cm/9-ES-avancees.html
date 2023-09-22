@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Les entrées-sorties (E/S) : aspects avancés &#8212; Algo-Prog 2023</title>
-    
+    <title>7. Les entrées-sorties (E/S) : aspects avancés &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,715 +64,376 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/9-ES-avancees';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Modules utiles" href="11-modules-utiles.html" />
-    <link rel="prev" title="2. Sous-programme et affectation – aspects avancés" href="7-fonctions-avancees.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="8. Modules utiles" href="11-modules-utiles.html" />
+    <link rel="prev" title="6. Sous-programme et affectation – aspects avancés" href="7-fonctions-avancees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo2023.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Algo-Prog 2023</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Algo-Prog !
+                    Bienvenu en Prog Python!
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Présentation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="0-presentation-2023.html">
-   1. Algorithmique et Programmation en 2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="competences.html">
-   2. Compétences
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Les bases
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1-fonctions.html">
-   1. Fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3-ES-fichiers.html">
-   2. Entrées-sorties simples avec des fichiers
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithmique
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="4-complexite.html">
-   1. Complexités
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="6-recursivite.html">
-   2. Récursivité
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programmation
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="5-types_composes.html">
-   1. Les types composés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="7-fonctions-avancees.html">
-   2. Sous-programme et affectation – aspects avancés
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Les entrées-sorties (E/S) : aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11-modules-utiles.html">
-   4. Modules utiles
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">11. Exceptions</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Annexes
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a0-boucles-avancees.html">
-   1. Boucles, tableaux et fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a1-booleens.html">
-   2. Annexe : les booléens en python (&gt;3.6)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a2-ndarray.html">
-   3. Les ‘ndarray’ : de vrais tableaux en python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3-exceptions.html">
-   4. Exceptions
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  TD
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/prealable-td.html">
-   1. Préalables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td1.html">
-   2. Feuille 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td2.html">
-   3. Feuille 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td3.html">
-   4. Feuille 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td4.html">
-   5. Feuille 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td5.html">
-   6. Feuille 5
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2023/main?urlpath=tree/Algo-Prog-2023/cm/9-ES-avancees.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/cm/9-ES-avancees.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Fcm/9-ES-avancees.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/phillanglois/Algo-Prog-2023/issues/new?title=Issue%20on%20page%20%2Fcm/9-ES-avancees.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/cm/9-ES-avancees.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/9-ES-avancees.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-formats-d-ecriture-de-lecture-et-d-affichage">
-   3.1. Les formats d’écriture, de lecture et d’affichage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres">
-     3.1.1. Spécifier le format de nombres et des chaînes de caractères
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatage-de-nombres-int">
-       Formatage de nombres
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         int
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatage-de-nombres-float">
-       Formatage de nombres
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         float
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatages-de-chaines-de-caracteres">
-       Formatages de chaînes de caractères
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#les-caracteres-speciaux">
-       Les caractères spéciaux
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         \...
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-expressions-ou-chaines-formatees">
-     3.1.2. Les
-     <em>
-      expressions
-     </em>
-     ou
-     <em>
-      chaînes  formatées
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-methode-format">
-     3.1.3. La méthode
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .format()
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#star-complements">
-     3.1.4. (
-     <span class="math notranslate nohighlight">
-      \(\star\)
-     </span>
-     ) Compléments
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#str-et-repr">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         str()
-        </span>
-       </code>
-       et
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         repr()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#souplesses-de-l-arg-de-format">
-       Souplesses de l’
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         arg
-        </span>
-       </code>
-       de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .format()
-        </span>
-       </code>
-       .
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#methodes-specifiques-sans-format">
-       Méthodes spécifiques (sans
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .format()
-        </span>
-       </code>
-       )
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   3.2. Synthèse
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
-     3.2.1. Avoir les idées claires
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-faire">
-     3.2.2. Savoir-faire
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Les entrées-sorties (E/S) : aspects avancés</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-formats-d-ecriture-de-lecture-et-d-affichage">
-   3.1. Les formats d’écriture, de lecture et d’affichage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres">
-     3.1.1. Spécifier le format de nombres et des chaînes de caractères
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatage-de-nombres-int">
-       Formatage de nombres
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         int
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatage-de-nombres-float">
-       Formatage de nombres
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         float
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#formatages-de-chaines-de-caracteres">
-       Formatages de chaînes de caractères
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#les-caracteres-speciaux">
-       Les caractères spéciaux
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         \...
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-expressions-ou-chaines-formatees">
-     3.1.2. Les
-     <em>
-      expressions
-     </em>
-     ou
-     <em>
-      chaînes  formatées
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-methode-format">
-     3.1.3. La méthode
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .format()
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#star-complements">
-     3.1.4. (
-     <span class="math notranslate nohighlight">
-      \(\star\)
-     </span>
-     ) Compléments
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#str-et-repr">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         str()
-        </span>
-       </code>
-       et
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         repr()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#souplesses-de-l-arg-de-format">
-       Souplesses de l’
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         arg
-        </span>
-       </code>
-       de
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .format()
-        </span>
-       </code>
-       .
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#methodes-specifiques-sans-format">
-       Méthodes spécifiques (sans
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         .format()
-        </span>
-       </code>
-       )
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   3.2. Synthèse
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
-     3.2.1. Avoir les idées claires
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#savoir-faire">
-     3.2.2. Savoir-faire
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Les entrées-sorties (E/S) : aspects avancés</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-ecriture-de-lecture-et-d-affichage">7.1. Les formats d’écriture, de lecture et d’affichage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres">7.1.1. Spécifier le format de nombres et des chaînes de caractères</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatage-de-nombres-int">Formatage de nombres <code class="docutils literal notranslate"><span class="pre">int</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatage-de-nombres-float">Formatage de nombres <code class="docutils literal notranslate"><span class="pre">float</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatages-de-chaines-de-caracteres">Formatages de chaînes de caractères</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux">Les caractères spéciaux <code class="docutils literal notranslate"><span class="pre">\...</span> </code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-expressions-ou-chaines-formatees">7.1.2. Les  <em>expressions</em> ou <em>chaînes  formatées</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methode-format">7.1.3. La méthode <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-complements">7.1.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#str-et-repr"><code class="docutils literal notranslate"><span class="pre">str()</span></code> et <code class="docutils literal notranslate"><span class="pre">repr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#souplesses-de-l-arg-de-format">Souplesses de l’<code class="docutils literal notranslate"><span class="pre">arg</span></code> de <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-specifiques-sans-format">Méthodes spécifiques (sans <code class="docutils literal notranslate"><span class="pre">.format()</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">7.2. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">7.2.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">7.2.2. Savoir-faire</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="les-entrees-sorties-e-s-aspects-avances">
-<span id="ch-es-avancees"></span><h1><span class="section-number">3. </span>Les entrées-sorties (E/S) : aspects avancés<a class="headerlink" href="#les-entrees-sorties-e-s-aspects-avances" title="Permalink to this headline">#</a></h1>
+<span id="ch-es-avancees"></span><h1><span class="section-number">7. </span>Les entrées-sorties (E/S) : aspects avancés<a class="headerlink" href="#les-entrees-sorties-e-s-aspects-avances" title="Permalink to this heading">#</a></h1>
 <p><strong>Partie Programmation</strong><br />
 version 2021, v1 PhL.</p>
 <p>Chapitre où on étudie comment peaufiner le format ses entrées-sorties à l’écran ou dans des fichiers de texte.</p>
 <p>Ce chapitre complète le chapitre “Entrées-sorties avec des fichiers”.</p>
 <h1>Table of Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a href="#Les-entrées-sorties-(E/S)-:-aspects-avancés" data-toc-modified-id="Les-entrées-sorties-(E/S)-:-aspects-avancés-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Les entrées-sorties (E/S) : aspects avancés</a></span><ul class="toc-item"><li><span><a href="#Les-formats-d'écriture,-de-lecture-et-d'affichage" data-toc-modified-id="Les-formats-d'écriture,-de-lecture-et-d'affichage-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Les formats d'écriture, de lecture et d'affichage</a></span><ul class="toc-item"><li><span><a href="#Spécifier-le-format-de-nombres-et-des-chaînes-de-caractères" data-toc-modified-id="Spécifier-le-format-de-nombres-et-des-chaînes-de-caractères-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Spécifier le format de nombres et des chaînes de caractères</a></span><ul class="toc-item"><li><span><a href="#Formatage-de-nombres-int" data-toc-modified-id="Formatage-de-nombres-int-1.1.1.1"><span class="toc-item-num">1.1.1.1&nbsp;&nbsp;</span>Formatage de nombres <code>int</code></a></span></li><li><span><a href="#Formatage-de-nombres-float" data-toc-modified-id="Formatage-de-nombres-float-1.1.1.2"><span class="toc-item-num">1.1.1.2&nbsp;&nbsp;</span>Formatage de nombres <code>float</code></a></span></li><li><span><a href="#Formatages-de-chaînes-de-caractères" data-toc-modified-id="Formatages-de-chaînes-de-caractères-1.1.1.3"><span class="toc-item-num">1.1.1.3&nbsp;&nbsp;</span>Formatages de chaînes de caractères</a></span></li><li><span><a href="#Les-caractères-spéciaux-\..." data-toc-modified-id="Les-caractères-spéciaux-\...-1.1.1.4"><span class="toc-item-num">1.1.1.4&nbsp;&nbsp;</span>Les caractères spéciaux <code>\...</code></a></span></li></ul></li><li><span><a href="#Les--expressions-ou-chaînes--formatées" data-toc-modified-id="Les--expressions-ou-chaînes--formatées-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Les  <em>expressions</em> ou <em>chaînes  formatées</em></a></span></li><li><span><a href="#La-méthode-.format()." data-toc-modified-id="La-méthode-.format().-1.1.3"><span class="toc-item-num">1.1.3&nbsp;&nbsp;</span>La méthode <code>.format()</code>.</a></span></li><li><span><a href="#($\star$)-Compléments" data-toc-modified-id="($\star$)-Compléments-1.1.4"><span class="toc-item-num">1.1.4&nbsp;&nbsp;</span>($\star$) Compléments</a></span><ul class="toc-item"><li><span><a href="#str()-et-repr()" data-toc-modified-id="str()-et-repr()-1.1.4.1"><span class="toc-item-num">1.1.4.1&nbsp;&nbsp;</span><code>str()</code> et <code>repr()</code></a></span></li><li><span><a href="#Souplesses-de-l'arg-de-.format()." data-toc-modified-id="Souplesses-de-l'arg-de-.format().-1.1.4.2"><span class="toc-item-num">1.1.4.2&nbsp;&nbsp;</span>Souplesses de l'<code>arg</code> de <code>.format()</code>.</a></span></li><li><span><a href="#Méthodes-spécifiques-(sans-.format())" data-toc-modified-id="Méthodes-spécifiques-(sans-.format())-1.1.4.3"><span class="toc-item-num">1.1.4.3&nbsp;&nbsp;</span>Méthodes spécifiques (sans <code>.format()</code>)</a></span></li></ul></li></ul></li><li><span><a href="#Synthèse" data-toc-modified-id="Synthèse-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Synthèse</a></span><ul class="toc-item"><li><span><a href="#Avoir-les-idées-claires" data-toc-modified-id="Avoir-les-idées-claires-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>Avoir les idées claires</a></span></li><li><span><a href="#Savoir-faire" data-toc-modified-id="Savoir-faire-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Savoir-faire</a></span></li></ul></li></ul></li></ul></div><section id="les-formats-d-ecriture-de-lecture-et-d-affichage">
-<h2><span class="section-number">3.1. </span>Les formats d’écriture, de lecture et d’affichage<a class="headerlink" href="#les-formats-d-ecriture-de-lecture-et-d-affichage" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.1. </span>Les formats d’écriture, de lecture et d’affichage<a class="headerlink" href="#les-formats-d-ecriture-de-lecture-et-d-affichage" title="Permalink to this heading">#</a></h2>
 <p>Il s’agit de <em>définir la façon dont s’écrivent, se lisent ou s’affichent à l’écran</em> les informations textuelles, <em>i.e.</em> les chaînes de caractères.<br />
 Exemple : combien de chiffres après la virgule d’un <code class="docutils literal notranslate"><span class="pre">float</span></code>, utiliser une notation scientifique (<span class="math notranslate nohighlight">\(\pm 1.xxxx \cdot 10^E\)</span>), insérer ou non des caractères avant la <code class="docutils literal notranslate"><span class="pre">str</span></code> à afficher, …</p>
 <p>On commence par la syntaxe qui permet d’exprimer le formatage voulu (syntaxe un peu lourde au début), puis on montre deux moyens d’appliquer l’opération de formatage : les <em>chaînes formatées</em> (ou <em>f-string</em> en python) puis la méthode plus générale <code class="docutils literal notranslate"><span class="pre">.format</span></code> (méthode définie pour les <code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
 <div class="alert alert-danger">
 <p>Ces <strong>formats</strong> d’affichage s’appliquent aux <strong>chaînes de caractères</strong> utiles aux entrées-sorties <strong>textuelles</strong> (avec <code class="docutils literal notranslate"><span class="pre">print()</span></code> pour l’écran, mais aussi <code class="docutils literal notranslate"><span class="pre">write()</span></code> et <code class="docutils literal notranslate"><span class="pre">read()</span></code> pour les fichiers de texte).</p>
 </div><section id="specifier-le-format-de-nombres-et-des-chaines-de-caracteres">
-<h3><span class="section-number">3.1.1. </span>Spécifier le format de nombres et des chaînes de caractères<a class="headerlink" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.1.1. </span>Spécifier le format de nombres et des chaînes de caractères<a class="headerlink" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres" title="Permalink to this heading">#</a></h3>
 <p>La syntaxe générale d’un <strong>format</strong> (d’écriture ou d’affichage) est :</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">:[drapeau][largeur][.precision][type]</span></code></p>
@@ -795,9 +468,9 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 </ul>
 <p>On a indiqué que <code class="docutils literal notranslate"><span class="pre">[type]</span></code>est le paramètre de format le plus important en pratique. C’est donc lui qui guide la présentation.</p>
 <section id="formatage-de-nombres-int">
-<h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#formatage-de-nombres-int" title="Permalink to this headline">#</a></h4>
+<h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#formatage-de-nombres-int" title="Permalink to this heading">#</a></h4>
 <p>Le champs <code class="docutils literal notranslate"><span class="pre">[type]</span></code>peut prendre les valeurs <code class="docutils literal notranslate"><span class="pre">d</span></code> (par défaut), <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">o</span></code>, et <code class="docutils literal notranslate"><span class="pre">b</span></code> dont le sens est illustré par les 5 codes suivants.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -896,7 +569,7 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 </div>
 </div>
 <p>Les écritures classiques des entiers sont aussi obtenues à l’aide des codes suivants.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -949,10 +622,10 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 </div>
 </section>
 <section id="formatage-de-nombres-float">
-<h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#formatage-de-nombres-float" title="Permalink to this headline">#</a></h4>
+<h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#formatage-de-nombres-float" title="Permalink to this heading">#</a></h4>
 <p>Le champs <code class="docutils literal notranslate"><span class="pre">[type]</span></code> peut prendre les valeurs <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
 <p>Avec les champs <code class="docutils literal notranslate"><span class="pre">[drapeau]</span></code>, <code class="docutils literal notranslate"><span class="pre">[largeur]</span></code> et <code class="docutils literal notranslate"><span class="pre">[précision]</span></code>, on obtient des formats adaptés aux <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -1002,9 +675,9 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 <p><strong>Rmq.</strong> Ces formatages d’<code class="docutils literal notranslate"><span class="pre">int</span></code> et de <code class="docutils literal notranslate"><span class="pre">float</span></code> apparaissent aussi dans d’autres langages de programmation, <em>e.g.</em> C.</p>
 </section>
 <section id="formatages-de-chaines-de-caracteres">
-<h4>Formatages de chaînes de caractères<a class="headerlink" href="#formatages-de-chaines-de-caracteres" title="Permalink to this headline">#</a></h4>
+<h4>Formatages de chaînes de caractères<a class="headerlink" href="#formatages-de-chaines-de-caracteres" title="Permalink to this heading">#</a></h4>
 <p>Dans ce cas, on défini les champs <code class="docutils literal notranslate"><span class="pre">drapeau</span></code> et <code class="docutils literal notranslate"><span class="pre">largeur</span></code> comme déjà indiqué.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -1057,7 +730,7 @@ un texte formaté
 </div>
 </section>
 <section id="les-caracteres-speciaux">
-<h4>Les caractères spéciaux <code class="docutils literal notranslate"><span class="pre">\...</span> </code><a class="headerlink" href="#les-caracteres-speciaux" title="Permalink to this headline">#</a></h4>
+<h4>Les caractères spéciaux <code class="docutils literal notranslate"><span class="pre">\...</span> </code><a class="headerlink" href="#les-caracteres-speciaux" title="Permalink to this heading">#</a></h4>
 <p>On rappelle que les <em>caractères spéciaux</em> ou <em>séquences d’échappement</em> sont l’association du “backslash” <code class="docutils literal notranslate"><span class="pre">\</span></code> et de certains symboles (ou  suite de symboles).
 Cette suite de caractères (qui commence par <code class="docutils literal notranslate"><span class="pre">\</span></code>) est interprétée de façon particulière.</p>
 <p>Caractères spéciaux “de contrôle”:</p>
@@ -1083,9 +756,9 @@ Cette notion se retrouve dans d’autres langages de programmation : C, …</p>
 </section>
 </section>
 <section id="les-expressions-ou-chaines-formatees">
-<h3><span class="section-number">3.1.2. </span>Les  <em>expressions</em> ou <em>chaînes  formatées</em><a class="headerlink" href="#les-expressions-ou-chaines-formatees" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.1.2. </span>Les  <em>expressions</em> ou <em>chaînes  formatées</em><a class="headerlink" href="#les-expressions-ou-chaines-formatees" title="Permalink to this heading">#</a></h3>
 <p><strong>Principe</strong></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>On définit un <em>format d’affichage</em> pour une chaîne de caractères qui dépend de la valeur de certains <em>champs</em> à formater</p></li>
 <li><p>On applique ce format à un nombre arbitraire de valeurs</p></li>
 <li><p>On obtient un nombre arbitraire de valeurs affichées de la même manière.</p></li>
@@ -1144,7 +817,7 @@ La température du 12  janvier   2021 est 5.6oC.
 </div>
 </section>
 <section id="la-methode-format">
-<h3><span class="section-number">3.1.3. </span>La méthode <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.<a class="headerlink" href="#la-methode-format" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.1.3. </span>La méthode <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.<a class="headerlink" href="#la-methode-format" title="Permalink to this heading">#</a></h3>
 <p>L’exemple précédent donne envie de pouvoir définir <em>une fois pour toute</em> l’expression formatée et de pouvoir <em>l’appliquer</em>  à un nombre arbitraire de valeurs pour obtenir l’affichage formatée de ces valeurs.</p>
 <p>C’est l’objet de la méthode <code class="docutils literal notranslate"><span class="pre">.format()</span></code> qui s’applique à des <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 <p>La syntaxe de <code class="docutils literal notranslate"><span class="pre">.format()</span></code> est un peu déroutante au début.</p>
@@ -1179,27 +852,27 @@ La température du 12  janvier   2021 est 5.6oC.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est  +2.0 oC.
-La température du  5  janvier   2021 est  -0.1 oC.
-La température du  9  janvier   2021 est  +1.2 oC.
-La température du 13  janvier   2021 est  +1.0 oC.
-La température du 17  janvier   2021 est  +6.5 oC.
-La température du 21  janvier   2021 est  +7.6 oC.
-La température du 25  janvier   2021 est  -0.9 oC.
-La température du  1  février   2021 est  +7.8 oC.
-La température du  5  février   2021 est  +9.7 oC.
-La température du  9  février   2021 est +10.1 oC.
-La température du 13  février   2021 est +10.1 oC.
-La température du 17  février   2021 est +10.3 oC.
-La température du 21  février   2021 est +14.3 oC.
-La température du 25  février   2021 est +13.4 oC.
-La température du  1    mars    2021 est  -1.9 oC.
-La température du  5    mars    2021 est  +4.3 oC.
-La température du  9    mars    2021 est  +1.5 oC.
-La température du 13    mars    2021 est  +0.1 oC.
-La température du 17    mars    2021 est  +5.5 oC.
-La température du 21    mars    2021 est  +5.7 oC.
-La température du 25    mars    2021 est +11.9 oC.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est  -0.7 oC.
+La température du  5  janvier   2021 est  +0.8 oC.
+La température du  9  janvier   2021 est +15.8 oC.
+La température du 13  janvier   2021 est  +4.0 oC.
+La température du 17  janvier   2021 est +12.4 oC.
+La température du 21  janvier   2021 est +10.1 oC.
+La température du 25  janvier   2021 est  +5.9 oC.
+La température du  1  février   2021 est  +2.2 oC.
+La température du  5  février   2021 est  +1.8 oC.
+La température du  9  février   2021 est +12.8 oC.
+La température du 13  février   2021 est  +9.7 oC.
+La température du 17  février   2021 est  +2.2 oC.
+La température du 21  février   2021 est  -1.5 oC.
+La température du 25  février   2021 est  +3.8 oC.
+La température du  1    mars    2021 est +10.7 oC.
+La température du  5    mars    2021 est  +3.8 oC.
+La température du  9    mars    2021 est  -2.0 oC.
+La température du 13    mars    2021 est  +7.6 oC.
+La température du 17    mars    2021 est  +4.8 oC.
+La température du 21    mars    2021 est  -0.0 oC.
+La température du 25    mars    2021 est  +4.6 oC.
 </pre></div>
 </div>
 </div>
@@ -1236,7 +909,7 @@ Le {} mot est {} {}
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat tmp/format1.txt 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>tmp/format1.txt<span class="w"> </span>
 </pre></div>
 </div>
 </div>
@@ -1252,11 +925,11 @@ Cette utilisation par remplacement peut faire penser (à tort) à un rôle inver
 Ce risque de confusion sera levée avec l’étude de la programmation objet (en python) – hors du programme de ce semestre.</p>
 </section>
 <section id="star-complements">
-<h3><span class="section-number">3.1.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Compléments<a class="headerlink" href="#star-complements" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.1.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Compléments<a class="headerlink" href="#star-complements" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-warning">
 <p>Objectif 20 et en seconde lecture</p>
 </div><section id="str-et-repr">
-<h4><code class="docutils literal notranslate"><span class="pre">str()</span></code> et <code class="docutils literal notranslate"><span class="pre">repr()</span></code><a class="headerlink" href="#str-et-repr" title="Permalink to this headline">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">str()</span></code> et <code class="docutils literal notranslate"><span class="pre">repr()</span></code><a class="headerlink" href="#str-et-repr" title="Permalink to this heading">#</a></h4>
 <p>Vous avez utilisé –de façon explicite ou “à votre insu”– la fonction <code class="docutils literal notranslate"><span class="pre">str()</span></code> pour convertir une valeur de type quelconque en sa représentation comme une chaîne de caractères.</p>
 <ul class="simple">
 <li><p>Citez un exemple d’utilisation implicite de <code class="docutils literal notranslate"><span class="pre">str()</span></code></p></li>
@@ -1348,7 +1021,7 @@ Bonjour,
 </div>
 </section>
 <section id="souplesses-de-l-arg-de-format">
-<h4>Souplesses de l’<code class="docutils literal notranslate"><span class="pre">arg</span></code> de <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.<a class="headerlink" href="#souplesses-de-l-arg-de-format" title="Permalink to this headline">#</a></h4>
+<h4>Souplesses de l’<code class="docutils literal notranslate"><span class="pre">arg</span></code> de <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.<a class="headerlink" href="#souplesses-de-l-arg-de-format" title="Permalink to this heading">#</a></h4>
 <p>Avec <code class="docutils literal notranslate"><span class="pre">.format()</span></code>, les arguments à formater peuvent être indiqués par position implicite (par défaut comme jusqu’à présent) ou <em>explicite</em> mais aussi par <em>nommage</em> ou par <em>liste/dictionnaire</em> – dans la définition et dans l’appel pour les deux derniers.</p>
 <p>La position des valeurs du conteneur <code class="docutils literal notranslate"><span class="pre">arg</span></code> argument de <code class="docutils literal notranslate"><span class="pre">.format(arg)</span></code> est précisée dans les <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> de <code class="docutils literal notranslate"><span class="pre">st_format</span></code> :</p>
 <ul class="simple">
@@ -1376,9 +1049,7 @@ Bonjour,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>le ciel est bleu
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>la mer est calme
+la mer est calme
 la montagne est violette
 le soleil est chaud
 </pre></div>
@@ -1387,9 +1058,9 @@ le soleil est chaud
 </div>
 </section>
 <section id="methodes-specifiques-sans-format">
-<h4>Méthodes spécifiques (sans <code class="docutils literal notranslate"><span class="pre">.format()</span></code>)<a class="headerlink" href="#methodes-specifiques-sans-format" title="Permalink to this headline">#</a></h4>
+<h4>Méthodes spécifiques (sans <code class="docutils literal notranslate"><span class="pre">.format()</span></code>)<a class="headerlink" href="#methodes-specifiques-sans-format" title="Permalink to this heading">#</a></h4>
 <p>On verra que certains traitements peuvent être obtenus avec des méthodes spécifiques aux <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>méthode</p></th>
 <th class="head"><p>effet</p></th>
@@ -1414,15 +1085,15 @@ le soleil est chaud
 </section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">3.2. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <section id="avoir-les-idees-claires">
-<h3><span class="section-number">3.2.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.2.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Connaitre les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.</p></li>
 </ul>
 </section>
 <section id="savoir-faire">
-<h3><span class="section-number">3.2.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.2.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Utiliser les formatages de base des types <code class="docutils literal notranslate"><span class="pre">int</span></code> et <code class="docutils literal notranslate"><span class="pre">float</span></code> de python</p></li>
 <li><p>En s’appuyant sur les documents de cours ou de référence, définir et appliquer des formatages évolués et adaptés aux données manipulées avec python</p></li>
@@ -1443,7 +1114,7 @@ le soleil est chaud
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./cm"
         },
         predefinedOutput: true
@@ -1451,49 +1122,116 @@ le soleil est chaud
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="7-fonctions-avancees.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Sous-programme et affectation – aspects avancés</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="11-modules-utiles.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Modules utiles</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ph. Langlois<br/>
-  
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="7-fonctions-avancees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Sous-programme et affectation – aspects avancés</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="11-modules-utiles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Modules utiles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-ecriture-de-lecture-et-d-affichage">7.1. Les formats d’écriture, de lecture et d’affichage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-le-format-de-nombres-et-des-chaines-de-caracteres">7.1.1. Spécifier le format de nombres et des chaînes de caractères</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatage-de-nombres-int">Formatage de nombres <code class="docutils literal notranslate"><span class="pre">int</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatage-de-nombres-float">Formatage de nombres <code class="docutils literal notranslate"><span class="pre">float</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formatages-de-chaines-de-caracteres">Formatages de chaînes de caractères</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux">Les caractères spéciaux <code class="docutils literal notranslate"><span class="pre">\...</span> </code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-expressions-ou-chaines-formatees">7.1.2. Les  <em>expressions</em> ou <em>chaînes  formatées</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methode-format">7.1.3. La méthode <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-complements">7.1.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#str-et-repr"><code class="docutils literal notranslate"><span class="pre">str()</span></code> et <code class="docutils literal notranslate"><span class="pre">repr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#souplesses-de-l-arg-de-format">Souplesses de l’<code class="docutils literal notranslate"><span class="pre">arg</span></code> de <code class="docutils literal notranslate"><span class="pre">.format()</span></code>.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-specifiques-sans-format">Méthodes spécifiques (sans <code class="docutils literal notranslate"><span class="pre">.format()</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">7.2. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">7.2.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">7.2.2. Savoir-faire</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Les ‘ndarray’ : de vrais tableaux en python &#8212; Algo-Prog 2023</title>
-    
+    <title>10. Les ‘ndarray’ : de vrais tableaux en python &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,690 +64,366 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/a2-ndarray';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Exceptions" href="a3-exceptions.html" />
-    <link rel="prev" title="2. Annexe : les booléens en python (&gt;3.6)" href="a1-booleens.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="11. Exceptions" href="a3-exceptions.html" />
+    <link rel="prev" title="9. Annexe : les booléens en python (&gt;3.6)" href="a1-booleens.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo2023.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Algo-Prog 2023</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Algo-Prog !
+                    Bienvenu en Prog Python!
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Présentation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="0-presentation-2023.html">
-   1. Algorithmique et Programmation en 2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="competences.html">
-   2. Compétences
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Les bases
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1-fonctions.html">
-   1. Fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3-ES-fichiers.html">
-   2. Entrées-sorties simples avec des fichiers
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithmique
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="4-complexite.html">
-   1. Complexités
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="6-recursivite.html">
-   2. Récursivité
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programmation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="5-types_composes.html">
-   1. Les types composés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="7-fonctions-avancees.html">
-   2. Sous-programme et affectation – aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="9-ES-avancees.html">
-   3. Les entrées-sorties (E/S) : aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11-modules-utiles.html">
-   4. Modules utiles
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Annexes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a0-boucles-avancees.html">
-   1. Boucles, tableaux et fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a1-booleens.html">
-   2. Annexe : les booléens en python (&gt;3.6)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Les ‘ndarray’ : de vrais tableaux en python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3-exceptions.html">
-   4. Exceptions
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">11. Exceptions</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  TD
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/prealable-td.html">
-   1. Préalables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td1.html">
-   2. Feuille 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td2.html">
-   3. Feuille 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td3.html">
-   4. Feuille 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td4.html">
-   5. Feuille 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../td/td5.html">
-   6. Feuille 5
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2023/main?urlpath=tree/Algo-Prog-2023/cm/a2-ndarray.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/cm/a2-ndarray.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Fcm/a2-ndarray.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/phillanglois/Algo-Prog-2023/issues/new?title=Issue%20on%20page%20%2Fcm/a2-ndarray.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/cm/a2-ndarray.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/a2-ndarray.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-tableaux">
-   3.1. Les tableaux
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-vision-classique">
-     3.1.1. La vision classique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#en-python">
-     3.1.2. En python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-ndarray-de-numpy">
-   3.2. Les
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     ndarray
-    </span>
-   </code>
-   de
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     numpy
-    </span>
-   </code>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preliminaire-necessaire-a-l-utilisation-de-numpy">
-     3.2.1. Préliminaire nécessaire à l’utilisation de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creer-un-ndarray-fonctions-de-creation">
-     3.2.2. Créer un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     : fonctions de création
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#choisir-le-type-des-valeurs-a-la-creation">
-     3.2.3. Choisir le type des valeurs à la création
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acceder-aux-elements-d-un-ndarray">
-     3.2.4. Accéder aux éléments d’un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#afficher-un-ndarray-fonction-d-affichage">
-     3.2.5. Afficher un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     : fonction d’affichage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methodes-d-introspection">
-     3.2.6. Méthodes d’introspection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fonctions-element-par-element-vs-tableau">
-     3.2.7. Fonctions : élément-par-élément vs. tableau
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">
-     3.2.8. Définir des
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     à partir de listes python (
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       list
-      </span>
-     </code>
-     )
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aspects-plus-avances-star">
-   3.3. Aspects plus avancés    (
-   <span class="math notranslate nohighlight">
-    \(\star\)
-   </span>
-   )
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#autres-constructeurs-et-autres-descripteurs">
-     3.3.1. Autres constructeurs et autres descripteurs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#autres-fonctions-et-methodes-utiles">
-     3.3.2. Autres fonctions et méthodes utiles
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   3.4. Synthèse
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Les ‘ndarray’ : de vrais tableaux en python</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-tableaux">
-   3.1. Les tableaux
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-vision-classique">
-     3.1.1. La vision classique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#en-python">
-     3.1.2. En python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-ndarray-de-numpy">
-   3.2. Les
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     ndarray
-    </span>
-   </code>
-   de
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     numpy
-    </span>
-   </code>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preliminaire-necessaire-a-l-utilisation-de-numpy">
-     3.2.1. Préliminaire nécessaire à l’utilisation de
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creer-un-ndarray-fonctions-de-creation">
-     3.2.2. Créer un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     : fonctions de création
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#choisir-le-type-des-valeurs-a-la-creation">
-     3.2.3. Choisir le type des valeurs à la création
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acceder-aux-elements-d-un-ndarray">
-     3.2.4. Accéder aux éléments d’un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#afficher-un-ndarray-fonction-d-affichage">
-     3.2.5. Afficher un
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     : fonction d’affichage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methodes-d-introspection">
-     3.2.6. Méthodes d’introspection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fonctions-element-par-element-vs-tableau">
-     3.2.7. Fonctions : élément-par-élément vs. tableau
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">
-     3.2.8. Définir des
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       ndarray
-      </span>
-     </code>
-     à partir de listes python (
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       list
-      </span>
-     </code>
-     )
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aspects-plus-avances-star">
-   3.3. Aspects plus avancés    (
-   <span class="math notranslate nohighlight">
-    \(\star\)
-   </span>
-   )
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#autres-constructeurs-et-autres-descripteurs">
-     3.3.1. Autres constructeurs et autres descripteurs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#autres-fonctions-et-methodes-utiles">
-     3.3.2. Autres fonctions et méthodes utiles
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese">
-   3.4. Synthèse
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Les ‘ndarray’ : de vrais tableaux en python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tableaux">10.1. Les tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">10.1.1. La vision classique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-python">10.1.2. En python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ndarray-de-numpy">10.2. Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaire-necessaire-a-l-utilisation-de-numpy">10.2.1. Préliminaire nécessaire à l’utilisation de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-ndarray-fonctions-de-creation">10.2.2. Créer un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> : fonctions de création</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choisir-le-type-des-valeurs-a-la-creation">10.2.3. Choisir le type des valeurs à la création</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceder-aux-elements-d-un-ndarray">10.2.4. Accéder aux éléments d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afficher-un-ndarray-fonction-d-affichage">10.2.5. Afficher un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>: fonction d’affichage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-d-introspection">10.2.6. Méthodes d’introspection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-element-par-element-vs-tableau">10.2.7. Fonctions : élément-par-élément vs. tableau</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">10.2.8. Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aspects-plus-avances-star">10.3. Aspects plus avancés    (<span class="math notranslate nohighlight">\(\star\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-constructeurs-et-autres-descripteurs">10.3.1. Autres constructeurs et autres descripteurs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-fonctions-et-methodes-utiles">10.3.2. Autres fonctions et méthodes utiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">10.4. Synthèse</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="les-ndarray-de-vrais-tableaux-en-python">
-<span id="ann-ndarray"></span><h1><span class="section-number">3. </span>Les ‘ndarray’ : de vrais tableaux en python<a class="headerlink" href="#les-ndarray-de-vrais-tableaux-en-python" title="Permalink to this headline">#</a></h1>
+<span id="ann-ndarray"></span><h1><span class="section-number">10. </span>Les ‘ndarray’ : de vrais tableaux en python<a class="headerlink" href="#les-ndarray-de-vrais-tableaux-en-python" title="Permalink to this heading">#</a></h1>
 <p>version 2022, PhL.</p>
 <p>Chapitre où sont présentés les vrais tableaux en python : les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> (tableaux) <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
-<p>Les sections avec une <span class="math notranslate nohighlight">\(\star\)</span> sont de niveau <em>Objectif 20</em>.</p>
+<p>Un complément utile en seconde lecture est le chapitre sur <a class="reference external" href="https://pnavaro.github.io/python-notebooks/13-Numpy.html">numpy</a> du cours <a class="reference external" href="https://pnavaro.github.io/python-notebooks/01-Introduction.html">Python Scientist</a>.</p>
 <section id="les-tableaux">
-<h2><span class="section-number">3.1. </span>Les tableaux<a class="headerlink" href="#les-tableaux" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.1. </span>Les tableaux<a class="headerlink" href="#les-tableaux" title="Permalink to this heading">#</a></h2>
 <p>Les <em>types scalaires</em> permettent de manipuler des valeurs scalaires comme les :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
@@ -748,7 +436,7 @@ title="Print to PDF"
 Il y a plusieurs <em>familles</em> de types composés.
 Les tableaux sont l’une d’entre elles.</p>
 <section id="la-vision-classique">
-<h3><span class="section-number">3.1.1. </span>La vision classique<a class="headerlink" href="#la-vision-classique" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.1. </span>La vision classique<a class="headerlink" href="#la-vision-classique" title="Permalink to this heading">#</a></h3>
 <p><strong>Les tableaux</strong>  sont définis comme des ensembles :</p>
 <ul class="simple">
 <li><p>de valeurs <em>de même type</em></p></li>
@@ -769,14 +457,14 @@ Les tableaux sont l’une d’entre elles.</p>
 </ul>
 </section>
 <section id="en-python">
-<h3><span class="section-number">3.1.2. </span>En python<a class="headerlink" href="#en-python" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.2. </span>En python<a class="headerlink" href="#en-python" title="Permalink to this heading">#</a></h3>
 <p>Jusque-là, les tableaux ont été représentés par des listes python.
 Au <a class="reference internal" href="5-types_composes.html#ch-typescomposes"><span class="std std-ref">chapitre “Types composés”</span></a>, on a vu qu’une liste python est très différente de la définition – la vision classique – des tableaux.</p>
 <p>Voilà pourquoi nous allons étudier les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, qui définissent un type composé fourni par le module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> et qui correspondent aux tableaux classiques.</p>
 </section>
 </section>
 <section id="les-ndarray-de-numpy">
-<h2><span class="section-number">3.2. </span>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#les-ndarray-de-numpy" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.2. </span>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#les-ndarray-de-numpy" title="Permalink to this heading">#</a></h2>
 <p>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code> sont ainsi appelés car :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> : tableau in english,</p></li>
@@ -784,7 +472,7 @@ Au <a class="reference internal" href="5-types_composes.html#ch-typescomposes"><
 </ul>
 <p><strong>ATTENTION</strong> : il existe des <code class="docutils literal notranslate"><span class="pre">array</span></code> dans la bibliothèque standard de python.</p>
 <section id="preliminaire-necessaire-a-l-utilisation-de-numpy">
-<h3><span class="section-number">3.2.1. </span>Préliminaire nécessaire à l’utilisation de <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#preliminaire-necessaire-a-l-utilisation-de-numpy" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.1. </span>Préliminaire nécessaire à l’utilisation de <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#preliminaire-necessaire-a-l-utilisation-de-numpy" title="Permalink to this heading">#</a></h3>
 <p>Ce qui suit concerne les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> du module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> utilisables après un <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span></code> ou le classique :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -795,11 +483,11 @@ Au <a class="reference internal" href="5-types_composes.html#ch-typescomposes"><
 </div>
 </section>
 <section id="creer-un-ndarray-fonctions-de-creation">
-<h3><span class="section-number">3.2.2. </span>Créer un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> : fonctions de création<a class="headerlink" href="#creer-un-ndarray-fonctions-de-creation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.2. </span>Créer un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> : fonctions de création<a class="headerlink" href="#creer-un-ndarray-fonctions-de-creation" title="Permalink to this heading">#</a></h3>
 <p>La création d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> est un peu pénible au début.
 Il faut utiliser un des <em>constructeurs</em> définis dans le tableau ci-dessous.
 Le choix d’un constructeur dépend de la connaissance ou non des valeurs du <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>. Bien sûr, le nombre d’éléments de <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, ou de façon équivalente le produit de ses dimensions, doit être connu avant la création du <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>identifiant</p></th>
 <th class="head"><p>Argument</p></th>
@@ -863,7 +551,7 @@ t2D de 3 lignes et 4 colonnes :
 </div>
 </section>
 <section id="choisir-le-type-des-valeurs-a-la-creation">
-<h3><span class="section-number">3.2.3. </span>Choisir le type des valeurs à la création<a class="headerlink" href="#choisir-le-type-des-valeurs-a-la-creation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.3. </span>Choisir le type des valeurs à la création<a class="headerlink" href="#choisir-le-type-des-valeurs-a-la-creation" title="Permalink to this heading">#</a></h3>
 <p>Le paramètre <code class="docutils literal notranslate"><span class="pre">dtype</span></code> (<em>data-type</em>) permet de définir type des valeurs du <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> lors de sa création.</p>
 <p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> :</p>
 <ul class="simple">
@@ -972,7 +660,7 @@ zeros(...)
 </div>
 </section>
 <section id="acceder-aux-elements-d-un-ndarray">
-<h3><span class="section-number">3.2.4. </span>Accéder aux éléments d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code><a class="headerlink" href="#acceder-aux-elements-d-un-ndarray" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.4. </span>Accéder aux éléments d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code><a class="headerlink" href="#acceder-aux-elements-d-un-ndarray" title="Permalink to this heading">#</a></h3>
 <p>On manipule les élements, les tranches de tableau avec la même syntaxe que les <code class="docutils literal notranslate"><span class="pre">str</span></code> ou les <code class="docutils literal notranslate"><span class="pre">lst</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">t[5]</span></code></p></li>
@@ -999,7 +687,7 @@ zeros(...)
 </div>
 </section>
 <section id="afficher-un-ndarray-fonction-d-affichage">
-<h3><span class="section-number">3.2.5. </span>Afficher un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>: fonction d’affichage<a class="headerlink" href="#afficher-un-ndarray-fonction-d-affichage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.5. </span>Afficher un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>: fonction d’affichage<a class="headerlink" href="#afficher-un-ndarray-fonction-d-affichage" title="Permalink to this heading">#</a></h3>
 <p>On aura remarqué que la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> accepte et traite correctement un argument de type <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.<br />
 Et même sans avoir à préciser :</p>
 <ul class="simple">
@@ -1014,10 +702,10 @@ Comprendre qu’il y a en fait plusieurs fonctions <code class="docutils literal
 </ul>
 </section>
 <section id="methodes-d-introspection">
-<h3><span class="section-number">3.2.6. </span>Méthodes d’introspection<a class="headerlink" href="#methodes-d-introspection" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.6. </span>Méthodes d’introspection<a class="headerlink" href="#methodes-d-introspection" title="Permalink to this heading">#</a></h3>
 <p>Les méthodes d’introspection sont des fonctions qui retournent des caractéristiques des variables (objets) auxquelles elles s’appliquent.<br />
 Ce sont des <em>méthodes de description</em>.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>identifiant</p></th>
 <th class="head"><p>Argument</p></th>
@@ -1158,7 +846,7 @@ size : 6
 </div>
 </section>
 <section id="fonctions-element-par-element-vs-tableau">
-<h3><span class="section-number">3.2.7. </span>Fonctions : élément-par-élément vs. tableau<a class="headerlink" href="#fonctions-element-par-element-vs-tableau" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.7. </span>Fonctions : élément-par-élément vs. tableau<a class="headerlink" href="#fonctions-element-par-element-vs-tableau" title="Permalink to this heading">#</a></h3>
 <p>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>bénéficient d’opérations vectorielles et matricielles ainsi que des traitements d’algèbre linéaire :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dot()</span></code>: produit scalaire (aussi <code class="docutils literal notranslate"><span class="pre">vdot</span></code>),</p></li>
@@ -1169,7 +857,7 @@ size : 6
 <p>Ainsi ces fonctions retournent des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de forme induite par celles des opérandes.</p>
 <ul class="simple">
 <li><p>opérateurs arithmétiques (surchargés et s’appliquant element-wise)  : <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>,  <code class="docutils literal notranslate"><span class="pre">//</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">divmod()</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>, <code class="docutils literal notranslate"><span class="pre">pow()</span></code></p></li>
-<li><p>opérateurs logiques : <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">^,</span> </code>|<code class="docutils literal notranslate"><span class="pre">,</span> </code>~`</p></li>
+<li><p>opérateurs logiques : <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">~</span></code></p></li>
 <li><p>comparaisons : <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code></p></li>
 <li><p>fonctions : <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code>, <code class="docutils literal notranslate"><span class="pre">exp()</span></code>, …</p></li>
 </ul>
@@ -1181,7 +869,7 @@ size : 6
 En particulier, le terme suivant est utilisé une et une seule fois, ici : matrix!</p>
 </div></section>
 <section id="definir-des-ndarray-a-partir-de-listes-python-list">
-<h3><span class="section-number">3.2.8. </span>Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">list</span></code>)<a class="headerlink" href="#definir-des-ndarray-a-partir-de-listes-python-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.2.8. </span>Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">list</span></code>)<a class="headerlink" href="#definir-des-ndarray-a-partir-de-listes-python-list" title="Permalink to this heading">#</a></h3>
 <p>L’exemple suivant utilise un autre constructeur, dénoté <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> qui définit un tableau <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de la <em>liste</em> de ses valeurs (cf. paragraphe suivant).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1262,10 +950,10 @@ tranche de tableau: [0 0 1]
 </div></section>
 </section>
 <section id="aspects-plus-avances-star">
-<h2><span class="section-number">3.3. </span>Aspects plus avancés    (<span class="math notranslate nohighlight">\(\star\)</span>)<a class="headerlink" href="#aspects-plus-avances-star" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.3. </span>Aspects plus avancés    (<span class="math notranslate nohighlight">\(\star\)</span>)<a class="headerlink" href="#aspects-plus-avances-star" title="Permalink to this heading">#</a></h2>
 <section id="autres-constructeurs-et-autres-descripteurs">
-<h3><span class="section-number">3.3.1. </span>Autres constructeurs et autres descripteurs<a class="headerlink" href="#autres-constructeurs-et-autres-descripteurs" title="Permalink to this headline">#</a></h3>
-<table class="colwidths-auto table">
+<h3><span class="section-number">10.3.1. </span>Autres constructeurs et autres descripteurs<a class="headerlink" href="#autres-constructeurs-et-autres-descripteurs" title="Permalink to this heading">#</a></h3>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>identifiant</p></th>
 <th class="head"><p>Fonction ou Méthode</p></th>
@@ -1361,13 +1049,14 @@ Ce nouveau tableau est obtenu lors de l’affectation du résultat (de la foncti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>comparaison : False
-shapes : (4, 3) (6, 2)
-id : 140620493688976 140620493577936
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_25702/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
-  print(&quot;comparaison :&quot;, t12 == t12bis)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;comparaison :&quot;</span><span class="p">,</span> <span class="n">t12</span> <span class="o">==</span> <span class="n">t12bis</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shapes :&quot;</span><span class="p">,</span> <span class="n">t12</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">t12bis</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;id :&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">t12</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">t12bis</span><span class="p">))</span>
+
+<span class="ne">ValueError</span>: operands could not be broadcast together with shapes (4,3) (6,2) 
 </pre></div>
 </div>
 </div>
@@ -1452,11 +1141,11 @@ int64
 <div class="alert alert-block alert-warning">
 <p><strong>Création <span class="math notranslate nohighlight">\(\neq\)</span> affectation.</strong></p>
 <p>L’affectation entre <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> :<code class="docutils literal notranslate"><span class="pre">tab2</span> <span class="pre">=</span> <span class="pre">tab1</span></code> ne créé pas un nouvel <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> <code class="docutils literal notranslate"><span class="pre">tab2</span></code>.</p>
-<p>On retrouvera ce comportement avec <strong>types mutables</strong> python : <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">dict</span></code>.</p>
+<p>On retrouve le comportement des <strong>types mutables</strong> python : <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">dict</span></code>.</p>
 <p>En revanche, les précédentes fonctions de création produisent l’effet attendu.</p>
 </div></section>
 <section id="autres-fonctions-et-methodes-utiles">
-<h3><span class="section-number">3.3.2. </span>Autres fonctions et méthodes utiles<a class="headerlink" href="#autres-fonctions-et-methodes-utiles" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.3.2. </span>Autres fonctions et méthodes utiles<a class="headerlink" href="#autres-fonctions-et-methodes-utiles" title="Permalink to this heading">#</a></h3>
 <p>En vrac des fonctions et des méthodes qui manipulent (en entrée et sortie) des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">linspace(a,b,nb)</span></code> : fonction qui génère et retourne un tableau <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">nb</span></code> valeurs régulièrement espacées entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
@@ -1496,8 +1185,8 @@ int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.0000000e+00 -8.5899346e+09  4.4057372e+07]
- [ 1.5849497e+29  1.1210388e-44  0.0000000e+00]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0. 0.]
+ [0. 0. 0.]] 
  on vous aura prévenu !
 float32
 
@@ -1519,7 +1208,7 @@ int16
 </section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">3.4. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.4. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code> : des vrais tableaux nD</p>
 <ul>
@@ -1536,6 +1225,18 @@ int16
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> propose de multiples autres fonctions pour manipuler efficacement des tableaux.</p></li>
 <li><p>Se référer à <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.15.0/user/quickstart.html">quickstart numpy</a>  (en anglais).</p></li>
+<li><p>La bibliothèque <a class="reference external" href="https://scipy.org"><code class="docutils literal notranslate"><span class="pre">scipy</span></code></a> fournit de nombreux modules de calcul scientifique optimisés et basés sur <code class="docutils literal notranslate"><span class="pre">numpy</span></code> comme par exemple (et par ordre alphabétique) :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">constants</span></code> : les constantes physiques ou mathématiques</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fftpack</span></code> : Fast Fourier Transform</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">integrate</span></code> : solvers d’EDO (équations différentielles ordinaires)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interpolate</span></code> : interpolation et splines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">io</span></code> : entrées-sorties</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linalg</span></code> : algèbre linéaire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signal</span></code>traitement du signal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sparse</span></code> : matrices creuses et traitements associés</p></li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
@@ -1552,7 +1253,7 @@ int16
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./cm"
         },
         predefinedOutput: true
@@ -1560,49 +1261,115 @@ int16
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="a1-booleens.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Annexe : les booléens en python (&gt;3.6)</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="a3-exceptions.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Exceptions</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ph. Langlois<br/>
-  
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="a1-booleens.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Annexe : les booléens en python (&gt;3.6)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="a3-exceptions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Exceptions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tableaux">10.1. Les tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">10.1.1. La vision classique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-python">10.1.2. En python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ndarray-de-numpy">10.2. Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaire-necessaire-a-l-utilisation-de-numpy">10.2.1. Préliminaire nécessaire à l’utilisation de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-ndarray-fonctions-de-creation">10.2.2. Créer un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> : fonctions de création</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choisir-le-type-des-valeurs-a-la-creation">10.2.3. Choisir le type des valeurs à la création</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceder-aux-elements-d-un-ndarray">10.2.4. Accéder aux éléments d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afficher-un-ndarray-fonction-d-affichage">10.2.5. Afficher un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>: fonction d’affichage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-d-introspection">10.2.6. Méthodes d’introspection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-element-par-element-vs-tableau">10.2.7. Fonctions : élément-par-élément vs. tableau</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">10.2.8. Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aspects-plus-avances-star">10.3. Aspects plus avancés    (<span class="math notranslate nohighlight">\(\star\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-constructeurs-et-autres-descripteurs">10.3.1. Autres constructeurs et autres descripteurs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-fonctions-et-methodes-utiles">10.3.2. Autres fonctions et méthodes utiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">10.4. Synthèse</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

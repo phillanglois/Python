@@ -1,0 +1,1921 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Feuille 2 &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tp/2-knn';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Feuille 3" href="3-env-convexe.html" />
+    <link rel="prev" title="2. Feuille 1" href="1-bases.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Prog Python!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a3-exceptions.html">11. Exceptions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-env-convexe.html">4. Feuille 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/tp/2-knn.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Ftp/2-knn.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tp/2-knn.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-commencons-par-trier">3.1. Etape 1 : commençons par trier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-en-place-d-un-tableau-1d-d-entiers">3.1.1. Tri sélection en place d’un tableau 1D d’entiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation">3.1.2. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-avec-copie-d-un-tableau-1d">3.1.3. Tri sélection avec copie d’un tableau 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.4. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-d-un-tableau-2d">3.1.5. Tri d’un tableau 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-tableau-2d-poudlard">3.1.5.1. Le tableau 2D <code class="docutils literal notranslate"><span class="pre">poudlard</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-d-un-tableau-2d">3.1.5.2. Tri sélection d’un tableau 2D</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-2d-en-place">3.1.5.3. Tri sélection 2D en place</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalidation">3.1.5.4. Autovalidation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation-1">3.1.5.5. Votre validation (1)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation-2">3.1.5.6. Votre validation (2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-continuons-avec-l-element-majoritaire-de-n-elements">3.2. Etape 2 : continuons avec l’élément majoritaire de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#element-s-majoritaire-s-d-un-tableau-1d-de-n-entiers">3.2.1. Elément(s) majoritaire(s) d’un tableau 1D de <code class="docutils literal notranslate"><span class="pre">n</span></code> entiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-validation">3.2.2. Auto-validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2.3. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#element-s-majoritaire-s-d-un-tableau-2d">3.2.4. Elément(s) majoritaire(s) d’un tableau 2D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.5. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.6. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-mesurons-des-proximites-un-peu-compliquees">3.3. Etape 3 : mesurons des proximités un peu compliquées</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-de-manhattan-a-poudlard">3.3.1. Distance de Manhattan … à Poudlard !</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distm">3.3.2. <code class="docutils literal notranslate"><span class="pre">distM()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.3.3. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.3.4. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-la-proximite-entre-un-nouvel-eleve-et-les-eleves-sorciers-de-poudlard">3.3.5. Application à la proximité entre un nouvel élève et les élèves-sorciers de Poudlard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proximitesnouveleleve">3.3.6. <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.3.7. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-k-plus-proches-eleves-sorciers-d-un-nouvel-eleve">3.3.8. Les <code class="docutils literal notranslate"><span class="pre">k</span></code> plus proches élèves-sorciers d’un nouvel élève</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proximitesnouveleleve-version-triee">3.3.9. <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> : version triée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.3.10. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kplusproches">3.3.11. <code class="docutils literal notranslate"><span class="pre">kPlusProches()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3.12. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-4-classifions-poudlard-maintenant">3.4. Etape 4 : classifions Poudlard maintenant !</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quatre-nouveaux-eleves-arrivent-a-poudlard">3.4.1. Quatre nouveaux élèves arrivent à Poudlard …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-tentative-pour-valider-cette-approche">3.4.2. Première tentative pour valider cette approche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.4.3. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-5-et-comme-le-choixpeau-magique-affectons-les-nouveaux-eleves-dans-la-maison-qui-leur-convient-le-mieux">3.5. Etape 5 : et comme le <em>Choixpeau magique</em>, affectons les nouveaux élèves dans la maison qui leur convient le mieux.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-poudlard-plus-complet">3.5.1. Un Poudlard plus complet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.5.2. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-choixpeau-magique">3.5.3. Le <em>Choixpeau magique</em></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-2">
+<span id="tp-tp2"></span><h1><span class="section-number">3. </span>Feuille 2<a class="headerlink" href="#feuille-2" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Feuille téléchargeable au format jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)</p></li>
+<li><p>La mise en forme du jupyter notebook est légèrement modifiée dans ce support : l’exécution automatique des cellules de réponse provoquent des levées de l’exception <code class="docutils literal notranslate"><span class="pre">NotImplementedError()</span></code> qui polluent hélas l’affichage du sujet.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Algorithmes simples (distance, tri, élément majoritaire)</p></li>
+<li><p>Notions de bases de python (tableaux 1D, 2D,listes, dictionnaire, tuple)</p></li>
+<li><p>Fichiers (csv)</p></li>
+<li><p>Analyse de complexité</p></li>
+<li><p>Les questions sont accompagnées d’indications pour vérifier vos réponses (tests ou exemples)</p></li>
+<li><p>Bien suivre les questions et répondre dans les cellules dédiées</p></li>
+<li><p>Ne pas modifier les cellules bloquées, ni ajouter aucune cellule.</p></li>
+</ul>
+<p><strong>Deux remarques prélables.</strong></p>
+<ol class="arabic simple">
+<li><p>Dans l’archive zip, ce notebook <code class="docutils literal notranslate"><span class="pre">2-knn.ipynb</span></code> est accompagné du fichier <code class="docutils literal notranslate"><span class="pre">poudlard2022.csv</span></code> utilisé à l’étape 5.</p></li>
+<li><p>Les fonctions demandées sont toujours décrites partiellement : signature, doc-string et pré-conditions. Ne pas modifier ces éléments qui sont donnés pour vous aider. En revanche, vos réponse doivent remplacer les 2 dernières lignes de ces cellules :</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Bon travail.</p>
+<p>Ce sujet propose de découvrir un algorithme d’apprentissage automatique supervisé, <em>l’algorithme des k plus proches voisins</em>, et de l’utiliser pour classifier de nouvelles données selon une caractéristique discrète.</p>
+<p>Plus concrètement, nous traiterons avec cet algorithme l’exemple du <em>Choixpeau magique</em> de la série de romans “Harry Potter” de J. K. Rowling. Le <em>Choixpeau magique</em> détermine la maison d’élèves-sorciers qui accueillera les nouveaux arrivants de la fameuse école de Poudlard. Ici, la caractéristique discrète déterminée par le <em>Choixpeau magique</em> pour chaque nouvel élève est, celle des 4 maisons de sorciers (Serpentar, Griffondor, Serdaigle, Poufssouffle) qui correspond le mieux à ses qualités (courage, loyauté,  sagesse, malice).</p>
+<p>Pour arriver à un tel traitement, ce sujet se découpe en 5 étapes successives.</p>
+<ul class="simple">
+<li><p>Etape 1 : commençons par trier</p></li>
+<li><p>Etape 2 : continuons avec l’élément majoritaire de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments</p></li>
+<li><p>Etape 3 : mesurons des proximités un peu compliquées</p></li>
+<li><p>Etape 4 : classifions Poudlard maintenant</p></li>
+<li><p>Etape 5 : et comme le <em>Choixpeau magique</em>, affectons les nouveaux élèves dans la maison qui leur convient le mieux !</p></li>
+</ul>
+<p>Il est bien sûr conseillé de lire le sujet en entier avant de commencer.</p>
+<p>Les étapes 1, 2, 3 sont très largement indépendantes.
+Les étapes 4 et 5 dépendent des précédentes et sont liées l’une à l’autre : l’étape 5 généralise l’étape 4.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># le module typing pour annoter les types des paramètres de fonction</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">TypeVar</span>
+
+<span class="c1"># une variable de type IntOrStr est soit un int, soit une str </span>
+<span class="c1"># ainsi la liste [&quot;abc&quot;, 3] sera annotée simplement list[IntOrStr]</span>
+<span class="n">IntOrStr</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;IntOrStr&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<section id="etape-1-commencons-par-trier">
+<h2><span class="section-number">3.1. </span>Etape 1 : commençons par trier<a class="headerlink" href="#etape-1-commencons-par-trier" title="Permalink to this heading">#</a></h2>
+<p>On suppose une relation d’ordre définie pour des valeurs à trier. Par exemple, on veut trier des entiers par ordre croissant.
+On suppose aussi <em>dans un premier temps</em> que les valeurs à trier sont au nombre de <span class="math notranslate nohighlight">\(n\)</span> et sont stockées dans un tableau 1D : une liste en python.</p>
+<p>Le <em>tri par sélection</em> est l’un des plus simples algorithmes de tri. Il consiste à :</p>
+<ul class="simple">
+<li><p>parcourir les <span class="math notranslate nohighlight">\(n\)</span> valeurs à trier,</p></li>
+<li><p><em>identifier la plus petite</em> des valeurs,</p></li>
+<li><p><em>déplacer</em> cette valeur à sa position définitive dans le tableau trié, c-a-d. en première position,</p></li>
+<li><p>recommencer pour <em>identifier</em> et <em>déplacer</em> la seconde plus petite des valeurs,</p></li>
+<li><p>et ainsi de suite pour toutes les valeurs.</p></li>
+</ul>
+<p>A l’itération <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(1 \le i &lt; n\)</span>), les <span class="math notranslate nohighlight">\(i\)</span> plus petites valeurs sont correctement placées dans un ordre trié, c-a-d. dans les <span class="math notranslate nohighlight">\(i\)</span> premières cases du tableau.
+A la fin, les <span class="math notranslate nohighlight">\(n\)</span> valeurs sont correctement placées, c-a-d. de façon triée par ordre croissant.</p>
+<p><strong>Exemple</strong>.
+Le tableau <code class="docutils literal notranslate"><span class="pre">t0</span> <span class="pre">=</span> <span class="pre">[2,</span> <span class="pre">4,</span> <span class="pre">1,</span> <span class="pre">3]</span></code> est transformé successivement en :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">4,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>
+: 1 est la plus petite valeur de <code class="docutils literal notranslate"><span class="pre">t0</span></code>, elle est donc placé à l’indice 0,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">3]</span></code> : 2 est la plus petite valeur suivante, elle est donc placé à l’indice 1,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> : 3 est la plus petite valeur suivante, elle est donc placé à l’indice 2.<br />
+Il reste une dernière valeur qui se retrouve correctement placée : ici la valeur 4 placée à l’indice 3.</p></li>
+</ul>
+<p>Ce tableau <code class="docutils literal notranslate"><span class="pre">t0</span></code> sera utilisé par la suite.</p>
+<p>Remarquons que cet algorithme <em>déplace</em> des valeurs dans le tableau initial. Il s’agit donc d’<strong>un tri en place</strong>.</p>
+<p>Si on introduit un tableau 1D de taille <span class="math notranslate nohighlight">\(n\)</span> supplémentaire, et si le verbe <em>déplacer</em> est remplacé par <em>placer</em>, l’algorithme ainsi formulé remplit successivement ce tableau supplémentaire à partir de son indice 0. Ce tableau supplémentaire contient de façon triée les valeurs du tableau initial. Il s’agit alors d’<strong>un tri avec copie</strong>.</p>
+<p>Il y a plusieurs stratégies pour rechercher et effectuer chaque déplacement/placement.</p>
+<p>Dans ces deux cas, la spécification de ce tri, pour un tableau de <span class="math notranslate nohighlight">\(n\)</span> entiers, à la forme classique suivante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;signature d&#39;un tri par selection de n entiers&#39;&#39;&#39;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tri-selection-en-place-d-un-tableau-1d-d-entiers">
+<h3><span class="section-number">3.1.1. </span>Tri sélection en place d’un tableau 1D d’entiers<a class="headerlink" href="#tri-selection-en-place-d-un-tableau-1d-d-entiers" title="Permalink to this heading">#</a></h3>
+<p>Ecrire <code class="docutils literal notranslate"><span class="pre">tri_selection_1()</span></code> une version “en place” du tri par sélection.
+Une variable entière temporaire pourra servir pour les déplacements successifs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tri_selection_1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;tri par selection de n entiers : version en place&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Auto-validation</span>
+
+<span class="n">La</span> <span class="n">validation</span> <span class="n">suivante</span> <span class="n">doit</span> <span class="n">s</span><span class="s1">&#39;exécuter sans erreur.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+    <span class="n">La</span> <span class="n">validation</span> <span class="n">suivante</span> <span class="n">doit</span> <span class="n">s</span><span class="s1">&#39;exécuter sans erreur.</span>
+                                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unterminated string literal (detected at line 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[x = \frac{4}{3} \sqrt{x}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">tt0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">tt0</span> <span class="o">==</span> <span class="n">tri_selection_1</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">tt0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">assert</span> <span class="n">tt0</span> <span class="o">==</span> <span class="n">tri_selection_1</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">))</span>
+
+<span class="ne">AssertionError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="votre-validation">
+<h3><span class="section-number">3.1.2. </span>Votre validation<a class="headerlink" href="#votre-validation" title="Permalink to this heading">#</a></h3>
+<p>Définir les tableaux <code class="docutils literal notranslate"><span class="pre">t10_up</span></code> et <code class="docutils literal notranslate"><span class="pre">t10_down</span></code> qui contiennent les entiers 1, 2, …, 10 respectivement rangés par ordre croissant (up) et décroissant (down). Puis vérifier la correction de votre algorithme avec <code class="docutils literal notranslate"><span class="pre">t10_up</span></code> et <code class="docutils literal notranslate"><span class="pre">t10_down</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tri-selection-avec-copie-d-un-tableau-1d">
+<h3><span class="section-number">3.1.3. </span>Tri sélection avec copie d’un tableau 1D<a class="headerlink" href="#tri-selection-avec-copie-d-un-tableau-1d" title="Permalink to this heading">#</a></h3>
+<p>Ecrire <code class="docutils literal notranslate"><span class="pre">tri_selection_2()</span></code> une version du tri par sélection avec copie, c-a-d. avec un tableau supplémentaire.</p>
+<p>On rappelle par exemple que la fonction-méthode <code class="docutils literal notranslate"><span class="pre">l.pop(i)</span></code> enlève et retourne la valeur d’indice <code class="docutils literal notranslate"><span class="pre">i</span></code> de la liste python <code class="docutils literal notranslate"><span class="pre">l</span></code>.
+En revanche, on <strong>interdit d’utiliser</strong> la fonction-méthode <code class="docutils literal notranslate"><span class="pre">l.append()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tri_selection_2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;tri par selection de n entiers : version avec copie&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">3.1.4. </span>Votre validation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Ecrire les tests similaires à ceux de la version en place.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(<span class="math notranslate nohighlight">\(\star\)</span>) Complexité en temps</p>
+<p>Effectuer une analyse de la complexité en temps de ces 2 versions. Ne pas oublier de commencer par préciser le paramètre et la mesure de cette complexité. Justifier votre analyse. Expliciter les meilleurs et pire cas. En déduire la complexité asymptotique et l’écrire avec les notations de Landau.</p>
+<blockquote>
+<div><p>VOTRE REPONSE A LA PLACE DE CE TEXTE (format texte ou markdown)</p>
+</div></blockquote>
+<p>(<span class="math notranslate nohighlight">\(\star\)</span>) Complexité en espace.</p>
+<p>Que pensez-vous de la complexité en espace de ces 2 versions du tri sélection ?</p>
+<blockquote>
+<div><p>VOTRE REPONSE A LA PLACE DE CE TEXTE (format texte ou markdown)</p>
+</div></blockquote>
+</section>
+<section id="tri-d-un-tableau-2d">
+<h3><span class="section-number">3.1.5. </span>Tri d’un tableau 2D<a class="headerlink" href="#tri-d-un-tableau-2d" title="Permalink to this heading">#</a></h3>
+<p>On dispose maintenant de données stockées dans un “tableau” 2D <span class="math notranslate nohighlight">\(n \times p\)</span>, c-a-d. un tableau de <span class="math notranslate nohighlight">\(n\)</span> lignes et <span class="math notranslate nohighlight">\(p\)</span> colonnes.</p>
+<section id="le-tableau-2d-poudlard">
+<h4><span class="section-number">3.1.5.1. </span>Le tableau 2D <code class="docutils literal notranslate"><span class="pre">poudlard</span></code><a class="headerlink" href="#le-tableau-2d-poudlard" title="Permalink to this heading">#</a></h4>
+<p>On a par exemple, le “tableau” <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> suivant.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Nom</p></th>
+<th class="head text-center"><p>Courage</p></th>
+<th class="head text-center"><p>Loyauté</p></th>
+<th class="head text-center"><p>Sagesse</p></th>
+<th class="head text-center"><p>Malice</p></th>
+<th class="head text-left"><p>Maison</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Adam</p></td>
+<td class="text-center"><p>9</p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-left"><p>Serpentar</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Ahmed</p></td>
+<td class="text-center"><p>9</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-left"><p>Griffondor</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Albertine</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>5</p></td>
+<td class="text-center"><p>9</p></td>
+<td class="text-left"><p>Griffondor</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>André</p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>8</p></td>
+<td class="text-center"><p>8</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-left"><p>Serdaigle</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Angelina</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>5</p></td>
+<td class="text-left"><p>Griffondor</p></td>
+</tr>
+</tbody>
+</table>
+<p>Vous aurez reconnu 6 premiers élèves-sorciers imaginaires (ici : Adam, Ahmed, Albertine, André, Angelina) d’une série déjà citée, répartis dans 3 (des 4) <em>Maisons</em> (ici : Serpentar, Griffondor, Serdaigle) en fonction de leurs qualités (courage, loyauté,  sagesse, malice). D’autres élèves-sorciers et la quatrième maison (Poufssouffle) apparaîtront prochainement.</p>
+<p>Ce “tableau” peut être stocké par la liste de listes suivante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Albertine&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;André&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Serdaigle&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ainsi les guillemets utilisés autour de “tableau” s’expliquent : toutes les valeurs stockées ne sont pas d’un type unique : il s’agit bien de liste de listes.  On se dispense donc maintenant de ces guillements.</p>
+<p><strong>Préalable</strong>.  Les en-têtes des fonctions sont systématiquement définis. Ils explicitent le type des arguments de ces fonctions.</p>
+<p>Dans ce sujet, on va écrire des fonctions qui manipulent des tableaux 2D <strong>de valeurs de type différents</strong>, ici des <code class="docutils literal notranslate"><span class="pre">int</span></code> ou des <code class="docutils literal notranslate"><span class="pre">str</span></code>.
+python 3.7 (version instalée à ce jour sur les machines) nécessite quelques contorsions pour définir le type de tels arguments, c-a-d. des listes de <code class="docutils literal notranslate"><span class="pre">int</span></code> ou <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>En début de sujet, on a donc défini “un nouveau type” <code class="docutils literal notranslate"><span class="pre">IntOrStr</span></code>. Ainsi on peut maintenant écrire <code class="docutils literal notranslate"><span class="pre">list[IntOrStr]</span></code> pour caractériser une liste de valeurs <code class="docutils literal notranslate"><span class="pre">int</span></code> ou <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>L’importation d’<code class="docutils literal notranslate"><span class="pre">Union</span></code> du module <code class="docutils literal notranslate"><span class="pre">typing</span></code> effectuée aussi en début de sujet permet de décrire certains cas “un peu compliqués”. Ainsi <code class="docutils literal notranslate"><span class="pre">Union[int,</span> <span class="pre">str,</span> <span class="pre">None]</span></code> indique une valeur de type <code class="docutils literal notranslate"><span class="pre">int</span></code>, ou <code class="docutils literal notranslate"><span class="pre">str</span></code> ou la valeur  <code class="docutils literal notranslate"><span class="pre">None</span></code>. Cette construction est par exemple utilisée pour préciser le type de la valeur retournée par une fonction.</p>
+</section>
+<section id="tri-selection-d-un-tableau-2d">
+<h4><span class="section-number">3.1.5.2. </span>Tri sélection d’un tableau 2D<a class="headerlink" href="#tri-selection-d-un-tableau-2d" title="Permalink to this heading">#</a></h4>
+<p>On veut maintenant <em>trier les lignes</em> d’un tableau 2D <em>selon les valeurs d’une de ses colonnes</em>. Ceci suppose qu’une relation d’ordre existe sur les valeurs de cette colonne.</p>
+<p>Par exemple, le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> est actuellement trié selon sa colonne <code class="docutils literal notranslate"><span class="pre">0</span></code>,  c-a-d. selon l’ordre lexicographique
+(*) des <code class="docutils literal notranslate"><span class="pre">Noms</span></code>.</p>
+<p>(*) L’ordre lexicographique est l’ordre alphabétique étendu, par exemple appliqué pour ranger les mots d’un dictionnaire.</p>
+<p>On modifie donc la signature de la fonction de tri sélection d’un tableau 1D pour indiquer <strong>le numéro de la colonne</strong> selon laquelle s’effectue <strong>le tri des lignes</strong> du tableau 2D.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tri2D_selection</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num_col</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;signature d&#39;un tri par selection d&#39;un tableau 2D d&#39;int ou de str</span>
+<span class="sd">    selon l&#39;ordre croissant de la colonne de numéro num_col&#39;&#39;&#39;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarque.</strong> On pourrait aussi ajouter un paramètre supplémentaire pour indiquer la relation d’ordre qui s’applique sur les valeurs de la “colonne de tri”. Ici les colonnes 0 (“Nom”) et 5 (“Maison”) sont des valeurs de type <code class="docutils literal notranslate"><span class="pre">str</span></code> tandis que les 4 autres sont de type <code class="docutils literal notranslate"><span class="pre">int</span></code>. Ainsi, on pourrait spécifier des relations d’ordre adaptées selon le choix de la colonne de tri. Par exemple, l’ordre lexicographique (croissant) pour les colonnes 0 et 5, et l’ordre naturel (croissant) pour les 4 autres. Remarquons qu’un tel paramètre serait une fonction (et non une valeur).</p>
+<p>On va simplifier cette question en utilisant, comme pour les tableaux 1D d’entiers traités précédemment, <strong>les relations d’ordre notées <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> ou <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></strong> qui s’appliquent (en python) de façon adaptée à des valeurs <code class="docutils literal notranslate"><span class="pre">int</span></code> (ordre naturel) ou <code class="docutils literal notranslate"><span class="pre">str</span></code> (ordre lexicographique).  Attention cependant à ne pas comparer aveuglément des <code class="docutils literal notranslate"><span class="pre">int</span></code> à des <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>La cellule suivante qui s’exécute sans erreur vous aide à mieux comprendre si besoin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="k">assert</span> <span class="p">(</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> 
+<span class="k">assert</span> <span class="p">(</span><span class="mi">9</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> 
+<span class="k">assert</span> <span class="p">(</span><span class="mi">12</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="p">(</span><span class="s2">&quot;Adam&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;Angelique&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="p">(</span><span class="s2">&quot;Angelique&quot;</span> <span class="o">&lt;=</span> <span class="s2">&quot;Angelique&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="p">(</span><span class="s2">&quot;Albertine&quot;</span> <span class="o">&lt;=</span> <span class="s2">&quot;Adam&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tri-selection-2d-en-place">
+<h4><span class="section-number">3.1.5.3. </span>Tri sélection 2D en place<a class="headerlink" href="#tri-selection-2d-en-place" title="Permalink to this heading">#</a></h4>
+<p>Ecrire <code class="docutils literal notranslate"><span class="pre">tri2D_selection()</span></code> une version “en place” du tri par sélection d’un tableau 2D selon les valeurs d’une colonne.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tri2D_selection</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num_col</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;tri par selection d&#39;un tableau 2D d&#39;int ou de str</span>
+<span class="sd">    selon l&#39;ordre croissant de num_col&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">num_col</span> <span class="o">&lt;</span> <span class="n">p</span> <span class="ow">or</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">num_col</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="autovalidation">
+<h4><span class="section-number">3.1.5.4. </span>Autovalidation<a class="headerlink" href="#autovalidation" title="Permalink to this heading">#</a></h4>
+<p>La validation suivante doit s’exécuter sans erreur. Et il est utile de comprendre <em>pourquoi</em> cette validation est ainsi construite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">tri2D_selection</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">p1</span> <span class="o">==</span> <span class="n">poudlard</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">)):</span>
+    <span class="k">assert</span> <span class="n">p1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">poudlard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+            <span class="k">assert</span> <span class="n">p1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">poudlard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">tri2D_selection</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">p1</span> <span class="o">==</span> <span class="n">poudlard</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">)):</span>
+
+<span class="nn">Cell In[18], line 9,</span> in <span class="ni">tri2D_selection</span><span class="nt">(t, n, p, num_col)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">num_col</span> <span class="o">&lt;</span> <span class="n">p</span> <span class="ow">or</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">num_col</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="votre-validation-1">
+<h4><span class="section-number">3.1.5.5. </span>Votre validation (1)<a class="headerlink" href="#votre-validation-1" title="Permalink to this heading">#</a></h4>
+<p>Vérifier que le tri de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> selon la valeur <code class="docutils literal notranslate"><span class="pre">Courage</span></code> conduit bien à l’affichage suivant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;André&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Serdaigle&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Ahmed&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Serpentar&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Albertine&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Angelina&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><strong>Attention.</strong> Il s’agit d’un tri <em>en place</em> qui va donc modifier le tableau à trier (ici <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>). Il peut donc être utile de conserver une copie du tableau initial ou de le re-générer si besoin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="votre-validation-2">
+<h4><span class="section-number">3.1.5.6. </span>Votre validation (2)<a class="headerlink" href="#votre-validation-2" title="Permalink to this heading">#</a></h4>
+<p>Vérifier que le tri de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> selon la <code class="docutils literal notranslate"><span class="pre">Maison</span></code> conduit bien à l’affichage suivant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;Ahmed&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Albertine&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Angelina&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;André&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Serdaigle&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Serpentar&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><strong>Attention.</strong> Il s’agit d’un tri <em>en place</em> qui va donc modifier le tableau à trier (ici <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>). Il peut donc être utile de conserver une copie du tableau initial ou de le re-générer si besoin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="etape-2-continuons-avec-l-element-majoritaire-de-n-elements">
+<h2><span class="section-number">3.2. </span>Etape 2 : continuons avec l’élément majoritaire de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments<a class="headerlink" href="#etape-2-continuons-avec-l-element-majoritaire-de-n-elements" title="Permalink to this heading">#</a></h2>
+<p>Nous allons préciser deux notions différentes de la notion d’élément majoritaire parmi <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments.</p>
+<p><strong>Elément majoritaire : sens absolu.</strong>
+<em>L’élément majoritaire</em> d’une liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments est, <em>lorsqu’il existe</em>, l’élément qui apparaît <em>strictement plus que</em> <code class="docutils literal notranslate"><span class="pre">n//2</span></code> fois.</p>
+<p>Plusieurs algorithmes (de diverses complexités) existent pour déterminer, lorsqu’il existe, l’élément majoritaire d’un ensemble d’éléments.</p>
+<p>Une seconde définition permet d’obtenir au moins une réponse dans tous les cas.</p>
+<p><strong>Elément majoritaire : sens relatif.</strong>
+L’<em>élément majoritaire</em> d’une liste de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments est l’élément qui apparaît le plus grand nombre de fois.</p>
+<p>Cette définition assure l’existence d’<em>au moins un</em> élément majoritaire quelques soient les <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments de départ. En revanche, l’unicité n’est plus assurée : <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments, au plus, peuvent être majoritaires (au sens relatif).</p>
+<p>Le choix de l’une ou l’autre des définitions (“absolu” <em>vs.</em> “relatif”) dépend des contextes d’intérêt.</p>
+<p><strong>Dans la suite de ce tp</strong>, nous considérons <strong>uniquement la formulation relative</strong>.</p>
+<p>Pour calculer un tel élément majoritaire, nous allons :</p>
+<ol class="arabic simple">
+<li><p>effectuer un parcours séquentiel des <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments,</p></li>
+<li><p>dénombrer les occurrences de chacun de ces éléments</p></li>
+<li><p>en mettant à jour un dictionnaire <code class="docutils literal notranslate"><span class="pre">{(élément</span> <span class="pre">:</span> <span class="pre">nombre</span> <span class="pre">d'occurrences</span> <span class="pre">de</span> <span class="pre">cet</span> <span class="pre">élément)}</span></code></p>
+<ul class="simple">
+<li><p>la clé est un des <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments</p></li>
+<li><p>la valeur correspondante est le nombre d’occurrences de cet élément ;</p></li>
+</ul>
+</li>
+<li><p>puis effectuer un parcours de ce dictionnaire afin d’identifier le (ou les) élément(s) majoritaire(s).</p></li>
+</ol>
+<section id="element-s-majoritaire-s-d-un-tableau-1d-de-n-entiers">
+<h3><span class="section-number">3.2.1. </span>Elément(s) majoritaire(s) d’un tableau 1D de <code class="docutils literal notranslate"><span class="pre">n</span></code> entiers<a class="headerlink" href="#element-s-majoritaire-s-d-un-tableau-1d-de-n-entiers" title="Permalink to this heading">#</a></h3>
+<p>Ecrire la fonction <code class="docutils literal notranslate"><span class="pre">elemMajoritaire1D()</span></code> qui retourne sous la forme d’une liste (éventuellement réduite à un seul élément) l’élément majoritaire de <span class="math notranslate nohighlight">\(n\)</span> valeurs <em>entières</em> stockées dans un tableau 1D. Cette fonction retournera <code class="docutils literal notranslate"><span class="pre">None</span></code> si la liste des éléments majoritaires est vide.</p>
+<p><strong>Remarque.</strong> Cette fonction ne retourne pas le dictionnaire nécessaire à son exécution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elemMajoritaire1D</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne l&#39;élément majoritaite de t tab de n entiers ou None sinon&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="auto-validation">
+<h3><span class="section-number">3.2.2. </span>Auto-validation<a class="headerlink" href="#auto-validation" title="Permalink to this heading">#</a></h3>
+<p>La validation suivante doit s’exécuter sans erreur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">)))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">)))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">assert</span> <span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="nn">Cell In[24], line 5,</span> in <span class="ni">elemMajoritaire1D</span><span class="nt">(t, n)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3><span class="section-number">3.2.3. </span>Votre validation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Ecrire des tests de validation qui complètent les précédents : tableaux de taille impair, tableau vide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="element-s-majoritaire-s-d-un-tableau-2d">
+<h3><span class="section-number">3.2.4. </span>Elément(s) majoritaire(s) d’un tableau 2D<a class="headerlink" href="#element-s-majoritaire-s-d-un-tableau-2d" title="Permalink to this heading">#</a></h3>
+<p>On étend naturellement aux tableaux 2Dla notion d’élément majoritaire <em>selon une de ses colonnes</em>.  L’élément majoritaire est alors l’élément majoritaire (au sens relatif) des <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments qui composent la colonne choisie.</p>
+<p>Ecrire la fonction <code class="docutils literal notranslate"><span class="pre">elemMajoritaire2D()</span></code> qui effectue ce traitement selon une colonne  d’un tableau 2D similaire à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elemMajoritaire2D</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num_col</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne l&#39;élément majoritaite de t tab2D de n lignes d&#39;int ou str,</span>
+<span class="sd">    retourne None si pas d&#39;elemnt majoritaire&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3><span class="section-number">3.2.5. </span>Autovalidation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>La validation suivante doit s’exécuter sans erreur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">maisonMaj</span> <span class="o">=</span> <span class="n">elemMajoritaire2D</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">maisonMaj</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">maisonMaj</span> <span class="o">=</span> <span class="n">elemMajoritaire2D</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">5</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">maisonMaj</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+
+<span class="nn">Cell In[28], line 8,</span> in <span class="ni">elemMajoritaire2D</span><span class="nt">(t, n, p, num_col)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3><span class="section-number">3.2.6. </span>Votre validation<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>Ecrire des tests de validation qui vérifient le(s) élément(s) majoritaire(s) pour chacune des qualités des 6 élèves-sorciers actuels de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="etape-3-mesurons-des-proximites-un-peu-compliquees">
+<h2><span class="section-number">3.3. </span>Etape 3 : mesurons des proximités un peu compliquées<a class="headerlink" href="#etape-3-mesurons-des-proximites-un-peu-compliquees" title="Permalink to this heading">#</a></h2>
+<p>Il existe de nombreuses distances pour mesurer la proximité entre deux objets mathématiques. Intéressons-nous au cas suivant.</p>
+<p>Chaque ligne du tableau 2D <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>  contient un vecteur de 4 valeurs discrètes  : courage, loyauté, sagesse, et malice. Ces valeurs sont des entiers positifs entre 0 et 10.</p>
+<p>On peut donc extraire de la ligne <span class="math notranslate nohighlight">\(i\)</span>, qui décrit l’élève-sorcier <span class="math notranslate nohighlight">\(h_i\)</span>, les 4 valeurs <span class="math notranslate nohighlight">\((c_i, l_i, s_i, m_i)\)</span> de <strong>c</strong>ourage, <strong>l</strong>oyauté, <strong>s</strong>agesse et <strong>m</strong>alice de l’élève-sorcier <span class="math notranslate nohighlight">\(h_i\)</span>.</p>
+<p>Par exemple, la ligne d’<code class="docutils literal notranslate"><span class="pre">Adam</span></code> donne le vecteur (9, 4, 7, 10) et celle d’<code class="docutils literal notranslate"><span class="pre">Ahmed</span></code> le vecteur (9, 3, 4, 7).</p>
+<section id="distance-de-manhattan-a-poudlard">
+<h3><span class="section-number">3.3.1. </span>Distance de Manhattan … à Poudlard !<a class="headerlink" href="#distance-de-manhattan-a-poudlard" title="Permalink to this heading">#</a></h3>
+<p>La <strong>distance</strong> (dite) <strong>de Manhattan</strong> est adaptée pour mesurer la proximité de 2 élèves-sorciers du tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> (c-a-d. de 2 lignes de ce tableau). On la définit comme suit pour 2 élèves-sorciers <span class="math notranslate nohighlight">\(h_1\)</span> et <span class="math notranslate nohighlight">\(h_2\)</span> du tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> :</p>
+<div class="math notranslate nohighlight">
+\[d(h_1, h_2) = |c_1 - c_2| + |l_1 - l_2| + |s_1 - s_2| +|m_1 - m_2|\]</div>
+<p>où <span class="math notranslate nohighlight">\(h_i = (c_i, l_i, s_i, m_i)\)</span> pour <span class="math notranslate nohighlight">\(i= 1, 2\)</span>.</p>
+<p>Par exemple, la distance de Manhattan entre <code class="docutils literal notranslate"><span class="pre">&quot;Adam&quot;</span></code> et <code class="docutils literal notranslate"><span class="pre">&quot;Ahmed&quot;</span></code> vaut <span class="math notranslate nohighlight">\(|9-9|+|4-3|+|7-4|+|10-7| = 7\)</span>.</p>
+</section>
+<section id="distm">
+<h3><span class="section-number">3.3.2. </span><code class="docutils literal notranslate"><span class="pre">distM()</span></code><a class="headerlink" href="#distm" title="Permalink to this heading">#</a></h3>
+<p>Ecrire selon l’en-tête suivante, la fonction <code class="docutils literal notranslate"><span class="pre">distM()</span></code> qui retourne la distance de Manhattan entre 2 élèves-sorciers décrits par les lignes <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code> du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> à <code class="docutils literal notranslate"><span class="pre">n</span></code> lignes et <code class="docutils literal notranslate"><span class="pre">p</span></code> colonnes. Le paramètre <code class="docutils literal notranslate"><span class="pre">cols</span></code> est le t-uple qui décrit les numéros des colonnes du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> qui forment le vecteur à considérer pour le calcul de la distance entre les 2 lignes.</p>
+<p>Par exemple pour le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>, le tuple (1, 2, 3, 4) décrit les 4 valeurs <span class="math notranslate nohighlight">\((c_i, l_i, s_i, m_i)\)</span> mentionnées plus haut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distM</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+          <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne la distance de Manhattan entre les vecteurs des colonnes cols </span>
+<span class="sd">    des lignes i et j du tableau t de taille n x p.&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">or</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">or</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">3.3.3. </span>Autovalidation<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>La validation suivante doit s’exécuter sans erreur.</p>
+<p><strong>Attention.</strong> Le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> est redéfini dans son état original (pour éviter les éventuels effets de bord des traitements précédents) .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Albertine&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;André&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Serdaigle&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># distance entre Adam et lui-même</span>
+<span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>  <span class="c1"># distance entre Adam et Ahmed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="p">[</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># distance entre Adam et lui-même</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>  <span class="c1"># distance entre Adam et Ahmed</span>
+
+<span class="nn">Cell In[32], line 11,</span> in <span class="ni">distM</span><span class="nt">(i, j, cols, t, n, p)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">or</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3><span class="section-number">3.3.4. </span>Votre validation<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>Ecrire des tests qui valident votre fonction <code class="docutils literal notranslate"><span class="pre">distM()</span></code> sur <code class="docutils literal notranslate"><span class="pre">Adam</span></code>, <code class="docutils literal notranslate"><span class="pre">Albertine</span></code> et <code class="docutils literal notranslate"><span class="pre">Angelina</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="application-a-la-proximite-entre-un-nouvel-eleve-et-les-eleves-sorciers-de-poudlard">
+<h3><span class="section-number">3.3.5. </span>Application à la proximité entre un nouvel élève et les élèves-sorciers de Poudlard<a class="headerlink" href="#application-a-la-proximite-entre-un-nouvel-eleve-et-les-eleves-sorciers-de-poudlard" title="Permalink to this heading">#</a></h3>
+<p>Un nouvel élève doit être intégré à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.  Pour des raisons que nous expliquerons dans la section suivante, nous préparons son intégration en réalisant le traitement suivant.</p>
+<ol class="arabic simple">
+<li><p>Ce nouvel élève est décrit par un t-uple de <strong>6 valeurs</strong> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(son_nom,</span> <span class="pre">son_courage,</span> <span class="pre">sa_loyauté,</span> <span class="pre">sa_sagesse,</span> <span class="pre">sa_malice,</span> <span class="pre">&quot;&quot;)</span></code> ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">son_nom</span></code> est une <code class="docutils literal notranslate"><span class="pre">str</span></code> et les 4 valeurs suivantes des <code class="docutils literal notranslate"><span class="pre">int</span></code> entre 0 et 10.</p></li>
+<li><p>Remarquons qu’à la différence des élèves-sorciers de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>, ce nouvel élève n’appartient à aucune <code class="docutils literal notranslate"><span class="pre">Maison</span></code>. Ainsi la 6-ème valeur du t-uple est la chaîne vide <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p>On calcule la distance de Manhattan entre ce nouvel élève et chaque élève-sorcier de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code></p>
+<ul class="simple">
+<li><p>ce qui donne <code class="docutils literal notranslate"><span class="pre">n</span></code> distances (des entiers entre 0 et 40).</p></li>
+</ul>
+</li>
+<li><p>On ajoute chacune de ces distances à la ligne correspondant à chaque élève-sorcier dans le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code></p>
+<ul class="simple">
+<li><p>ce qui donne une colonne supplémentaire après celle de <code class="docutils literal notranslate"><span class="pre">Maison</span></code></p></li>
+<li><p>et modifie donc le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Indications.</strong></p>
+<ul class="simple">
+<li><p>Il est commode d’ajouter <em>temporairement</em> ce nouvel élève à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> pour profiter du calcul réalisé par la fonction <code class="docutils literal notranslate"><span class="pre">distM()</span></code>.</p></li>
+<li><p>Ce nouvel élève est un t-uple et <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> est une liste de listes.</p></li>
+</ul>
+<p><strong>Exemple.</strong> Préparons l’intégration aux 6 élèves-sorciers actuels de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> de :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eleve_bientot_celebre</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Hermione&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Après le traitement décrit, le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> aura la forme <strong>différente</strong> suivante :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Serpentar&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Ahmed&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Albertine&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;André&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Serdaigle&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Angelina&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>La dernière valeur de chaque ligne est la proximité entre “Hermione”  et chaque élèves-sorciers.</p></li>
+<li><p>Cette valeur ajoute une colonne supplémentaire au tableau initial.</p></li>
+<li><p>En revanche, remarquons qu’aucune <em>nouvelle ligne</em>, c-a-d. aucun nouvel élèves-sorciers, n’a été ajouté à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> <strong>après ce traitement</strong> : “Hermione”  n’est pas encore une héroïne !</p></li>
+</ul>
+</section>
+<section id="proximitesnouveleleve">
+<h3><span class="section-number">3.3.6. </span><code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code><a class="headerlink" href="#proximitesnouveleleve" title="Permalink to this heading">#</a></h3>
+<p>Ecrire ce traitement avec la fonction suivante <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code>.</p>
+<ul class="simple">
+<li><p>On choisit de laisser l’appel de cette fonction définir que le traitement s’effectue sur le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> (comme paramètre effectif du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> et de ses dimensions <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">p</span></code>).</p></li>
+<li><p>Cette fonction  modifie le tableau paramètre <code class="docutils literal notranslate"><span class="pre">t</span></code> en <strong>ajoutant une dernière colonne supplémentaire</strong> – comme illustré dans l’exemple précédent pour un appel sur le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">proximitesNouvelEleve</span><span class="p">(</span><span class="n">eleve</span> <span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">],</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> 
+          <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule et ajoute en dernière colonne la distance de Manhattan </span>
+<span class="sd">    entre eleve et les heros actuels de Poudlard&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h3><span class="section-number">3.3.7. </span>Votre validation<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>Vérifier que l’application de votre fonction <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> est conforme à l’exemple précédent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="les-k-plus-proches-eleves-sorciers-d-un-nouvel-eleve">
+<h3><span class="section-number">3.3.8. </span>Les <code class="docutils literal notranslate"><span class="pre">k</span></code> plus proches élèves-sorciers d’un nouvel élève<a class="headerlink" href="#les-k-plus-proches-eleves-sorciers-d-un-nouvel-eleve" title="Permalink to this heading">#</a></h3>
+<p>En utilisant l’étape 1 (tri d’un tableau 2D selon l’une de ses colonnes), il est maintenant facile :</p>
+<ol class="arabic simple">
+<li><p>de trier le tableau résultat de <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> selon les distances entre le nouvel élève et les élèves-sorciers,</p></li>
+<li><p>pour extraire <strong>les <code class="docutils literal notranslate"><span class="pre">k</span></code> élèves-sorciers les plus proches</strong> de ce nouvel élève où <code class="docutils literal notranslate"><span class="pre">k</span></code> est un entier positif arbitraire – mais inférieur au nombre d’élèves-sorciers, c-a-d. au nombre de lignes de <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+</ol>
+<p><strong>Remarque.</strong> Il n’y a pas nécessairement unicité du résultat
+si des proximités égales apparaissent de part et d’autres du k-ième rang.</p>
+<p>On propose un traitement qui permet de profiter du tri en place du tableau résultat de <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> en séparant ces deux étapes.</p>
+</section>
+<section id="proximitesnouveleleve-version-triee">
+<h3><span class="section-number">3.3.9. </span><code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> : version triée<a class="headerlink" href="#proximitesnouveleleve-version-triee" title="Permalink to this heading">#</a></h3>
+<p>Reprendre la fonction <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> de façon à retourner le tableau trié selon les distances entre le nouvel élève et les élèves-sorciers.</p>
+<p>On rappelle que la préparation de l’intégration d’un nouvel élève ajoute une nouvelle dernière colonne au tableau : la colonne des distances entre les élèves-sorciers et cet élève.
+Ce traitement modifie donc le tableau paramètre <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">proximitesNouvelEleve</span><span class="p">(</span><span class="n">eleve</span> <span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">],</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> 
+          <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;version triee selon derniere colonne de :</span>
+<span class="sd">    du calcul et ajout en dernière colonne la distance de Manhattan </span>
+<span class="sd">    entre eleve et les heros actuels de Poudlard&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h3><span class="section-number">3.3.10. </span>Autovalidation<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>La validation suivante qui modifie le tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> pour préparer l’intégration de la nouvelle élève “Hermione”, doit s’exécuter sans erreur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
+<span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
+<span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Albertine&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;André&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Serdaigle&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">eleve_bientot_celebre</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Hermione&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">poudlard</span> <span class="o">=</span> <span class="n">proximitesNouvelEleve</span><span class="p">(</span><span class="n">eleve_bientot_celebre</span><span class="p">,</span> <span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;Albertine&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Ahmed&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Serpentar&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;Angelina&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s1">&#39;André&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Serdaigle&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="n">poudlard</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="p">[</span><span class="s2">&quot;Angelina&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">eleve_bientot_celebre</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Hermione&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">poudlard</span> <span class="o">=</span> <span class="n">proximitesNouvelEleve</span><span class="p">(</span><span class="n">eleve_bientot_celebre</span><span class="p">,</span> <span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">[</span><span class="s1">&#39;Albertine&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="p">[</span><span class="s1">&#39;Ahmed&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> 
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="p">[</span><span class="s1">&#39;André&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Serdaigle&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="n">poudlard</span>
+
+<span class="nn">Cell In[41], line 10,</span> in <span class="ni">proximitesNouvelEleve</span><span class="nt">(eleve, t, n, p)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kplusproches">
+<h3><span class="section-number">3.3.11. </span><code class="docutils literal notranslate"><span class="pre">kPlusProches()</span></code><a class="headerlink" href="#kplusproches" title="Permalink to this heading">#</a></h3>
+<p>On effectue maintenant l’extraction des <code class="docutils literal notranslate"><span class="pre">k</span></code> élèves-sorciers les plus proches du nouvel élève.</p>
+<ul class="simple">
+<li><p>Ce traitement prendra comme argument <code class="docutils literal notranslate"><span class="pre">t</span></code> <strong>le résultat de la version avec tri de <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code></strong></p>
+<ul>
+<li><p>Attention aux dimensions de ce tableau.</p></li>
+</ul>
+</li>
+<li><p>Ce traitement donnera un <strong>nouveau</strong> tableau uniquement constitué des <code class="docutils literal notranslate"><span class="pre">k</span></code> lignes extraites du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<ul>
+<li><p>Ainsi celui-ci ne pourra être trié qu’une seule fois si plusieurs tentatives d’extraction pour différentes valeurs de <code class="docutils literal notranslate"><span class="pre">k</span></code>  sont nécessaires.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kPlusProches</span><span class="p">(</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">int</span>  <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne sous la même forme que t les k plus proches lignes de t&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
+    <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3><span class="section-number">3.3.12. </span>Votre validation<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>Vérifier que les 3 plus proches élèves-sorciers d’<code class="docutils literal notranslate"><span class="pre">&quot;Hermione&quot;</span></code> sont <code class="docutils literal notranslate"><span class="pre">&quot;Albertine&quot;,</span> <span class="pre">&quot;Ahmed&quot;</span></code>et <code class="docutils literal notranslate"><span class="pre">&quot;Adam&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="etape-4-classifions-poudlard-maintenant">
+<h2><span class="section-number">3.4. </span>Etape 4 : classifions Poudlard maintenant !<a class="headerlink" href="#etape-4-classifions-poudlard-maintenant" title="Permalink to this heading">#</a></h2>
+<p>On dispose maintenant des outils nécessaires à l’algorithme des k plus proches voisins pour l’apprentissage automatique (<em>machine learning</em>) supervisé</p>
+<p>On suppose un ensemble de données dont on connaît <em>toutes les</em> caractéristiques.
+Ces caractéristiques peuvent être discrètes et de type divers (numériques ou alphanumérique).</p>
+<p>Par exemple, nos 6 élèves-sorciers de <code class="docutils literal notranslate"><span class="pre">poudlard</span></code> sont connus par des caractéristiques de type <code class="docutils literal notranslate"><span class="pre">int</span></code> pour courage, loyauté, sagesse, … ou des <code class="docutils literal notranslate"><span class="pre">str</span></code> comme “Griffondor”, “Serpentar”, … pour leur maison.
+Cette dernière caractéristique peut être vue comme une <strong>étiquette</strong> qui regroupe certains élèves-sorciers : les élèves-sorciers de la maison  “Griffondor” sont …, les élèves-sorciers de la maison  “Serpentar” sont …, …</p>
+<p>Implicitement, on suppose qu’il y a moins d’étiquettes différentes que de combinaisons des autres valeurs des caractéristiques. Ici, il y a 4 maisons et <span class="math notranslate nohighlight">\(11^4\)</span> combinaisons possibles des autres caractéristiques.</p>
+<p><strong>La classification</strong> consiste à identifier <em>l’étiquette d’une nouvelle donnée</em> dont on connaît les autres caractéristiques. Cette détermination s’effectue à partir de la connaissance de l’ensemble des données connues.</p>
+<p><strong>L’algorithme des k plus proches voisins</strong> choisit pour <em>étiquette d’une nouvelle donnée</em>, l’étiquette majoritaire des k données les plus proches de cette nouvelle donnée (dans l’ensemble des données connues).</p>
+<p>Dans notre exemple, cela pourrait être l’algorithme du <em>Choixpeau magique</em> de Poudlard lorsque celui-ci affecte un nouvel élève dans une des 4 maisons Poudlard.</p>
+<p>Bien sûr, la pertinence de cette classification dépend :</p>
+<ul class="simple">
+<li><p>du nombre de données connues,</p></li>
+<li><p>de la valeur <code class="docutils literal notranslate"><span class="pre">k</span></code> du nombre de voisins considérés,</p></li>
+</ul>
+<p>et d’autres paramètres que nous oublierons aujourd’hui (la distance entre 2 éléments, …)</p>
+<section id="quatre-nouveaux-eleves-arrivent-a-poudlard">
+<h3><span class="section-number">3.4.1. </span>Quatre nouveaux élèves arrivent à Poudlard …<a class="headerlink" href="#quatre-nouveaux-eleves-arrivent-a-poudlard" title="Permalink to this heading">#</a></h3>
+<p>Nous allons donc maintenant mettre en oeuvre cet algorithme pour affecter chacun des 4 nouveaux élèves suivants dans une maison qui correspondant à leurs qualités.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Nom</p></th>
+<th class="head text-center"><p>Courage</p></th>
+<th class="head text-center"><p>Loyauté</p></th>
+<th class="head text-center"><p>Sagesse</p></th>
+<th class="head text-center"><p>Malice</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Hermione</p></td>
+<td class="text-center"><p>8</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Drago</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>5</p></td>
+<td class="text-center"><p>8</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Cho</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-center"><p>6</p></td>
+<td class="text-center"><p>9</p></td>
+<td class="text-center"><p>6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cedric</p></td>
+<td class="text-center"><p>7</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>5</p></td>
+<td class="text-center"><p>6</p></td>
+</tr>
+</tbody>
+</table>
+<p>Regrouper ces 4 nouveaux élèves dans <code class="docutils literal notranslate"><span class="pre">nouveauxEleves</span></code> : un tableau 1D de 4 t-uples.
+Chaque t-uple est d’une forme similaire à <code class="docutils literal notranslate"><span class="pre">eleve_bientot_celebre</span></code> (c’est un t-uple de longueur 6).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="premiere-tentative-pour-valider-cette-approche">
+<h3><span class="section-number">3.4.2. </span>Première tentative pour valider cette approche<a class="headerlink" href="#premiere-tentative-pour-valider-cette-approche" title="Permalink to this heading">#</a></h3>
+<p>Notre connaissance actuelle des données connues se limite aux 6 élèves-sorciers du tableau <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>.
+Bien sûr, ce n’est pas satisfaisant pour une classification pertinente : il manque par exemple des représentants de la maison “Poufsouffle” dans les données connues !</p>
+<p>Mais c’est suffisant pour mettre en oeuvre <em>un prototype</em> de traitement en attendant de pouvoir disposer d’une base de connaissance suffisante. Ce qui sera l’objet de la dernière étape de ce tp.</p>
+</section>
+<section id="id10">
+<h3><span class="section-number">3.4.3. </span>Votre validation<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p><strong>On fixe arbitrairement <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">2</span></code></strong> pour cette première expérience.</p>
+<p>Vérifier que cette première expérience affecte 3 des 4 nouveaux élèves dans une même maison et hésite entre 2 maisons pour le quatrième.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bien sûr, les résultats obtenus ne sont pas pertinents : ils sont déduits d’un échantillon trop incomplet pour représenter une base de connaissances représentative de Poudlard.</p>
+</section>
+</section>
+<section id="etape-5-et-comme-le-choixpeau-magique-affectons-les-nouveaux-eleves-dans-la-maison-qui-leur-convient-le-mieux">
+<h2><span class="section-number">3.5. </span>Etape 5 : et comme le <em>Choixpeau magique</em>, affectons les nouveaux élèves dans la maison qui leur convient le mieux.<a class="headerlink" href="#etape-5-et-comme-le-choixpeau-magique-affectons-les-nouveaux-eleves-dans-la-maison-qui-leur-convient-le-mieux" title="Permalink to this heading">#</a></h2>
+<section id="un-poudlard-plus-complet">
+<h3><span class="section-number">3.5.1. </span>Un Poudlard plus complet<a class="headerlink" href="#un-poudlard-plus-complet" title="Permalink to this heading">#</a></h3>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">poudlard2022.csv</span></code> contient les 50 élèves-sorciers de Poudlard avant la rentrée 2022.</p>
+<p>Ce fichier est au format “csv” (<em>Comma Separated Values</em>, valeurs séparées par des virgules).
+Le module python <code class="docutils literal notranslate"><span class="pre">csv</span></code> permet de lire de tels fichiers de façon assez similaire à la lecture des fichiers textes vus en cours. Les curieux pourront consulter <a class="reference external" href="https://docs.python.org/fr/3/library/csv.html">cette partie</a> de la documentation python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction suivante lit ce fichier et retourne son contenu sous la forme d’un tableau 2D similaire à <code class="docutils literal notranslate"><span class="pre">poudlard</span></code>– mais avec 50 lignes maintenant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lirePoudlard</span><span class="p">(</span><span class="n">nomDuFichier</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">IntOrStr</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;lit nomDuFichier au format csv et retourne un tableau 2D&#39;&#39;&#39;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nomDuFichier</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">donnees_csv</span><span class="p">:</span>
+        <span class="n">eleves</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">donnees_csv</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+        <span class="n">eleves</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span> <span class="c1"># saut ligne 0</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">eleves</span><span class="p">:</span>
+            <span class="n">val_e</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">val_e</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Initialiser le tableau 2D <code class="docutils literal notranslate"><span class="pre">poudlard2022</span></code> avec la base de connaissances donnée par le fichier “poudlard2022.csv”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">51</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ne pas écrire dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h3><span class="section-number">3.5.2. </span>Votre validation<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>Vous pouvez par exemple vérifier la présence de l’élève-sorcier suivant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Demelza&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Griffondor&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="le-choixpeau-magique">
+<h3><span class="section-number">3.5.3. </span>Le <em>Choixpeau magique</em><a class="headerlink" href="#le-choixpeau-magique" title="Permalink to this heading">#</a></h3>
+<p>Vous pouvez enfin reprendre l’expérimentation de l’étape 4 pour affecter les 4 nouveaux élèves dans leurs maisons.
+Faire varier <code class="docutils literal notranslate"><span class="pre">k</span></code> jusqu’à obtenir le même résultat que celui obtenu par le <em>Choixpeau magique</em> de Poudlard pour ces 4 nouveaux, et bientôt célèbres, élèves.</p>
+<p>Soit (pour celles et ceux qui ne s’en souviennent pas) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Hermione</span> <span class="o">-&gt;</span> <span class="s1">&#39;Griffondor&#39;</span>
+<span class="n">Drago</span>    <span class="o">-&gt;</span> <span class="s1">&#39;Serpentar&#39;</span>
+<span class="n">Cho</span>      <span class="o">-&gt;</span> <span class="s1">&#39;Serdaigle&#39;</span>
+<span class="n">Cedric</span>   <span class="o">-&gt;</span> <span class="s1">&#39;Poufsouffle&#39;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">54</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-bases.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Feuille 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-env-convexe.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Feuille 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-1-commencons-par-trier">3.1. Etape 1 : commençons par trier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-en-place-d-un-tableau-1d-d-entiers">3.1.1. Tri sélection en place d’un tableau 1D d’entiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation">3.1.2. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-avec-copie-d-un-tableau-1d">3.1.3. Tri sélection avec copie d’un tableau 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.4. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-d-un-tableau-2d">3.1.5. Tri d’un tableau 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-tableau-2d-poudlard">3.1.5.1. Le tableau 2D <code class="docutils literal notranslate"><span class="pre">poudlard</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-d-un-tableau-2d">3.1.5.2. Tri sélection d’un tableau 2D</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-selection-2d-en-place">3.1.5.3. Tri sélection 2D en place</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalidation">3.1.5.4. Autovalidation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation-1">3.1.5.5. Votre validation (1)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#votre-validation-2">3.1.5.6. Votre validation (2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-2-continuons-avec-l-element-majoritaire-de-n-elements">3.2. Etape 2 : continuons avec l’élément majoritaire de <code class="docutils literal notranslate"><span class="pre">n</span></code> éléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#element-s-majoritaire-s-d-un-tableau-1d-de-n-entiers">3.2.1. Elément(s) majoritaire(s) d’un tableau 1D de <code class="docutils literal notranslate"><span class="pre">n</span></code> entiers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-validation">3.2.2. Auto-validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2.3. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#element-s-majoritaire-s-d-un-tableau-2d">3.2.4. Elément(s) majoritaire(s) d’un tableau 2D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.5. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.6. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-3-mesurons-des-proximites-un-peu-compliquees">3.3. Etape 3 : mesurons des proximités un peu compliquées</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-de-manhattan-a-poudlard">3.3.1. Distance de Manhattan … à Poudlard !</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distm">3.3.2. <code class="docutils literal notranslate"><span class="pre">distM()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.3.3. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.3.4. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-la-proximite-entre-un-nouvel-eleve-et-les-eleves-sorciers-de-poudlard">3.3.5. Application à la proximité entre un nouvel élève et les élèves-sorciers de Poudlard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proximitesnouveleleve">3.3.6. <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.3.7. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-k-plus-proches-eleves-sorciers-d-un-nouvel-eleve">3.3.8. Les <code class="docutils literal notranslate"><span class="pre">k</span></code> plus proches élèves-sorciers d’un nouvel élève</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proximitesnouveleleve-version-triee">3.3.9. <code class="docutils literal notranslate"><span class="pre">proximitesNouvelEleve()</span></code> : version triée</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.3.10. Autovalidation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kplusproches">3.3.11. <code class="docutils literal notranslate"><span class="pre">kPlusProches()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3.12. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-4-classifions-poudlard-maintenant">3.4. Etape 4 : classifions Poudlard maintenant !</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quatre-nouveaux-eleves-arrivent-a-poudlard">3.4.1. Quatre nouveaux élèves arrivent à Poudlard …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-tentative-pour-valider-cette-approche">3.4.2. Première tentative pour valider cette approche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.4.3. Votre validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etape-5-et-comme-le-choixpeau-magique-affectons-les-nouveaux-eleves-dans-la-maison-qui-leur-convient-le-mieux">3.5. Etape 5 : et comme le <em>Choixpeau magique</em>, affectons les nouveaux élèves dans la maison qui leur convient le mieux.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-poudlard-plus-complet">3.5.1. Un Poudlard plus complet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.5.2. Votre validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-choixpeau-magique">3.5.3. Le <em>Choixpeau magique</em></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

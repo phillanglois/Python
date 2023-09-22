@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Bienvenu en Algo-Prog ! &#8212; Algo-Prog 2023</title>
-    
+    <title>Bienvenu en Prog Python! &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,427 +64,484 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bonjour';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Algorithmique et Programmation en 2023" href="cm/0-presentation-2023.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="1. Synthèse introductive à Python" href="cm/0-synthese.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo2023.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Algo-Prog 2023</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/python.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Bienvenu en Algo-Prog !
+                    Bienvenu en Prog Python!
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Présentation
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/0-presentation-2023.html">
-   1. Algorithmique et Programmation en 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/competences.html">
-   2. Compétences
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="cm/0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a3-exceptions.html">11. Exceptions</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Les bases
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/1-fonctions.html">
-   1. Fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/3-ES-fichiers.html">
-   2. Entrées-sorties simples avec des fichiers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/3-env-convexe.html">4. Feuille 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithmique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/4-complexite.html">
-   1. Complexités
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/6-recursivite.html">
-   2. Récursivité
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programmation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/5-types_composes.html">
-   1. Les types composés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/7-fonctions-avancees.html">
-   2. Sous-programme et affectation – aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/9-ES-avancees.html">
-   3. Les entrées-sorties (E/S) : aspects avancés
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/11-modules-utiles.html">
-   4. Modules utiles
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Annexes
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/a0-boucles-avancees.html">
-   1. Boucles, tableaux et fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/a1-booleens.html">
-   2. Annexe : les booléens en python (&gt;3.6)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/a2-ndarray.html">
-   3. Les ‘ndarray’ : de vrais tableaux en python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cm/a3-exceptions.html">
-   4. Exceptions
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  TD
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="td/prealable-td.html">
-   1. Préalables
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td/td1.html">
-   2. Feuille 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td/td2.html">
-   3. Feuille 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td/td3.html">
-   4. Feuille 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td/td4.html">
-   5. Feuille 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td/td5.html">
-   6. Feuille 5
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="pdf/memento.html">1. Memento</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Fbonjour.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/phillanglois/Algo-Prog-2023/issues/new?title=Issue%20on%20page%20%2Fbonjour.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/bonjour.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bonjour.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="btn__text-container">.md</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#semaine-3">
-   Semaine 3
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bienvenu en Algo-Prog !</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#semaine-3">
-   Semaine 3
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bienvenu en Prog Python!</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">Travailler en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-de-travail">Programme de travail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-38">Semaine 38</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-39">Semaine 39</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-40">Semaine 40</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-41">Semaine 41</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-42">Semaine 42</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <!-- #region -->
-<section class="tex2jax_ignore mathjax_ignore" id="bienvenu-en-algo-prog">
-<span id="ch-bonjour"></span><h1>Bienvenu en Algo-Prog !<a class="headerlink" href="#bienvenu-en-algo-prog" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="bienvenu-en-prog-python">
+<span id="ch-bonjour"></span><h1>Bienvenu en Prog Python!<a class="headerlink" href="#bienvenu-en-prog-python" title="Permalink to this heading">#</a></h1>
 <p><strong>Ce support est en évolution tout au long du semestre.</strong></p>
-<p>Mis à jour : Jan 18, 2023, lecture : 0 minutes minimum, PhL.</p>
-<p>Ceci est le premier point d’entrée de l’UE Algo-Prog en complément de l’<a class="reference external" href="https://cours.univ-perp.fr/course/view.php?id=925">espace moodle de cette UE</a>.</p>
+<p>Mis à jour : Sep 22, 2023, lecture : 3 minutes minimum, PhL.</p>
+<ul class="simple">
+<li><p>Vous : <strong>M1 CHPS</strong></p></li>
+<li><p>Moi : <strong>Philippe Langlois</strong></p></li>
+<li><p>Comment me contacter : <img alt="" src="_images/mail_phl.png" /></p></li>
+<li><p>Comment me rencontrer : sur RDV <em>DEMANDÉ PAR E-MAIL</em></p></li>
+<li><p>Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).</p></li>
+</ul>
+<p>Ce support regroupe les ressources de la partie Python de l’UE Programmation du semestre 1 en complément de l’<a class="reference external" href="https://cours.univ-perp.fr/course/view.php?id=6237">espace moodle de cette UE</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Rappels des dates importantes</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>Dates importantes et contrôle des connaissances.</p>
+<p><strong>Section modifiée le 25.09.2023.</strong></p>
+<p>Les numéros des semaines sont celles du calendrier.</p>
 <ul class="simple">
-<li><p>Les numéros des semaines sont celles du calendrier.
-La première séance de CM a eu lieu en semaine 3.</p></li>
-<li><p>les items indiqués d’une (<span class="math notranslate nohighlight">\(\star\)</span>) correspondent aux activités <em>objectif 20</em></p></li>
+<li><p>semaine 38. Démarrage</p></li>
+<li><p>semaine 43. <strong>CC en temps limité (4h)</strong> lundi 23 octobre 2023 (dernière séance de TP Python)</p></li>
+<li><p>semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)</p></li>
 </ul>
+<p>Note finale partie Python : <span class="math notranslate nohighlight">\(0.5 \times (CC+CT)\)</span></p>
 </div>
-<section id="semaine-3">
-<h2>Semaine 3<a class="headerlink" href="#semaine-3" title="Permalink to this headline">#</a></h2>
+<p><img alt="photo tableau" src="_images/MCCAlgoPython2022.jpeg" /></p>
+<section id="travailler-en-python">
+<h2>Travailler en python<a class="headerlink" href="#travailler-en-python" title="Permalink to this heading">#</a></h2>
+<p>Il est indispensable :</p>
+<ul class="simple">
+<li><p>d’avoir accès à un environnement de programmation python, si possible assez complet,</p></li>
+<li><p>d’avoir son propre ordinateur configuré de façon complète et selon vos préférences.</p></li>
+</ul>
+<p>Il y a 3 choix d’OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l’UPVD.
+Les <span class="xref myst">distributions python</span> sont assez variées, et peuvent différer selon les OS.
+Cependant nous décrirons une solution aussi générique que possible.</p>
+<p><strong>De quoi a-t-on <em>absolument</em> besoin ?</strong></p>
+<p>Ce qui suit est une liste minimale de composants utiles ce deux années
+Elle peut sembler longue, mais en pratique ces composants “arrivent” d’un seul coup avec une distribution – cf. paragraphe suivant.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> version <code class="docutils literal notranslate"><span class="pre">**3.9**</span></code></p></li>
+<li><p>l’<code class="docutils literal notranslate"><span class="pre">IDLE</span></code> python 3</p>
+<ul>
+<li><p>éditeur, interpréteur, débugger</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> le successeur de <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<ul>
+<li><p>pour intégrer dans <em>un unique fichier</em> du texte, des maths (<span class="math notranslate nohighlight">\(\LaTeX\)</span>) et du code python qui s’exécute, les résultats de ces éxecutions (valeurs, courbes, images, …) et exporter tout ça en <code class="docutils literal notranslate"><span class="pre">html</span></code>ou <code class="docutils literal notranslate"><span class="pre">pdf</span></code> ou en <code class="docutils literal notranslate"><span class="pre">slide</span></code></p></li>
+<li><p>très utile pour les exercices</p></li>
+<li><p>utilisé pour les TP de programmation</p></li>
+<li><p>utilisable dans toutes les matières ou presque</p></li>
+</ul>
+</li>
+<li><p>les gestionnaire de paquets (modules) python pour compléter et mettre à jour son environnement</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code>: plus complet si distribution anaconda utilisée (solution recommandée)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> : autre gestionnaire classique</p></li>
+<li><p>Exemple d’utilisation :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code> : <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">le_module_que_je_veux</span></code> et voilà, c’est fini !</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> : pareil <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">update</span></code>, <code class="docutils literal notranslate"><span class="pre">install</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>les modules indispensables</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span> </code> : fournit des <em>vrais</em> tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>: pour le traitement graphique de données, et en particulier :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> pour des affichages élaborés</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.image</span></code>  pour le traitement d’images</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tkinter</span></code> : pour réaliser des interfaces graphiques</p></li>
+</ul>
+</li>
+<li><p>un module utile</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span> </code>: scientific python qui rassemble des modules de calcul scientifiques (dont <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Pièges</strong></p>
+<ul class="simple">
+<li><p>Ne pas confondre <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">2</span></code> et <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">3</span></code></p></li>
+</ul>
+<p><strong>Conseil</strong></p>
+<ul class="simple">
+<li><p>Choisir une distribution la plus complète possible dès le début.</p></li>
+</ul>
+<p><strong>Comment s’y prendre</strong></p>
+<p>Tel est l’objet de <a class="reference internal" href="tp/0-installation.html#tp-0-installation"><span class="std std-ref">ce document</span></a></p>
+</section>
+<section id="programme-de-travail">
+<h2>Programme de travail<a class="headerlink" href="#programme-de-travail" title="Permalink to this heading">#</a></h2>
+<section id="cm">
+<h3>CM<a class="headerlink" href="#cm" title="Permalink to this heading">#</a></h3>
+<p><strong>Séance 1</strong></p>
+<ul class="simple">
+<li><p>types de données et structures de contrôle de base</p></li>
+<li><p>fonctions, modules</p></li>
+<li><p>ES de base</p></li>
+</ul>
+<p><strong>Séance 2</strong></p>
+<ul class="simple">
+<li><p>types de données avancés</p></li>
+<li><p>sous-programmes et affectations : aspects avancés</p></li>
+<li><p>ES avancées</p></li>
+</ul>
+<p><strong>Séance 3</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code>, ses <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="docutils literal notranslate"><span class="pre">scypi</span></code> : structures de données et traitements de calcul scientifique</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : courbes et graphiques</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span> </code> : mesure de temps d’exécution</p></li>
+</ul>
+</section>
+<section id="semaine-38">
+<h3>Semaine 38<a class="headerlink" href="#semaine-38" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.linguee.fr/anglais-francais/traduction/motto.html"><strong>Motto</strong></a> : “Pratiquer, pratiquer, pratiquer !”</p>
+<ul class="simple">
+<li><p>Exercices intégrés au chapitre 1</p></li>
+<li><p>Chapitres 1 à 4</p></li>
+</ul>
 <p>Préparation semaine suivante :</p>
 <ul class="simple">
-<li><p>CM : lire en entier le chapitre “Fonctions, procédures et sous-programmes”</p></li>
 <li><p>Compétences : Savoir faire et pré-requis technique</p></li>
-<li><p>TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne</p></li>
+<li><p>TP : installer l’environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l’UPVD (Feuille 0)</p></li>
+</ul>
+</section>
+<section id="semaine-39">
+<h3>Semaine 39<a class="headerlink" href="#semaine-39" title="Permalink to this heading">#</a></h3>
+<p><strong>Motto</strong> : Ecrire une fonction dans l’ordre suivant.</p>
+<ol class="arabic simple">
+<li><p>spécification avec annotations de types</p></li>
+<li><p>appels sur premiers tests unitaires avec des <code class="docutils literal notranslate"><span class="pre">assert</span></code></p></li>
+<li><p>corps de la fonction</p></li>
+<li><p>vérification des tests unitaires</p></li>
+</ol>
+<ul class="simple">
+<li><p>Chapitres 5, 6 et 7</p></li>
+<li><p>TP feuille 1</p></li>
+</ul>
+</section>
+<section id="semaine-40">
+<h3>Semaine 40<a class="headerlink" href="#semaine-40" title="Permalink to this heading">#</a></h3>
+<p><strong>Motto</strong> : Limiter les <code class="docutils literal notranslate"><span class="pre">import</span></code> aux ressources effectivement utilisées</p>
+<ul class="simple">
+<li><p>Chapitres 8 (<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>) et 10 (<code class="docutils literal notranslate"><span class="pre">numpy</span></code>).</p></li>
+<li><p>TP feuille 1</p></li>
+</ul>
+</section>
+<section id="semaine-41">
+<h3>Semaine 41<a class="headerlink" href="#semaine-41" title="Permalink to this heading">#</a></h3>
+<p><strong>Motto</strong> : les <code class="docutils literal notranslate"><span class="pre">assert</span></code> pour vos tests unitaires</p>
+<ul class="simple">
+<li><p>TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard</p></li>
+</ul>
+</section>
+<section id="semaine-42">
+<h3>Semaine 42<a class="headerlink" href="#semaine-42" title="Permalink to this heading">#</a></h3>
+<p><strong>Motto</strong> : valider ses traitements avec des cas extrêmes</p>
+<ul class="simple">
+<li><p>TP feuille 3 : enveloppe convexe de <span class="math notranslate nohighlight">\(n\)</span> points du plan</p></li>
 </ul>
 <!-- #endregion -->
 </section>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -493,7 +562,7 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -501,42 +570,94 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="cm/0-presentation-2023.html" title="next page">
-    <div class="prev-next-info">
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="cm/0-synthese.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Algorithmique et Programmation en 2023</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+        <p class="prev-next-title"><span class="section-number">1. </span>Synthèse introductive à Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">Travailler en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-de-travail">Programme de travail</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-38">Semaine 38</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-39">Semaine 39</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-40">Semaine 40</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-41">Semaine 41</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-42">Semaine 42</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Ph. Langlois<br/>
-  
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
