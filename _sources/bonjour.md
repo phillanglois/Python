@@ -29,8 +29,6 @@ Les numéros des semaines sont celles du calendrier.
 Note finale partie Python : $0.5 \times (CC+CT)$
 :::
 
-![photo tableau](./MCCAlgoPython2022.jpeg)
-
 
 ## Travailler en python
 
