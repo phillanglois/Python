@@ -134,14 +134,14 @@ Préparation semaine suivante :
 - Chapitres 5, 6 et 7
 - TP feuille 1 
 
-### Semaine 40
+### Semaine 40 
 
 **Motto** : Limiter les `import` aux ressources effectivement utilisées 
 
 - Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
 - TP feuille 1
 
-### Semaine 41
+### Semaine 41 (séance fin de semaine 40)
 
 **Motto** : les `assert` pour vos tests unitaires 
 
