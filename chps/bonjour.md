@@ -22,7 +22,7 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 
 Les numéros des semaines sont celles du calendrier. 
 
-- semaine 37. Démarrage
+- semaine 37. Démarrage : on y va
 - semaine X. **CC en temps limité (4h)** date à fixer (dernière séance de TP Python ?)
 - semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)
 
