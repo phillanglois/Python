@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>7. Les entrées-sorties (E/S) : aspects avancés &#8212; Python</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -78,7 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
 
@@ -121,12 +121,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,9 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../bonjour.html">
+  
   
   
   
@@ -153,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
   
   
 </a></div>
@@ -344,6 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -353,6 +364,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -416,7 +428,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-entrees-sorties-e-s-aspects-avances">
 <span id="ch-es-avancees"></span><h1><span class="section-number">7. </span>Les entrées-sorties (E/S) : aspects avancés<a class="headerlink" href="#les-entrees-sorties-e-s-aspects-avances" title="Permalink to this heading">#</a></h1>
@@ -470,7 +482,7 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 <section id="formatage-de-nombres-int">
 <h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#formatage-de-nombres-int" title="Permalink to this heading">#</a></h4>
 <p>Le champs <code class="docutils literal notranslate"><span class="pre">[type]</span></code>peut prendre les valeurs <code class="docutils literal notranslate"><span class="pre">d</span></code> (par défaut), <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">o</span></code>, et <code class="docutils literal notranslate"><span class="pre">b</span></code> dont le sens est illustré par les 5 codes suivants.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -569,7 +581,7 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 </div>
 </div>
 <p>Les écritures classiques des entiers sont aussi obtenues à l’aide des codes suivants.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -625,7 +637,7 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 <h4>Formatage de nombres <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#formatage-de-nombres-float" title="Permalink to this heading">#</a></h4>
 <p>Le champs <code class="docutils literal notranslate"><span class="pre">[type]</span></code> peut prendre les valeurs <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
 <p>Avec les champs <code class="docutils literal notranslate"><span class="pre">[drapeau]</span></code>, <code class="docutils literal notranslate"><span class="pre">[largeur]</span></code> et <code class="docutils literal notranslate"><span class="pre">[précision]</span></code>, on obtient des formats adaptés aux <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -677,7 +689,7 @@ Les exemples qui suivent pour illustrer l’effet de ces codes sont donnés :</p
 <section id="formatages-de-chaines-de-caracteres">
 <h4>Formatages de chaînes de caractères<a class="headerlink" href="#formatages-de-chaines-de-caracteres" title="Permalink to this heading">#</a></h4>
 <p>Dans ce cas, on défini les champs <code class="docutils literal notranslate"><span class="pre">drapeau</span></code> et <code class="docutils literal notranslate"><span class="pre">largeur</span></code> comme déjà indiqué.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>type</p></th>
 <th class="head"><p>code (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></th>
@@ -852,27 +864,27 @@ La température du 12  janvier   2021 est 5.6oC.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est  +9.0 oC.
-La température du  5  janvier   2021 est  +0.2 oC.
-La température du  9  janvier   2021 est  +8.3 oC.
-La température du 13  janvier   2021 est  +5.2 oC.
-La température du 17  janvier   2021 est  +8.9 oC.
-La température du 21  janvier   2021 est +14.2 oC.
-La température du 25  janvier   2021 est  +7.6 oC.
-La température du  1  février   2021 est +12.4 oC.
-La température du  5  février   2021 est  +6.7 oC.
-La température du  9  février   2021 est +15.4 oC.
-La température du 13  février   2021 est +13.5 oC.
-La température du 17  février   2021 est  +0.2 oC.
-La température du 21  février   2021 est  +6.0 oC.
-La température du 25  février   2021 est +11.0 oC.
-La température du  1    mars    2021 est  +1.7 oC.
-La température du  5    mars    2021 est  +6.4 oC.
-La température du  9    mars    2021 est  +1.0 oC.
-La température du 13    mars    2021 est  +2.7 oC.
-La température du 17    mars    2021 est +14.9 oC.
-La température du 21    mars    2021 est  -1.0 oC.
-La température du 25    mars    2021 est +13.5 oC.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est +12.0 oC.
+La température du  5  janvier   2021 est  +5.9 oC.
+La température du  9  janvier   2021 est +10.3 oC.
+La température du 13  janvier   2021 est  +8.6 oC.
+La température du 17  janvier   2021 est  +3.0 oC.
+La température du 21  janvier   2021 est  +6.4 oC.
+La température du 25  janvier   2021 est +15.1 oC.
+La température du  1  février   2021 est +11.4 oC.
+La température du  5  février   2021 est  +3.3 oC.
+La température du  9  février   2021 est  +5.7 oC.
+La température du 13  février   2021 est  +1.0 oC.
+La température du 17  février   2021 est  +1.7 oC.
+La température du 21  février   2021 est +12.8 oC.
+La température du 25  février   2021 est  +6.9 oC.
+La température du  1    mars    2021 est  +2.8 oC.
+La température du  5    mars    2021 est +12.6 oC.
+La température du  9    mars    2021 est  +6.3 oC.
+La température du 13    mars    2021 est  +8.8 oC.
+La température du 17    mars    2021 est  +5.8 oC.
+La température du 21    mars    2021 est +10.0 oC.
+La température du 25    mars    2021 est  +2.1 oC.
 </pre></div>
 </div>
 </div>
@@ -1060,7 +1072,7 @@ le soleil est chaud
 <section id="methodes-specifiques-sans-format">
 <h4>Méthodes spécifiques (sans <code class="docutils literal notranslate"><span class="pre">.format()</span></code>)<a class="headerlink" href="#methodes-specifiques-sans-format" title="Permalink to this heading">#</a></h4>
 <p>On verra que certains traitements peuvent être obtenus avec des méthodes spécifiques aux <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>méthode</p></th>
 <th class="head"><p>effet</p></th>
@@ -1130,7 +1142,7 @@ le soleil est chaud
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="7-fonctions-avancees.html"
@@ -1158,6 +1170,7 @@ le soleil est chaud
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1209,6 +1222,7 @@ By Ph. Langlois
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1228,8 +1242,8 @@ By Ph. Langlois
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

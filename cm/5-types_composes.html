@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>5. Les types composés &#8212; Python</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -78,7 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
 
@@ -121,12 +121,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,9 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../bonjour.html">
+  
   
   
   
@@ -153,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
   
   
 </a></div>
@@ -344,6 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -353,6 +364,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -433,11 +445,11 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">5. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Sep 22, 2023, lecture : 14
+<p>Mis à jour : Sep 11, 2024, lecture : 14
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -972,7 +984,7 @@ False True
 <li><p>Les paramètres supplémentaires sont des arguments entre parenthèses en plus de la notation pointée.</p></li>
 <li><p>Remarquer que les méthodes suivantes modifient la liste à laquelle elles s’appliquent.</p></li>
 </ul>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Syntaxe</p></th>
 <th class="head"><p>Effet</p></th>
@@ -1143,14 +1155,14 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4355822912 4355822912
+4398523904 4398523904
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-4355824704 4355822912
+4398524864 4398523904
 </pre></div>
 </div>
 </div>
@@ -1462,9 +1474,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4302279176
-abc 4302279176
-abcdef 4355676976
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4345910864
+abc 4345910864
+abcdef 4398341936
 </pre></div>
 </div>
 </div>
@@ -1565,10 +1577,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4355776112
-4355776112
-4355782192
-4355782192
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4398344048
+4398344048
+4398347440
+4398347440
 </pre></div>
 </div>
 </div>
@@ -1816,16 +1828,16 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;u&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;a&#39;, &#39;i&#39;, &#39;e&#39;} 6
 True
 False
-aie : {&#39;e&#39;, &#39;i&#39;, &#39;a&#39;}
-voyelles : {&#39;u&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;}
-union : {&#39;u&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;}
-autre union : {&#39;u&#39;, &#39;e&#39;, &#39;b&#39;, &#39;a&#39;, &#39;f&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;}
-intersection : {&#39;e&#39;, &#39;i&#39;, &#39;a&#39;}
-difference :  set() {&#39;f&#39;, &#39;b&#39;}
-difference symétrique:  {&#39;u&#39;, &#39;y&#39;, &#39;o&#39;}
+aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+voyelles : {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+union : {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+autre union : {&#39;y&#39;, &#39;u&#39;, &#39;b&#39;, &#39;f&#39;, &#39;o&#39;, &#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+difference :  set() {&#39;b&#39;, &#39;f&#39;}
+difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2117,7 +2129,7 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="3-ES-fichiers.html"
@@ -2145,6 +2157,7 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2213,6 +2226,7 @@ By Ph. Langlois
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -2232,8 +2246,8 @@ By Ph. Langlois
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

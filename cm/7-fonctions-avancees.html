@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>6. Sous-programme et affectation – aspects avancés &#8212; Python</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -78,7 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
 
@@ -121,12 +121,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,9 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../bonjour.html">
+  
   
   
   
@@ -153,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/python.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
   
   
 </a></div>
@@ -344,6 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -353,6 +364,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -446,7 +458,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sous-programme-et-affectation-aspects-avances">
 <span id="ch-fonctionsavancees"></span><h1><span class="section-number">6. </span>Sous-programme et affectation – aspects avancés<a class="headerlink" href="#sous-programme-et-affectation-aspects-avances" title="Permalink to this heading">#</a></h1>
@@ -821,11 +833,11 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4340868328
-1.1 &lt;class &#39;float&#39;&gt; 4392237456
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4394101376
-[1, 1] &lt;class &#39;list&#39;&gt; 4393573952
-4340868296 4340868296
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4309478520
+1.1 &lt;class &#39;float&#39;&gt; 4360285328
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4361777920
+[1, 1] &lt;class &#39;list&#39;&gt; 4361807680
+4309478488 4309478488
 </pre></div>
 </div>
 </div>
@@ -951,20 +963,20 @@ Etonné ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4340868328
-b: 1 &lt;class &#39;int&#39;&gt; 4340868328
-b: 2 &lt;class &#39;int&#39;&gt; 4340868360 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4309478520
+b: 1 &lt;class &#39;int&#39;&gt; 4309478520
+b: 2 &lt;class &#39;int&#39;&gt; 4309478552 
 
-s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4393733296
-s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4393733296
-s2 a &lt;class &#39;str&#39;&gt; 4340645544 
+s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4361783536
+s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4361783536
+s2 a &lt;class &#39;str&#39;&gt; 4309255736 
 
-[0, 0] &lt;class &#39;list&#39;&gt; 4394084992
-[0, 0] &lt;class &#39;list&#39;&gt; 4394084992
-[1, 0] &lt;class &#39;list&#39;&gt; 4393964352
-[0, 0] &lt;class &#39;list&#39;&gt; 4394084992
-[1, 1] &lt;class &#39;list&#39;&gt; 4393961600
-[0, 1] &lt;class &#39;list&#39;&gt; 4393961600 
+[0, 0] &lt;class &#39;list&#39;&gt; 4361810112
+[0, 0] &lt;class &#39;list&#39;&gt; 4361810112
+[1, 0] &lt;class &#39;list&#39;&gt; 4361799552
+[0, 0] &lt;class &#39;list&#39;&gt; 4361810112
+[1, 1] &lt;class &#39;list&#39;&gt; 4361800448
+[0, 1] &lt;class &#39;list&#39;&gt; 4361800448 
 </pre></div>
 </div>
 </div>
@@ -1046,23 +1058,23 @@ Cependant, elle est sans effet sur les instructions suivantes, comme cet exemple
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4340868328
-b= 1 4340868328
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4309478520
+b= 1 4309478520
 pas de nouvel espace mémoire suite à b = a. 
 
-a= 2 4340868360
-b= 1 4340868328
+a= 2 4309478552
+b= 1 4309478520
 a est modifié donc un nouvel espace mémoire est créé pour a. 
 
-a= 3 4340868392
+a= 3 4309478584
 a est encore modifié et un nouvel espace mémoire est encore créé.
 Un autre choix aurait été possible mais celui-ci est en cohérence avec le premier traitement observé.
 
-a= 5 4340868456
-a= 6 4340868488 bizarre : a += 1 devrait être effectué en place : cf. plus loin
+a= 5 4309478648
+a= 6 4309478680 bizarre : a += 1 devrait être effectué en place : cf. plus loin
 
-a= 3 4340868392
-b= 1 4340868328
+a= 3 4309478584
+b= 1 4309478520
 pas de surprise
 </pre></div>
 </div>
@@ -1119,21 +1131,21 @@ pas de surprise
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t = l
-[0, 0] 4393964032
-[0, 0] 4393964032
+[0, 0] 4361813888
+[0, 0] 4361813888
 modification partielle de l
-[2, 0] 4393964032
-[2, 0] 4393964032
+[2, 0] 4361813888
+[2, 0] 4361813888
 modification totale de l
-[4, 3] 4393967040
-[2, 0] 4393964032
+[4, 3] 4361748544
+[2, 0] 4361813888
 modifications de l par ses méthodes (aspects POO)
-[3, 4] 4393967040
-[3, 4] 4393967040
-[4, 3] 4393967040
-[4, 3] 4393967040
-[4, 11, 3] 4393967040
-[4, 11, 3] 4393967040
+[3, 4] 4361748544
+[3, 4] 4361748544
+[4, 3] 4361748544
+[4, 3] 4361748544
+[4, 11, 3] 4361748544
+[4, 11, 3] 4361748544
 </pre></div>
 </div>
 </div>
@@ -1235,15 +1247,15 @@ l= [0, 0, 0] =/ m= [5, 2, 3]  == mm= [5, 2, 3]  == m_copy= [5, 2, 3]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394072304 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4361802800 Jo
 
-4393964672 [&#39;Jo&#39;]
-4394072304 Jo
+4361801600 [&#39;Jo&#39;]
+4361802800 Jo
 
 affectation par référence (pas de duplication)
-4393964672 [&#39;Jo&#39;, &#39;Jack&#39;]
-4393964672 [&#39;Jo&#39;, &#39;Jack&#39;]
-4394069360 Averell
+4361801600 [&#39;Jo&#39;, &#39;Jack&#39;]
+4361801600 [&#39;Jo&#39;, &#39;Jack&#39;]
+4361767984 Averell
 
 Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
@@ -1277,16 +1289,16 @@ Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394072304 Jo
-4394084992 [&#39;Jo&#39;]
-4394072304 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4361802800 Jo
+4361807680 [&#39;Jo&#39;]
+4361802800 Jo
 
 affectation avec duplication
-4394084992 [&#39;Jo&#39;]
-4393964672 [&#39;Jo&#39;]
+4361807680 [&#39;Jo&#39;]
+4361801600 [&#39;Jo&#39;]
 
-4394084992 [&#39;Jo&#39;, &#39;Averell&#39;]
-4393964672 [&#39;Jo&#39;, &#39;Jack&#39;]
+4361807680 [&#39;Jo&#39;, &#39;Averell&#39;]
+4361801600 [&#39;Jo&#39;, &#39;Jack&#39;]
 Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
 </div>
@@ -1326,10 +1338,10 @@ Mystère ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4340868296 4340868648
-4340868328 4340868680
-4393892608 4394037888
-4393892608 4393973504
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4309478488 4309478840
+4309478520 4309478872
+4361566848 4361552000
+4361566848 4361563392
 </pre></div>
 </div>
 </div>
@@ -1371,12 +1383,12 @@ Le traitement sur la liste <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4340868360
-id dans f -- t: 4340868424 , u:  4340868360
-4 4340868424
-[10] 4393892608
-id dans f -- t: 4394100736 , u:  4393892608
-[10, 10] 4393892608
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4309478552
+id dans f -- t: 4309478616 , u:  4309478552
+4 4309478616
+[10] 4361566848
+id dans f -- t: 4361765440 , u:  4361566848
+[10, 10] 4361566848
 </pre></div>
 </div>
 </div>
@@ -1403,12 +1415,12 @@ id dans f -- t: 4394100736 , u:  4393892608
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4340868360
-id dans f -- t: 4340868424 , u:  4340868360
-6 4340868488
-[10] 4394039680
-id dans f -- t: 4394092224 , u:  4394039680
-[10, 10, 10] 4394039680
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4309478552
+id dans f -- t: 4309478616 , u:  4309478552
+6 4309478680
+[10] 4361556288
+id dans f -- t: 4361559232 , u:  4361556288
+[10, 10, 10] 4361556288
 </pre></div>
 </div>
 </div>
@@ -1554,11 +1566,11 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant appel:
 l= [0, 1] ll= [0, 1] , m= [0, 1] mm= [0, 1]
-id : l= 4393967296 , ll= 4393967296 , m= 4394115520 , mm= 4393967232
+id : l= 4361807424 , ll= 4361807424 , m= 4361552320 , mm= 4361799808
 
 appel avec affectation l = f(l):
 l= [0, 1, 0, 1] ll= [0, 1] , m= [0, 1]
-id : l= 4393573824 , ll= 4393967296 , m= 4394115520
+id : l= 4361804672 , ll= 4361807424 , m= 4361552320
 </pre></div>
 </div>
 </div>
@@ -1618,22 +1630,22 @@ est une fois de plus instructive.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l, ll, m
-[0, 0] &lt;class &#39;list&#39;&gt; 4394198336
-[0, 0] &lt;class &#39;list&#39;&gt; 4394198336
-[0, 0] &lt;class &#39;list&#39;&gt; 4394198272
+[0, 0] &lt;class &#39;list&#39;&gt; 4361903616
+[0, 0] &lt;class &#39;list&#39;&gt; 4361903616
+[0, 0] &lt;class &#39;list&#39;&gt; 4361903552
 
 appel sans affectation du retour: g(l)
 print g(l)= None
 l= [0, 0, 1] ll= [0, 0, 1] , m= [0, 0]
-id= 4394198336 id= 4394198336 , id= 4394198272
+id= 4361903616 id= 4361903616 , id= 4361903552
 
 appel avec affectation: l = g(l)
 l= None ll= [0, 0, 1, 1] , m= [0, 0]
-id= 4340866816 id= 4394198336 , id= 4394198272
+id= 4309477008 id= 4361903616 , id= 4361903552
 
 appel avec affectation m = g(l):
 l= [0, 0, 1] ll= [0, 0, 1, 1] , m= None
-id= 4394198592 id= 4394198336 , id= 4340866816
+id= 4361904640 id= 4361903616 , id= 4309477008
 </pre></div>
 </div>
 </div>
@@ -1752,24 +1764,24 @@ Cette fonction peut être très utile pour <em>debugger</em> un développement q
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
 l= [0, 0] ll= [0, 0] m= [0, 0]
-@l= 4394112640 @ll= 4394112640 @m= 4394119872
+@l= 4361755072 @ll= 4361755072 @m= 4361759552
 
 appel sans affectation du retour:
-main: @l= 4394112640
-  f avant : @= 4394112640
-  f après : @=  4394201856
-  f avant : @= 4394112640
-  f après : @=  4393776320
-print f(l)= [0, 0, 0, 0] @f(l)= 4393776320
+main: @l= 4361755072
+  f avant : @= 4361755072
+  f après : @=  4361907968
+  f avant : @= 4361755072
+  f après : @=  4361908096
+print f(l)= [0, 0, 0, 0] @f(l)= 4361908096
 l= [0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4394112640 @ll= 4394112640 @m= 4394119872
+@l= 4361755072 @ll= 4361755072 @m= 4361759552
 
 appel avec affectation l = f(l):
-  f avant : @= 4394112640
-  f après : @=  4394198592
-main: @l(après l=f(l))= 4394198592
+  f avant : @= 4361755072
+  f après : @=  4361904640
+main: @l(après l=f(l))= 4361904640
 l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4394198592 @ll= 4394112640 @m= 4394119872
+@l= 4361904640 @ll= 4361755072 @m= 4361759552
 </pre></div>
 </div>
 </div>
@@ -1818,20 +1830,20 @@ l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4340868296
+u= 0 @u= 4309478488
 
 appel sans affectation du retour:
-  f_r: avant @= 4340868296
-  f_r: après @= 4340868296
-  f_r: avant @= 4340868296
-  f_r: après @= 4340868296
-f(u)= 2 @f(u)= 4340868360
-u= 0 @u= 4340868296
+  f_r: avant @= 4309478488
+  f_r: après @= 4309478488
+  f_r: avant @= 4309478488
+  f_r: après @= 4309478488
+f(u)= 2 @f(u)= 4309478552
+u= 0 @u= 4309478488
 
 appel avec affectation du retour:
-  f_r: avant @= 4340868296
-  f_r: après @= 4340868296
-u après u=f(u)= 2 @u= 4340868360
+  f_r: avant @= 4309478488
+  f_r: après @= 4309478488
+u après u=f(u)= 2 @u= 4309478552
 </pre></div>
 </div>
 </div>
@@ -1865,20 +1877,20 @@ u après u=f(u)= 2 @u= 4340868360
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 1 @u= 4340868328
+u= 1 @u= 4309478520
 
 appel sans affectation du retour:
-  f_x: avant @= 4340868328
-  f_x: après @= 4340868392
-  f_x: avant @= 4340868328
-  f_x: après @= 4340868392
-f(u)= 3 @f(u)= 4340868392
-u= 1 @u= 4340868328
+  f_x: avant @= 4309478520
+  f_x: après @= 4309478584
+  f_x: avant @= 4309478520
+  f_x: après @= 4309478584
+f(u)= 3 @f(u)= 4309478584
+u= 1 @u= 4309478520
 
 appel avec affectation du retour:
-  f_x: avant @= 4340868328
-  f_x: après @= 4340868392
-u après u=f(u)= 3 @u= 4340868392
+  f_x: avant @= 4309478520
+  f_x: après @= 4309478584
+u après u=f(u)= 3 @u= 4309478584
 </pre></div>
 </div>
 </div>
@@ -1912,20 +1924,20 @@ u après u=f(u)= 3 @u= 4340868392
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4340868296
+u= 0 @u= 4309478488
 
 appel sans affectation du retour:
-  f_=: avant @= 4340868296
-  f_=: après @= 4340868360
-  f_=: avant @= 4340868296
-  f_=: après @= 4340868360
-f(u)= 2 @f(u)= 4340868360
-u= 0 @u= 4340868296
+  f_=: avant @= 4309478488
+  f_=: après @= 4309478552
+  f_=: avant @= 4309478488
+  f_=: après @= 4309478552
+f(u)= 2 @f(u)= 4309478552
+u= 0 @u= 4309478488
 
 appel avec affectation du retour:
-  f_=: avant @= 4340868296
-  f_=: après @= 4340868360
-u après u=f(u)= 2 @u= 4340868360
+  f_=: avant @= 4309478488
+  f_=: après @= 4309478552
+u après u=f(u)= 2 @u= 4309478552
 </pre></div>
 </div>
 </div>
@@ -2109,7 +2121,7 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="5-types_composes.html"
@@ -2137,6 +2149,7 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2218,6 +2231,7 @@ By Ph. Langlois
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -2237,8 +2251,8 @@ By Ph. Langlois
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
