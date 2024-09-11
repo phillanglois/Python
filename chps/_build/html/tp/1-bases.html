@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Feuille 1 &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tp/1-bases';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Feuille 2" href="2-knn.html" />
+    <link rel="prev" title="1. Préparer son ordinateur et travailler avec Python et JupyterLab" href="0-installation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Prog Python!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a3-exceptions.html">11. Exceptions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-env-convexe.html">4. Feuille 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/tp/1-bases.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Ftp/1-bases.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tp/1-bases.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.3. Exercice (palindrome)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.4. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.5. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.6. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.7. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.8. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.9. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.10. Exercice (suite de Syracuse)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-1">
+<span id="tp-tp1"></span><h1><span class="section-number">2. </span>Feuille 1<a class="headerlink" href="#feuille-1" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Feuille téléchargeable au format jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)</p>
+</div>
+<ul class="simple">
+<li><p>Exercices sur les notions de bases</p></li>
+<li><p>Accompagner les fonctions de tests unitaires pertinents</p></li>
+<li><p>Utiliser les annotations de type pour les paramètres des fonctions</p></li>
+</ul>
+<section id="exercice-est-rectangle">
+<h2><span class="section-number">2.1. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)<a class="headerlink" href="#exercice-est-rectangle" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Définir et écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> qui vérifie si un
+triangle est rectangle. Aucune hypothèse est effectuée sur les
+paramètres de ce traitement.</p></li>
+<li><p>Ecrire un programme qui utilise cette fonction pour traiter un
+nombre arbitraire de triangles entrées au clavier par l’utilisateur.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_rectangle</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;vérifie si un triangle est rectangle&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span>
+    <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> 
+<span class="n">l1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">est_rectangle</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="mi">5</span>
+          <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block after &#39;elif&#39; statement on line 5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-randint-du-module-random">
+<h2><span class="section-number">2.2. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)<a class="headerlink" href="#exercice-randint-du-module-random" title="Permalink to this heading">#</a></h2>
+<p>Cet exercice utilise la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Regarder la description de la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Ecrire une fonction qui effectue un nombre arbitraire de tirages
+aléatoires d’entiers compris entre 1 et 6 (bornes comprises) et qui
+renvoie le pourcentage de 6 obtenus.</p></li>
+<li><p>Faire varier le nombre de tirages et vérifier la qualité de la
+fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p></li>
+</ol>
+</section>
+<section id="exercice-palindrome">
+<h2><span class="section-number">2.3. </span>Exercice (palindrome)<a class="headerlink" href="#exercice-palindrome" title="Permalink to this heading">#</a></h2>
+<p>Un palindrome est un mot, ou un groupe de mots, dont l’ordre des lettres
+reste le même qu’on le lise de la droite vers la gauche ou inversement.
+Des exemples bien connus sont “été”, “kayak”, “mon nom”, “élu par cette
+crapule”. Ce dernier permet d’illustrer qu’on ne tient pas compte en
+général des accents, trémas, cédilles, ni des espaces. Dans cet exercice
+:</p>
+<ul class="simple">
+<li><p>un mot ou un groupe de mots est représenté par une chaîne de
+caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>),</p></li>
+<li><p>ces caractères sont sans accent, tréma, ni cédille : “ete”</p></li>
+<li><p>les espaces sont considérés comme des caractères : ainsi “elu par
+cette crapule” n’est pas un palindrome ici.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction qui teste si un argument est ou non un
+palindrome et retourne le booléen correspondant.</p></li>
+<li><p>Utiliser cette fonction pour tester un nombre arbitraire de mots
+entrés au clavier.</p></li>
+</ol>
+</section>
+<section id="exercice-algorithme-de-type-monte-carlo">
+<h2><span class="section-number">2.4. </span>Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h2>
+<p>On va calculer une approximation de <span class="math notranslate nohighlight">\(\pi\)</span> de façon probabiliste.</p>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction qui vérifie si un point du plan défini par ses
+coordonnées <span class="math notranslate nohighlight">\((x,y)\)</span> appartient à un disque de centre <span class="math notranslate nohighlight">\((a,b)\)</span> et de
+rayon <span class="math notranslate nohighlight">\(r\)</span>.<br />
+Rappel. L’équation du cercle de mêmes caractéristiques est :
+<span class="math notranslate nohighlight">\((x-a)^2 + (y-b)^2 = r^2\)</span>.</p></li>
+<li><p>Identifier dans la documentation du module python <code class="docutils literal notranslate"><span class="pre">random</span></code> la
+fonction adaptée à la génération d’un point aléatoire dans le carré
+<span class="math notranslate nohighlight">\([-1, 1] \times [-1, 1]\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> le cercle de centre 0 et de rayon 1. Ecrire une
+programme qui génère <span class="math notranslate nohighlight">\(n\)</span> points aléatoires situés dans le carré
+précédent et calcule le ratio entre les points situés dans le cercle
+<span class="math notranslate nohighlight">\(\mathcal{C}\)</span> et <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>Faire varier <span class="math notranslate nohighlight">\(n\)</span> et observer l’évolution de ce ratio.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) En déduire une approximation de <span class="math notranslate nohighlight">\(\pi\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercice-une-premiere-cryptanalyse">
+<h2><span class="section-number">2.5. </span>Exercice (Une première cryptanalyse)<a class="headerlink" href="#exercice-une-premiere-cryptanalyse" title="Permalink to this heading">#</a></h2>
+<p><em>L’analyse fréquentielle, découverte au IXe siècle par Al-Kindi, examine
+les répétitions des lettres d’un message chiffré afin de trouver la clé.
+Elle est inefficace contre les chiffrements modernes tels que DES, RSA.
+Elle est principalement utilisée contre les chiffrements
+mono-alphabétiques qui substituent chaque lettre par une autre et qui
+présentent un biais statistique.</em> (wikipedia).</p>
+<p>L’analyse de la fréquence d’apparition des lettres dans les écrits d’une
+langue donnée permet donc de déchiffrer les messages cryptés par
+certains chiffrements simples. En se limitant aux textes en francais et
+écrits en minuscules, nous allons effectuer les deux dernières étapes du
+processus suivant.</p>
+<ul class="simple">
+<li><p>Etape 1 : Estimer la fréquence moyenne d’apparition en français des
+lettres de l’alphabet. Ici nous utiliserons des résultats existants.</p></li>
+<li><p>Etape 2 : Appliquer un chiffrement de César pour crypter un message
+arbitraire.</p></li>
+<li><p>Etape 3 : Effectuer l’analyse fréquentielle du message ainsi chiffré
+pour (tenter de) retrouver le message d’origine.</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Etape 2. Le chiffrement de César est une technique simple de
+décalage régulier (permutation circulaire) de chaque lettre de
+l’alphabet. La longueur de ce décalage – distance entre la position
+d’une lettre décalée et sa position d’origine (<span class="math notranslate nohighlight">\(\le\)</span> 26) – est la
+<em>clé</em> de ce chiffrement.</p>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">cesar()</span></code> qui retourne le chiffré d’un
+message arbitraire (chaine de caractères) pour une clé
+arbitraire.</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">decesar()</span></code> qui retourne le message
+d’origine connaissant la clé de chiffrement.</p></li>
+</ol>
+<ol class="arabic" id="que-cesar" start="3">
+<li><p>Valider vos fonctions avec le chiffrement suivant de clé 5.
+Faire d’autres essais et utiliser aussi les ressources
+disponibles sur le web.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p></p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-left head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>message clair</p></td>
+<td class="text-center"><p>:</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">UNIVERSITE</span> <span class="pre">DE</span> <span class="pre">PERPIGNAN</span> <span class="pre">VIA</span> <span class="pre">DOMITIA</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>message chiffré</p></td>
+<td class="text-center"><p>:</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ZSNAJWXNYJ</span> <span class="pre">IJ</span> <span class="pre">UJWUNLSFS</span> <span class="pre">ANF</span> <span class="pre">ITRNYNF</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</li>
+<li><p>Etape 3. Déchiffrement d’un texte chiffré de clé inconnue. La
+fréquence moyenne d’apparition des lettres de l’alphabet dans un
+texte en français est <a class="reference external" href="https://fr.wikipedia.org/wiki/Analyse_fr%C3%A9quentielle#Fr%C3%A9quence_d'apparition">par exemple donné dans</a></p>
+<ol class="arabic simple">
+<li><p>Proposer une solution pour déchiffrer un message que l’on sait
+crypté par un chiffrement de César mais de clé inconnue.</p></li>
+<li><p>Coder cette solution et l’appliquer aux messages de <a class="reference internal" href="#que-cesar"><span class="std std-ref">la
+question</span></a>.</p></li>
+<li><p>Evaluer comment votre solution “passe à l’échelle”, c’est-à-dire
+comment son efficacité évolue pour des textes de tailles qui
+augmentent. Proposer des optimisations.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-un-peu-d-images">
+<h2><span class="section-number">2.6. </span>Exercice (un peu d’images)<a class="headerlink" href="#exercice-un-peu-d-images" title="Permalink to this heading">#</a></h2>
+<p>Une image à niveaux de gris peut être représentée par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc).
+La taille de l’image <span class="math notranslate nohighlight">\(L \times C\)</span> est arbitraire.<br />
+Ecrire les algorithmes des traitements suivants. On pourra commencer en
+introduisant un tableau supplémentaire pour l’image transformée. Selon
+les cas, on essaiera ensuite une solution “en place” : la transformation
+s’effectue sur le tableau de l’image d’origine.
+On utilisera les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code> pour ces traitements.</p>
+<ol class="arabic simple">
+<li><p>Générer le négatif (<em>reverse video</em>) d’une image NB ou par niveaux
+de gris.</p></li>
+<li><p>Générer une image NB à partir d’une image niveau de gris.</p></li>
+<li><p>Augmenter le contraste de la transformation précédente.<br />
+Principe : fixer un seuil et remplacer les pixels plus clairs que le
+seuil par des pixels blancs, et inversement les plus sombres que le
+seuil par des pixels noirs.</p></li>
+<li><p>Générer une image miroir vertical (le haut se retrouve en bas et
+réciproquement) ou horizontal d’une image NB.</p></li>
+<li><p>Augmenter la luminosité (ou luminance) d’une image à niveau de
+gris.<br />
+Principe : ajouter ou retrancher une constante de la valeur des
+pixels.</p></li>
+<li><p>Générer les contours significatifs d’une image.<br />
+Principe : on remplace par un pixel noir chaque pixel dont la
+variation des valeurs de ses 4 voisins varient au delà d’un certain
+seuil, sinon on le remplace par un pixel blanc.</p></li>
+<li><p>Réduire par 2 la taille d’une image à niveau de gris.<br />
+Principe : chaque carré de 2x2 pixels est remplacé par 1 pixel de
+valeur la moyenne des pixels du carré.</p></li>
+</ol>
+</section>
+<section id="exercice-tx-b">
+<h2><span class="section-number">2.7. </span>Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)<a class="headerlink" href="#exercice-tx-b" title="Permalink to this heading">#</a></h2>
+<p>On veut résoudre le système linéaire <span class="math notranslate nohighlight">\(Tx=b\)</span> où la matrice <span class="math notranslate nohighlight">\(T\)</span> est une
+matrice triangulaire inférieure carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et <span class="math notranslate nohighlight">\(b\)</span> un vecteur
+second membre (de taille <span class="math notranslate nohighlight">\(n\)</span>). La matrice <span class="math notranslate nohighlight">\(T\)</span> et et le vecteur <span class="math notranslate nohighlight">\(b\)</span> sont
+supposés donnés (au clavier ou avec une valeur d’initialisation).</p>
+<ol class="arabic simple">
+<li><p>Ecrire la fonction qui effectue ce traitement et les tests unitaires associés :
+a. en utilisant les listes natives Python
+b. en utilisant les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p>Comparer vos résultats et leurs performances avec le m^me traitement fourni par <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ol>
+</section>
+<section id="exercice-efficacite-des-algorithmes-de-recherche">
+<h2><span class="section-number">2.8. </span>Exercice (efficacité des algorithmes de recherche)<a class="headerlink" href="#exercice-efficacite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
+<p>Effectuer une analyse expérimentale de la
+complexité pour comparer l’efficacité des algorithmes de recherche
+itérative et dichotomique (cas de l’entrée triée). Dégager les
+comportements dans le meilleur cas, dans le pire cas et en moyenne.</p>
+</section>
+<section id="exercice-recursion-terminale-et-iteration">
+<span id="exo-forrec"></span><h2><span class="section-number">2.9. </span>Exercice (récursion terminale et itération)<a class="headerlink" href="#exercice-recursion-terminale-et-iteration" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Donner la forme récursive qui produit le même traitement que celui
+d’une boucle for qui (parcourt et) affiche les indices entiers
+successifs de 11 à 1.</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Même question pour obtenir l’affichage : 1, 2, …, 10, 11.</p></li>
+</ol>
+</section>
+<section id="exercice-suite-de-syracuse">
+<span id="exo-syracuse"></span><h2><span class="section-number">2.10. </span>Exercice (suite de Syracuse)<a class="headerlink" href="#exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h2>
+<p>La suite de Syracuse <span class="math notranslate nohighlight">\(s\)</span> d’un nombre <span class="math notranslate nohighlight">\(N\)</span> donné est définie de façon
+récursive comme suit.</p>
+<p>On commence avec <span class="math notranslate nohighlight">\(s(0) = N\)</span>, puis :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(n+1) = s(n)/2\)</span>, si <span class="math notranslate nohighlight">\(s(n)\)</span> est pair,</p></li>
+<li><p><span class="math notranslate nohighlight">\(s(n+1) = 3s(n)+1\)</span>, si <span class="math notranslate nohighlight">\(s(n)\)</span> est impair.</p></li>
+</ul>
+<p>Ainsi définie, <span class="math notranslate nohighlight">\(s\)</span> est une suite infinie de valeurs entières construites
+à partir de la valeur de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ol class="arabic simple">
+<li><p>A la main pour commencer.</p>
+<ol class="arabic simple">
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 4, 2, 1\)</span>. Qu’en déduire ?</p></li>
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 3, 5, 6, 7, 8, 16, 32\)</span>. Il peut être utile de
+représenter les valeurs obtenues sous la forme d’un tableau où
+chaque colonne (ou ligne) à la forme <span class="math notranslate nohighlight">\(N u_1 u_2 \dots u_n \dots\)</span>
+où les <span class="math notranslate nohighlight">\(u_i\)</span> sont les valeurs de la suite pour la valeur de
+départ <span class="math notranslate nohighlight">\(N\)</span>. Qu’en déduire et en particulier que penser de la
+terminaison de cette suite ?</p></li>
+</ol>
+</li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>La coder de façon récursive et observer son comportement pour l’une
+de ces valeurs de <span class="math notranslate nohighlight">\(N\)</span>. Attention !!!</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Terminaison : on arrête la suite <span class="math notranslate nohighlight">\(s(n)\)</span> quand on rencontre <span class="math notranslate nohighlight">\(n = 1\)</span>
+(c’est-à-dire <span class="math notranslate nohighlight">\(s(2)\)</span>). D’après la conjecture de Collatz, cette
+valeur est rencontrée quelque soit le terme de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Compléter votre code précédent avec cette condition d’arrêt.</p></li>
+<li><p>Compléter votre code précédent avec l’affichage de chaque valeur
+calculée avant la terminaison.</p></li>
+</ol>
+</li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Écrire des fonctions qui calculent les notions suivantes (source
+Wikipédia) :</p>
+<ol class="arabic simple">
+<li><p>le temps de vol qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel que
+<span class="math notranslate nohighlight">\(s(n) = 1\)</span>, <em>i.e.</em> jusqu’à la terminaison.</p></li>
+<li><p>le temps de vol en altitude qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel
+que <span class="math notranslate nohighlight">\(s(n) \le N\)</span>.</p></li>
+<li><p>l’altitude maximale qui est la valeur maximale <span class="math notranslate nohighlight">\(s(n)\)</span> de la
+suite.</p></li>
+</ol>
+</li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Coder ces fonctions et proposer des graphiques instructifs.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Coder ces fonctions et proposer des graphiques instructifs.</p></li>
+</ol>
+<ol class="arabic simple" start="7">
+<li><p>Coder le calcul avec terminaison de façon itérative.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0-installation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Préparer son ordinateur et travailler avec Python et JupyterLab</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2-knn.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Feuille 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.3. Exercice (palindrome)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.4. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.5. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.6. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.7. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.8. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.9. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.10. Exercice (suite de Syracuse)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

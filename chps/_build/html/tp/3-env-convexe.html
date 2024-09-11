@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Feuille 3 &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tp/3-env-convexe';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Memento" href="../pdf/memento.html" />
+    <link rel="prev" title="3. Feuille 2" href="2-knn.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Prog Python!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">8. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a3-exceptions.html">11. Exceptions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-bases.html">2. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-knn.html">3. Feuille 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Feuille 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps2022/tp/3-env-convexe.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Ftp/3-env-convexe.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tp/3-env-convexe.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-du-plan-relation-d-ordre">4.1. Points du plan, relation d’ordre</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points">4.1.1. <code class="docutils literal notranslate"><span class="pre">points</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuage-de-points-generer-trier-afficher-stocker-tracer">4.2. `Nuage de points : générer, trier, afficher, stocker, tracer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuage">4.2.1. <code class="docutils literal notranslate"><span class="pre">nuage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-nuage-random">4.2.2. <code class="docutils literal notranslate"><span class="pre">un_nuage_random()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trier-nuage">4.2.3. <code class="docutils literal notranslate"><span class="pre">trier_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-nuage">4.2.4. <code class="docutils literal notranslate"><span class="pre">write_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-nuage">4.2.5. <code class="docutils literal notranslate"><span class="pre">read_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aff-nuage">4.2.6. <code class="docutils literal notranslate"><span class="pre">aff_nuage()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-3-points-du-plan">4.3. Orientation de 3 points du plan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">4.3.1. <code class="docutils literal notranslate"><span class="pre">orientation()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrie2d-enveloppe-convexe">4.4. <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-l-enveloppe-convexe-d-un-nuage-de-points">4.4.1. Construire l’enveloppe convexe d’un nuage de points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maj-es-enveloppe-convexe-superieure">4.4.2. <code class="docutils literal notranslate"><span class="pre">maj_es()</span></code> : enveloppe convexe supérieure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maj-ei-enveloppe-convexe-inferieure">4.4.3. <code class="docutils literal notranslate"><span class="pre">maj_ei()</span></code>: enveloppe convexe inférieure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validation">4.4.4. Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#env-convexe">4.4.5. <code class="docutils literal notranslate"><span class="pre">env_convexe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-env">4.4.6. <code class="docutils literal notranslate"><span class="pre">print_env()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aff-nuage-env">4.4.7. <code class="docutils literal notranslate"><span class="pre">aff_nuage_env()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-n10">4.4.8. Application à <code class="docutils literal notranslate"><span class="pre">n10</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-n100">4.4.9. Application à <code class="docutils literal notranslate"><span class="pre">n100</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-3">
+<h1><span class="section-number">4. </span>Feuille 3<a class="headerlink" href="#feuille-3" title="Permalink to this heading">#</a></h1>
+<p>L’objectif de ce TP est de <strong>calculer et tracer l’enveloppe convexe d’un nuage de points du plan</strong>. L’algorithme de ce calcul utilise des piles.
+Les notions utiles seront introduites au fur et à mesure.</p>
+<ul class="simple">
+<li><p>Ce TP peut profiter d’une implémentation python du type de données abstrait <em>pile LIFO</em>.</p></li>
+<li><p>Le travail demandé sera effectué dans ce notebook jupyter.</p></li>
+<li><p>Dans le notebook, les <em>modules</em> demandés pourront être codés par des fonctions ou des traitements regroupés dans une cellule.</p></li>
+<li><p>Accompagner chaque développement de son test unitaire de validation.</p></li>
+<li><p>Dans un second temps, les traitements demandés pourront être regroupés dans des fichiers python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) exécutables depuis la ligne de commande.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on regroupe les imports utiles</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="points-du-plan-relation-d-ordre">
+<h2><span class="section-number">4.1. </span>Points du plan, relation d’ordre<a class="headerlink" href="#points-du-plan-relation-d-ordre" title="Permalink to this heading">#</a></h2>
+<p>Un <em>point</em> du plan est un couple <span class="math notranslate nohighlight">\((x, y)\)</span> (de nombres flottants).<br />
+On définit la relation d’ordre suivante entre 2 points du plan :<br />
+$<span class="math notranslate nohighlight">\((x,y) \le (x',y') \iff x &lt; x' \text{ ou } (x = x' \text{ et } y \le y').\)</span>$<br />
+Un <em>nuage de points</em> est un ensemble fini de points.</p>
+<section id="points">
+<h3><span class="section-number">4.1.1. </span><code class="docutils literal notranslate"><span class="pre">points</span></code><a class="headerlink" href="#points" title="Permalink to this heading">#</a></h3>
+<p>Concevoir et coder un module <code class="docutils literal notranslate"><span class="pre">points</span></code> qui permet de définir des points,
+de les comparer, d’afficher leurs coordonnées <span class="math notranslate nohighlight">\((x,y)\)</span> à l’écran.</p>
+</section>
+</section>
+<section id="nuage-de-points-generer-trier-afficher-stocker-tracer">
+<h2><span class="section-number">4.2. </span>`Nuage de points : générer, trier, afficher, stocker, tracer<a class="headerlink" href="#nuage-de-points-generer-trier-afficher-stocker-tracer" title="Permalink to this heading">#</a></h2>
+<section id="nuage">
+<h3><span class="section-number">4.2.1. </span><code class="docutils literal notranslate"><span class="pre">nuage</span></code><a class="headerlink" href="#nuage" title="Permalink to this heading">#</a></h3>
+<p>Ecrire un module <code class="docutils literal notranslate"><span class="pre">nuage</span></code> qui permet de définir un nuage de points de
+taille paramétrable et de d’afficher les coordonnées de ses points à
+l’écran.</p>
+<p><img alt="Un nuage de points aléatoires" src="../_images/nuage.png" /></p>
+</section>
+<section id="un-nuage-random">
+<h3><span class="section-number">4.2.2. </span><code class="docutils literal notranslate"><span class="pre">un_nuage_random()</span></code><a class="headerlink" href="#un-nuage-random" title="Permalink to this heading">#</a></h3>
+<p>Compléter ce module de façon à pouvoir générer aléatoirement un nuage de
+points de taille arbitraire et contenu dans le carré
+<span class="math notranslate nohighlight">\([0,1] \times [0,1]\)</span>.</p>
+</section>
+<section id="trier-nuage">
+<h3><span class="section-number">4.2.3. </span><code class="docutils literal notranslate"><span class="pre">trier_nuage()</span></code><a class="headerlink" href="#trier-nuage" title="Permalink to this heading">#</a></h3>
+<p>Compléter ce module de façon à pouvoir trier les points d’un nuage donné selon l’ordre croissant défini sur les points du plan.</p>
+</section>
+<section id="write-nuage">
+<h3><span class="section-number">4.2.4. </span><code class="docutils literal notranslate"><span class="pre">write_nuage()</span></code><a class="headerlink" href="#write-nuage" title="Permalink to this heading">#</a></h3>
+<p>Compléter ce module de façon à pouvoir enregistrer un nuage de points de taille arbitraire dans un fichier de texte. La taille du nuage sera aussi enregistrée dans ce fichier.<br />
+Les fichiers <code class="docutils literal notranslate"><span class="pre">data_nuage_10.txt</span></code> et <code class="docutils literal notranslate"><span class="pre">data_nuage_100.txt</span></code> fournis dans l’archive <code class="docutils literal notranslate"><span class="pre">3-data-nuage.zip</span></code> sont des exemples de tels fichiers.</p>
+</section>
+<section id="read-nuage">
+<h3><span class="section-number">4.2.5. </span><code class="docutils literal notranslate"><span class="pre">read_nuage()</span></code><a class="headerlink" href="#read-nuage" title="Permalink to this heading">#</a></h3>
+<p>Compléter ce module de façon à pouvoir lire un nuage de points de taille arbitraire à partir d’un fichier de texte selon le format défini ci-dessus.</p>
+</section>
+<section id="aff-nuage">
+<h3><span class="section-number">4.2.6. </span><code class="docutils literal notranslate"><span class="pre">aff_nuage()</span></code><a class="headerlink" href="#aff-nuage" title="Permalink to this heading">#</a></h3>
+<p>Compléter ce module de façon à pouvoir tracer graphiquement un nuage de
+points donné. Le tracé sera effectué à l’écran par défaut. Il permettra
+aussi de stocker ce tracé dans un fichier <code class="docutils literal notranslate"><span class="pre">jpeg</span></code>.</p>
+</section>
+</section>
+<section id="orientation-de-3-points-du-plan">
+<h2><span class="section-number">4.3. </span>Orientation de 3 points du plan<a class="headerlink" href="#orientation-de-3-points-du-plan" title="Permalink to this heading">#</a></h2>
+<p>On va développer progressivement un module <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>.</p>
+<p>On commence avec la détermination de l’orientation d’un triplet de points.</p>
+<p><img alt="Orientations d'un triplet (p,q,r)" src="../_images/orientation_pqr.png" /></p>
+<p>Un triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> de points <em>non alignés</em> du plan est <em>orienté
+positivement</em> si l’angle des vecteurs <code class="docutils literal notranslate"><span class="pre">(pq,</span> <span class="pre">pr)</span></code> est dans <span class="math notranslate nohighlight">\(]0, \pi \ [\)</span>
+(modulo <span class="math notranslate nohighlight">\(2\pi\)</span>). Sinon, il est <em>orienté négativement</em>.</p>
+<p>On vérifie l’orientation du triplet <code class="docutils literal notranslate"><span class="pre">(p,q,r)</span></code> en calculant le signe du
+déterminant 2x2 <span class="math notranslate nohighlight">\(det(pq,pr)\)</span> des vecteurs <code class="docutils literal notranslate"><span class="pre">pq</span></code> et <code class="docutils literal notranslate"><span class="pre">pr</span></code>. Signe du
+déterminant et sens d’orientation coïncident.</p>
+<p>On rappelle que :
+$<span class="math notranslate nohighlight">\(det(pq,pr) = (x_q - x_p)\times(y_r - y_p) - (y_q - y_p)\times(x_r -
+x_p).\)</span>$</p>
+<section id="orientation">
+<h3><span class="section-number">4.3.1. </span><code class="docutils literal notranslate"><span class="pre">orientation()</span></code><a class="headerlink" href="#orientation" title="Permalink to this heading">#</a></h3>
+<p>Commencer le module <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code> avec une fonction qui calcule l’orientation d’un triplet de points du plan.</p>
+</section>
+</section>
+<section id="geometrie2d-enveloppe-convexe">
+<h2><span class="section-number">4.4. </span><code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe<a class="headerlink" href="#geometrie2d-enveloppe-convexe" title="Permalink to this heading">#</a></h2>
+<p>Un ensemble <span class="math notranslate nohighlight">\(C\)</span> est <em>convexe</em> si le segment [p,q] qui relie deux
+points quelconques de <span class="math notranslate nohighlight">\(C\)</span> est inclus dans <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p><img alt="exemple d'ensembles convexes et nonconvexe" src="../_images/convexes.png" /></p>
+<p>L’<em>enveloppe convexe</em> <span class="math notranslate nohighlight">\(Conv(N)\)</span> d’un nuage de points <span class="math notranslate nohighlight">\(N\)</span> est le plus
+petit polygone convexe qui contient tous les points de <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p><img alt="L'enveloppe convexe du nuage de points‘data_nuage_10.txt'" src="../_images/env_conv10.png" /> <img alt="L'enveloppeconvexe du nuage de points‘data_nuage_100.txt'" src="../_images/env_conv100.png" /></p>
+<section id="construire-l-enveloppe-convexe-d-un-nuage-de-points">
+<h3><span class="section-number">4.4.1. </span>Construire l’enveloppe convexe d’un nuage de points<a class="headerlink" href="#construire-l-enveloppe-convexe-d-un-nuage-de-points" title="Permalink to this heading">#</a></h3>
+<p>Il existe plusieurs algorithmes.
+Nous utiliserons l’algorithme de Graham-Andrew qui s’appuie sur un balayage du nuage de points préalablement triés.</p>
+<p><strong>Hypothèse importante : aucun triplet de points alignés</strong></p>
+<p>Dans un premier temps, il est plus facile de supposer qu’aucun triplet <span class="math notranslate nohighlight">\((p, q, r)\)</span> du nuage de points ne sont alignés.</p>
+<p>On choisira d’arrêter le traitement d’un éventuel nuage qui ne vérifie pas cette hypothèse.</p>
+<p><strong>Algorithme de Graham-Andrew.</strong></p>
+<p>On construit <span class="math notranslate nohighlight">\(Conv(N)\)</span> en balayant de gauche à droite avec une droite verticale le
+nuage <span class="math notranslate nohighlight">\(N\)</span> préalablement trié par ordre croissant.
+On convient ainsi que p0 est le plus petit point de N, <em>ie.</em> celui le plus à gauche.</p>
+<p>Chaque point p rencontré par la droite met à jour l’enveloppe convexe du sous-nuage à gauche du point p. 
+Cette mise à jour s’effectue en distinguant une partie supérieure et une partie inférieure de l’enveloppe convexe.</p>
+<p>L’<em>enveloppe supérieure</em> est au dessus du segment [p0, p].
+Cette enveloppe <code class="docutils literal notranslate"><span class="pre">ES</span></code> est modifiée par l’algorithme suivant qui justifie de stocker <code class="docutils literal notranslate"><span class="pre">ES</span></code> comme une pile de base p0. On ajoute aussi à <code class="docutils literal notranslate"><span class="pre">ES</span></code>, p1 le point immédiatement supérieur à p0 (<em>ie.</em> immédiatement à droite de p0).
+La pile <code class="docutils literal notranslate"><span class="pre">ES</span></code> est ainsi composée d’au moins deux éléments.</p>
+<p>Soit p le point rencontré par le balayage de N.
+Notons q et r les deux derniers points ajoutés à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – q est au sommet.</p>
+<ul class="simple">
+<li><p>Si le triplet (p,q,r) est orienté positivement alors p est ajouté à
+<code class="docutils literal notranslate"><span class="pre">ES</span></code>. Ce qui termine la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p></li>
+<li><p>Sinon q est retiré de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et on reprend le test d’orientation et le
+traitement précédent pour <strong>un nouveau triplet (p,q,r)</strong> jusqu’à
+terminer la mise à jour de <code class="docutils literal notranslate"><span class="pre">ES</span></code> :</p>
+<ul>
+<li><p>par l’ajout de p à <code class="docutils literal notranslate"><span class="pre">ES</span></code></p></li>
+<li><p>ou parce qu’il ne reste que p0 dans <code class="docutils literal notranslate"><span class="pre">ES</span></code>. Dans ce cas, on
+termine en ajoutant p à <code class="docutils literal notranslate"><span class="pre">ES</span></code> – qui est ainsi toujours composée
+d’au moins deux éléments.</p></li>
+</ul>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> contient l’enveloppe convexe supérieure du nuage N une fois tous
+les points p de N balayés.</p>
+<p>On convient aisément que le point le plus à droite de N est le dernier
+point ajouté à <code class="docutils literal notranslate"><span class="pre">ES</span></code>.</p>
+<p><strong>Illustration graphique.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5,6}, début du traitement de p = 7</p>
+<p><img alt="Orientation (7,6,5) négative" src="../_images/ES-1.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,5}, p = 7</p>
+<p><img alt="Orientation (7,5,1) négative" src="../_images/ES-2.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1}, p = 7</p>
+<p><img alt="Orientation (7,1,0) positive" src="../_images/ES-3.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ES</span></code> = {0,1,7}, fin du traitement de p = 7.</p>
+</section>
+<section id="maj-es-enveloppe-convexe-superieure">
+<h3><span class="section-number">4.4.2. </span><code class="docutils literal notranslate"><span class="pre">maj_es()</span></code> : enveloppe convexe supérieure<a class="headerlink" href="#maj-es-enveloppe-convexe-superieure" title="Permalink to this heading">#</a></h3>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majES(pile,</span> <span class="pre">point)</span></code> qui
+effectue la mise à jour de la pile <code class="docutils literal notranslate"><span class="pre">ES</span></code> lors du traitement du point p.</p>
+</section>
+<section id="maj-ei-enveloppe-convexe-inferieure">
+<h3><span class="section-number">4.4.3. </span><code class="docutils literal notranslate"><span class="pre">maj_ei()</span></code>: enveloppe convexe inférieure<a class="headerlink" href="#maj-ei-enveloppe-convexe-inferieure" title="Permalink to this heading">#</a></h3>
+<p>L’<em>enveloppe convexe inférieure</em> est obtenue de façon similaire avec une
+(autre) pile ‘EI’ et un test d’orientation inverse.</p>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">majEI(pile,</span> <span class="pre">point)</span></code> qui
+effectue la mise à jour de la pile ‘EI’ lors du traitement du point p.</p>
+</section>
+<section id="validation">
+<h3><span class="section-number">4.4.4. </span>Validation<a class="headerlink" href="#validation" title="Permalink to this heading">#</a></h3>
+<p>Valider les deux fonctions précédentes sur des nuages de 5 ou 6 points.</p>
+</section>
+<section id="env-convexe">
+<h3><span class="section-number">4.4.5. </span><code class="docutils literal notranslate"><span class="pre">env_convexe()</span></code><a class="headerlink" href="#env-convexe" title="Permalink to this heading">#</a></h3>
+<p>L’enveloppe convexe <span class="math notranslate nohighlight">\(Conv(N)\)</span> est une (autre) pile construite à partir
+de <code class="docutils literal notranslate"><span class="pre">ES</span></code> et <code class="docutils literal notranslate"><span class="pre">EI</span></code> en stockant successivement chaque point visité par les 2
+parcours suivants :</p>
+<ul class="simple">
+<li><p>L’enveloppe convexe supérieure est parcourue de la gauche vers la
+droite,</p></li>
+<li><p>l’enveloppe convexe inférieure est parcourue de la droite vers la
+gauche;<br />
+et modifié comme suit :</p></li>
+<li><p>l’extrémité droite de l’une et de l’autre de ces enveloppes n’est pas
+répétée,</p></li>
+<li><p>le sommet de <span class="math notranslate nohighlight">\(Conv(N)\)</span> répète sa base p0.</p></li>
+</ul>
+<p>Compléter le module précédent avec une fonction <code class="docutils literal notranslate"><span class="pre">env_convexe(nuage)</span></code> qui
+construit l’enveloppe convexe d’un nuage de points arbitraire.</p>
+</section>
+<section id="print-env">
+<h3><span class="section-number">4.4.6. </span><code class="docutils literal notranslate"><span class="pre">print_env()</span></code><a class="headerlink" href="#print-env" title="Permalink to this heading">#</a></h3>
+<p>Compléter le module précédent avec une fonction qui permet d’afficher l’enveloppe convexe ainsi construite.</p>
+</section>
+<section id="aff-nuage-env">
+<h3><span class="section-number">4.4.7. </span><code class="docutils literal notranslate"><span class="pre">aff_nuage_env()</span></code><a class="headerlink" href="#aff-nuage-env" title="Permalink to this heading">#</a></h3>
+<p>Compléter le module précédent avec une fonction qui permet de tracer graphiquement cette enveloppe convexe, d’abord sans le nuage de points associé, puis avec.</p>
+</section>
+<section id="application-a-n10">
+<h3><span class="section-number">4.4.8. </span>Application à <code class="docutils literal notranslate"><span class="pre">n10</span></code><a class="headerlink" href="#application-a-n10" title="Permalink to this heading">#</a></h3>
+<p>On note <code class="docutils literal notranslate"><span class="pre">n10</span></code> le nuage de points définis par le fichier de données
+<code class="docutils literal notranslate"><span class="pre">data_nuage_10.txt</span></code></p>
+<p>Déterminer et tracer l’enveloppe convexe de ce nuage de points.</p>
+</section>
+<section id="application-a-n100">
+<h3><span class="section-number">4.4.9. </span>Application à <code class="docutils literal notranslate"><span class="pre">n100</span></code><a class="headerlink" href="#application-a-n100" title="Permalink to this heading">#</a></h3>
+<p>On note <code class="docutils literal notranslate"><span class="pre">n100</span></code> le nuage de points définis par le fichier de données
+<code class="docutils literal notranslate"><span class="pre">data_nuage_100.txt</span></code></p>
+<p>Déterminer et tracer l’enveloppe convexe de ce nuage de points.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2-knn.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Feuille 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../pdf/memento.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Memento</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-du-plan-relation-d-ordre">4.1. Points du plan, relation d’ordre</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#points">4.1.1. <code class="docutils literal notranslate"><span class="pre">points</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuage-de-points-generer-trier-afficher-stocker-tracer">4.2. `Nuage de points : générer, trier, afficher, stocker, tracer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuage">4.2.1. <code class="docutils literal notranslate"><span class="pre">nuage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-nuage-random">4.2.2. <code class="docutils literal notranslate"><span class="pre">un_nuage_random()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trier-nuage">4.2.3. <code class="docutils literal notranslate"><span class="pre">trier_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-nuage">4.2.4. <code class="docutils literal notranslate"><span class="pre">write_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-nuage">4.2.5. <code class="docutils literal notranslate"><span class="pre">read_nuage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aff-nuage">4.2.6. <code class="docutils literal notranslate"><span class="pre">aff_nuage()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-3-points-du-plan">4.3. Orientation de 3 points du plan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">4.3.1. <code class="docutils literal notranslate"><span class="pre">orientation()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrie2d-enveloppe-convexe">4.4. <code class="docutils literal notranslate"><span class="pre">geometrie2d</span></code>: enveloppe convexe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construire-l-enveloppe-convexe-d-un-nuage-de-points">4.4.1. Construire l’enveloppe convexe d’un nuage de points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maj-es-enveloppe-convexe-superieure">4.4.2. <code class="docutils literal notranslate"><span class="pre">maj_es()</span></code> : enveloppe convexe supérieure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maj-ei-enveloppe-convexe-inferieure">4.4.3. <code class="docutils literal notranslate"><span class="pre">maj_ei()</span></code>: enveloppe convexe inférieure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validation">4.4.4. Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#env-convexe">4.4.5. <code class="docutils literal notranslate"><span class="pre">env_convexe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-env">4.4.6. <code class="docutils literal notranslate"><span class="pre">print_env()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aff-nuage-env">4.4.7. <code class="docutils literal notranslate"><span class="pre">aff_nuage_env()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-n10">4.4.8. Application à <code class="docutils literal notranslate"><span class="pre">n10</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-a-n100">4.4.9. Application à <code class="docutils literal notranslate"><span class="pre">n100</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

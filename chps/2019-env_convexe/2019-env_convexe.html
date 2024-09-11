@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2019-env_convexe</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  body {
+    color: #444;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 1em;
+    margin: auto;
+    max-width: 42em;
+    background: #fefefe;
+  }
+  
+  a {
+    color: #0645ad;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #0b0080;
+  }
+  
+  a:hover {
+    color: #06e;
+  }
+  
+  a:active {
+    color: #faa700;
+  }
+  
+  a:focus {
+    outline: thin dotted;
+  }
+  
+  *::-moz-selection {
+    background: rgba(255, 255, 0, 0.3);
+    color: #000;
+  }
+  
+  *::selection {
+    background: rgba(255, 255, 0, 0.3);
+    color: #000;
+  }
+  
+  a::-moz-selection {
+    background: rgba(255, 255, 0, 0.3);
+    color: #0645ad;
+  }
+  
+  a::selection {
+    background: rgba(255, 255, 0, 0.3);
+    color: #0645ad;
+  }
+  
+  p {
+    margin: 1em 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #111;
+    line-height: 125%;
+    margin-top: 2em;
+    font-weight: normal;
+  }
+  
+  h4, h5, h6 {
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  h4 {
+    font-size: 1.2em;
+  }
+  
+  h5 {
+    font-size: 1em;
+  }
+  
+  h6 {
+    font-size: 0.9em;
+  }
+  
+  blockquote {
+    color: #666666;
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em #EEE solid;
+  }
+  
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  pre, code, kbd, samp {
+    color: #000;
+    font-family: monospace, monospace;
+    _font-family: 'courier new', monospace;
+    font-size: 0.98em;
+  }
+  
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  b, strong {
+    font-weight: bold;
+  }
+  
+  dfn {
+    font-style: italic;
+  }
+  
+  ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  ul, ol {
+    margin: 1em 0;
+    padding: 0 0 0 2em;
+  }
+  
+  li p:last-child {
+    margin-bottom: 0;
+  }
+  
+  ul ul, ol ol {
+    margin: .3em 0;
+  }
+  
+  dl {
+    margin-bottom: 1em;
+  }
+  
+  dt {
+    font-weight: bold;
+    margin-bottom: .8em;
+  }
+  
+  dd {
+    margin: 0 0 .8em 2em;
+  }
+  
+  dd:last-child {
+    margin-bottom: 0;
+  }
+  
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+  }
+  
+  figure {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+  }
+  
+  figure img {
+    border: none;
+    margin: 0 auto;
+  }
+  
+  figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0 0 .8em;
+  }
+  
+  table {
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  
+  table th {
+    padding: .2em 1em;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  
+  table td {
+    padding: .2em 1em;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+  }
+  
+  .author {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  @media print {
+    * {
+      background: transparent !important;
+      color: black !important;
+      filter: none !important;
+      -ms-filter: none !important;
+    }
+  
+    body {
+      font-size: 12pt;
+      max-width: 100%;
+    }
+  
+    a, a:visited {
+      text-decoration: underline;
+    }
+  
+    hr {
+      height: 1px;
+      border: 0;
+      border-bottom: 1px solid black;
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+  
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+      content: "";
+    }
+  
+    pre, blockquote {
+      border: 1px solid #999;
+      padding-right: 1em;
+      page-break-inside: avoid;
+    }
+  
+    tr, img {
+      page-break-inside: avoid;
+    }
+  
+    img {
+      max-width: 100% !important;
+    }
+  
+    @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+  }
+  
+    @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+  }
+  
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2, h3 {
+      page-break-after: avoid;
+    }
+  }
+  </style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#evaluation-intermédiaire-du-module-daccueil-2019-2020"><span class="toc-section-number">1</span> Evaluation intermédiaire du module d’accueil, 2019-2020</a><ul>
+<li><a href="#points-points-du-plan-relation-dordre"><span class="toc-section-number">1.1</span> <code>points</code>: points du plan, relation d’ordre</a><ul>
+<li><a href="#question"><span class="toc-section-number">1.1.1</span> Question</a></li>
+</ul></li>
+<li><a href="#nuage-nuage-de-points-générer-trier-afficher-stocker-tracer"><span class="toc-section-number">1.2</span> <code>nuage</code> : nuage de points : générer, trier, afficher, stocker, tracer</a><ul>
+<li><a href="#question-1"><span class="toc-section-number">1.2.1</span> Question</a></li>
+<li><a href="#question-2"><span class="toc-section-number">1.2.2</span> Question</a></li>
+<li><a href="#question-3"><span class="toc-section-number">1.2.3</span> Question</a></li>
+<li><a href="#question-4"><span class="toc-section-number">1.2.4</span> Question</a></li>
+<li><a href="#question-5"><span class="toc-section-number">1.2.5</span> Question</a></li>
+<li><a href="#question-6"><span class="toc-section-number">1.2.6</span> Question</a></li>
+</ul></li>
+<li><a href="#geometrie2d-orientation-de-3-points-du-plan"><span class="toc-section-number">1.3</span> <code>geometrie2d</code>: orientation de 3 points du plan</a><ul>
+<li><a href="#question-7"><span class="toc-section-number">1.3.1</span> Question</a></li>
+</ul></li>
+<li><a href="#geometrie2d-enveloppe-convexe-supérieure"><span class="toc-section-number">1.4</span> <code>geometrie2d</code>: enveloppe convexe supérieure</a><ul>
+<li><a href="#algorithme"><span class="toc-section-number">1.4.1</span> Algorithme</a></li>
+<li><a href="#question-8"><span class="toc-section-number">1.4.2</span> Question</a></li>
+<li><a href="#question-9"><span class="toc-section-number">1.4.3</span> Question</a></li>
+</ul></li>
+<li><a href="#geometrie2d-enveloppe-convexe-inférieure"><span class="toc-section-number">1.5</span> <code>geometrie2d</code>: enveloppe convexe inférieure</a><ul>
+<li><a href="#question-10"><span class="toc-section-number">1.5.1</span> Question</a></li>
+<li><a href="#question-11"><span class="toc-section-number">1.5.2</span> Question</a></li>
+</ul></li>
+<li><a href="#geometrie2d-enveloppe-convexe"><span class="toc-section-number">1.6</span> <code>geometrie2d</code>: enveloppe convexe</a><ul>
+<li><a href="#question-12"><span class="toc-section-number">1.6.1</span> Question</a></li>
+<li><a href="#question-13"><span class="toc-section-number">1.6.2</span> Question</a></li>
+<li><a href="#question-14"><span class="toc-section-number">1.6.3</span> Question</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="evaluation-intermédiaire-du-module-daccueil-2019-2020"><span class="header-section-number">1</span> Evaluation intermédiaire du module d’accueil, 2019-2020</h1>
+<p>L’objectif de cette épreuve est de calculer et tracer l’enveloppe convexe d’un nuage de points du plan. L’algorithme de ce calcul utilise des piles.</p>
+<p>Les notions utiles seront introduites au fur et à mesure.</p>
+<p>Le travail demandé comporte plusieurs éléments.</p>
+<ul>
+<li>Un document écrit (.txt ou .md ou .pdf) qui justifie <strong>synthétiquement</strong> l’organisation de votre développement, le choix des structures de données, des fonctions et les tests unitaires associés. Il précise aussi comment obtenir les exécutables et les exécutions associées.<br />
+</li>
+<li>Les fichiers de code,<br />
+</li>
+<li>les fichiers de sortie,<br />
+</li>
+<li>et un <code>makefile</code>.</li>
+</ul>
+<p>Ce travail doit être déposé sous forme d’archive zip sur moodle en fin d’épreuve.</p>
+<p>Vous pouvez utiliser vos implantations du TDA piles. Dans ce cas, ne pas oublier d’inclure à votre dépôt zip tous les fichiers nécessaires à l’exécution de vos développements. <strong>Seules les parties qui s’exécutent sont évaluées et prises en compte dans la notation</strong>.</p>
+<h2 id="points-points-du-plan-relation-dordre"><span class="header-section-number">1.1</span> <code>points</code>: points du plan, relation d’ordre</h2>
+<p>Un <em>point</em> du plan est un couple <span class="math inline">(<em>x</em>, <em>y</em>)</span> (de nombres flottants).<br />
+On définit la relation d’ordre suivante entre 2 points du plan :<br />
+<br /><span class="math display">(<em>x</em>, <em>y</em>) ≤ (<em>x</em>′, <em>y</em>′) ⇔ <em>x</em> &lt; <em>x</em>′ ou (<em>x</em> = <em>x</em>′ et <em>y</em> ≤ <em>y</em>′).</span><br /><br />
+Un <em>nuage de points</em> est un ensemble fini de points.</p>
+<h3 id="question"><span class="header-section-number">1.1.1</span> Question</h3>
+<p>Concevoir et coder un module <code>points</code> qui permet de définir des points, de les comparer, d’afficher leurs coordonnées <span class="math inline">(<em>x</em>, <em>y</em>)</span> à l’écran.</p>
+<h2 id="nuage-nuage-de-points-générer-trier-afficher-stocker-tracer"><span class="header-section-number">1.2</span> <code>nuage</code> : nuage de points : générer, trier, afficher, stocker, tracer</h2>
+<h3 id="question-1"><span class="header-section-number">1.2.1</span> Question</h3>
+<p>Ecrire un module <code>nuage</code> qui permet de définir un nuage de points de taille paramétrable et de d’afficher les coordonnées de ses points à l’écran.</p>
+<figure>
+<img src="nuage.png" alt="Un nuage de points aléatoires" /><figcaption>Un nuage de points aléatoires</figcaption>
+</figure>
+<h3 id="question-2"><span class="header-section-number">1.2.2</span> Question</h3>
+<p>Compléter ce module de façon à pouvoir générer aléatoirement un nuage de points de taille arbitraire et contenu dans le carré <span class="math inline">[0, 1] × [0, 1]</span>.<br />
+On rappelle que la fonction <code>int rand(void)</code> de <code>stdlib</code> renvoie un entier entre 0 et RAND_MAX.</p>
+<h3 id="question-3"><span class="header-section-number">1.2.3</span> Question</h3>
+<p>Compléter ce module de façon à pouvoir trier les points d’un nuage donné selon l’ordre croissant défini sur les points du plan.</p>
+<h3 id="question-4"><span class="header-section-number">1.2.4</span> Question</h3>
+<p>Compléter ce module de façon à pouvoir enregistrer un nuage de points de taille arbitraire dans un fichier de texte. La taille du nuage sera aussi enregistrée dans ce fichier.<br />
+Les fichiers <code>data_nuage_10.txt</code> et <code>data_nuage_100.txt</code> fournis sont des exemples de tels fichiers.</p>
+<h3 id="question-5"><span class="header-section-number">1.2.5</span> Question</h3>
+<p>Compléter ce module de façon à pouvoir lire un nuage de points de taille arbitraire à partir d’un fichier de texte selon le format défini ci-dessus.</p>
+<h3 id="question-6"><span class="header-section-number">1.2.6</span> Question</h3>
+<p>Compléter ce module de façon à pouvoir tracer graphiquement un nuage de points donné. Le tracé sera effectué à l’écran par défaut. Il permettra aussi de stocker ce tracé dans un fichier <code>jpeg</code>.</p>
+<p>On va développer progressivement un module <code>geometrie2d</code>.</p>
+<h2 id="geometrie2d-orientation-de-3-points-du-plan"><span class="header-section-number">1.3</span> <code>geometrie2d</code>: orientation de 3 points du plan</h2>
+<figure>
+<img src="orientation_pqr.png" alt="Orientations d’un triplet (p,q,r)" /><figcaption>Orientations d’un triplet (p,q,r)</figcaption>
+</figure>
+<p>Un triplet <code>(p,q,r)</code> de points <em>non alignés</em> du plan est <em>orienté positivement</em> si l’angle des vecteurs <code>(pq, pr)</code> est dans <span class="math inline">]0, <em>π</em> [</span> (modulo <span class="math inline">2<em>π</em></span>). Sinon, il est <em>orienté négativement</em>.</p>
+<p>On vérifie l’orientation du triplet <code>(p,q,r)</code> en calculant le signe du déterminant 2x2 <span class="math inline"><em>d</em><em>e</em><em>t</em>(<em>p</em><em>q</em>, <em>p</em><em>r</em>)</span> des vecteurs <code>pq</code> et <code>pr</code>. Signe du déterminant et sens d’orientation coincident.</p>
+<p>On rappelle que : <br /><span class="math display"><em>d</em><em>e</em><em>t</em>(<em>p</em><em>q</em>, <em>p</em><em>r</em>) = (<em>x</em><sub><em>q</em></sub> − <em>x</em><sub><em>p</em></sub>) × (<em>y</em><sub><em>r</em></sub> − <em>y</em><sub><em>p</em></sub>) − (<em>y</em><sub><em>q</em></sub> − <em>y</em><sub><em>p</em></sub>) × (<em>x</em><sub><em>r</em></sub> − <em>x</em><sub><em>p</em></sub>).</span><br /></p>
+<h3 id="question-7"><span class="header-section-number">1.3.1</span> Question</h3>
+<p>Commencer le module <code>geometrie2d</code> avec une fonction qui calcule l’orientation d’un triplet de points du plan.</p>
+<h2 id="geometrie2d-enveloppe-convexe-supérieure"><span class="header-section-number">1.4</span> <code>geometrie2d</code>: enveloppe convexe supérieure</h2>
+<p>Un ensemble <span class="math inline"><em>C</em></span> est <em>convexe</em> si le segment [p,q] qui relie deux points quelconques de <span class="math inline"><em>C</em></span> est inclus dans <span class="math inline"><em>C</em></span>.</p>
+<figure>
+<img src="convexes.png" alt="exemple d’ensembles convexes et non convexe" /><figcaption>exemple d’ensembles convexes et non convexe</figcaption>
+</figure>
+<p>L’<em>enveloppe convexe</em> <span class="math inline"><em>C</em><em>o</em><em>n</em><em>v</em>(<em>N</em>)</span> d’un nuage de points <span class="math inline"><em>N</em></span> est le plus petit polygone convexe qui contient tous les points de <span class="math inline"><em>N</em></span>.</p>
+<p><img src="env_conv10.png" alt="exemple d’enveloppe convexe" /> <img src="env_conv100.png" alt="exemple d’enveloppe convexe" /></p>
+<p><strong>Construire l’enveloppe convexe d’un nuage de points.</strong> On construit <span class="math inline"><em>C</em><em>o</em><em>n</em><em>v</em>(<em>N</em>)</span> en balayant de gauche à droite avec une droite verticale le nuage <span class="math inline"><em>N</em></span> (préalablement trié par ordre croissant). On convient ainsi que p0 est le plus petit point de N, <em>ie.</em> celui le plus à gauche.</p>
+<p>Chaque point p rencontré par la droite met à jour l’enveloppe convexe du sous-nuage à gauche du point p. Cette mise à jour s’effectue en distinguant une partie supérieure et une partie inférieure de l’enveloppe convexe.</p>
+<p>L’<em>enveloppe supérieure</em> est au dessus du segment [p0, p]. Cette enveloppe ‘ES’ est modifiée par l’algorithme suivant qui justifie de stocker ‘ES’ comme une pile de base p0. On ajoute aussi à ‘ES’, p1 le point immédiatement supérieur à p0 (<em>ie.</em> immédiatement à droite de p0). La pile ‘ES’ est ainsi composée d’au moins deux éléments.</p>
+<h3 id="algorithme"><span class="header-section-number">1.4.1</span> Algorithme</h3>
+<p>Soit p le point rencontré par le balayage de N. Notons q et r les deux derniers points ajoutés à ‘ES’ – q est au sommet.</p>
+<ul>
+<li>Si le triplet (p,q,r) est orienté positivement alors p est ajouté à ‘ES’. Ce qui termine la mise à jour de ‘ES’.</li>
+<li>Sinon q est retiré de ‘ES’ et on reprend le test d’orientation et le traitement précédent pour <strong>un nouveau triplet (p,q,r)</strong> jusqu’à terminer la mise à jour de ‘ES’ :
+<ul>
+<li>par l’ajout de p à ‘ES’<br />
+</li>
+<li>ou parce qu’il ne reste que p0 dans ‘ES’. Dans ce cas, on termine en ajoutant p à ‘ES’ – qui est ainsi toujours composée d’au moins deux éléments.</li>
+</ul></li>
+</ul>
+<p>‘ES’ contient l’enveloppe convexe supérieure du nuage N une fois tous les points p de N balayés.</p>
+<p>On convient aisèment que le point le plus à droite de N est le dernier point ajouté à ‘ES’.</p>
+<p><strong>Illustration graphique.</strong></p>
+<p>‘ES’ = {0,1,5,6}, début du traitementy de p = 7</p>
+<figure>
+<img src="ES-1.png" alt="Orientation (7,6,5) négative" /><figcaption>Orientation (7,6,5) négative</figcaption>
+</figure>
+<p>‘ES’ = {0,1,5}, p = 7</p>
+<figure>
+<img src="ES-2.png" alt="Orientation (7,5,1) négative" /><figcaption>Orientation (7,5,1) négative</figcaption>
+</figure>
+<p>‘ES’ = {0,1}, p = 7</p>
+<figure>
+<img src="ES-3.png" alt="Orientation (7,1,0) positive" /><figcaption>Orientation (7,1,0) positive</figcaption>
+</figure>
+<p>‘ES’ = {0,1,7}, fin du traitement de p = 7.</p>
+<h3 id="question-8"><span class="header-section-number">1.4.2</span> Question</h3>
+<p>Compléter le module précédent avec une fonction <code>majES(pile, point)</code> qui effectue la mise à jour de la pile ‘ES’ lors du traitement du point p.</p>
+<h3 id="question-9"><span class="header-section-number">1.4.3</span> Question</h3>
+<p>Valider cette fonction sur des nuages de 4 ou 5 points par exemple.</p>
+<h2 id="geometrie2d-enveloppe-convexe-inférieure"><span class="header-section-number">1.5</span> <code>geometrie2d</code>: enveloppe convexe inférieure</h2>
+<p>L’<em>enveloppe convexe inférieure</em> est obtenue de façon similaire avec une (autre) pile ‘EI’ et un test d’orientation inverse.</p>
+<h3 id="question-10"><span class="header-section-number">1.5.1</span> Question</h3>
+<p>Compléter le module précédent avec une fonction <code>majEI(pile, point)</code> qui effectue la mise à jour de la pile ‘EI’ lors du traitement du point p.</p>
+<h3 id="question-11"><span class="header-section-number">1.5.2</span> Question</h3>
+<p>Valider cette fonction sur des nuages de 4 ou 5 points par exemple.</p>
+<h2 id="geometrie2d-enveloppe-convexe"><span class="header-section-number">1.6</span> <code>geometrie2d</code>: enveloppe convexe</h2>
+<p>L’enveloppe convexe <span class="math inline"><em>C</em><em>o</em><em>n</em><em>v</em>(<em>N</em>)</span> est une (autre) pile construite à partir de ‘ES’ et ‘EI’ en stockant successivement chaque point visité par les 2 parcours suivants :<br />
+- L’enveloppe convexe supérieure est parcourue de la gauche vers la droite,<br />
+- l’enveloppe convexe inférieure est parcourue de la droite vers la gauche;<br />
+et modifié comme suit :<br />
+- l’extrémité droite de l’une et de l’autre de ces enveloppes n’est pas repétée,<br />
+- le sommet de <span class="math inline"><em>C</em><em>o</em><em>n</em><em>v</em>(<em>N</em>)</span> repète sa base p0.</p>
+<h3 id="question-12"><span class="header-section-number">1.6.1</span> Question</h3>
+<p>Compléter le module précédent avec une fonction <code>env_convexe(nuage)</code> qui construit l’enveloppe convexe d’un nuage de points arbitraire.</p>
+<h3 id="question-13"><span class="header-section-number">1.6.2</span> Question</h3>
+<p>Compléter le module précédent avec une fonction qui permet d’afficher l’enveloppe convexe ainsi construite.</p>
+<h3 id="question-14"><span class="header-section-number">1.6.3</span> Question</h3>
+<p>Compléter le module précédent avec une fonction qui permet de tracer graphiquement cette enveloppe convexe, d’abord sans le nuage de points associé, puis avec.</p>
+<pre><code>pandoc -s --number-sections --toc -H pandoc.css 2019-env_convexe.md -o 2019-env_convexe.html</code></pre>
+</body>
+</html>

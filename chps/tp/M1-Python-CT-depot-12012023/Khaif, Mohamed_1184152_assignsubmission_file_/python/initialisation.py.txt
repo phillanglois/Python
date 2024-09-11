@@ -1,0 +1,12 @@
+from random import choice
+
+
+live = 1
+dead = 0
+vals = [live, dead]
+def init_grille(n: int) -> list[list[str]]:
+    t=[[0 for k in range(n)] for p in range(n)]
+    for i in range(n):
+        for j in range(n):
+            t[i][j]= choice(vals)  
+    return np.asarray(t)

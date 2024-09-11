@@ -1,0 +1,16 @@
+def vois_live(g : list[list[int]]) -> list[list[int]]:
+    n = len(g)
+    new_grille = [[0 for k in range(n)] for p in range(n)]
+    for i in range(n):
+        for j in range(n):
+            l = int((g[i, (j-1)%n] + g[i, (j+1)%n] +
+                         g[(i-1)%n, j] + g[(i+1)%n, j] +
+                         g[(i-1)%n, (j-1)%n] + g[(i-1)%n, (j+1)%n] +
+                         g[(i+1)%n, (j-1)%n] + g[(i+1)%n, (j+1)%n]))
+        if g[i, j]  == live:
+                if (l < 2) or (l > 3):
+                    new_grille[i, j] = dead
+                else:
+                    if l == 3:
+                        new_grille[i,j] = live
+    return new_gril
