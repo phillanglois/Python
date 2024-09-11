@@ -18,12 +18,12 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 
 :::{important} Dates importantes et contrôle des connaissances.
 
-**Section modifiée le 25.09.2023.**
+**Section modifiée le 11.09.2024.**
 
 Les numéros des semaines sont celles du calendrier. 
 
-- semaine 38. Démarrage
-- semaine 43. **CC en temps limité (4h)** lundi 23 octobre 2023 (dernière séance de TP Python)
+- semaine 37. Démarrage
+- semaine X. **CC en temps limité (4h)** date à fixer (dernière séance de TP Python ?)
 - semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)
 
 Note finale partie Python : $0.5 \times (CC+CT)$
@@ -48,7 +48,7 @@ Cependant nous décrirons une solution aussi générique que possible.
 Ce qui suit est une liste minimale de composants utiles ce deux années
 Elle peut sembler longue, mais en pratique ces composants "arrivent" d'un seul coup avec une distribution -- cf. paragraphe suivant.  
 
-- `python` version `**3.9**`
+- `python` version `**3.11**` ou supérieures
 
 - l'`IDLE` python 3  
     - éditeur, interpréteur, débugger 

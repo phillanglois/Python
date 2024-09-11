@@ -46,20 +46,13 @@ ALLSRC = $(wildcard  $(BOOKDIR)/cm/*.ipynb $(BOOKDIR)/cm/*.md $(BOOKDIR)/td/*.ip
 #--------------------------------------------------------------------
 
 book: $(ALLSRC)
-	@cd /Users/langlois/2022/ens/Python
+	@cd /Users/langlois/2024/ens/Python
 	@jupyter-book build $(BOOKDIR)
-#@pipenv run jupyter-book build $(BOOKDIR)
 
 enligne: $(ALLSRC)
-	@cd /Users/langlois/2022/ens/Python
+	@cd /Users/langlois/2024/ens/Python
 	jupyter-book build $(BOOKDIR)
 	ghp-import -n -p -f $(BOOKDIR)/_build/html -m "version en ligne : maj"
-#@pipenv run jupyter-book build $(BOOKDIR)
-#@pipenv run ghp-import -n -p -f $(BOOKDIR)/_build/html -m "version en ligne : maj"
-
-tp: $(BOOKDIR)/$(wildcard tp2022/*.ipynb)
-	@cd /Users/langlois/2022/ens/Python
-	@pipenv run jupyter-book build tp2022
 #--------------------------------------------------------------------
 
 SRCDIR = cm
