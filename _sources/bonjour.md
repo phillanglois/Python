@@ -23,8 +23,9 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 Les numéros des semaines sont celles du calendrier. 
 
 - semaine 37. Démarrage : on y va
-- semaine X. **CC en temps limité (4h)** date à fixer (dernière séance de TP Python ?)
-- semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)
+- semaine 41. **CC en temps limité (3h)** 11 octobre 2024, 13h30-17h30
+
+Le CT porte sur la partie C.
 
 Note finale partie Python : $0.5 \times (CC+CT)$
 :::
@@ -139,19 +140,18 @@ Préparation semaine suivante :
 **Motto** : Limiter les `import` aux ressources effectivement utilisées 
 
 - Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
-- TP feuille 1
+- TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
 
 ### Semaine 40
 
 **Motto** : les `assert` pour vos tests unitaires 
 
-- TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
-
+- TP feuille 3 : enveloppe convexe de $n$ points du plan
 
 ### Semaine 41
 
 **Motto** : valider ses traitements avec des cas extrêmes
 
-- TP feuille 3 : enveloppe convexe de $n$ points du plan
+- Contrôle continu de 3 heures
 
 <!-- #endregion -->
