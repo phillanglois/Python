@@ -22,7 +22,7 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 
 Les numéros des semaines sont celles du calendrier. 
 
-- semaine 37. Démarrage
+- semaine 37. Démarrage : on y va
 - semaine X. **CC en temps limité (4h)** date à fixer (dernière séance de TP Python ?)
 - semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)
 
@@ -110,7 +110,7 @@ Tel est l'objet de [ce document](tp:0-installation)
 - `time ` : mesure de temps d'exécution
 
 
-### Semaine 38
+### Semaine 37
 
 [**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
 
@@ -122,7 +122,7 @@ Préparation semaine suivante :
 - Compétences : Savoir faire et pré-requis technique
 - TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD (Feuille 0)
 
-### Semaine 39
+### Semaine 38
 
 **Motto** : Ecrire une fonction dans l'ordre suivant. 
 
@@ -134,21 +134,21 @@ Préparation semaine suivante :
 - Chapitres 5, 6 et 7
 - TP feuille 1 
 
-### Semaine 40 
+### Semaine 39 
 
 **Motto** : Limiter les `import` aux ressources effectivement utilisées 
 
 - Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
 - TP feuille 1
 
-### Semaine 41 (séance fin de semaine 40)
+### Semaine 40
 
 **Motto** : les `assert` pour vos tests unitaires 
 
 - TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
 
 
-### Semaine 42
+### Semaine 41
 
 **Motto** : valider ses traitements avec des cas extrêmes
 

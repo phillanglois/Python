@@ -398,14 +398,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.3. Exercice (palindrome)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.4. Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.5. Exercice (Une première cryptanalyse)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.6. Exercice (un peu d’images)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.7. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.8. Exercice (efficacité des algorithmes de recherche)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.9. Exercice (récursion terminale et itération)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.10. Exercice (suite de Syracuse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.4. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.5. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.7. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.8. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.9. Exercice (suite de Syracuse)</a></li>
 </ul>
             </nav>
         </div>
@@ -437,30 +436,6 @@ paramètres de ce traitement.</p></li>
 <li><p>Ecrire un programme qui utilise cette fonction pour traiter un
 nombre arbitraire de triangles entrées au clavier par l’utilisateur.</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_rectangle</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;vérifie si un triangle est rectangle&#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span>
-    <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> 
-<span class="n">l1</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">l2</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">l3</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">est_rectangle</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-    <span class="n">l1</span> <span class="o">=</span> <span class="mi">5</span>
-          <span class="o">^</span>
-<span class="ne">IndentationError</span>: expected an indented block after &#39;elif&#39; statement on line 5
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="exercice-randint-du-module-random">
 <h2><span class="section-number">2.2. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)<a class="headerlink" href="#exercice-randint-du-module-random" title="Permalink to this heading">#</a></h2>
@@ -474,30 +449,8 @@ renvoie le pourcentage de 6 obtenus.</p></li>
 fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p></li>
 </ol>
 </section>
-<section id="exercice-palindrome">
-<h2><span class="section-number">2.3. </span>Exercice (palindrome)<a class="headerlink" href="#exercice-palindrome" title="Permalink to this heading">#</a></h2>
-<p>Un palindrome est un mot, ou un groupe de mots, dont l’ordre des lettres
-reste le même qu’on le lise de la droite vers la gauche ou inversement.
-Des exemples bien connus sont “été”, “kayak”, “mon nom”, “élu par cette
-crapule”. Ce dernier permet d’illustrer qu’on ne tient pas compte en
-général des accents, trémas, cédilles, ni des espaces. Dans cet exercice
-:</p>
-<ul class="simple">
-<li><p>un mot ou un groupe de mots est représenté par une chaîne de
-caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>),</p></li>
-<li><p>ces caractères sont sans accent, tréma, ni cédille : “ete”</p></li>
-<li><p>les espaces sont considérés comme des caractères : ainsi “elu par
-cette crapule” n’est pas un palindrome ici.</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Ecrire une fonction qui teste si un argument est ou non un
-palindrome et retourne le booléen correspondant.</p></li>
-<li><p>Utiliser cette fonction pour tester un nombre arbitraire de mots
-entrés au clavier.</p></li>
-</ol>
-</section>
 <section id="exercice-algorithme-de-type-monte-carlo">
-<h2><span class="section-number">2.4. </span>Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h2>
 <p>On va calculer une approximation de <span class="math notranslate nohighlight">\(\pi\)</span> de façon probabiliste.</p>
 <ol class="arabic simple">
 <li><p>Ecrire une fonction qui vérifie si un point du plan défini par ses
@@ -517,7 +470,7 @@ précédent et calcule le ratio entre les points situés dans le cercle
 </ol>
 </section>
 <section id="exercice-une-premiere-cryptanalyse">
-<h2><span class="section-number">2.5. </span>Exercice (Une première cryptanalyse)<a class="headerlink" href="#exercice-une-premiere-cryptanalyse" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>Exercice (Une première cryptanalyse)<a class="headerlink" href="#exercice-une-premiere-cryptanalyse" title="Permalink to this heading">#</a></h2>
 <p><em>L’analyse fréquentielle, découverte au IXe siècle par Al-Kindi, examine
 les répétitions des lettres d’un message chiffré afin de trouver la clé.
 Elle est inefficace contre les chiffrements modernes tels que DES, RSA.
@@ -591,7 +544,7 @@ augmentent. Proposer des optimisations.</p></li>
 </ol>
 </section>
 <section id="exercice-un-peu-d-images">
-<h2><span class="section-number">2.6. </span>Exercice (un peu d’images)<a class="headerlink" href="#exercice-un-peu-d-images" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.5. </span>Exercice (un peu d’images)<a class="headerlink" href="#exercice-un-peu-d-images" title="Permalink to this heading">#</a></h2>
 <p>Une image à niveaux de gris peut être représentée par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc).
 La taille de l’image <span class="math notranslate nohighlight">\(L \times C\)</span> est arbitraire.<br />
 Ecrire les algorithmes des traitements suivants. On pourra commencer en
@@ -623,7 +576,7 @@ valeur la moyenne des pixels du carré.</p></li>
 </ol>
 </section>
 <section id="exercice-tx-b">
-<h2><span class="section-number">2.7. </span>Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)<a class="headerlink" href="#exercice-tx-b" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6. </span>Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)<a class="headerlink" href="#exercice-tx-b" title="Permalink to this heading">#</a></h2>
 <p>On veut résoudre le système linéaire <span class="math notranslate nohighlight">\(Tx=b\)</span> où la matrice <span class="math notranslate nohighlight">\(T\)</span> est une
 matrice triangulaire inférieure carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et <span class="math notranslate nohighlight">\(b\)</span> un vecteur
 second membre (de taille <span class="math notranslate nohighlight">\(n\)</span>). La matrice <span class="math notranslate nohighlight">\(T\)</span> et et le vecteur <span class="math notranslate nohighlight">\(b\)</span> sont
@@ -636,14 +589,14 @@ b. en utilisant les <code class="docutils literal notranslate"><span class="pre"
 </ol>
 </section>
 <section id="exercice-efficacite-des-algorithmes-de-recherche">
-<h2><span class="section-number">2.8. </span>Exercice (efficacité des algorithmes de recherche)<a class="headerlink" href="#exercice-efficacite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.7. </span>Exercice (efficacité des algorithmes de recherche)<a class="headerlink" href="#exercice-efficacite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
 <p>Effectuer une analyse expérimentale de la
 complexité pour comparer l’efficacité des algorithmes de recherche
 itérative et dichotomique (cas de l’entrée triée). Dégager les
 comportements dans le meilleur cas, dans le pire cas et en moyenne.</p>
 </section>
 <section id="exercice-recursion-terminale-et-iteration">
-<span id="exo-forrec"></span><h2><span class="section-number">2.9. </span>Exercice (récursion terminale et itération)<a class="headerlink" href="#exercice-recursion-terminale-et-iteration" title="Permalink to this heading">#</a></h2>
+<span id="exo-forrec"></span><h2><span class="section-number">2.8. </span>Exercice (récursion terminale et itération)<a class="headerlink" href="#exercice-recursion-terminale-et-iteration" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Donner la forme récursive qui produit le même traitement que celui
 d’une boucle for qui (parcourt et) affiche les indices entiers
@@ -654,7 +607,7 @@ successifs de 11 à 1.</p></li>
 </ol>
 </section>
 <section id="exercice-suite-de-syracuse">
-<span id="exo-syracuse"></span><h2><span class="section-number">2.10. </span>Exercice (suite de Syracuse)<a class="headerlink" href="#exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h2>
+<span id="exo-syracuse"></span><h2><span class="section-number">2.9. </span>Exercice (suite de Syracuse)<a class="headerlink" href="#exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h2>
 <p>La suite de Syracuse <span class="math notranslate nohighlight">\(s\)</span> d’un nombre <span class="math notranslate nohighlight">\(N\)</span> donné est définie de façon
 récursive comme suit.</p>
 <p>On commence avec <span class="math notranslate nohighlight">\(s(0) = N\)</span>, puis :</p>
@@ -785,14 +738,13 @@ suite.</p></li>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.3. Exercice (palindrome)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.4. Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.5. Exercice (Une première cryptanalyse)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.6. Exercice (un peu d’images)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.7. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.8. Exercice (efficacité des algorithmes de recherche)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.9. Exercice (récursion terminale et itération)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.10. Exercice (suite de Syracuse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.4. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.5. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.7. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.8. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.9. Exercice (suite de Syracuse)</a></li>
 </ul>
   </nav></div>
 
