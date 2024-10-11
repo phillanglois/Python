@@ -513,32 +513,6 @@ Les étapes 4 et 5 dépendent des précédentes et sont liées l’une à l’au
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
-</div>
 <section id="etape-1-commencons-par-trier">
 <h2><span class="section-number">3.1. </span>Etape 1 : commençons par trier<a class="headerlink" href="#etape-1-commencons-par-trier" title="Permalink to this heading">#</a></h2>
 <p>On suppose une relation d’ordre définie pour des valeurs à trier. Par exemple, on veut trier des entiers par ordre croissant.
@@ -608,12 +582,12 @@ Une variable entière temporaire pourra servir pour les déplacements successifs
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">tt0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">assert</span> <span class="n">tt0</span> <span class="o">==</span> <span class="n">tri_selection_1</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">))</span>
 
-<span class="nn">Cell In[6], line 5,</span> in <span class="ni">tri_selection_1</span><span class="nt">(t, n)</span>
+<span class="nn">Cell In[3], line 5,</span> in <span class="ni">tri_selection_1</span><span class="nt">(t, n)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -637,7 +611,7 @@ Une variable entière temporaire pourra servir pour les déplacements successifs
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -691,7 +665,7 @@ En revanche, on <strong>interdit d’utiliser</strong> la fonction-méthode <cod
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -870,14 +844,14 @@ python 3.7 (version instalée à ce jour sur les machines) nécessite quelques c
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">tri2D_selection</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">p1</span> <span class="o">==</span> <span class="n">poudlard</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">)):</span>
 
-<span class="nn">Cell In[17], line 9,</span> in <span class="ni">tri2D_selection</span><span class="nt">(t, n, p, num_col)</span>
+<span class="nn">Cell In[14], line 9,</span> in <span class="ni">tri2D_selection</span><span class="nt">(t, n, p, num_col)</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">num_col</span> <span class="o">&lt;</span> <span class="n">p</span> <span class="ow">or</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">num_col</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -905,7 +879,7 @@ python 3.7 (version instalée à ce jour sur les machines) nécessite quelques c
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -939,7 +913,7 @@ python 3.7 (version instalée à ce jour sur les machines) nécessite quelques c
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1015,13 +989,13 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t0</span><span class="p">)))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">t0</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">assert</span> <span class="n">elemMajoritaire1D</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
-<span class="nn">Cell In[23], line 5,</span> in <span class="ni">elemMajoritaire1D</span><span class="nt">(t, n)</span>
+<span class="nn">Cell In[20], line 5,</span> in <span class="ni">elemMajoritaire1D</span><span class="nt">(t, n)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -1045,7 +1019,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1096,13 +1070,13 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">maisonMaj</span> <span class="o">=</span> <span class="n">elemMajoritaire2D</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poudlard</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">5</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">maisonMaj</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Griffondor&quot;</span><span class="p">]</span>
 
-<span class="nn">Cell In[27], line 8,</span> in <span class="ni">elemMajoritaire2D</span><span class="nt">(t, n, p, num_col)</span>
+<span class="nn">Cell In[24], line 8,</span> in <span class="ni">elemMajoritaire2D</span><span class="nt">(t, n, p, num_col)</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -1126,7 +1100,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1203,7 +1177,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exécuter cette cellule sans la modifier, ni écrire dedans</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Son exécution ne doit pas déclencher d&#39;erreur </span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
@@ -1215,7 +1189,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># distance entre Adam et lui-même</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">assert</span> <span class="n">distM</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">poudlard</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>  <span class="c1"># distance entre Adam et Ahmed</span>
 
-<span class="nn">Cell In[31], line 11,</span> in <span class="ni">distM</span><span class="nt">(i, j, cols, t, n, p)</span>
+<span class="nn">Cell In[28], line 11,</span> in <span class="ni">distM</span><span class="nt">(i, j, cols, t, n, p)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">or</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -1239,7 +1213,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1351,7 +1325,7 @@ L’<em>élément majoritaire</em> d’une liste de <code class="docutils litera
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1435,7 +1409,7 @@ Ce traitement modifie donc le tableau paramètre <code class="docutils literal n
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">poudlard</span> <span class="o">=</span> <span class="p">[</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Serpentar&quot;</span><span class="p">],</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">[</span><span class="s2">&quot;Ahmed&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Griffondor&quot;</span><span class="p">],</span> 
@@ -1452,7 +1426,7 @@ Ce traitement modifie donc le tableau paramètre <code class="docutils literal n
 <span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="n">poudlard</span>
 
-<span class="nn">Cell In[40], line 10,</span> in <span class="ni">proximitesNouvelEleve</span><span class="nt">(eleve, t, n, p)</span>
+<span class="nn">Cell In[37], line 10,</span> in <span class="ni">proximitesNouvelEleve</span><span class="nt">(eleve, t, n, p)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">_</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -1505,7 +1479,7 @@ Ce traitement modifie donc le tableau paramètre <code class="docutils literal n
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1591,7 +1565,7 @@ Chaque t-uple est d’une forme similaire à <code class="docutils literal notra
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1629,7 +1603,7 @@ Bien sûr, ce n’est pas satisfaisant pour une classification pertinente : il m
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -1684,7 +1658,7 @@ Le module python <code class="docutils literal notranslate"><span class="pre">cs
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1717,7 +1691,7 @@ Le module python <code class="docutils literal notranslate"><span class="pre">cs
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -1748,7 +1722,7 @@ Faire varier <code class="docutils literal notranslate"><span class="pre">k</spa
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># ENTRER VOTRE CODE A LA PLACE DE CES 2 LIGNES</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 

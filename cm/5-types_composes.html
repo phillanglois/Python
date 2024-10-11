@@ -449,7 +449,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">5. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Sep 24, 2024, lecture : 14
+<p>Mis à jour : Oct 11, 2024, lecture : 14
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -1155,14 +1155,14 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4400195904 4400195904
+4422118976 4422118976
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-4400196352 4400195904
+4422119424 4422118976
 </pre></div>
 </div>
 </div>
@@ -1474,9 +1474,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4347582032
-abc 4347582032
-abcdef 4400285936
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4369487440
+abc 4369487440
+abcdef 4422200880
 </pre></div>
 </div>
 </div>
@@ -1577,10 +1577,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4400052528
-4400052528
-4400295536
-4400295536
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4422058160
+4422058160
+4422073904
+4422073904
 </pre></div>
 </div>
 </div>
@@ -1828,16 +1828,16 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;o&#39;, &#39;i&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;, &#39;a&#39;} 6
 True
 False
-aie : {&#39;e&#39;, &#39;i&#39;, &#39;a&#39;}
-voyelles : {&#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;o&#39;, &#39;i&#39;}
-union : {&#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;o&#39;, &#39;i&#39;}
-autre union : {&#39;b&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;f&#39;, &#39;o&#39;, &#39;i&#39;}
-intersection : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;}
+aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+voyelles : {&#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;, &#39;a&#39;}
+union : {&#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;o&#39;, &#39;a&#39;}
+autre union : {&#39;u&#39;, &#39;e&#39;, &#39;f&#39;, &#39;i&#39;, &#39;b&#39;, &#39;y&#39;, &#39;o&#39;, &#39;a&#39;}
+intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;u&#39;, &#39;y&#39;, &#39;o&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
