@@ -387,10 +387,14 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-votre-environnement">12.2. Utiliser votre environnement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-et-ses-notebooks">12.3. Jupyter et ses notebooks</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-et-utiliser-des-notebooks">12.3.1. Créer et utiliser des notebooks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">12.3.2. Jupyter Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-markdown">12.3.3. Le format markdown</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">12.3.4. Compléments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mtu-utiliser-les-notebooks-jupyter">12.3.1. MTU Utiliser les notebooks Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-alternative">12.3.2. Une alternative</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-et-utiliser-des-notebooks">12.3.2.1. Créer et utiliser des notebooks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">12.3.2.2. Jupyter Lab</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-markdown">12.3.2.3. Le format markdown</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">12.3.2.4. Compléments</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-finir">12.4. Pour finir</a></li>
@@ -449,7 +453,7 @@ Puis on va créer un environnement virtuel qui permet de séparer l’espace de 
 Ainsi vous serez propriétaire et gestionnaire de cet environnement (monPython) dans lequel vous installerez les modules dont vous avez besoin pour votre projet.
 Il est classique de créer un environnement de travail spécifique à chaque projet que l’on développe.</p>
 <ol class="arabic">
-<li><p>installer la distribution python <strong>3.9</strong> d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a></p>
+<li><p>installer la distribution python <strong>3.11</strong> ou suivante d’<a class="reference external" href="https://www.anaconda.com/products/distribution">anaconda</a></p>
 <ul class="simple">
 <li><p>Il suffit de télécharger le fichier proposé (ça peut être un peu long) et l’installer simplement en cliquant</p></li>
 <li><p>Si anaconda est déjà présent sur votre machine, s’assurer qu’il s’agit bien de la distribution python <strong>3.9</strong>. Dans le cas contraire, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">désinstallez</a> cette version d’anaconda</p></li>
@@ -460,7 +464,7 @@ Il est classique de créer un environnement de travail spécifique à chaque pro
 <ul class="simple">
 <li><p>en ligne de commande (si besoin s’aider de cette <a class="reference external" href="https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/">page</a> ou de <a class="reference external" href="https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/">celle-ci</a>) :</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>monPython<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>monPython<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11
 </pre></div>
 </div>
 <ul class="simple">
@@ -552,28 +556,36 @@ En revanche, vous êtes propriétaire de tout environnement que vous créez.</p>
 </section>
 <section id="jupyter-et-ses-notebooks">
 <span id="sec-jupyter"></span><h2><span class="section-number">12.3. </span>Jupyter et ses notebooks<a class="headerlink" href="#jupyter-et-ses-notebooks" title="Permalink to this heading">#</a></h2>
+<section id="mtu-utiliser-les-notebooks-jupyter">
+<h3><span class="section-number">12.3.1. </span>MTU Utiliser les notebooks Jupyter<a class="headerlink" href="#mtu-utiliser-les-notebooks-jupyter" title="Permalink to this heading">#</a></h3>
+<p>La capsule de formation “MTU Utiliser les notebooks Jupyter” est accessible <a class="reference external" href="https://cours.univ-perp.fr/mod/h5pactivity/view.php?id=270945">via moodle</a></p>
+<p>Bon travail !</p>
+</section>
+<section id="une-alternative">
+<h3><span class="section-number">12.3.2. </span>Une alternative<a class="headerlink" href="#une-alternative" title="Permalink to this heading">#</a></h3>
 <p>Ce <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/">chapitre sur Jupyter</a> extrait du cours en ligne du master de Biologie Informatique de l’université Paris Diderot - Paris 7 (devenue Université Paris Cité) vous permettra d’utiliser rapidement les notebooks de <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> ou de <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> son prédécesseur.</p>
 <p>Vous étudierez en particulier les sections suivantes.</p>
 <section id="creer-et-utiliser-des-notebooks">
-<h3><span class="section-number">12.3.1. </span>Créer et utiliser des notebooks<a class="headerlink" href="#creer-et-utiliser-des-notebooks" title="Permalink to this heading">#</a></h3>
+<h4><span class="section-number">12.3.2.1. </span>Créer et utiliser des notebooks<a class="headerlink" href="#creer-et-utiliser-des-notebooks" title="Permalink to this heading">#</a></h4>
 <p>On a montré plus haut comment créer un notebook dans <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code>.
 Ensuite, l’utilisation des notebooks est identique dans <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> et <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>.
 Les <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/#182-lancement-de-jupyter-et-creation-dun-notebook">principes de création et d’utilisation des notebooks</a> sont présentés ici dans l’environnement <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>.</p>
 </section>
 <section id="jupyter-lab">
-<h3><span class="section-number">12.3.2. </span>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this heading">#</a></h3>
+<h4><span class="section-number">12.3.2.2. </span>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this heading">#</a></h4>
 <p>Les spécificités de <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/#186-jupyterlab">Jupyter Lab</a> par rapport à <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> y sont rapidement présentées.</p>
 </section>
 <section id="le-format-markdown">
-<h3><span class="section-number">12.3.3. </span>Le format markdown<a class="headerlink" href="#le-format-markdown" title="Permalink to this heading">#</a></h3>
+<h4><span class="section-number">12.3.2.3. </span>Le format markdown<a class="headerlink" href="#le-format-markdown" title="Permalink to this heading">#</a></h4>
 <p>Le <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/#183-le-format-markdown">format markdown</a> permet d’écrire du texte mis en forme de fort belle façon pour une sortie à l’écran, en html ou en pdf.
 Il est décliné dans plusieurs variantes – par exemple <a class="reference external" href="https://fr.wikipedia.org/wiki/GitHub_Flavored_Markdown">GitHub Flavored Markdown</a> utilisée dans <a class="reference external" href="https://github.com">github</a>.
 Ce langage de balisage léger s’utilise facilement dans le notebook jupyter ou “seul”.
 Dans ce cas, on profitera du très puissant convertisseur de formats de documents <a class="reference external" href="https://pandoc.org">pandoc</a>.</p>
 </section>
 <section id="complements">
-<h3><span class="section-number">12.3.4. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h3>
+<h4><span class="section-number">12.3.2.4. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h4>
 <p>Et dans un second temps, vous lirez les sections plus spécifiques sur les <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/#184-des-graphiques-dans-les-notebooks">graphiques dans les notebooks</a> et les très pratiques <a class="reference external" href="https://python.sdv.univ-paris-diderot.fr/18_jupyter/#185-les-magic-commands"><em>magic commands</em></a>.</p>
+</section>
 </section>
 </section>
 <section id="pour-finir">
@@ -663,10 +675,14 @@ Dans ce cas, on profitera du très puissant convertisseur de formats de document
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-votre-environnement">12.2. Utiliser votre environnement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-et-ses-notebooks">12.3. Jupyter et ses notebooks</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-et-utiliser-des-notebooks">12.3.1. Créer et utiliser des notebooks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">12.3.2. Jupyter Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-markdown">12.3.3. Le format markdown</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">12.3.4. Compléments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mtu-utiliser-les-notebooks-jupyter">12.3.1. MTU Utiliser les notebooks Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-alternative">12.3.2. Une alternative</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-et-utiliser-des-notebooks">12.3.2.1. Créer et utiliser des notebooks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">12.3.2.2. Jupyter Lab</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-markdown">12.3.2.3. Le format markdown</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">12.3.2.4. Compléments</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-finir">12.4. Pour finir</a></li>

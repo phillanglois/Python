@@ -40,14 +40,14 @@ Puis on va créer un environnement virtuel qui permet de séparer l'espace de _v
 Ainsi vous serez propriétaire et gestionnaire de cet environnement (monPython) dans lequel vous installerez les modules dont vous avez besoin pour votre projet.
 Il est classique de créer un environnement de travail spécifique à chaque projet que l'on développe.
 
-1. installer la distribution python **3.9** d'[anaconda](https://www.anaconda.com/products/distribution)  
+1. installer la distribution python **3.11** ou suivante d'[anaconda](https://www.anaconda.com/products/distribution)  
     - Il suffit de télécharger le fichier proposé (ça peut être un peu long) et l'installer simplement en cliquant
     - Si anaconda est déjà présent sur votre machine, s'assurer qu'il s'agit bien de la distribution python **3.9**. Dans le cas contraire, [désinstallez](https://docs.anaconda.com/anaconda/install/uninstall/) cette version d'anaconda 
     - L'installation prend du temps et nécessite une connection internet. Elle peut régulièrement vous demander d'installer une nouvelle version d'un des nombreux composants de la distribution.
 2. créer un environnement virtuel (par exemple `monPython`) 
     - en ligne de commande (si besoin s'aider de cette [page](https://www.pythoniste.fr/anaconda/les-environnements-virtuels-en-python-avec-anaconda/) ou de [celle-ci](https://fr.acervolima.com/configurer-un-environnement-virtuel-pour-python-a-laide-danaconda/)) :
     ```shell
-    conda create -n monPython python=3.9
+    conda create -n monPython python=3.11
     ```  
     - ou en utilisant l'interface graphique du navigateur anaconda :
     ![creer environnement via navigateur](fig/navigator-create-environment.png)
@@ -125,21 +125,29 @@ Une exécution d'un noyau python différent est associé à chaque notebook ouve
 (sec:jupyter)=
 ## Jupyter et ses notebooks
 
+### MTU Utiliser les notebooks Jupyter
+
+La capsule de formation "MTU Utiliser les notebooks Jupyter" est accessible [via moodle](https://cours.univ-perp.fr/mod/h5pactivity/view.php?id=270945)
+
+Bon travail !
+
+### Une alternative
+
 Ce [chapitre sur Jupyter](https://python.sdv.univ-paris-diderot.fr/18_jupyter/) extrait du cours en ligne du master de Biologie Informatique de l'université Paris Diderot - Paris 7 (devenue Université Paris Cité) vous permettra d'utiliser rapidement les notebooks de `Jupyter Lab` ou de `Jupyter` son prédécesseur.
 
 Vous étudierez en particulier les sections suivantes.
 
-### Créer et utiliser des notebooks
+#### Créer et utiliser des notebooks
 
 On a montré plus haut comment créer un notebook dans `Jupyter Lab`.
 Ensuite, l'utilisation des notebooks est identique dans `Jupyter Lab` et `Jupyter`.
 Les [principes de création et d'utilisation des notebooks](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#182-lancement-de-jupyter-et-creation-dun-notebook) sont présentés ici dans l'environnement `Jupyter`. 
 
-### Jupyter Lab
+#### Jupyter Lab
 
 Les spécificités de [Jupyter Lab](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#186-jupyterlab) par rapport à `Jupyter` y sont rapidement présentées.
 
-### Le format markdown
+#### Le format markdown
 
 Le [format markdown](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#183-le-format-markdown) permet d'écrire du texte mis en forme de fort belle façon pour une sortie à l'écran, en html ou en pdf. 
 Il est décliné dans plusieurs variantes -- par exemple [GitHub Flavored Markdown](https://fr.wikipedia.org/wiki/GitHub_Flavored_Markdown) utilisée dans [github](https://github.com).
@@ -147,7 +155,7 @@ Ce langage de balisage léger s'utilise facilement dans le notebook jupyter ou "
 Dans ce cas, on profitera du très puissant convertisseur de formats de documents [pandoc](https://pandoc.org).
 
 
-### Compléments
+#### Compléments
 
 Et dans un second temps, vous lirez les sections plus spécifiques sur les [graphiques dans les notebooks](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#184-des-graphiques-dans-les-notebooks) et les très pratiques [_magic commands_](https://python.sdv.univ-paris-diderot.fr/18_jupyter/#185-les-magic-commands).
 
