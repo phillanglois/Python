@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -167,7 +163,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -193,14 +200,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -389,7 +396,7 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="bienvenu-en-prog-python">
 <span id="ch-bonjour"></span><h1>Bienvenu en Prog Python!<a class="headerlink" href="#bienvenu-en-prog-python" title="Permalink to this heading">#</a></h1>
 <p><strong>Ce support est en évolution tout au long du semestre.</strong></p>
-<p>Mis à jour : Oct 16, 2024, lecture : 3 minutes minimum, PhL.</p>
+<p>Mis à jour : Sep 10, 2025, lecture : 3 minutes minimum, PhL.</p>
 <ul class="simple">
 <li><p>Vous : <strong>M1 CHPS</strong></p></li>
 <li><p>Moi : <strong>Philippe Langlois</strong></p></li>
@@ -405,7 +412,7 @@ document.write(`
 <p>Les numéros des semaines sont celles du calendrier.</p>
 <ul class="simple">
 <li><p>semaine 37. Démarrage : on y va</p></li>
-<li><p>semaine 43. <strong>CC en temps limité (3h)</strong> 25 octobre 2024, 10h-13h</p></li>
+<li><p>semaine X. <strong>CC en temps limité (3h)</strong> date à venir</p></li>
 </ul>
 <p>Le CT porte sur la partie C.</p>
 <p>Note finale partie Python : <span class="math notranslate nohighlight">\(0.5 \times (CC+CT)\)</span></p>
@@ -418,7 +425,7 @@ document.write(`
 <li><p>d’avoir son propre ordinateur configuré de façon complète et selon vos préférences.</p></li>
 </ul>
 <p>Il y a 3 choix d’OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l’UPVD.
-Les <span class="xref myst">distributions python</span> sont assez variées, et peuvent différer selon les OS.
+Les <a class="reference internal" href="#En%20pratique"><span class="xref myst">distributions python</span></a> sont assez variées, et peuvent différer selon les OS.
 Cependant nous décrirons une solution aussi générique que possible.</p>
 <p><strong>De quoi a-t-on <em>absolument</em> besoin ?</strong></p>
 <p>Ce qui suit est une liste minimale de composants utiles ce deux années
@@ -548,7 +555,7 @@ Elle peut sembler longue, mais en pratique ces composants “arrivent” d’un 
 <h3>Semaine 41<a class="headerlink" href="#semaine-41" title="Permalink to this heading">#</a></h3>
 <p><strong>Motto</strong> : valider ses traitements avec des cas extrêmes</p>
 <ul class="simple">
-<li><p>Contrôle continu de 3 heures</p></li>
+<li><p>S’entrainer sur les sujets de CC des années précédentes</p></li>
 </ul>
 <!-- #endregion -->
 </section>

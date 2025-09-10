@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Feuille 1 &#8212; Python</title>
+    <title>13. Feuille 1 &#8212; Python</title>
   
   
   
@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,26 +49,22 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tp/1-bases';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Feuille 2" href="2-knn.html" />
-    <link rel="prev" title="1. Préparer son ordinateur et travailler avec Python et JupyterLab" href="0-installation.html" />
+    <link rel="next" title="14. Feuille 2" href="2-knn.html" />
+    <link rel="prev" title="12. Préparer son ordinateur et travailler avec Python et JupyterLab" href="0-installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -396,15 +403,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.4. Exercice (Une première cryptanalyse)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.5. Exercice (un peu d’images)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.7. Exercice (efficacité des algorithmes de recherche)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.8. Exercice (récursion terminale et itération)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.9. Exercice (suite de Syracuse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">13.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">13.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">13.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">13.4. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">13.5. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">13.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">13.7. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">13.8. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">13.9. Exercice (suite de Syracuse)</a></li>
 </ul>
             </nav>
         </div>
@@ -417,7 +424,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="feuille-1">
-<span id="tp-tp1"></span><h1><span class="section-number">2. </span>Feuille 1<a class="headerlink" href="#feuille-1" title="Permalink to this heading">#</a></h1>
+<span id="tp-tp1"></span><h1><span class="section-number">13. </span>Feuille 1<a class="headerlink" href="#feuille-1" title="Permalink to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Feuille téléchargeable au format jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)</p>
@@ -428,7 +435,7 @@ document.write(`
 <li><p>Utiliser les annotations de type pour les paramètres des fonctions</p></li>
 </ul>
 <section id="exercice-est-rectangle">
-<h2><span class="section-number">2.1. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)<a class="headerlink" href="#exercice-est-rectangle" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.1. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)<a class="headerlink" href="#exercice-est-rectangle" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Définir et écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> qui vérifie si un
 triangle est rectangle. Aucune hypothèse est effectuée sur les
@@ -438,7 +445,7 @@ nombre arbitraire de triangles entrées au clavier par l’utilisateur.</p></li>
 </ol>
 </section>
 <section id="exercice-randint-du-module-random">
-<h2><span class="section-number">2.2. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)<a class="headerlink" href="#exercice-randint-du-module-random" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.2. </span>Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)<a class="headerlink" href="#exercice-randint-du-module-random" title="Permalink to this heading">#</a></h2>
 <p>Cet exercice utilise la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Regarder la description de la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p></li>
@@ -450,7 +457,7 @@ fonction <code class="docutils literal notranslate"><span class="pre">randint</s
 </ol>
 </section>
 <section id="exercice-algorithme-de-type-monte-carlo">
-<h2><span class="section-number">2.3. </span>Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.3. </span>Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h2>
 <p>On va calculer une approximation de <span class="math notranslate nohighlight">\(\pi\)</span> de façon probabiliste.</p>
 <ol class="arabic simple">
 <li><p>Ecrire une fonction qui vérifie si un point du plan défini par ses
@@ -470,7 +477,7 @@ précédent et calcule le ratio entre les points situés dans le cercle
 </ol>
 </section>
 <section id="exercice-une-premiere-cryptanalyse">
-<h2><span class="section-number">2.4. </span>Exercice (Une première cryptanalyse)<a class="headerlink" href="#exercice-une-premiere-cryptanalyse" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.4. </span>Exercice (Une première cryptanalyse)<a class="headerlink" href="#exercice-une-premiere-cryptanalyse" title="Permalink to this heading">#</a></h2>
 <p><em>L’analyse fréquentielle, découverte au IXe siècle par Al-Kindi, examine
 les répétitions des lettres d’un message chiffré afin de trouver la clé.
 Elle est inefficace contre les chiffrements modernes tels que DES, RSA.
@@ -544,7 +551,7 @@ augmentent. Proposer des optimisations.</p></li>
 </ol>
 </section>
 <section id="exercice-un-peu-d-images">
-<h2><span class="section-number">2.5. </span>Exercice (un peu d’images)<a class="headerlink" href="#exercice-un-peu-d-images" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.5. </span>Exercice (un peu d’images)<a class="headerlink" href="#exercice-un-peu-d-images" title="Permalink to this heading">#</a></h2>
 <p>Une image à niveaux de gris peut être représentée par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc).
 La taille de l’image <span class="math notranslate nohighlight">\(L \times C\)</span> est arbitraire.<br />
 Ecrire les algorithmes des traitements suivants. On pourra commencer en
@@ -576,7 +583,7 @@ valeur la moyenne des pixels du carré.</p></li>
 </ol>
 </section>
 <section id="exercice-tx-b">
-<h2><span class="section-number">2.6. </span>Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)<a class="headerlink" href="#exercice-tx-b" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.6. </span>Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)<a class="headerlink" href="#exercice-tx-b" title="Permalink to this heading">#</a></h2>
 <p>On veut résoudre le système linéaire <span class="math notranslate nohighlight">\(Tx=b\)</span> où la matrice <span class="math notranslate nohighlight">\(T\)</span> est une
 matrice triangulaire inférieure carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et <span class="math notranslate nohighlight">\(b\)</span> un vecteur
 second membre (de taille <span class="math notranslate nohighlight">\(n\)</span>). La matrice <span class="math notranslate nohighlight">\(T\)</span> et et le vecteur <span class="math notranslate nohighlight">\(b\)</span> sont
@@ -589,14 +596,14 @@ b. en utilisant les <code class="docutils literal notranslate"><span class="pre"
 </ol>
 </section>
 <section id="exercice-efficacite-des-algorithmes-de-recherche">
-<h2><span class="section-number">2.7. </span>Exercice (efficacité des algorithmes de recherche)<a class="headerlink" href="#exercice-efficacite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">13.7. </span>Exercice (efficacité des algorithmes de recherche)<a class="headerlink" href="#exercice-efficacite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
 <p>Effectuer une analyse expérimentale de la
 complexité pour comparer l’efficacité des algorithmes de recherche
 itérative et dichotomique (cas de l’entrée triée). Dégager les
 comportements dans le meilleur cas, dans le pire cas et en moyenne.</p>
 </section>
 <section id="exercice-recursion-terminale-et-iteration">
-<span id="exo-forrec"></span><h2><span class="section-number">2.8. </span>Exercice (récursion terminale et itération)<a class="headerlink" href="#exercice-recursion-terminale-et-iteration" title="Permalink to this heading">#</a></h2>
+<span id="exo-forrec"></span><h2><span class="section-number">13.8. </span>Exercice (récursion terminale et itération)<a class="headerlink" href="#exercice-recursion-terminale-et-iteration" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Donner la forme récursive qui produit le même traitement que celui
 d’une boucle for qui (parcourt et) affiche les indices entiers
@@ -607,7 +614,7 @@ successifs de 11 à 1.</p></li>
 </ol>
 </section>
 <section id="exercice-suite-de-syracuse">
-<span id="exo-syracuse"></span><h2><span class="section-number">2.9. </span>Exercice (suite de Syracuse)<a class="headerlink" href="#exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h2>
+<span id="exo-syracuse"></span><h2><span class="section-number">13.9. </span>Exercice (suite de Syracuse)<a class="headerlink" href="#exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h2>
 <p>La suite de Syracuse <span class="math notranslate nohighlight">\(s\)</span> d’un nombre <span class="math notranslate nohighlight">\(N\)</span> donné est définie de façon
 récursive comme suit.</p>
 <p>On commence avec <span class="math notranslate nohighlight">\(s(0) = N\)</span>, puis :</p>
@@ -708,7 +715,7 @@ suite.</p></li>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Préparer son ordinateur et travailler avec Python et JupyterLab</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Préparer son ordinateur et travailler avec Python et JupyterLab</p>
       </div>
     </a>
     <a class="right-next"
@@ -716,7 +723,7 @@ suite.</p></li>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Feuille 2</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>Feuille 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -736,15 +743,15 @@ suite.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">2.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">2.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">2.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">2.4. Exercice (Une première cryptanalyse)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">2.5. Exercice (un peu d’images)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">2.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">2.7. Exercice (efficacité des algorithmes de recherche)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">2.8. Exercice (récursion terminale et itération)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">2.9. Exercice (suite de Syracuse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-est-rectangle">13.1. Exercice (<code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-randint-du-module-random">13.2. Exercice (<code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-algorithme-de-type-monte-carlo">13.3. Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-une-premiere-cryptanalyse">13.4. Exercice (Une première cryptanalyse)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-un-peu-d-images">13.5. Exercice (un peu d’images)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tx-b">13.6. Exercice (<span class="math notranslate nohighlight">\(Tx = b\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-efficacite-des-algorithmes-de-recherche">13.7. Exercice (efficacité des algorithmes de recherche)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-recursion-terminale-et-iteration">13.8. Exercice (récursion terminale et itération)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-suite-de-syracuse">13.9. Exercice (suite de Syracuse)</a></li>
 </ul>
   </nav></div>
 

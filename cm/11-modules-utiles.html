@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -436,7 +443,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Oct 16, 2024, lecture : 8
+<p>Mis à jour : Sep 10, 2025, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -533,7 +540,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.667310445127391, 0.8115320449909771, 0.22407234650035524, 0.42035936397313456, 0.30437038765022806, 0.7052576576934676, 0.7730330666689313, 0.5987631310794682, 0.3816299295359178, 0.9884324395496983]
+[0.9082737403761069, 0.3964055216108403, 0.5717241930506435, 0.9789502061744845, 0.9824662234693863, 0.6557877311976832, 0.1356680299229195, 0.5342805699429665, 0.7873771871905106, 0.014099808757718213]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -698,7 +705,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12132a0d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x11ecf4b10&gt;
 </pre></div>
 </div>
 <img alt="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" src="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" />
@@ -781,7 +788,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x121baaf10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x11f50bfd0&gt;
 </pre></div>
 </div>
 <img alt="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" src="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" />
@@ -893,7 +900,7 @@ premières itérations du segment <span class="math notranslate nohighlight">\([
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eb2c9fb60fd302293b70701a9e60e0d4422cdf1ae972628b10801d027c073332.png" src="../_images/eb2c9fb60fd302293b70701a9e60e0d4422cdf1ae972628b10801d027c073332.png" />
+<a class="reference internal image-reference" href="../_images/eb2c9fb60fd302293b70701a9e60e0d4422cdf1ae972628b10801d027c073332.png"><img alt="../_images/eb2c9fb60fd302293b70701a9e60e0d4422cdf1ae972628b10801d027c073332.png" src="../_images/eb2c9fb60fd302293b70701a9e60e0d4422cdf1ae972628b10801d027c073332.png" style="width: 520px;" /></a>
 </div>
 </div>
 </section>
@@ -1099,26 +1106,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.681e-04 1.611e-04
-1.650e-04 1.605e-04
-1.662e-04 1.610e-04
-1.709e-04 1.603e-04
-1.719e-04 1.611e-04
-1.748e-04 1.605e-04
-1.819e-04 1.637e-04
-1.757e-04 1.607e-04
-1.674e-04 1.608e-04
-1.600e-04 1.608e-04
-1.609e-04 1.610e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.671e-04 1.639e-04
+1.688e-04 1.600e-04
 1.600e-04 1.603e-04
-1.602e-04 2.737e-04
-1.607e-04 1.700e-04
-1.640e-04 1.614e-04
-1.600e-04 1.609e-04
-1.600e-04 1.607e-04
-1.640e-04 1.609e-04
-1.600e-04 1.608e-04
-1.600e-04 1.611e-04
+1.600e-04 1.603e-04
+1.590e-04 1.599e-04
+1.588e-04 1.600e-04
+1.671e-04 1.596e-04
+1.669e-04 2.925e-04
+1.600e-04 1.676e-04
+1.600e-04 1.600e-04
+1.600e-04 1.600e-04
+1.590e-04 1.640e-04
+1.590e-04 1.600e-04
+1.600e-04 1.602e-04
+1.600e-04 1.605e-04
+1.590e-04 1.601e-04
+1.600e-04 1.606e-04
+1.600e-04 1.602e-04
+1.600e-04 1.601e-04
+1.590e-04 1.605e-04
 </pre></div>
 </div>
 </div>
@@ -1148,7 +1155,7 @@ réserves précédentes).</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;20 mesures répétées&#39;)
 </pre></div>
 </div>
-<img alt="../_images/faa9363590ee3164c3cbabc76b9a121c8e831cce9203530357f93bb70baac8c9.png" src="../_images/faa9363590ee3164c3cbabc76b9a121c8e831cce9203530357f93bb70baac8c9.png" />
+<img alt="../_images/ec3692270bb205c142ceadcac17fd14241ca97dfba2d0083c8e0b6ff5c5fbf65.png" src="../_images/ec3692270bb205c142ceadcac17fd14241ca97dfba2d0083c8e0b6ff5c5fbf65.png" />
 </div>
 </div>
 </section>
@@ -1209,18 +1216,18 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 3.505e-06 3.505e-08
-00001000 1.607e-05 1.607e-08
-00010000 1.716e-04 1.716e-08
-00100000 1.759e-03 1.759e-08
-01000000 1.749e-02 1.749e-08
-10000000 1.870e-01 1.870e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 2.289e-06 2.289e-08
+00001000 1.640e-05 1.640e-08
+00010000 1.718e-04 1.718e-08
+00100000 1.725e-03 1.725e-08
+01000000 1.726e-02 1.726e-08
+10000000 1.731e-01 1.731e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x121e3df90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12f506bd0&gt;
 </pre></div>
 </div>
-<img alt="../_images/1d6445399307527162b1d6f18bd8353ab02ab00df48133d008dc6bdb03d7bec5.png" src="../_images/1d6445399307527162b1d6f18bd8353ab02ab00df48133d008dc6bdb03d7bec5.png" />
+<img alt="../_images/27312d68e0d198e9cd07246640234402e69a5968181818f825678c66989748b9.png" src="../_images/27312d68e0d198e9cd07246640234402e69a5968181818f825678c66989748b9.png" />
 </div>
 </div>
 <p><strong>Conclusion</strong></p>

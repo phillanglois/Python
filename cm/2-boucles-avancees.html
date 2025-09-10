@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -448,7 +455,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="boucles-tableaux-et-fonctions">
 <span id="ch-boucles"></span><h1><span class="section-number">3. </span>Boucles, tableaux et fonctions<a class="headerlink" href="#boucles-tableaux-et-fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Oct 16, 2024, lecture : 20 minutes minimum, PhL.</p>
+<p>Mis à jour : Sep 10, 2025, lecture : 20 minutes minimum, PhL.</p>
 <p>Dans ce chapitre, nous revisitons trois notions déjà connues :</p>
 <ul class="simple">
 <li><p>les structures de données de type tableau,</p></li>
@@ -673,8 +680,8 @@ Aie !
 <p><strong>Visualiser pour bien comprendre.</strong></p>
 <p>Merci pythontutor !</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://pythontutor.com/visualize.html#code=v%20%3D%20%5B1,%202,%203%5D%0Anon%20%3D%20%5B0%5D%20*%203%0Aoui%20%3D%20%5B0%20for%20_%20in%20range%283%29%5D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=edit&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">tableau 1D</a> : OK par concaténation et compréhension.</p></li>
-<li><p><a class="reference external" href="http://pythontutor.com/visualize.html#code=%23%20tableau%202D%0Am%20%3D%20%5B%5B1,%202%5D,%20%5B3,%204%5D,%20%5B5,%206%5D%5D%0A%23%20bien%20regarder%20l'effet%20de%20la%20construction%20suivante%0Anon2%20%3D%20%5B%5B0%5D%20*%202%5D%20*%203%0A%23et%20de%20celle-ci%0Aoui2%20%3D%20%5B%5B0%20for%20i%20in%20range%282%29%5D%20for%20j%20in%20range%283%29%5D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=edit&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">tableau 2D</a> : Oui par compréhension, NON par concaténation de listes !</p></li>
+<li><p><a class="reference external" href="http://pythontutor.com/visualize.html#code=v%20%3D%20%5B1,%202,%203%5D%0Anon%20%3D%20%5B0%5D%20*%203%0Aoui%20%3D%20%5B0%20for%20_%20in%20range%283%29%5D&amp;amp;cumulative=false&amp;amp;heapPrimitives=nevernest&amp;amp;mode=edit&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">tableau 1D</a> : OK par concaténation et compréhension.</p></li>
+<li><p><a class="reference external" href="http://pythontutor.com/visualize.html#code=%23%20tableau%202D%0Am%20%3D%20%5B%5B1,%202%5D,%20%5B3,%204%5D,%20%5B5,%206%5D%5D%0A%23%20bien%20regarder%20l'effet%20de%20la%20construction%20suivante%0Anon2%20%3D%20%5B%5B0%5D%20*%202%5D%20*%203%0A%23et%20de%20celle-ci%0Aoui2%20%3D%20%5B%5B0%20for%20i%20in%20range%282%29%5D%20for%20j%20in%20range%283%29%5D&amp;amp;cumulative=false&amp;amp;heapPrimitives=nevernest&amp;amp;mode=edit&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">tableau 2D</a> : Oui par compréhension, NON par concaténation de listes !</p></li>
 </ul>
 <p><strong>Conclusion</strong>
 Il vaut mieux s’interdire toute mauvaise habitude – même pour les listes 1D ou tableaux 1D.</p>
@@ -932,11 +939,7 @@ Notre question s’écrit mathématiquement pour le tableau <span class="math no
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponse<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponse</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Le doublon du tableau
 <code class="docutils literal notranslate"><span class="pre">t_rapide</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code>
 est identifié au premier parcours de la droite vers la gauche, c-a-d. :
@@ -953,11 +956,7 @@ Cette dépendance des parcours se traduit par l’imbrication de deux <em>boucle
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponse<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponse</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">Il suffit de parcourir le sous-tableau à droite de la valeur dont on cherche un doublon</p></li>
 <li><p class="sd-card-text">La recherche peut s’arrêter dès qu’un doublon a été identifié</p></li>
@@ -966,11 +965,7 @@ Réponse<div class="sd-summary-down docutils">
 </details><p><strong>Exercice.</strong> Modifier la question (Q) pour que son traitement demande alors que les parcours du tableau ne soient pas interrompus.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponse<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponse</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Plusieurs solutions dont :</p>
 <ul class="simple">
 <li><p class="sd-card-text">Combien de doublons sont présents dans le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> ?</p></li>
@@ -1049,17 +1044,13 @@ Réponse<div class="sd-summary-down docutils">
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>)  Qu’en pensez-vous ?</p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Quelles conditions satisfaire pour une généralisation (correcte) de ce traitement ?</p>
 <ul>
-<li><p>La <span class="xref myst">section</span> de ce chapitre aborde cette question.</p></li>
+<li><p>La <a class="reference internal" href="#genericite">section</a> de ce chapitre aborde cette question.</p></li>
 </ul>
 </li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponse<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponse</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">Il suffit de remplacer l’indication de type <code class="docutils literal notranslate"><span class="pre">int</span></code> par <code class="docutils literal notranslate"><span class="pre">float</span></code> dans l’en-tête et le corps des fonctions précédentes.</p></li>
 <li><p class="sd-card-text">En revanche en python, si on veut distinguer les 2 traitements, il faut que les fonctions aient des noms différents.</p></li>
@@ -1166,11 +1157,7 @@ Combien de fois est exécuté le test de la ligne 5 de <code class="docutils lit
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">min2()</span></code> possède deux boucles imbriquées <strong>indépendantes</strong>, cad. la boucle interne fait varier l’indice de colonne  <code class="docutils literal notranslate"><span class="pre">j</span></code> pour des valeurs (d’indices) qui ne dépendent pas de la valeur de <code class="docutils literal notranslate"><span class="pre">i</span></code>, l’indice de ligne.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<strong>Réponses.</strong><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text"><strong>Réponses.</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Respectivement 6 et <span class="math notranslate nohighlight">\(m \times n\)</span> fois.</p>
 </div>
 </details><p><strong>Explications.</strong>
@@ -1319,11 +1306,7 @@ et ils varient (ici) tous entre 0 et <span class="math notranslate nohighlight">
 <p><strong>Rmq.</strong> Les 4 lignes annoncées pour l’<em>algorithme</em> sont les lignes 4-5-6-7 :) Les lignes supplémentaires sont propres à sa <em>programmation</em>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Détails<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Détails</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">l’en-tête et son <code class="docutils literal notranslate"><span class="pre">doc-string</span></code></p></li>
 <li><p class="sd-card-text">l’initialisation de la matrice résultat <code class="docutils literal notranslate"><span class="pre">c</span></code> (avec une construction en compréhension)</p></li>
@@ -1381,11 +1364,7 @@ On aurait du écrire 6 paramètres d’entrée car il en faut 3 pour définir ch
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponses.<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponses.</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ol class="arabic simple">
 <li><p class="sd-card-text">Voir détails ci-dessus</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n^3\)</span>  où <span class="math notranslate nohighlight">\(n\)</span> est la taille des matrices ici supposées carrées</p></li>
@@ -1475,11 +1454,7 @@ True False
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponses.<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponses.</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ol class="arabic simple">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n^2\)</span></p></li>
 <li><p class="sd-card-text">La moitié au moins de ce travail est inutile.</p></li>
@@ -1533,11 +1508,7 @@ Réponses.<div class="sd-summary-down docutils">
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponses.<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponses.</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ol class="arabic simple">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n + (n-1) + \dots + 2 + 1 = n(n + 1)/2\)</span> qui est équivalent à <span class="math notranslate nohighlight">\(n^2/2\)</span> quand <span class="math notranslate nohighlight">\(n\)</span> est arbitrairement grand – soit moitié moins que le traitement précédent.</p></li>
 <li><p class="sd-card-text">On continue à “trop travailler” dans certains cas.</p></li>
@@ -1591,11 +1562,7 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Réponses.<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Réponses.</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Cherchez un peu svp ! Ensuite allez vérifier <a class="reference internal" href="#rep-doublonwhile"><span class="std std-ref">ici</span></a></p>
 </div>
 </details></section>

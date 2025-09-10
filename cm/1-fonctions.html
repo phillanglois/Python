@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -472,7 +479,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
 <span id="ch-fonctions"></span><h1><span class="section-number">2. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Oct 16, 2024, lecture : 19 minutes minimum, PhL.</p>
+<p>Mis à jour : Sep 10, 2025, lecture : 19 minutes minimum, PhL.</p>
 <p>Dans ce premier chapitre, nous abordons une notion importante qui fait l’objet de différentes appellations : fonction, procédure ou sous-programme. (Le titre de ce chapitre à longtemps été “Fonctions, procédures, sous-programmes”).
 Vous connaissez les fonctions en mathématiques depuis le collège.
 La notion de sous-programme à une consonance très “programmation”.
@@ -861,13 +868,14 @@ Morale : “Pas de nouvelle, bonne nouvelle !”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999999999999
 1.0
 1.0
+0.9999999999999999
 1.0
+0.9999999999999999
 1.0
-1.0
-1.0
+0.9999999999999999
 1.0
 1.0
 1.0
@@ -875,12 +883,11 @@ Morale : “Pas de nouvelle, bonne nouvelle !”</p>
 0.9999999999999999
 1.0
 1.0
-1.0000000000000002
-0.9999999999999999
 1.0
 1.0
+1.0
 0.9999999999999999
-0.9999999999999999
+1.0
 </pre></div>
 </div>
 </div>
@@ -1146,7 +1153,7 @@ A l’issue du traitement, la fonction renvoie (ou retourne) une valeur de sorti
 <p>Nous illustrons avec <a class="reference external" href="http://pythontutor.com/visualize.html#mode=edit">pythontutor</a> l’exécution d’un appel de fonction.</p>
 <ul class="simple">
 <li><p>Fonction affine :
-<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20f%28x%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''Une%20fonction%20affine%20d%C3%A9j%C3%A0%20rencontr%C3%A9e'''%0A%20%20%20%20y%20%3D%202%20*%20x%20%2B%201%0A%20%20%20%20return%20y%0A%20%20%20%20%0Aordonnee_a_l_origine%20%3D%20f%280%29%0A%0Aprint%28ordonnee_a_l_origine%29%0A%0Aprint%28%22n,%20f%28n%29%22%29%0A%23%20plusieurs%20appels%20de%20f%0Afor%20val%20in%20range%283%29%3A%0A%20%20%20%20print%28val,%20f%28val%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a></p></li>
+<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20f%28x%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''Une%20fonction%20affine%20d%C3%A9j%C3%A0%20rencontr%C3%A9e'''%0A%20%20%20%20y%20%3D%202%20*%20x%20%2B%201%0A%20%20%20%20return%20y%0A%20%20%20%20%0Aordonnee_a_l_origine%20%3D%20f%280%29%0A%0Aprint%28ordonnee_a_l_origine%29%0A%0Aprint%28%22n,%20f%28n%29%22%29%0A%23%20plusieurs%20appels%20de%20f%0Afor%20val%20in%20range%283%29%3A%0A%20%20%20%20print%28val,%20f%28val%29%29&amp;amp;cumulative=false&amp;amp;curInstr=0&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">visualisation pythontutor</a></p></li>
 </ul>
 <p>On observe :</p>
 <ul class="simple">
@@ -1179,7 +1186,7 @@ Donc pas uniquement comme dernière instruction du corps de la fonction.</p>
 <li><p>Le premier <code class="docutils literal notranslate"><span class="pre">return</span></code> exécuté arrête l’exécution</p></li>
 <li><p>les instructions suivantes du corps de la fonction ne sont pas traitées – comme dans une branche conditionnelle non prise, <em>eg.</em> dans une structure <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">...</span> <span class="pre">elif:</span> <span class="pre">...</span> <span class="pre">else:</span> <span class="pre">...</span></code>.</p></li>
 </ul>
-<p><a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''La%20m%C3%AAme%20avec%202%20return%20'''%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;cumulative=false&amp;curInstr=14&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a>
+<p><a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''La%20m%C3%AAme%20avec%202%20return%20'''%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;amp;cumulative=false&amp;amp;curInstr=14&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">visualisation pythontutor</a>
 de plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> et 1 seul exécuté par appel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

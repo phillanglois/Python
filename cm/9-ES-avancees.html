@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -864,27 +871,27 @@ La température du 12  janvier   2021 est 5.6oC.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est  +2.0 oC.
-La température du  5  janvier   2021 est +11.5 oC.
-La température du  9  janvier   2021 est +14.6 oC.
-La température du 13  janvier   2021 est  -0.6 oC.
-La température du 17  janvier   2021 est  +9.5 oC.
-La température du 21  janvier   2021 est +13.7 oC.
-La température du 25  janvier   2021 est  +8.4 oC.
-La température du  1  février   2021 est  +3.8 oC.
-La température du  5  février   2021 est  +9.8 oC.
-La température du  9  février   2021 est  -1.2 oC.
-La température du 13  février   2021 est +11.3 oC.
-La température du 17  février   2021 est +10.3 oC.
-La température du 21  février   2021 est +14.6 oC.
-La température du 25  février   2021 est +14.0 oC.
-La température du  1    mars    2021 est  +9.7 oC.
-La température du  5    mars    2021 est +10.8 oC.
-La température du  9    mars    2021 est +14.3 oC.
-La température du 13    mars    2021 est +14.1 oC.
-La température du 17    mars    2021 est  +5.0 oC.
-La température du 21    mars    2021 est +11.5 oC.
-La température du 25    mars    2021 est +12.5 oC.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La température du  1  janvier   2021 est  +7.7 oC.
+La température du  5  janvier   2021 est  +0.6 oC.
+La température du  9  janvier   2021 est  +9.2 oC.
+La température du 13  janvier   2021 est  -0.8 oC.
+La température du 17  janvier   2021 est  +8.2 oC.
+La température du 21  janvier   2021 est +11.3 oC.
+La température du 25  janvier   2021 est  +9.1 oC.
+La température du  1  février   2021 est  +2.7 oC.
+La température du  5  février   2021 est  -1.9 oC.
+La température du  9  février   2021 est +14.1 oC.
+La température du 13  février   2021 est  +8.6 oC.
+La température du 17  février   2021 est  +8.6 oC.
+La température du 21  février   2021 est  +5.8 oC.
+La température du 25  février   2021 est  +5.4 oC.
+La température du  1    mars    2021 est +13.0 oC.
+La température du  5    mars    2021 est  +7.6 oC.
+La température du  9    mars    2021 est +11.3 oC.
+La température du 13    mars    2021 est +15.8 oC.
+La température du 17    mars    2021 est  +9.6 oC.
+La température du 21    mars    2021 est  +8.1 oC.
+La température du 25    mars    2021 est  +6.8 oC.
 </pre></div>
 </div>
 </div>

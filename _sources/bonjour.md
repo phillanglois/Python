@@ -23,7 +23,7 @@ Ce support regroupe les ressources de la partie Python de l'UE Programmation du 
 Les numéros des semaines sont celles du calendrier. 
 
 - semaine 37. Démarrage : on y va
-- semaine 43. **CC en temps limité (3h)** 25 octobre 2024, 10h-13h
+- semaine X. **CC en temps limité (3h)** date à venir
 
 Le CT porte sur la partie C.
 
@@ -152,6 +152,6 @@ Préparation semaine suivante :
 
 **Motto** : valider ses traitements avec des cas extrêmes
 
-- Contrôle continu de 3 heures
+- S'entrainer sur les sujets de CC des années précédentes
 
 <!-- #endregion -->

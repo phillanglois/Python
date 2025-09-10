@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -194,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">1. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">2. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">3. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">4. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">1. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
 </ul>
 
     </div>
@@ -449,7 +456,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">5. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Oct 16, 2024, lecture : 14
+<p>Mis à jour : Sep 10, 2025, lecture : 14
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -845,7 +852,7 @@ retourne le nombre d’occurrences de <code class="docutils literal notranslate"
 <p><strong>Attention.</strong></p>
 <ul class="simple">
 <li><p>Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code> sont non mutables donc modifier <code class="docutils literal notranslate"><span class="pre">c</span></code> (ici par concaténation à l’avant-dernière ligne) créé en fait une <em>nouvelle</em> variable <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
-<li><p>L’exécution <a class="reference external" href="https://pythontutor.com/visualize.html#code=c%20%3D%20%281,2,3%29%0Ac2%20%3D%20c%20%2B%20c%0Ad1%20%3D%20c%20*%203%0Ac%20%3D%20c%20%2B%20%284,%29&amp;cumulative=false&amp;curInstr=4&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">pythontutor</a>
+<li><p>L’exécution <a class="reference external" href="https://pythontutor.com/visualize.html#code=c%20%3D%20%281,2,3%29%0Ac2%20%3D%20c%20%2B%20c%0Ad1%20%3D%20c%20*%203%0Ac%20%3D%20c%20%2B%20%284,%29&amp;amp;cumulative=false&amp;amp;curInstr=4&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">pythontutor</a>
 illustre bien ce point important.</p></li>
 </ul>
 <p><strong>Exercice.</strong> Que penser de la fonction à la spécification incomplète suivante ?</p>
@@ -1155,14 +1162,14 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4428655616 4428655616
+4355126976 4355126976
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-4428657536 4428655616
+4355127936 4355126976
 </pre></div>
 </div>
 </div>
@@ -1474,9 +1481,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4376024656
-abc 4376024656
-abcdef 4428722544
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4302444112
+abc 4302444112
+abcdef 4355213872
 </pre></div>
 </div>
 </div>
@@ -1577,10 +1584,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4428650608
-4428650608
-4428722800
-4428722800
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4354950192
+4354950192
+4354949488
+4354949488
 </pre></div>
 </div>
 </div>
@@ -1828,16 +1835,16 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;i&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;e&#39;} 6
 True
 False
-aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-voyelles : {&#39;i&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;}
-union : {&#39;i&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;}
-autre union : {&#39;i&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;b&#39;, &#39;f&#39;}
-intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;u&#39;, &#39;o&#39;, &#39;y&#39;}
+aie : {&#39;i&#39;, &#39;e&#39;, &#39;a&#39;}
+voyelles : {&#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;e&#39;}
+union : {&#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;e&#39;}
+autre union : {&#39;f&#39;, &#39;a&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;b&#39;, &#39;e&#39;}
+intersection : {&#39;i&#39;, &#39;e&#39;, &#39;a&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
