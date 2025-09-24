@@ -27,7 +27,7 @@ Les numéros des semaines sont celles du calendrier.
 
 Le CT porte sur la partie C.
 
-Note finale partie Python : $0.5 \times (CC+CT)$
+Note finale UE : $0.5 \times (CC+CT)$
 :::
 
 
