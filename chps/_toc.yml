@@ -18,6 +18,7 @@ parts:
     - file: cm/5-types_composes
     - file: cm/7-fonctions-avancees
     - file: cm/9-ES-avancees
+    - file: cm/12-poo
     - file: cm/11-modules-utiles
     - file: cm/a1-booleens
     - file: cm/a2-ndarray

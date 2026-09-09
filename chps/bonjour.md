@@ -1,33 +1,17 @@
 <!-- #region -->
 (ch:bonjour)=
-# Bienvenu en Prog Python!
+# Bienvenu en Prog Python !
 
 **Ce support est en évolution tout au long du semestre.**
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
 
-- Vous : **M1 CHPS**  
+- Vous : **L3 Informatique**  
 - Moi : **Philippe Langlois**   
 - Comment me contacter : ![](./cm/fig/mail_phl.png)  
 - Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
 - Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
-
-Ce support regroupe les ressources de la partie Python de l'UE Programmation du semestre 1 en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=6237).
-
-
-:::{important} Dates importantes et contrôle des connaissances.
-
-**Section modifiée le 11.09.2024.**
-
-Les numéros des semaines sont celles du calendrier. 
-
-- semaine 37. Démarrage : on y va
-- semaine X. **CC en temps limité (4h)** date à fixer (dernière séance de TP Python ?)
-- semaine X. CT (épreuve sur machine, date et durée selon calendrier des examens)
-
-Note finale partie Python : $0.5 \times (CC+CT)$
-:::
 
 
 ## Travailler en python
@@ -39,7 +23,7 @@ Il est indispensable :
 - d'avoir son propre ordinateur configuré de façon complète et selon vos préférences.    
 
 Il y a 3 choix d'OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l'UPVD.
-Les [distributions python](#En%20pratique) sont assez variées, et peuvent différer selon les OS.
+Les distributions python sont variées et peuvent différer selon les OS.
 Cependant nous décrirons une solution aussi générique que possible.
 
 
@@ -86,72 +70,5 @@ Elle peut sembler longue, mais en pratique ces composants "arrivent" d'un seul c
 
 Tel est l'objet de [ce document](tp:0-installation)
 
-
-## Programme de travail
-
-### CM
-
-**Séance 1**
-
-- types de données et structures de contrôle de base
-- fonctions, modules 
-- ES de base
-
-**Séance 2**
-
-- types de données avancés
-- sous-programmes et affectations : aspects avancés
-- ES avancées 
-
-**Séance 3**
-
-- `numpy`, ses `ndarray`, `scypi` : structures de données et traitements de calcul scientifique
-- `matplotlib` : courbes et graphiques
-- `time ` : mesure de temps d'exécution
-
-
-### Semaine 37
-
-[**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Pratiquer, pratiquer, pratiquer !"
-
-- Exercices intégrés au chapitre 1 
-- Chapitres 1 à 4
-
-Préparation semaine suivante :
-
-- Compétences : Savoir faire et pré-requis technique
-- TP : installer l'environnement python et JupyterLab sur sa machine personnelle, savoir utiliser ces ressources sur les ordinateurs de l'UPVD (Feuille 0)
-
-### Semaine 38
-
-**Motto** : Ecrire une fonction dans l'ordre suivant. 
-
-1. spécification avec annotations de types
-2. appels sur premiers tests unitaires avec des `assert`
-3. corps de la fonction
-4. vérification des tests unitaires
-
-- Chapitres 5, 6 et 7
-- TP feuille 1 
-
-### Semaine 39 
-
-**Motto** : Limiter les `import` aux ressources effectivement utilisées 
-
-- Chapitres 8 (`matplotlib`, `time`) et 10 (`numpy`).
-- TP feuille 1
-
-### Semaine 40
-
-**Motto** : les `assert` pour vos tests unitaires 
-
-- TP feuille 2 : algorithme KNN et Choixpeau magique de Poudlard
-
-
-### Semaine 41
-
-**Motto** : valider ses traitements avec des cas extrêmes
-
-- TP feuille 3 : enveloppe convexe de $n$ points du plan
 
 <!-- #endregion -->
