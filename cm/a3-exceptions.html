@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11. Exceptions &#8212; Python</title>
+    <title>12. Exceptions &#8212; Python</title>
   
   
   
@@ -29,40 +28,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/a3-exceptions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Préparer son ordinateur et travailler avec Python et JupyterLab" href="../tp/0-installation.html" />
-    <link rel="prev" title="10. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
+    <link rel="next" title="13. Préparer son ordinateur et travailler avec Python et JupyterLab" href="../tp/0-installation.html" />
+    <link rel="prev" title="11. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +178,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Prog Python!
+                    Bienvenu en Prog Python !
                 </a>
             </li>
         </ul>
@@ -192,21 +191,22 @@
 <li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-poo.html">8. La programmation orientée objet (POO) en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">9. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">10. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">11. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Exceptions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">13. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">14. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">15. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">16. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">17. Memento</a></li>
 </ul>
 
     </div>
@@ -401,21 +401,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">11.1. Principes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-exceptions-predefinies">11.2. Les exceptions prédéfinies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-des-exceptions-en-python">11.3. Traitement des exceptions en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-gentil">11.3.1. Premier exemple gentil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">11.3.2. Remarques</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">11.3.3. Exemples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">12.1. Principes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-exceptions-predefinies">12.2. Les exceptions prédéfinies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-des-exceptions-en-python">12.3. Traitement des exceptions en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-gentil">12.3.1. Premier exemple gentil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">12.3.2. Remarques</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">12.3.3. Exemples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions-definies-par-l-utilisateur">11.4. Exceptions définies par l’utilisateur</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#levee-d-exception-predefinie">11.4.1. Levée d’exception prédéfinie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-ses-propres-exceptions">11.4.2. Définir ses propres exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions-definies-par-l-utilisateur">12.4. Exceptions définies par l’utilisateur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#levee-d-exception-predefinie">12.4.1. Levée d’exception prédéfinie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-ses-propres-exceptions">12.4.2. Définir ses propres exceptions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precondition">11.5. Précondition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">11.6. Synthèse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precondition">12.5. Précondition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">12.6. Synthèse</a></li>
 </ul>
             </nav>
         </div>
@@ -428,7 +428,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exceptions">
-<h1><span class="section-number">11. </span>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">12. </span>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading">#</a></h1>
 <p>Programmation.</p>
 <p>Version 2020 (PhL).</p>
 <p><strong>NOTE 2022</strong> Reprendre ce chapitre pour afficher les exceptions levées par le nb.
@@ -437,7 +437,7 @@ Metadata de ce nb maj avec
 cf <a class="reference external" href="https://jupyterbook.org/content/execute.html#execution-configuration">doc</a></p>
 <h1>Table des matieres<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a href="#Principes" data-toc-modified-id="Principes-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Principes</a></span></li><li><span><a href="#Les-exceptions-prédéfinies" data-toc-modified-id="Les-exceptions-prédéfinies-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Les exceptions prédéfinies</a></span></li><li><span><a href="#Traitement-des-exceptions-en-python" data-toc-modified-id="Traitement-des-exceptions-en-python-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Traitement des exceptions en python</a></span><ul class="toc-item"><li><span><a href="#Premier-exemple-gentil" data-toc-modified-id="Premier-exemple-gentil-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Premier exemple gentil</a></span></li><li><span><a href="#Remarques" data-toc-modified-id="Remarques-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Remarques</a></span></li><li><span><a href="#Exemples" data-toc-modified-id="Exemples-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Exemples</a></span></li></ul></li><li><span><a href="#Exceptions-définies-par-l'utilisateur" data-toc-modified-id="Exceptions-définies-par-l'utilisateur-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Exceptions définies par l'utilisateur</a></span><ul class="toc-item"><li><span><a href="#Levée-d'exception-prédéfinie" data-toc-modified-id="Levée-d'exception-prédéfinie-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Levée d'exception prédéfinie</a></span></li><li><span><a href="#Définir-ses-propres-exceptions" data-toc-modified-id="Définir-ses-propres-exceptions-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Définir ses propres exceptions</a></span></li></ul></li><li><span><a href="#Précondition" data-toc-modified-id="Précondition-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Précondition</a></span></li><li><span><a href="#Synthèse" data-toc-modified-id="Synthèse-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Synthèse</a></span></li></ul></div><section id="principes">
-<h2><span class="section-number">11.1. </span>Principes<a class="headerlink" href="#principes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.1. </span>Principes<a class="headerlink" href="#principes" title="Link to this heading">#</a></h2>
 <p>Motivation : certains traitements ne peuvent pas s’effectuer correctement. Comme par exemple l’évaluation d’une racine carrée négative, une division par zéro, la lecture au delà de la fin d’un fichier, l’écriture au delà de la zone mémoire accessible, …</p>
 <p>Ces situations <em>exceptionnelles</em> sont prises en compte par le mécanisme des <em>exceptions</em>.</p>
 <p>3 étapes :</p>
@@ -457,7 +457,7 @@ Il est rare, mais pas impossible, qu’un <em>traite exception</em> permette de 
 Bien distinguer les _erreurs de syntaxe_ à l'interprétation/compilation des exceptions à _l'exécution_. 
 </div></section>
 <section id="les-exceptions-predefinies">
-<h2><span class="section-number">11.2. </span>Les exceptions prédéfinies<a class="headerlink" href="#les-exceptions-predefinies" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.2. </span>Les exceptions prédéfinies<a class="headerlink" href="#les-exceptions-predefinies" title="Link to this heading">#</a></h2>
 <p>En python (et dans d’autres langages), ces exceptions sont nombreuses.
 Voir par exemple : <a class="reference external" href="https://docs.python.org/fr/3.5/library/exceptions.html">doc python</a></p>
 <p>Elles sont organisées selon leur origine (système, calcul, mémoire, exécution, périphérique, …) par groupe et/ou de façon hierarchisée : <a class="reference external" href="https://docs.python.org/fr/3.5/library/exceptions.html#exception-hierarchy">hierarchie des exceptions python</a></p>
@@ -494,7 +494,7 @@ Voir par exemple : <a class="reference external" href="https://docs.python.org/f
 </ul>
 </section>
 <section id="traitement-des-exceptions-en-python">
-<h2><span class="section-number">11.3. </span>Traitement des exceptions en python<a class="headerlink" href="#traitement-des-exceptions-en-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.3. </span>Traitement des exceptions en python<a class="headerlink" href="#traitement-des-exceptions-en-python" title="Link to this heading">#</a></h2>
 <p>La gestion des exceptions s’effectue avec la construction suivante qui <strong>encadre les zones à risques</strong> :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">:</span>
     <span class="c1"># la partie du traitement principal susceptible de mal se passer</span>
@@ -530,7 +530,7 @@ Voir par exemple : <a class="reference external" href="https://docs.python.org/f
 </li>
 </ul>
 <section id="premier-exemple-gentil">
-<h3><span class="section-number">11.3.1. </span>Premier exemple gentil<a class="headerlink" href="#premier-exemple-gentil" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.1. </span>Premier exemple gentil<a class="headerlink" href="#premier-exemple-gentil" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#x = float(input(&quot;Un float stp :&quot;))</span>
@@ -750,7 +750,7 @@ ZeroDivisionError:<span class="w"> </span>float<span class="w"> </span>division<
 </ul>
 </section>
 <section id="remarques">
-<h3><span class="section-number">11.3.2. </span>Remarques<a class="headerlink" href="#remarques" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.2. </span>Remarques<a class="headerlink" href="#remarques" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Un seul</strong> traite exception est exécuté lorsque le bloc <code class="docutils literal notranslate"><span class="pre">try</span></code> lève une exception</p></li>
 <li><p>Principe de <strong>propagation ascendante d’une exception non traitée</strong> : si aucun traite-exception est rencontré pour l’exception levée,</p>
@@ -765,7 +765,7 @@ ZeroDivisionError:<span class="w"> </span>float<span class="w"> </span>division<
 </ul>
 </section>
 <section id="exemples">
-<h3><span class="section-number">11.3.3. </span>Exemples<a class="headerlink" href="#exemples" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.3. </span>Exemples<a class="headerlink" href="#exemples" title="Link to this heading">#</a></h3>
 <p>Les ES sont des zones à risque.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -915,10 +915,10 @@ ZeroDivisionError:<span class="w"> </span>float<span class="w"> </span>division<
 </section>
 </section>
 <section id="exceptions-definies-par-l-utilisateur">
-<h2><span class="section-number">11.4. </span>Exceptions définies par l’utilisateur<a class="headerlink" href="#exceptions-definies-par-l-utilisateur" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.4. </span>Exceptions définies par l’utilisateur<a class="headerlink" href="#exceptions-definies-par-l-utilisateur" title="Link to this heading">#</a></h2>
 <p>Le développement de modules ou de traitements peut nécessiter de prévoir des cas exceptionnels qui seraient déclenchés par leur utilisation incorrecte.</p>
 <section id="levee-d-exception-predefinie">
-<h3><span class="section-number">11.4.1. </span>Levée d’exception prédéfinie<a class="headerlink" href="#levee-d-exception-predefinie" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.4.1. </span>Levée d’exception prédéfinie<a class="headerlink" href="#levee-d-exception-predefinie" title="Link to this heading">#</a></h3>
 <p>On peut souhaiter <em>lever une exception prédéfinie</em> qui correspond au type d’erreur qu’elle couvre dans le cas général.</p>
 <p>Il suffit d’exécuter :</p>
 <blockquote>
@@ -972,7 +972,7 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
 </div>
 </section>
 <section id="definir-ses-propres-exceptions">
-<h3><span class="section-number">11.4.2. </span>Définir ses propres exceptions<a class="headerlink" href="#definir-ses-propres-exceptions" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.4.2. </span>Définir ses propres exceptions<a class="headerlink" href="#definir-ses-propres-exceptions" title="Link to this heading">#</a></h3>
 <p>Il faut aussi pouvoir <em>définir ses propres exceptions</em></p>
 <ul class="simple">
 <li><p>adaptées au traitement proposé par notre module</p></li>
@@ -983,7 +983,7 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
 </section>
 </section>
 <section id="precondition">
-<h2><span class="section-number">11.5. </span>Précondition<a class="headerlink" href="#precondition" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.5. </span>Précondition<a class="headerlink" href="#precondition" title="Link to this heading">#</a></h2>
 <p>Certaines fonctions (ou traitements) sont définies avec des hypothèses sur les arguments effectifs.</p>
 <ul class="simple">
 <li><p>Par exemple, la division <code class="docutils literal notranslate"><span class="pre">x/y</span></code> n’est pas définie pour <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">==</span> <span class="pre">0</span></code> et ce cas lève l’exception prédéfinie <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>.</p></li>
@@ -1071,7 +1071,7 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
 </ul>
 </section>
 <section id="synthese">
-<h2><span class="section-number">11.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Les exceptions qualifient des traitements incorrects <em>exceptionnels</em></p></li>
 <li><p>Les traites exception permettent de “récupérer la main” pour sortir au mieux du c as incorrect</p></li>
@@ -1119,7 +1119,7 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
       </div>
     </a>
     <a class="right-next"
@@ -1127,7 +1127,7 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Préparer son ordinateur et travailler avec Python et JupyterLab</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Préparer son ordinateur et travailler avec Python et JupyterLab</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1147,21 +1147,21 @@ Un exemple est donné dans le paragraphe suivant avec l’exception <code class=
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">11.1. Principes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-exceptions-predefinies">11.2. Les exceptions prédéfinies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-des-exceptions-en-python">11.3. Traitement des exceptions en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-gentil">11.3.1. Premier exemple gentil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">11.3.2. Remarques</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">11.3.3. Exemples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">12.1. Principes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-exceptions-predefinies">12.2. Les exceptions prédéfinies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traitement-des-exceptions-en-python">12.3. Traitement des exceptions en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-exemple-gentil">12.3.1. Premier exemple gentil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques">12.3.2. Remarques</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">12.3.3. Exemples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions-definies-par-l-utilisateur">11.4. Exceptions définies par l’utilisateur</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#levee-d-exception-predefinie">11.4.1. Levée d’exception prédéfinie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-ses-propres-exceptions">11.4.2. Définir ses propres exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exceptions-definies-par-l-utilisateur">12.4. Exceptions définies par l’utilisateur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#levee-d-exception-predefinie">12.4.1. Levée d’exception prédéfinie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-ses-propres-exceptions">12.4.2. Définir ses propres exceptions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precondition">11.5. Précondition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">11.6. Synthèse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precondition">12.5. Précondition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">12.6. Synthèse</a></li>
 </ul>
   </nav></div>
 

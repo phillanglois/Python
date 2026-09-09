@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. P00 : programmation orientée objet &#8212; Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/12-poo';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Modules utiles" href="11-modules-utiles.html" />
+    <link rel="prev" title="7. Les entrées-sorties (E/S) : aspects avancés" href="9-ES-avancees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/python.png" class="logo__image only-light" alt="Python - Home"/>
+    <script>document.write(`<img src="../_static/python.png" class="logo__image only-dark" alt="Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Prog Python !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">COURS</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-synthese.html">1. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">2. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-boucles-avancees.html">3. Boucles, tableaux et fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">4. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. P00 : programmation orientée objet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">9. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">10. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">11. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">12. Exceptions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">13. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">14. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">15. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">16. Feuille 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">17. Memento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Python/main?urlpath=tree/chps/cm/12-poo.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Python/issues/new?title=Issue%20on%20page%20%2Fcm/12-poo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/12-poo.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>P00 : programmation orientée objet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-la-programmation-orientee-objet">8.1. Pourquoi la programmation orientée objet ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-et-objets">8.2. Classes et objets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-classe">8.2.1. Définir une classe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activite-1-une-classe-point">8.2.2. Activité 1 — Une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation">8.3. Encapsulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#property-controler-l-acces-a-un-attribut">8.3.1. Property : contrôler l’accès à un attribut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-name-mangling-des-attributs-attribut">8.3.2. ($\star$) <em>Name mangling</em> des attributs <code class="docutils literal notranslate"><span class="pre">__attribut</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-speciales-dunder">8.4. Méthodes spéciales (<em>dunder</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributs-et-methodes-de-classe">8.5. Attributs et méthodes de classe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage">8.6. Héritage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphisme">8.7. Polymorphisme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activite-2-une-hierarchie-de-vehicules">8.7.1. Activité 2 — Une hiérarchie de véhicules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-classes-abstraites">8.8. ((\star)) Classes abstraites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-rapide-de-la-comprehension">8.9. . Vérification rapide de la compréhension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-et-competences">8.10. Synthèse et compétences</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">8.10.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">8.10.2. Savoir faire</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="p00-programmation-orientee-objet">
+<span id="ch-poo"></span><h1><span class="section-number">8. </span>P00 : programmation orientée objet<a class="headerlink" href="#p00-programmation-orientee-objet" title="Link to this heading">#</a></h1>
+<p>Mis à jour : Sep 09, 2026, lecture : 11
+minutes minimum, PhL.</p>
+<p>Ce chapitre complète le cours d’<em>Algo-Prog</em> de L1 en introduisant la <strong>programmation orientée objet (POO)</strong> en python.
+Il s’appuie sur les notions déjà vues, en particulier :</p>
+<ul class="simple">
+<li><p>les <strong>fonctions</strong> (définition, paramètres typés, valeur de retour) —- voir ce <a class="reference internal" href="1-fonctions.html#ch-fonctions"><span class="std std-ref">chapitre</span></a></p></li>
+<li><p>les <strong>types composés</strong> (<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>) — voir ce <a class="reference internal" href="#ch:types-omposes"><span class="xref myst">chapitre</span></a> , et en particulier la notion d’<strong>enregistrement</strong> (ou <em>structure</em>), qui regroupe des champs nommés (<em>attributs</em>) accessibles en notation pointée <code class="docutils literal notranslate"><span class="pre">objet.attribut</span></code>,</p></li>
+<li><p>l’<strong>affectation et les références</strong> pour les objets mutables — voir ce [chapitre](ch:fonctions avancees).</p></li>
+</ul>
+<p><strong>Idée clé.</strong> La POO généralise la notion d’enregistrement : on ne regroupe plus seulement des <strong>données</strong> (des attributs), mais aussi les <strong>traitements</strong> (des fonctions, appelées ici <em>méthodes</em>) qui s’appliquent naturellement à ces données, au sein d’une même entité appelée <strong>classe</strong>.</p>
+<section id="pourquoi-la-programmation-orientee-objet">
+<h2><span class="section-number">8.1. </span>Pourquoi la programmation orientée objet ?<a class="headerlink" href="#pourquoi-la-programmation-orientee-objet" title="Link to this heading">#</a></h2>
+<p>Reprenons l’exemple de ce <a class="reference internal" href="#ch=fonctionsavancees"><span class="xref myst">chapitre</span></a>.
+On veut représenter un étudiant par un enregistrement à 4 champs <code class="docutils literal notranslate"><span class="pre">numero_etud</span></code>, <code class="docutils literal notranslate"><span class="pre">nom</span></code>, <code class="docutils literal notranslate"><span class="pre">prenom</span></code>, <code class="docutils literal notranslate"><span class="pre">diplome</span></code>.
+Aucun type composé natif de python ne correspond à un enregistrement.</p>
+<p>En pratique, on utilise alors un <code class="docutils literal notranslate"><span class="pre">dict</span></code> :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">etu</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="mi">20231234</span><span class="p">,</span> <span class="s2">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="s2">&quot;prenom&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+</pre></div>
+</div>
+<p><strong>Limites de cette approche :</strong></p>
+<ul class="simple">
+<li><p>rien n’empêche d’oublier un champ, d’en ajouter un par erreur, ou de faire une faute de frappe sur une clé (<code class="docutils literal notranslate"><span class="pre">etu[&quot;nomm&quot;]</span></code>) : l’erreur n’est détectée qu’à l’exécution, loin de sa cause ;</p></li>
+<li><p>les <em>traitements</em> associés à un étudiant (ajouter une note, calculer une moyenne) doivent être écrits comme des <strong>fonctions séparées</strong>, prenant le dictionnaire en paramètre : rien ne dit, en lisant le code, que ces fonctions et ce dictionnaire « vont ensemble » ;</p></li>
+<li><p>si on veut représenter plusieurs <em>sortes</em> d’étudiants (un étudiant boursier, un étudiant en alternance …) qui partagent l’essentiel de leur comportement mais en diffèrent sur quelques points, un dictionnaire ne propose aucun mécanisme de réutilisation.</p></li>
+</ul>
+<p><strong>Vocabulaire.</strong></p>
+<p>La <strong>programmation orientée objet</strong> (POO) est un paradigme de programmation qui répond à ces limites en regroupant, au sein d’une même entité appelée <strong>classe</strong> :</p>
+<ul class="simple">
+<li><p>des <strong>données</strong> : les <strong>attributs</strong> (comme les champs d’un enregistrement) ;</p></li>
+<li><p>des <strong>traitements</strong> : les <strong>méthodes</strong>, qui sont des fonctions <em>attachées</em> à la classe et qui agissent naturellement sur ses attributs.</p></li>
+</ul>
+<p>Une <strong>instance</strong> (ou <strong>objet</strong>) est une valeur concrète construite à partir d’une classe – de même qu’une valeur <code class="docutils literal notranslate"><span class="pre">3</span></code> est une instance du type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>En python <strong>tout est objet</strong>, y compris les entiers, les chaînes de caractères et les listes déjà rencontrés !</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>produit :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt; &lt;class &#39;str&#39;&gt; &lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+<p>Les types <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, … sont donc eux-mêmes des <strong>classes</strong>, prédéfinies par python. Ce chapitre montre comment définir <strong>ses propres classes</strong>.</p>
+</section>
+<section id="classes-et-objets">
+<span id="sec-classe-objets"></span><h2><span class="section-number">8.2. </span>Classes et objets<a class="headerlink" href="#classes-et-objets" title="Link to this heading">#</a></h2>
+<section id="definir-une-classe">
+<h3><span class="section-number">8.2.1. </span>Définir une classe<a class="headerlink" href="#definir-une-classe" title="Link to this heading">#</a></h3>
+<p><strong>Syntaxe minimale :</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NomDeClasse</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribut1</span> <span class="o">=</span> <span class="n">param1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribut2</span> <span class="o">=</span> <span class="n">param2</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Le nom d’une classe s’écrit conventionnellement avec une <strong>majuscule initiale</strong> (<code class="docutils literal notranslate"><span class="pre">Etudiant</span></code>, et non <code class="docutils literal notranslate"><span class="pre">etudiant</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> est une méthode spéciale appelée le <strong>constructeur</strong> : elle est exécutée automatiquement lors de la création (<em>instanciation</em>) d’un objet, et sert à initialiser ses attributs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> désigne <strong>l’instance elle-même</strong> ; c’est <strong>toujours le premier paramètre</strong> de chaque méthode d’instance, et python le fournit automatiquement — on ne l’indique jamais explicitement lors de l’appel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.attribut</span> <span class="pre">=</span> <span class="pre">valeur</span></code> crée (ou modifie) l’attribut <code class="docutils literal notranslate"><span class="pre">attribut</span></code> de l’instance <code class="docutils literal notranslate"><span class="pre">self</span></code>, exactement comme on écrirait <code class="docutils literal notranslate"><span class="pre">etudiant.numero_etud</span></code> pour un enregistrement.</p></li>
+</ul>
+<p><strong>Instancier</strong> un objet, c’est appeler la classe comme une fonction :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">objet</span> <span class="pre">=</span> <span class="pre">NomDeClasse(arg1,</span> <span class="pre">arg2,</span> <span class="pre">...)</span></code></p>
+</div></blockquote>
+<p>Ceci déclenche l’appel à <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...)</span></code> où <code class="docutils literal notranslate"><span class="pre">self</span></code> est automatiquement l’objet en cours de création.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Etudiant</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Représente un étudiant identifié par son numéro, son nom et son prénom.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nom</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prenom</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numero</span> <span class="o">=</span> <span class="n">numero</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prenom</span> <span class="o">=</span> <span class="n">prenom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># liste des notes obtenues</span>
+
+    <span class="k">def</span> <span class="nf">ajouter_note</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">)</span>
+
+
+<span class="n">etu1</span> <span class="o">=</span> <span class="n">Etudiant</span><span class="p">(</span><span class="mi">20231234</span><span class="p">,</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="n">etu2</span> <span class="o">=</span> <span class="n">Etudiant</span><span class="p">(</span><span class="mi">20235678</span><span class="p">,</span> <span class="s2">&quot;Martin&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">etu1</span><span class="o">.</span><span class="n">nom</span><span class="p">,</span> <span class="n">etu1</span><span class="o">.</span><span class="n">prenom</span><span class="p">,</span> <span class="n">etu1</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">etu1</span><span class="p">))</span>
+
+<span class="n">etu1</span><span class="o">.</span><span class="n">ajouter_note</span><span class="p">(</span><span class="mf">14.5</span><span class="p">)</span>
+<span class="n">etu1</span><span class="o">.</span><span class="n">ajouter_note</span><span class="p">(</span><span class="mf">16.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">etu1</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="n">etu1</span><span class="o">.</span><span class="n">moyenne</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">etu1</span> <span class="ow">is</span> <span class="n">etu2</span><span class="p">,</span> <span class="n">etu1</span> <span class="o">==</span> <span class="n">etu2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dupont Alice 20231234
+&lt;class &#39;__main__.Etudiant&#39;&gt;
+[14.5, 16.0] 15.25
+False False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">etu1.nom</span></code> se lit et s’écrit exactement comme un champ d’enregistrement : <code class="docutils literal notranslate"><span class="pre">objet.attribut</span></code>.</p></li>
+<li><p>Chaque instance possède <strong>son propre espace</strong> pour ses attributs : modifier <code class="docutils literal notranslate"><span class="pre">etu1.notes</span></code> ne modifie pas <code class="docutils literal notranslate"><span class="pre">etu2.notes</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">etu1</span> <span class="pre">==</span> <span class="pre">etu2</span></code> renvoie <code class="docutils literal notranslate"><span class="pre">False</span></code> : par défaut, <code class="docutils literal notranslate"><span class="pre">==</span></code> compare l’<strong>identité</strong> des objets (comme <code class="docutils literal notranslate"><span class="pre">is</span></code>), pas le contenu de leurs attributs. On verra en <a class="reference internal" href="#sec-dunder"><span class="std std-ref">section</span></a> comment redéfinir ce comportement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type(etu1)</span></code> confirme que <code class="docutils literal notranslate"><span class="pre">etu1</span></code> est bien une instance de la classe <code class="docutils literal notranslate"><span class="pre">Etudiant</span></code>, de la même façon que <code class="docutils literal notranslate"><span class="pre">type(3)</span></code> renvoie <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
+</ul>
+<p><strong>Attention.</strong> <code class="docutils literal notranslate"><span class="pre">self</span></code> n’est pas un mot-clé du langage (contrairement à <code class="docutils literal notranslate"><span class="pre">def</span></code> ou <code class="docutils literal notranslate"><span class="pre">class</span></code>) : c’est une <strong>convention</strong> universellement respectée. Oublier de préfixer un attribut par <code class="docutils literal notranslate"><span class="pre">self.</span></code> est une erreur fréquente en début d’apprentissage :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Compteur</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">incrementer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1"># `valeur` n&#39;a jamais été initialisé !</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Compteur</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">incrementer</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erreur : &#39;Compteur&#39; object has no attribute &#39;valeur&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice.</strong> Pourquoi cette erreur se produit-elle, alors que <code class="docutils literal notranslate"><span class="pre">self.valeur</span> <span class="pre">=</span> <span class="pre">self.valeur</span> <span class="pre">+</span> <span class="pre">1</span></code> <em>écrit</em> aussi dans <code class="docutils literal notranslate"><span class="pre">self.valeur</span></code> ?</p>
+<p><em>Réponse :</em> en python, une expression <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">1</span></code> évalue d’abord le membre de <strong>droite</strong> (<code class="docutils literal notranslate"><span class="pre">self.valeur</span> <span class="pre">+</span> <span class="pre">1</span></code>), ce qui nécessite de <em>lire</em> <code class="docutils literal notranslate"><span class="pre">self.valeur</span></code> — qui n’existe pas encore, faute d’avoir été créé dans <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Il faut initialiser <code class="docutils literal notranslate"><span class="pre">self.valeur</span></code> (par exemple à <code class="docutils literal notranslate"><span class="pre">0</span></code>) dans le constructeur de la classe.</p>
+</section>
+<section id="activite-1-une-classe-point">
+<h3><span class="section-number">8.2.2. </span>Activité 1 — Une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code><a class="headerlink" href="#activite-1-une-classe-point" title="Link to this heading">#</a></h3>
+<p><strong>Énoncé.</strong> Écrire une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> qui modélise un point du plan, avec :</p>
+<ul class="simple">
+<li><p>un constructeur <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">x:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">y:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0)</span></code> qui initialise les attributs <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> ;</p></li>
+<li><p>une méthode <code class="docutils literal notranslate"><span class="pre">distance(self,</span> <span class="pre">autre:</span> <span class="pre">&quot;Point&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></code> qui renvoie la distance euclidienne entre <code class="docutils literal notranslate"><span class="pre">self</span></code> et <code class="docutils literal notranslate"><span class="pre">autre</span></code> (utiliser le module <code class="docutils literal notranslate"><span class="pre">math</span></code>) ;</p></li>
+<li><p>une méthode <code class="docutils literal notranslate"><span class="pre">translater(self,</span> <span class="pre">dx:</span> <span class="pre">float,</span> <span class="pre">dy:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code> qui déplace le point de <code class="docutils literal notranslate"><span class="pre">dx</span></code> selon <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">dy</span></code> selon <code class="docutils literal notranslate"><span class="pre">y</span></code> (modification <em>en place</em>, comme une méthode <code class="docutils literal notranslate"><span class="pre">.append()</span></code> sur une liste).</p></li>
+</ul>
+<p>Tester la classe avec deux points <code class="docutils literal notranslate"><span class="pre">p1</span> <span class="pre">=</span> <span class="pre">Point(0,</span> <span class="pre">0)</span></code> et <code class="docutils literal notranslate"><span class="pre">p2</span> <span class="pre">=</span> <span class="pre">Point(3,</span> <span class="pre">4)</span></code>.</p>
+<p><strong>À vous de jouer avant de lire la correction ci-dessous !</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autre</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">autre</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">autre</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">translater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dx</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dy</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span>
+
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">translater</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+1 1
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong> L’annotation de type <code class="docutils literal notranslate"><span class="pre">autre:</span> <span class="pre">&quot;Point&quot;</span></code> est écrite entre guillemets (une <em>chaîne de caractères</em>) car, au moment où python lit la définition de la méthode <code class="docutils literal notranslate"><span class="pre">distance</span></code>, la classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> n’est pas encore entièrement définie. C’est une pratique courante pour les méthodes qui référencent leur propre classe.</p>
+</section>
+</section>
+<section id="encapsulation">
+<span id="sec-encapsulation"></span><h2><span class="section-number">8.3. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Link to this heading">#</a></h2>
+<p><strong>Vocabulaire.</strong> L’<strong>encapsulation</strong> consiste à protéger l’accès direct aux attributs d’un objet, pour n’autoriser leur lecture ou leur modification qu’au travers de méthodes qui en contrôlent la cohérence.</p>
+<p>Contrairement à d’autres langages (Java, C++), python <strong>n’impose aucune restriction stricte</strong> d’accès aux attributs : c’est une affaire de <strong>convention</strong>, respectée par les autres développeurs et développeuses.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Convention</p></th>
+<th class="head"><p>Signification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">attribut</span></code></p></td>
+<td><p>attribut <strong>public</strong> : utilisable librement depuis l’extérieur de la classe</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">_attribut</span></code></p></td>
+<td><p>attribut <strong>protégé</strong> <em>par convention</em> : « usage interne », mais accessible</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">__attribut</span></code></p></td>
+<td><p>attribut <strong>« privé »</strong> : python renomme l’attribut (<em>name mangling</em>), rendant son accès direct malaisé depuis l’extérieur</p></td>
+</tr>
+</tbody>
+</table>
+<section id="property-controler-l-acces-a-un-attribut">
+<h3><span class="section-number">8.3.1. </span>Property : contrôler l’accès à un attribut<a class="headerlink" href="#property-controler-l-acces-a-un-attribut" title="Link to this heading">#</a></h3>
+<p>Le décorateur <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> permet de définir une méthode qui <strong>se comporte comme un attribut</strong> en lecture (pas de parenthèses à l’appel), et <code class="docutils literal notranslate"><span class="pre">&#64;nom.setter</span></code> fait de même pour l’écriture, en y ajoutant un contrôle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CompteBancaire</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulaire</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">solde</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">titulaire</span> <span class="o">=</span> <span class="n">titulaire</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solde</span> <span class="o">=</span> <span class="n">solde</span>   <span class="c1"># attribut &quot;protégé&quot; par convention</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">solde</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solde</span>
+
+    <span class="nd">@solde</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">solde</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;le solde ne peut pas être négatif&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solde</span> <span class="o">=</span> <span class="n">valeur</span>
+
+    <span class="k">def</span> <span class="nf">deposer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">montant</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">+</span> <span class="n">montant</span>
+
+    <span class="k">def</span> <span class="nf">retirer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">montant</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">montant</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solde</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;solde insuffisant&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">-</span> <span class="n">montant</span>
+
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">CompteBancaire</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">deposer</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">solde</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">retirer</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">solde</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">solde</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">retirer</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>150
+120
+Erreur : le solde ne peut pas être négatif
+Erreur : solde insuffisant
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">c.solde</span></code> se lit <strong>sans parenthèses</strong>, comme un attribut ordinaire, bien qu’il s’agisse en réalité de l’appel d’une méthode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c.solde</span> <span class="pre">=</span> <span class="pre">-10</span></code> déclenche le <em>setter</em>, qui refuse la valeur et lève une exception : le solde reste cohérent.</p></li>
+<li><p>Cette approche permet de <strong>changer d’avis plus tard</strong> (ajouter un contrôle) sans casser le code qui utilise déjà <code class="docutils literal notranslate"><span class="pre">c.solde</span></code> — un avantage important par rapport à l’accès direct <code class="docutils literal notranslate"><span class="pre">c._solde</span></code>.</p></li>
+</ul>
+</section>
+<section id="star-name-mangling-des-attributs-attribut">
+<h3><span class="section-number">8.3.2. </span>($\star$) <em>Name mangling</em> des attributs <code class="docutils literal notranslate"><span class="pre">__attribut</span></code><a class="headerlink" href="#star-name-mangling-des-attributs-attribut" title="Link to this heading">#</a></h3>
+<p>Un attribut préfixé par <strong>deux</strong> <em>underscores</em> (et se terminant par au plus un underscore) est automatiquement renommé par python en <code class="docutils literal notranslate"><span class="pre">_NomDeClasse__attribut</span></code>, ce qui rend son accès direct depuis l’extérieur peu pratique — mais <strong>toujours possible</strong>, la « vie privée » n’étant jamais totale en python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Secret</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__valeur</span> <span class="o">=</span> <span class="mi">42</span>
+
+    <span class="k">def</span> <span class="nf">afficher</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__valeur</span><span class="p">)</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">Secret</span><span class="p">()</span>
+<span class="n">s</span><span class="o">.</span><span class="n">afficher</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">__valeur</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">_Secret__valeur</span><span class="p">)</span>   <span class="c1"># toujours accessible, mais fortement déconseillé</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+{&#39;_Secret__valeur&#39;: 42}
+Erreur : &#39;Secret&#39; object has no attribute &#39;__valeur&#39;
+42
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong> En pratique, la convention <code class="docutils literal notranslate"><span class="pre">_attribut</span></code> (un seul underscore) suffit dans la grande majorité des cas pour signaler « ceci est un détail d’implémentation, ne pas y toucher directement » ; on réserve <code class="docutils literal notranslate"><span class="pre">__attribut</span></code> aux cas où l’on veut vraiment éviter les collisions de noms, en particulier avec l’héritage – voir cette <a class="reference internal" href="#sec-heritage"><span class="std std-ref">section</span></a>.</p>
+</section>
+</section>
+<section id="methodes-speciales-dunder">
+<span id="sec-dunder"></span><h2><span class="section-number">8.4. </span>Méthodes spéciales (<em>dunder</em>)<a class="headerlink" href="#methodes-speciales-dunder" title="Link to this heading">#</a></h2>
+<p><strong>Vocabulaire.</strong> Les méthodes dont le nom est encadré de deux <em>underscores</em> (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>, <code class="docutils literal notranslate"><span class="pre">__str__</span></code>, …) sont appelées <strong>méthodes spéciales</strong> ou <em>dunder methods</em> (de l’anglais <em>double underscore</em>). Elles ne sont (presque) jamais appelées explicitement : python les appelle <strong>implicitement</strong> pour donner du sens à des opérateurs ou fonctions natives (<code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">len()</span></code>, …) appliqués à vos objets.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Méthode spéciale</p></th>
+<th class="head"><p>Déclenchée par</p></th>
+<th class="head"><p>Rôle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">__str__(self)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print(obj)</span></code>, <code class="docutils literal notranslate"><span class="pre">str(obj)</span></code></p></td>
+<td><p>représentation <strong>lisible</strong>, destinée à l’utilisateur</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">repr(obj)</span></code>, invite interactive, affichage d’une <code class="docutils literal notranslate"><span class="pre">list</span></code> d’objets</p></td>
+<td><p>représentation <strong>non ambigüe</strong>, destinée au développeur</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">__eq__(self,</span> <span class="pre">autre)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">obj1</span> <span class="pre">==</span> <span class="pre">obj2</span></code></p></td>
+<td><p>égalité <em>par valeur</em> plutôt que par identité</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">__lt__(self,</span> <span class="pre">autre)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">obj1</span> <span class="pre">&lt;</span> <span class="pre">obj2</span></code>, <code class="docutils literal notranslate"><span class="pre">sorted()</span></code></p></td>
+<td><p>ordre <em>strict</em> entre deux objets</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">__add__(self,</span> <span class="pre">autre)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">obj1</span> <span class="pre">+</span> <span class="pre">obj2</span></code></p></td>
+<td><p>addition (à définir selon le sens voulu)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">__len__(self)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(obj)</span></code></p></td>
+<td><p>« taille » de l’objet</p></td>
+</tr>
+</tbody>
+</table>
+<p>C’est en redéfinissant ces méthodes qu’une classe devient <strong>« pythonique »</strong> : elle s’intègre naturellement aux fonctions et opérateurs déjà connus, plutôt que d’exiger des fonctions dédiées.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Point(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">!r}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autre</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">autre</span><span class="p">,</span> <span class="n">Point</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="n">autre</span><span class="o">.</span><span class="n">x</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="n">autre</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autre</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">autre</span><span class="o">.</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">autre</span><span class="o">.</span><span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autre</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">autre</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">autre</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span>
+
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>               <span class="c1"># utilise __str__</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">p1</span><span class="p">))</span>          <span class="c1"># utilise __repr__</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p1</span> <span class="o">==</span> <span class="n">p3</span><span class="p">)</span>  <span class="c1"># utilise __eq__</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">&lt;</span> <span class="n">p3</span><span class="p">)</span>            <span class="c1"># utilise __lt__</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">+</span> <span class="n">p3</span><span class="p">)</span>             <span class="c1"># utilise __add__, puis __str__ pour l&#39;affichage</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="p">))</span>              <span class="c1"># utilise __len__</span>
+
+<span class="n">liste_points</span> <span class="o">=</span> <span class="p">[</span><span class="n">p3</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">liste_points</span><span class="p">))</span>  <span class="c1"># utilise __lt__ ; l&#39;affichage de la liste utilise __repr__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2)
+Point(1, 2)
+True False
+True
+(4, 6)
+2
+[Point(0, 0), Point(1, 2), Point(3, 4)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>Sans <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>, <code class="docutils literal notranslate"><span class="pre">p1</span> <span class="pre">==</span> <span class="pre">p2</span></code> aurait renvoyé <code class="docutils literal notranslate"><span class="pre">False</span></code> (comparaison d’identité), comme observé pour <code class="docutils literal notranslate"><span class="pre">Etudiant</span></code> en section <a class="reference internal" href="#sec-classe-objets"><span class="std std-ref">Classe et objets</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> d’une liste d’objets appelle <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> sur chacun d’eux, et non <code class="docutils literal notranslate"><span class="pre">__str__</span></code> : c’est pourquoi il est recommandé de <strong>toujours définir <code class="docutils literal notranslate"><span class="pre">__repr__</span></code></strong>, <code class="docutils literal notranslate"><span class="pre">__str__</span></code> étant optionnelle (python utilise <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> par défaut si <code class="docutils literal notranslate"><span class="pre">__str__</span></code> est absente).</p></li>
+<li><p>Si l’on définit <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>, il est également recommandé de définir <code class="docutils literal notranslate"><span class="pre">__hash__</span></code> pour continuer à pouvoir utiliser l’objet comme clé de <code class="docutils literal notranslate"><span class="pre">dict</span></code> ou élément de <code class="docutils literal notranslate"><span class="pre">set</span></code> (voir la documentation officielle) — ce point n’est pas approfondi ici.</p></li>
+</ul>
+<p><strong>Exercice.</strong> Quelle méthode spéciale faudrait-il définir pour permettre l’écriture <code class="docutils literal notranslate"><span class="pre">p1</span> <span class="pre">in</span> <span class="pre">liste_points</span></code>, sachant que cette syntaxe existe déjà pour les listes vues en L1 ?</p>
+<p><em>Réponse :</em> <code class="docutils literal notranslate"><span class="pre">__contains__(self,</span> <span class="pre">valeur)</span></code>. À défaut, python retombe sur une itération utilisant <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>, ce qui fonctionne également ici grâce à la définition de <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> ci-dessus.</p>
+</section>
+<section id="attributs-et-methodes-de-classe">
+<span id="sec-attributs-classe"></span><h2><span class="section-number">8.5. </span>Attributs et méthodes de classe<a class="headerlink" href="#attributs-et-methodes-de-classe" title="Link to this heading">#</a></h2>
+<p>Jusqu’ici, tous les attributs étaient des <strong>attributs d’instance</strong> : chaque objet possède sa propre valeur. Un <strong>attribut de classe</strong>, déclaré directement dans le corps de la classe (hors de toute méthode), est en revanche <strong>partagé par toutes les instances</strong>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> définit une méthode dont le premier paramètre, nommé par convention <code class="docutils literal notranslate"><span class="pre">cls</span></code>, désigne la <strong>classe elle-même</strong> (et non une instance) ; utile par exemple pour des constructeurs alternatifs ou pour manipuler un attribut de classe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code> définit une méthode qui n’utilise ni <code class="docutils literal notranslate"><span class="pre">self</span></code> ni <code class="docutils literal notranslate"><span class="pre">cls</span></code> : elle est rattachée à la classe par pure commodité d’organisation du code (regrouper une fonction utilitaire avec la classe à laquelle elle se rapporte).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Etudiant</span><span class="p">:</span>
+    <span class="n">nb_etudiants</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># attribut de CLASSE : une seule valeur, partagée</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>            <span class="c1"># attribut D&#39;INSTANCE</span>
+        <span class="n">Etudiant</span><span class="o">.</span><span class="n">nb_etudiants</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">nombre_etudiants</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">nb_etudiants</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">est_nom_valide</span><span class="p">(</span><span class="n">nom</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">nom</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+
+
+<span class="n">e1</span> <span class="o">=</span> <span class="n">Etudiant</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="n">e2</span> <span class="o">=</span> <span class="n">Etudiant</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Etudiant</span><span class="o">.</span><span class="n">nb_etudiants</span><span class="p">,</span> <span class="n">e1</span><span class="o">.</span><span class="n">nb_etudiants</span><span class="p">)</span>   <span class="c1"># accessible via la classe OU une instance</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Etudiant</span><span class="o">.</span><span class="n">nombre_etudiants</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Etudiant</span><span class="o">.</span><span class="n">est_nom_valide</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">),</span> <span class="n">Etudiant</span><span class="o">.</span><span class="n">est_nom_valide</span><span class="p">(</span><span class="s2">&quot;A1ice&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 2
+2
+True False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Attention.</strong> <code class="docutils literal notranslate"><span class="pre">Etudiant.nb_etudiants</span> <span class="pre">+=</span> <span class="pre">1</span></code> (et non <code class="docutils literal notranslate"><span class="pre">self.nb_etudiants</span> <span class="pre">+=</span> <span class="pre">1</span></code>) est essentiel : cette dernière écriture créerait un <strong>nouvel attribut d’instance</strong> <code class="docutils literal notranslate"><span class="pre">nb_etudiants</span></code>, propre à <code class="docutils literal notranslate"><span class="pre">self</span></code>, masquant l’attribut de classe sans le modifier — un piège classique.</p>
+<p><strong>Rmq.</strong> On retrouve ici, en écho au chapitre 10 de L1 (« Affectation et appel de fonction : aspects avancés »), une distinction analogue à celle entre variable locale et variable globale d’une fonction.</p>
+</section>
+<section id="heritage">
+<span id="sec-heritage"></span><h2><span class="section-number">8.6. </span>Héritage<a class="headerlink" href="#heritage" title="Link to this heading">#</a></h2>
+<p><strong>Vocabulaire.</strong> L’<strong>héritage</strong> permet de définir une nouvelle classe (dite <strong>classe fille</strong> ou <strong>sous-classe</strong>) à partir d’une classe existante (dite <strong>classe mère</strong> ou <strong>classe de base</strong>), en <strong>réutilisant</strong> ses attributs et méthodes, et en pouvant en <strong>ajouter</strong> de nouveaux ou en <strong>redéfinir</strong> certains (on parle de <strong>redéfinition</strong> ou <em>override</em>).</p>
+<p><strong>Syntaxe :</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClasseFille</span><span class="p">(</span><span class="n">ClasseMere</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">attribut_specifique</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>              <span class="c1"># appelle le constructeur de la classe mère</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribut_specifique</span> <span class="o">=</span> <span class="n">attribut_specifique</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">super()</span></code> désigne la classe mère et permet d’appeler ses méthodes (typiquement <code class="docutils literal notranslate"><span class="pre">__init__</span></code>) sans avoir à répéter leur code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+
+    <span class="k">def</span> <span class="nf">se_deplacer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2"> se déplace.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">crier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2"> fait un bruit.&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Chien</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>        <span class="c1"># Chien HERITE de Animal</span>
+    <span class="k">def</span> <span class="nf">crier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>    <span class="c1"># redéfinition (override) de la méthode crier</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2"> aboie !&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Chat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sterilise</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>       <span class="c1"># réutilise le constructeur de Animal</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sterilise</span> <span class="o">=</span> <span class="n">sterilise</span>  <span class="c1"># attribut supplémentaire, propre à Chat</span>
+
+    <span class="k">def</span> <span class="nf">crier</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="si">}</span><span class="s2"> miaule !&quot;</span>
+
+
+<span class="n">rex</span> <span class="o">=</span> <span class="n">Chien</span><span class="p">(</span><span class="s2">&quot;Rex&quot;</span><span class="p">)</span>
+<span class="n">felix</span> <span class="o">=</span> <span class="n">Chat</span><span class="p">(</span><span class="s2">&quot;Félix&quot;</span><span class="p">,</span> <span class="n">sterilise</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rex</span><span class="p">,</span> <span class="n">felix</span><span class="p">,</span> <span class="n">Animal</span><span class="p">(</span><span class="s2">&quot;Bêta&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">crier</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">se_deplacer</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">rex</span><span class="p">,</span> <span class="n">Animal</span><span class="p">),</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">felix</span><span class="p">,</span> <span class="n">Chien</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Chat</span><span class="p">,</span> <span class="n">Animal</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chien(Rex) -&gt; Rex aboie ! Rex se déplace.
+Chat(Félix) -&gt; Félix miaule ! Félix se déplace.
+Animal(Bêta) -&gt; Bêta fait un bruit. Bêta se déplace.
+True False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Chien</span></code> ne redéfinit pas <code class="docutils literal notranslate"><span class="pre">__init__</span></code> : elle <strong>hérite tel quel</strong> du constructeur de <code class="docutils literal notranslate"><span class="pre">Animal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Chien</span></code> ne redéfinit pas <code class="docutils literal notranslate"><span class="pre">se_deplacer</span></code> ni <code class="docutils literal notranslate"><span class="pre">__str__</span></code> non plus : ces méthodes sont <strong>héritées</strong> et fonctionnent sans modification.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type(self).__name__</span></code> (dans <code class="docutils literal notranslate"><span class="pre">Animal.__str__</span></code>) renvoie le nom de la classe <strong>réelle</strong> de l’instance (<code class="docutils literal notranslate"><span class="pre">&quot;Chien&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Chat&quot;</span></code> ou <code class="docutils literal notranslate"><span class="pre">&quot;Animal&quot;</span></code>), même si le code de <code class="docutils literal notranslate"><span class="pre">__str__</span></code> est écrit une seule fois, dans <code class="docutils literal notranslate"><span class="pre">Animal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isinstance(felix,</span> <span class="pre">Chien)</span></code> renvoie <code class="docutils literal notranslate"><span class="pre">False</span></code> : <code class="docutils literal notranslate"><span class="pre">felix</span></code> est un <code class="docutils literal notranslate"><span class="pre">Chat</span></code>, pas un <code class="docutils literal notranslate"><span class="pre">Chien</span></code>, même si les deux héritent de <code class="docutils literal notranslate"><span class="pre">Animal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issubclass(Chat,</span> <span class="pre">Animal)</span></code> teste une relation entre <strong>classes</strong> (et non entre objets et classes, comme <code class="docutils literal notranslate"><span class="pre">isinstance</span></code>).</p></li>
+</ul>
+</section>
+<section id="polymorphisme">
+<span id="sec-polymorphisme"></span><h2><span class="section-number">8.7. </span>Polymorphisme<a class="headerlink" href="#polymorphisme" title="Link to this heading">#</a></h2>
+<p><strong>Vocabulaire.</strong> Le <strong>polymorphisme</strong> (littéralement « plusieurs formes ») désigne la capacité d’un même code à traiter de façon uniforme des objets de classes différentes, dès lors qu’ils répondent aux mêmes méthodes.</p>
+<p>En python, le polymorphisme est <strong>naturel</strong> et ne nécessite aucune déclaration particulière : c’est ce qu’on appelle le <em><strong>duck typing</strong></em> (« si ça marche comme un canard et que ça cancane comme un canard, alors s’en est un ») — seul compte le fait qu’un objet <strong>possède</strong> la méthode appelée, indépendamment de sa classe exacte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">faire_du_bruit</span><span class="p">(</span><span class="n">animaux</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animaux</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">crier</span><span class="p">())</span>   <span class="c1"># fonctionne quelle que soit la classe REELLE de `a`</span>
+
+<span class="n">faire_du_bruit</span><span class="p">([</span><span class="n">rex</span><span class="p">,</span> <span class="n">felix</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rex aboie !
+Félix miaule !
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong> La fonction <code class="docutils literal notranslate"><span class="pre">faire_du_bruit</span></code> n’a <strong>jamais besoin de savoir</strong> si <code class="docutils literal notranslate"><span class="pre">a</span></code> est un <code class="docutils literal notranslate"><span class="pre">Chien</span></code>, un <code class="docutils literal notranslate"><span class="pre">Chat</span></code> ou une autre sous-classe de <code class="docutils literal notranslate"><span class="pre">Animal</span></code> : elle appelle simplement <code class="docutils literal notranslate"><span class="pre">a.crier()</span></code>, et c’est <strong>la classe réelle de l’objet</strong> qui détermine, à l’exécution, quelle version de la méthode est exécutée. C’est exactement le même principe que la <em>surcharge</em> de fonctions rencontrée en L1 (chapitre 7) avec le typage des paramètres, mais réalisé ici <em>dynamiquement</em>, au travers de l’héritage.</p>
+<section id="activite-2-une-hierarchie-de-vehicules">
+<h3><span class="section-number">8.7.1. </span>Activité 2 — Une hiérarchie de véhicules<a class="headerlink" href="#activite-2-une-hierarchie-de-vehicules" title="Link to this heading">#</a></h3>
+<p><strong>Énoncé.</strong> En s’inspirant de la hiérarchie <code class="docutils literal notranslate"><span class="pre">Animal</span></code> / <code class="docutils literal notranslate"><span class="pre">Chien</span></code> / <code class="docutils literal notranslate"><span class="pre">Chat</span></code> :</p>
+<ol class="arabic simple">
+<li><p>Définir une classe mère <code class="docutils literal notranslate"><span class="pre">Vehicule</span></code> avec un constructeur <code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">marque:</span> <span class="pre">str,</span> <span class="pre">vitesse_max:</span> <span class="pre">float)</span></code> et une méthode <code class="docutils literal notranslate"><span class="pre">decrire(self)</span> <span class="pre">-&gt;</span> <span class="pre">str</span></code> qui renvoie une phrase du type <code class="docutils literal notranslate"><span class="pre">&quot;Vehicule</span> <span class="pre">Peugeot</span> <span class="pre">(vitesse</span> <span class="pre">max</span> <span class="pre">180</span> <span class="pre">km/h)&quot;</span></code> (utiliser <code class="docutils literal notranslate"><span class="pre">type(self).__name__</span></code>).</p></li>
+<li><p>Définir deux classes filles <code class="docutils literal notranslate"><span class="pre">Voiture</span></code> (attribut supplémentaire <code class="docutils literal notranslate"><span class="pre">nb_portes</span></code>) et <code class="docutils literal notranslate"><span class="pre">Moto</span></code> (attribut supplémentaire <code class="docutils literal notranslate"><span class="pre">cylindree</span></code>), qui <strong>redéfinissent</strong> <code class="docutils literal notranslate"><span class="pre">decrire</span></code> pour ajouter leur information spécifique <strong>tout en réutilisant</strong> <code class="docutils literal notranslate"><span class="pre">decrire</span></code> de <code class="docutils literal notranslate"><span class="pre">Vehicule</span></code> grâce à <code class="docutils literal notranslate"><span class="pre">super()</span></code>.</p></li>
+<li><p>Construire une liste <code class="docutils literal notranslate"><span class="pre">parc</span></code> mélangeant des <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>, des <code class="docutils literal notranslate"><span class="pre">Moto</span></code> et un <code class="docutils literal notranslate"><span class="pre">Vehicule</span></code> « générique », et afficher la description de chaque véhicule avec <strong>une seule boucle</strong> — illustrant le polymorphisme.</p></li>
+</ol>
+<p><strong>À vous de jouer avant de lire la correction indicative ci-dessous !</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Vehicule</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marque</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vitesse_max</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marque</span> <span class="o">=</span> <span class="n">marque</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vitesse_max</span>
+
+    <span class="k">def</span> <span class="nf">decrire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">marque</span><span class="si">}</span><span class="s2"> (vitesse max </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="si">}</span><span class="s2"> km/h)&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Voiture</span><span class="p">(</span><span class="n">Vehicule</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marque</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vitesse_max</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">nb_portes</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">marque</span><span class="p">,</span> <span class="n">vitesse_max</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nb_portes</span> <span class="o">=</span> <span class="n">nb_portes</span>
+
+    <span class="k">def</span> <span class="nf">decrire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">decrire</span><span class="p">()</span>               <span class="c1"># réutilise la description de Vehicule</span>
+        <span class="k">return</span> <span class="n">base</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nb_portes</span><span class="si">}</span><span class="s2"> portes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Moto</span><span class="p">(</span><span class="n">Vehicule</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marque</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vitesse_max</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">cylindree</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">marque</span><span class="p">,</span> <span class="n">vitesse_max</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cylindree</span> <span class="o">=</span> <span class="n">cylindree</span>
+
+    <span class="k">def</span> <span class="nf">decrire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">decrire</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">base</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cylindree</span><span class="si">}</span><span class="s2"> cm3&quot;</span>
+
+
+<span class="n">parc</span> <span class="o">=</span> <span class="p">[</span><span class="n">Voiture</span><span class="p">(</span><span class="s2">&quot;Peugeot&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">Moto</span><span class="p">(</span><span class="s2">&quot;Yamaha&quot;</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="n">Vehicule</span><span class="p">(</span><span class="s2">&quot;Générique&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">parc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">decrire</span><span class="p">())</span>   <span class="c1"># une seule boucle, une seule ligne : polymorphisme</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Voiture Peugeot (vitesse max 180 km/h), 5 portes
+Moto Yamaha (vitesse max 220 km/h), 600 cm3
+Vehicule Générique (vitesse max 100 km/h)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong> L’appel <code class="docutils literal notranslate"><span class="pre">super().decrire()</span></code> <strong>dans</strong> <code class="docutils literal notranslate"><span class="pre">Voiture.decrire</span></code> illustre une bonne pratique : on <strong>complète</strong> le comportement de la classe mère plutôt que de <strong>dupliquer</strong> son code — un principe déjà rencontré en L1 sous la forme générale de la <em>décomposition en fonctions</em> (chapitres 1 et 2), appliqué ici entre une méthode et sa redéfinition.</p>
+</section>
+</section>
+<section id="star-classes-abstraites">
+<span id="sec-abc"></span><h2><span class="section-number">8.8. </span>((\star)) Classes abstraites<a class="headerlink" href="#star-classes-abstraites" title="Link to this heading">#</a></h2>
+<p>Une <strong>classe abstraite</strong> définit une <strong>interface commune</strong> — un ensemble de méthodes que toute sous-classe <strong>doit</strong> implémenter — sans fournir elle-même d’implémentation complète. Elle ne peut <strong>pas</strong> être instanciée directement.</p>
+<p>En python, le module <code class="docutils literal notranslate"><span class="pre">abc</span></code> (<em>Abstract Base Classes</em>) fournit la classe <code class="docutils literal notranslate"><span class="pre">ABC</span></code> et le décorateur <code class="docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="k">class</span> <span class="nc">Forme</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="o">...</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">perimetre</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(aire=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">aire</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, périmètre=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">perimetre</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">(</span><span class="n">Forme</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">largeur</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">=</span> <span class="n">largeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span> <span class="o">=</span> <span class="n">hauteur</span>
+
+    <span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span>
+
+    <span class="k">def</span> <span class="nf">perimetre</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largeur</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Cercle</span><span class="p">(</span><span class="n">Forme</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rayon</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rayon</span> <span class="o">=</span> <span class="n">rayon</span>
+
+    <span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rayon</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="k">def</span> <span class="nf">perimetre</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rayon</span>
+
+
+<span class="n">formes</span> <span class="o">=</span> <span class="p">[</span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Cercle</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">formes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1"># utilise __str__, qui utilise lui-même aire() et perimetre() redéfinies</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">Forme</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rectangle(aire=12.00, périmètre=14.00)
+Cercle(aire=12.57, périmètre=12.57)
+Erreur : Can&#39;t instantiate abstract class Forme with abstract methods aire, perimetre
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Forme()</span></code> est <strong>impossible</strong> : python refuse d’instancier une classe abstraite tant que toutes ses méthodes <code class="docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> n’ont pas été redéfinies.</p></li>
+<li><p>En revanche, <code class="docutils literal notranslate"><span class="pre">Forme.__str__</span></code> — qui n’est <strong>pas</strong> abstraite — est bien héritée et utilisable par <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> et <code class="docutils literal notranslate"><span class="pre">Cercle</span></code>, alors même qu’elle appelle <code class="docutils literal notranslate"><span class="pre">self.aire()</span></code> et <code class="docutils literal notranslate"><span class="pre">self.perimetre()</span></code>, deux méthodes qui n’existent, <em>au moment de l’écriture de <code class="docutils literal notranslate"><span class="pre">Forme</span></code></em>, que sous forme de « promesses » tenues plus tard par les sous-classes. C’est un exemple supplémentaire de polymorphisme.</p></li>
+<li><p>Une classe abstraite est utile pour <strong>garantir</strong>, dès la conception, qu’une famille de classes partage une interface commune — utile en particulier sur de gros projets à plusieurs développeurs et développeuses.</p></li>
+</ul>
+</section>
+<section id="verification-rapide-de-la-comprehension">
+<h2><span class="section-number">8.9. </span>. Vérification rapide de la compréhension<a class="headerlink" href="#verification-rapide-de-la-comprehension" title="Link to this heading">#</a></h2>
+<p>Répondez aux questions suivantes <strong>avant</strong> de consulter les réponses.</p>
+<p><strong>Q1.</strong> Que renvoie <code class="docutils literal notranslate"><span class="pre">p1</span> <span class="pre">==</span> <span class="pre">p2</span></code> pour deux objets <code class="docutils literal notranslate"><span class="pre">p1</span></code> et <code class="docutils literal notranslate"><span class="pre">p2</span></code> d’une classe qui <strong>ne redéfinit pas</strong> <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> ?</p>
+<p>a. <code class="docutils literal notranslate"><span class="pre">True</span></code> si tous les attributs de <code class="docutils literal notranslate"><span class="pre">p1</span></code> et <code class="docutils literal notranslate"><span class="pre">p2</span></code> ont la même valeur
+b. <code class="docutils literal notranslate"><span class="pre">True</span></code> uniquement si <code class="docutils literal notranslate"><span class="pre">p1</span></code> et <code class="docutils literal notranslate"><span class="pre">p2</span></code> sont le <strong>même</strong> objet en mémoire
+c. Une erreur, car <code class="docutils literal notranslate"><span class="pre">==</span></code> n’est pas défini par défaut</p>
+<p><em>Réponse : <strong>b</strong>. Sans redéfinition de <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code> compare l’identité des objets, comme <code class="docutils literal notranslate"><span class="pre">is</span></code> (voir <a class="reference internal" href="#sec-classe-objets"><span class="std std-ref">section</span></a> avec <code class="docutils literal notranslate"><span class="pre">etu1</span> <span class="pre">==</span> <span class="pre">etu2</span></code>).</em></p>
+<p><strong>Q2.</strong> Dans une méthode d’instance, à quoi correspond le paramètre <code class="docutils literal notranslate"><span class="pre">self</span></code> ?</p>
+<p>a. À la classe elle-même
+b. À l’instance sur laquelle la méthode est appelée
+c. À un attribut particulier de la classe</p>
+<p><em>Réponse : <strong>b</strong>. C’est pourquoi <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> utilise <code class="docutils literal notranslate"><span class="pre">cls</span></code> (la classe) plutôt que <code class="docutils literal notranslate"><span class="pre">self</span></code> (une instance) — voir <a class="reference internal" href="#sec-attributs-classe"><span class="std std-ref">section</span></a>.</em></p>
+<p><strong>Q3.</strong> Pourquoi <code class="docutils literal notranslate"><span class="pre">Etudiant.nb_etudiants</span> <span class="pre">+=</span> <span class="pre">1</span></code> et non <code class="docutils literal notranslate"><span class="pre">self.nb_etudiants</span> <span class="pre">+=</span> <span class="pre">1</span></code> dans le constructeur, pour incrémenter un compteur <strong>partagé</strong> par toutes les instances ?</p>
+<p><em>Réponse : <code class="docutils literal notranslate"><span class="pre">self.nb_etudiants</span> <span class="pre">+=</span> <span class="pre">1</span></code> créerait un nouvel attribut D’INSTANCE <code class="docutils literal notranslate"><span class="pre">nb_etudiants</span></code> propre à <code class="docutils literal notranslate"><span class="pre">self</span></code>, masquant l’attribut de classe sans le modifier réellement — voir la remarque de la voir <a class="reference internal" href="#sec-attributs-classe"><span class="std std-ref">section</span></a>.</em></p>
+<p><strong>Q4.</strong> Une classe <code class="docutils literal notranslate"><span class="pre">Carre</span></code> hérite de <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>. Que fait <code class="docutils literal notranslate"><span class="pre">super().__init__(cote,</span> <span class="pre">cote)</span></code> dans le constructeur de <code class="docutils literal notranslate"><span class="pre">Carre</span></code> ?</p>
+<p>a. Elle crée une nouvelle instance de <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>
+b. Elle appelle le constructeur de <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> pour initialiser les attributs hérités
+c. Elle redéfinit la méthode <code class="docutils literal notranslate"><span class="pre">__init__</span></code> de <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code></p>
+<p><em>Réponse : <strong>b</strong>. <code class="docutils literal notranslate"><span class="pre">super()</span></code> donne accès aux méthodes de la classe mère, notamment pour réutiliser (et non dupliquer) son constructeur — voir sections <a class="reference internal" href="#sec-heritage"><span class="std std-ref">héritage</span></a> et  <a class="reference internal" href="#sec-polymorphisme"><span class="std std-ref">polymorphisme</span></a>.</em></p>
+<p><strong>Q5.</strong> Pourquoi ne peut-on pas écrire <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">Forme()</span></code> si <code class="docutils literal notranslate"><span class="pre">Forme</span></code> hérite de <code class="docutils literal notranslate"><span class="pre">ABC</span></code> et définit des méthodes <code class="docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> ?</p>
+<p><em>Réponse : une classe abstraite ne peut pas être instanciée directement tant que toutes ses méthodes abstraites n’ont pas été redéfinies par une sous-classe concrète — voir section <a class="reference internal" href="#sec-abc"><span class="std std-ref">abc</span></a>.</em></p>
+<p><strong>Q6.</strong> Quelle est la différence entre <code class="docutils literal notranslate"><span class="pre">__str__</span></code> et <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> ?</p>
+<p><em>Réponse : <code class="docutils literal notranslate"><span class="pre">__str__</span></code> fournit une représentation lisible destinée à l’utilisateur (via <code class="docutils literal notranslate"><span class="pre">print()</span></code>), tandis que <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> fournit une représentation non ambigüe destinée au développeur, utilisée notamment par défaut pour afficher les éléments d’une <code class="docutils literal notranslate"><span class="pre">list</span></code> — voir section <a class="reference internal" href="#sec-dunder"><span class="std std-ref">méthodes spéciales</span></a></em></p>
+</section>
+<section id="synthese-et-competences">
+<h2><span class="section-number">8.10. </span>Synthèse et compétences<a class="headerlink" href="#synthese-et-competences" title="Link to this heading">#</a></h2>
+<section id="avoir-les-idees-claires">
+<h3><span class="section-number">8.10.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Une <strong>classe</strong> regroupe des <strong>attributs</strong> (données) et des <strong>méthodes</strong> (traitements), et généralise la notion d’enregistrement vue en L1.</p></li>
+<li><p>Une <strong>instance</strong> (ou objet) est une valeur concrète construite à partir d’une classe, via son constructeur <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> désigne toujours l’instance courante et doit être le premier paramètre de chaque méthode d’instance.</p></li>
+<li><p>L’<strong>encapsulation</strong> protège la cohérence des attributs (<code class="docutils literal notranslate"><span class="pre">_attribut</span></code>, <code class="docutils literal notranslate"><span class="pre">__attribut</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>).</p></li>
+<li><p>Les <strong>méthodes spéciales</strong> (<code class="docutils literal notranslate"><span class="pre">__str__</span></code>, <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>, <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, …) intègrent une classe aux opérateurs et fonctions natives de python.</p></li>
+<li><p>Les <strong>attributs de classe</strong> sont partagés par toutes les instances ; les <strong>attributs d’instance</strong> sont propres à chacune.</p></li>
+<li><p>L’<strong>héritage</strong> (<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Fille(Mere):</span></code>, <code class="docutils literal notranslate"><span class="pre">super()</span></code>) permet de réutiliser et d’étendre une classe existante.</p></li>
+<li><p>Le <strong>polymorphisme</strong> permet à un même code de traiter uniformément des objets de classes différentes, dès lors qu’ils répondent aux mêmes méthodes.</p></li>
+<li><p>((\star)) Une <strong>classe abstraite</strong> (<code class="docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code>) impose une interface commune à une famille de classes.</p></li>
+</ul>
+</section>
+<section id="savoir-faire">
+<h3><span class="section-number">8.10.2. </span>Savoir faire<a class="headerlink" href="#savoir-faire" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Définir une classe avec <code class="docutils literal notranslate"><span class="pre">__init__</span></code> et des méthodes, et instancier des objets.</p></li>
+<li><p>Choisir entre attribut public, protégé (<code class="docutils literal notranslate"><span class="pre">_</span></code>) ou « privé » (<code class="docutils literal notranslate"><span class="pre">__</span></code>), et définir une <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> lorsqu’un contrôle est nécessaire.</p></li>
+<li><p>Redéfinir les méthodes spéciales usuelles pour rendre une classe pythonique.</p></li>
+<li><p>Construire une hiérarchie de classes avec héritage, en utilisant <code class="docutils literal notranslate"><span class="pre">super()</span></code> pour réutiliser le comportement de la classe mère.</p></li>
+<li><p>Écrire une fonction qui exploite le polymorphisme, sans tester explicitement le type de ses arguments.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Définir une classe abstraite pour garantir une interface commune.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="9-ES-avancees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Les entrées-sorties (E/S) : aspects avancés</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11-modules-utiles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Modules utiles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-la-programmation-orientee-objet">8.1. Pourquoi la programmation orientée objet ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-et-objets">8.2. Classes et objets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-classe">8.2.1. Définir une classe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activite-1-une-classe-point">8.2.2. Activité 1 — Une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation">8.3. Encapsulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#property-controler-l-acces-a-un-attribut">8.3.1. Property : contrôler l’accès à un attribut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-name-mangling-des-attributs-attribut">8.3.2. ($\star$) <em>Name mangling</em> des attributs <code class="docutils literal notranslate"><span class="pre">__attribut</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-speciales-dunder">8.4. Méthodes spéciales (<em>dunder</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributs-et-methodes-de-classe">8.5. Attributs et méthodes de classe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage">8.6. Héritage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphisme">8.7. Polymorphisme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activite-2-une-hierarchie-de-vehicules">8.7.1. Activité 2 — Une hiérarchie de véhicules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-classes-abstraites">8.8. ((\star)) Classes abstraites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-rapide-de-la-comprehension">8.9. . Vérification rapide de la compréhension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-et-competences">8.10. Synthèse et compétences</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">8.10.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">8.10.2. Savoir faire</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

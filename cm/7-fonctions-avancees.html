@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6. Sous-programme et affectation – aspects avancés &#8212; Python</title>
   
@@ -29,35 +28,35 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/7-fonctions-avancees';</script>
@@ -181,7 +180,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Prog Python!
+                    Bienvenu en Prog Python !
                 </a>
             </li>
         </ul>
@@ -194,21 +193,22 @@
 <li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Sous-programme et affectation – aspects avancés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">9. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">11. Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-poo.html">8. P00 : programmation orientée objet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">9. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">10. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">11. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">12. Exceptions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">13. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">14. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">15. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">16. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">17. Memento</a></li>
 </ul>
 
     </div>
@@ -468,12 +468,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sous-programme-et-affectation-aspects-avances">
-<span id="ch-fonctionsavancees"></span><h1><span class="section-number">6. </span>Sous-programme et affectation – aspects avancés<a class="headerlink" href="#sous-programme-et-affectation-aspects-avances" title="Permalink to this heading">#</a></h1>
+<span id="ch-fonctionsavancees"></span><h1><span class="section-number">6. </span>Sous-programme et affectation – aspects avancés<a class="headerlink" href="#sous-programme-et-affectation-aspects-avances" title="Link to this heading">#</a></h1>
 <p>version 2021, PhL (v2.2)</p>
 <p>Nous abordons maintenant les aspects des fonctions qui dépendent des langages de programmation. Nous insistons surtout sur les choix de python3.</p>
 <p><strong>Rappel.</strong>  Le terme <em>paramètre effectif</em>, et son compagnon <em>paramètre formel</em>, sont des termes “langage-indépendant”. En python, le terme <em>argument</em> est utilisé à la place du terme <em>paramètre effectif</em>. Ainsi argument et paramètre effectif sont des synonymes, et seront utilisés comme tel dans ce qui suit.</p>
 <section id="le-passage-des-parametres-un-probleme-generique">
-<h2><span class="section-number">6.1. </span>Le passage des paramètres : un problème générique<a class="headerlink" href="#le-passage-des-parametres-un-probleme-generique" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Le passage des paramètres : un problème générique<a class="headerlink" href="#le-passage-des-parametres-un-probleme-generique" title="Link to this heading">#</a></h2>
 <p>Le corps de la fonction ne connaît que les paramètres formels.<br />
 L’appel de la fonction définit les paramètres effectifs .</p>
 <ul class="simple">
@@ -487,7 +487,7 @@ L’appel de la fonction définit les paramètres effectifs .</p>
 </ul>
 <p>Se sont les questions du passage de paramètres appelant-&gt;appelé</p>
 <section id="comment-est-transmis-un-parametre-effectif">
-<h3><span class="section-number">6.1.1. </span>Comment est transmis un paramètre effectif ?<a class="headerlink" href="#comment-est-transmis-un-parametre-effectif" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.1. </span>Comment est transmis un paramètre effectif ?<a class="headerlink" href="#comment-est-transmis-un-parametre-effectif" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Si c’est une constante :  <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">f(3)</span></code><br />
 OK : la valeur constante est connue et utilisée dans l’appel</p></li>
@@ -501,7 +501,7 @@ OK : la valeur constante est connue et utilisée dans l’appel</p></li>
 </ul>
 </section>
 <section id="deux-modes-materiels-de-passage-des-parametres">
-<h3><span class="section-number">6.1.2. </span>Deux modes <em>matériels</em> de passage des paramètres<a class="headerlink" href="#deux-modes-materiels-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.2. </span>Deux modes <em>matériels</em> de passage des paramètres<a class="headerlink" href="#deux-modes-materiels-de-passage-des-parametres" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>passage par valeur</strong> ou <strong>copie</strong> :  seules les <em>valeurs</em> des paramètres effectifs sont connus par la fonction.<br />
 Ainsi, <strong>les paramètres effectifs</strong>, qui sont des variables dans le programme appelant, <strong>ne sont pas modifiés</strong>. Bien sûr, ce n’est pas le cas du/des paramètre/s de sortie).</p></li>
@@ -520,7 +520,7 @@ Pros/cons : la copie de la valeur d'une "grosse" variable coûte plus cher que l
 <p>C-a-d. que les 2 modes peuvent coexister dans un même langage.</p>
 </section>
 <section id="trois-modes-logiques-de-passage-des-parametres">
-<h3><span class="section-number">6.1.3. </span>Trois modes <em>logiques</em> de passage des paramètres<a class="headerlink" href="#trois-modes-logiques-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.3. </span>Trois modes <em>logiques</em> de passage des paramètres<a class="headerlink" href="#trois-modes-logiques-de-passage-des-parametres" title="Link to this heading">#</a></h3>
 <p>Certains langages (Ada par exemple) se sont dégagés des aspects matériels pour définir des modes <em>logiques</em>.<br />
 Bien sûr, l’implantation de ces modes logiques repose sur l’une ou l’autre des 2 modes physiques.</p>
 <ol class="arabic simple">
@@ -535,7 +535,7 @@ le mode <code class="docutils literal notranslate"><span class="pre">in-out</spa
 </section>
 </section>
 <section id="et-pour-python">
-<h2><span class="section-number">6.2. </span>Et pour python ?<a class="headerlink" href="#et-pour-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Et pour python ?<a class="headerlink" href="#et-pour-python" title="Link to this heading">#</a></h2>
 <p>Le <a class="reference external" href="https://docs.python.org/fr/3/tutorial/controlflow.html#id2">tutoriel python.org</a> dit :</p>
 <blockquote>
 <div><p>Les paramètres effectifs (arguments) d’une fonction sont introduits dans la table de symboles locale de la fonction appelée lorsqu’elle est appelée ; par conséquent, <strong>les passages de paramètres</strong> se font par valeur, la valeur étant toujours une <strong>référence à un objet</strong>, et non la valeur de l’objet lui-même.</p>
@@ -573,16 +573,16 @@ C’est l’objet de la <a class="reference internal" href="#revisiter_les_varia
 <strong>Il appartient au programmeur d’être attentif au caractère mutable ou non mutable des paramètres des appels de fonctions</strong> – surtout dans le contexte de typage dynamique de python : rappelons que les annotations de type des paramètres ne sont que des indications pour le lecteur ou des outils spécialisés mais sont ignorées de l’interpréteur python.</p>
 </section>
 <section id="star-variable-et-affection-aspects-avances">
-<h2><span class="section-number">6.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés<a class="headerlink" href="#star-variable-et-affection-aspects-avances" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés<a class="headerlink" href="#star-variable-et-affection-aspects-avances" title="Link to this heading">#</a></h2>
 <div class="alert alert-block alert-success">
     Cette section relève de <b>l'objectif 20</b>
 </div>
 <p>Commençons par revenir sur les notions de <strong>variable</strong> et d’<strong>affectation</strong>.
 Puis comment ces notions existent en python.</p>
 <section id="notions-importantes">
-<h3><span class="section-number">6.3.1. </span>Notions importantes<a class="headerlink" href="#notions-importantes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Notions importantes<a class="headerlink" href="#notions-importantes" title="Link to this heading">#</a></h3>
 <section id="variable-valeur-espace-de-stockage-adresse-en-memoire-reference">
-<h4>Variable, valeur, espace de stockage, adresse en mémoire, référence<a class="headerlink" href="#variable-valeur-espace-de-stockage-adresse-en-memoire-reference" title="Permalink to this heading">#</a></h4>
+<h4>Variable, valeur, espace de stockage, adresse en mémoire, référence<a class="headerlink" href="#variable-valeur-espace-de-stockage-adresse-en-memoire-reference" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>une <em>variable</em> permet d’accéder, en lecture ou en écriture, à une <em>valeur</em> qui est stockée en mémoire</p>
 <ul>
@@ -606,7 +606,7 @@ L’identifiant de la variable est ainsi <strong>une référence</strong> à un 
 </ul>
 </section>
 <section id="affectation-et-evaluation">
-<h4>Affectation et évaluation<a class="headerlink" href="#affectation-et-evaluation" title="Permalink to this heading">#</a></h4>
+<h4>Affectation et évaluation<a class="headerlink" href="#affectation-et-evaluation" title="Link to this heading">#</a></h4>
 <p>L’<em>affectation d’une valeur à une variable</em> correspond à une modification de l’espace de stockage associé à la variable.</p>
 <ul class="simple">
 <li><p>La <em>valeur</em> affectée est le résultat de l’<em>évaluation</em> du membre du droite de l’affectation.</p></li>
@@ -646,7 +646,7 @@ L’identifiant de la variable est ainsi <strong>une référence</strong> à un 
 </ul>
 </section>
 <section id="declaration-vs-affectation">
-<h4>Déclaration <em>vs.</em> affectation<a class="headerlink" href="#declaration-vs-affectation" title="Permalink to this heading">#</a></h4>
+<h4>Déclaration <em>vs.</em> affectation<a class="headerlink" href="#declaration-vs-affectation" title="Link to this heading">#</a></h4>
 <p>Dans la plupart des langages de programmation <strong>mais pas en Python</strong>, une variable doit être déclarée <em>avant</em> d’être utilisée.</p>
 <p>Typiquement, la déclaration d’une variable contient la définition de son identifiant, <em>de son type</em>, d’une valeur initiale (l’initialisation) et éventuellement d’autres propriétés diverses.</p>
 <p>Une fois déclarée, la variable existe.
@@ -661,9 +661,9 @@ Cette première affectation définit le type de cette variable et sa valeur (et 
 </section>
 </section>
 <section id="variables-et-affectation-en-python">
-<h3><span class="section-number">6.3.2. </span>Variables et affectation en python<a class="headerlink" href="#variables-et-affectation-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>Variables et affectation en python<a class="headerlink" href="#variables-et-affectation-en-python" title="Link to this heading">#</a></h3>
 <section id="variables-en-python-mutable-ou-non-mutable">
-<h4>Variables en python : mutable ou non mutable ?<a class="headerlink" href="#variables-en-python-mutable-ou-non-mutable" title="Permalink to this heading">#</a></h4>
+<h4>Variables en python : mutable ou non mutable ?<a class="headerlink" href="#variables-en-python-mutable-ou-non-mutable" title="Link to this heading">#</a></h4>
 <p>On a écrit qu’une variable python est une référence.
 Mais une référence à quoi ? A une valeur ? A une adresse de la mémoire ?</p>
 <p>Les deux cas existent en python et dépendent du caractère mutable ou non mutable de la variable.</p>
@@ -708,7 +708,7 @@ Mais une référence à quoi ? A une valeur ? A une adresse de la mémoire ?</p>
 </div>
 </section>
 <section id="dupliquer-des-valeurs-par-reference-mutable-vs-non-mutable">
-<h4>Dupliquer des valeurs par référence :  mutable <em>vs.</em> non mutable<a class="headerlink" href="#dupliquer-des-valeurs-par-reference-mutable-vs-non-mutable" title="Permalink to this heading">#</a></h4>
+<h4>Dupliquer des valeurs par référence :  mutable <em>vs.</em> non mutable<a class="headerlink" href="#dupliquer-des-valeurs-par-reference-mutable-vs-non-mutable" title="Link to this heading">#</a></h4>
 <div class="alert alert-block alert-info">
 <p><strong>Cas mutable :</strong> l’affectation par référence <strong>ne duplique pas la valeur</strong>.</p>
 </div><p>Ainsi si cette valeur est déjà associée à une autre variable (cas de l’affectation <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">y</span></code> où <code class="docutils literal notranslate"><span class="pre">y</span></code> a été initialisée précédemment) alors <code class="docutils literal notranslate"><span class="pre">x</span></code> <strong>et</strong> <code class="docutils literal notranslate"><span class="pre">y</span></code> référencent le même emplacement en mémoire.<br />
@@ -809,7 +809,7 @@ Ce qui lui permet le cas échéant de récupérer les zones qui ne sont plus dé
 </section>
 </section>
 <section id="approfondissons-par-introspection">
-<h3><span class="section-number">6.3.3. </span>Approfondissons par <em>introspection</em><a class="headerlink" href="#approfondissons-par-introspection" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.3. </span>Approfondissons par <em>introspection</em><a class="headerlink" href="#approfondissons-par-introspection" title="Link to this heading">#</a></h3>
 <p>Nous verrons plus tard que les “entités python” sont des <em>objets</em>.<br />
 python fait partie des langages de programmation appelés <strong>langage objet</strong> ou <strong>langage orienté objet</strong>.<br />
 Un <em>objet</em> est un ensemble d’<em>attributs</em> (des valeurs nommées) et de <em>méthodes</em> (des fonctions qui s’appliquent à <em>tout</em> ou <em>partie</em> de cet objet), cet ensemble étant accessible par un <em>identifiant</em> (le nom de l’objet).<br />
@@ -817,7 +817,7 @@ Nous verrons qu’en fait un objet est (très souvent) associé à une notion pl
 Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’une classe donnée est aussi appelé <em>une instance</em> de cette classe.</p>
 <p><strong>Rmq.</strong> Pour l’instant, pas d’énorme différence entre objet et variable telle que présentée jusqu’à présent.</p>
 <section id="les-fonctions-type-et-id">
-<h4>Les fonctions  <code class="docutils literal notranslate"><span class="pre">type(</span> <span class="pre">)</span></code> et <code class="docutils literal notranslate"><span class="pre">id(</span> <span class="pre">)</span></code><a class="headerlink" href="#les-fonctions-type-et-id" title="Permalink to this heading">#</a></h4>
+<h4>Les fonctions  <code class="docutils literal notranslate"><span class="pre">type(</span> <span class="pre">)</span></code> et <code class="docutils literal notranslate"><span class="pre">id(</span> <span class="pre">)</span></code><a class="headerlink" href="#les-fonctions-type-et-id" title="Link to this heading">#</a></h4>
 <p>Parmi les méthodes de tout objet python, certaines permettent <em>l’introspection</em>, c-a-d. permettent d’obtenir des informations sur l’objet et sur son état.</p>
 <p>Nous allons présenter ici :</p>
 <ul class="simple">
@@ -840,11 +840,11 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4342525048
-1.1 &lt;class &#39;float&#39;&gt; 4394754320
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4394875968
-[1, 1] &lt;class &#39;list&#39;&gt; 4394874624
-4342525016 4342525016
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4341574776
+1.1 &lt;class &#39;float&#39;&gt; 4394697584
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4394845824
+[1, 1] &lt;class &#39;list&#39;&gt; 4394573248
+4341574744 4341574744
 </pre></div>
 </div>
 </div>
@@ -933,7 +933,7 @@ dir(...)
 </div>
 </section>
 <section id="introspection-de-l-affectation">
-<h4>Introspection de l’affectation<a class="headerlink" href="#introspection-de-l-affectation" title="Permalink to this heading">#</a></h4>
+<h4>Introspection de l’affectation<a class="headerlink" href="#introspection-de-l-affectation" title="Link to this heading">#</a></h4>
 <p>Dans les traitements suivants, retrouvons les comportements décrits précédemment.
 Etonné ?</p>
 <div class="cell docutils container">
@@ -970,20 +970,20 @@ Etonné ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4342525048
-b: 1 &lt;class &#39;int&#39;&gt; 4342525048
-b: 2 &lt;class &#39;int&#39;&gt; 4342525080 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4341574776
+b: 1 &lt;class &#39;int&#39;&gt; 4341574776
+b: 2 &lt;class &#39;int&#39;&gt; 4341574808 
 
-s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4394769008
-s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4394769008
-s2 a &lt;class &#39;str&#39;&gt; 4342302264 
+s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4394725616
+s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4394725616
+s2 a &lt;class &#39;str&#39;&gt; 4341351992 
 
-[0, 0] &lt;class &#39;list&#39;&gt; 4394740160
-[0, 0] &lt;class &#39;list&#39;&gt; 4394740160
-[1, 0] &lt;class &#39;list&#39;&gt; 4394740608
-[0, 0] &lt;class &#39;list&#39;&gt; 4394740160
-[1, 1] &lt;class &#39;list&#39;&gt; 4394740800
-[0, 1] &lt;class &#39;list&#39;&gt; 4394740800 
+[0, 0] &lt;class &#39;list&#39;&gt; 4394626176
+[0, 0] &lt;class &#39;list&#39;&gt; 4394626176
+[1, 0] &lt;class &#39;list&#39;&gt; 4394615936
+[0, 0] &lt;class &#39;list&#39;&gt; 4394626176
+[1, 1] &lt;class &#39;list&#39;&gt; 4394621248
+[0, 1] &lt;class &#39;list&#39;&gt; 4394621248 
 </pre></div>
 </div>
 </div>
@@ -1065,23 +1065,23 @@ Cependant, elle est sans effet sur les instructions suivantes, comme cet exemple
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4342525048
-b= 1 4342525048
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4341574776
+b= 1 4341574776
 pas de nouvel espace mémoire suite à b = a. 
 
-a= 2 4342525080
-b= 1 4342525048
+a= 2 4341574808
+b= 1 4341574776
 a est modifié donc un nouvel espace mémoire est créé pour a. 
 
-a= 3 4342525112
+a= 3 4341574840
 a est encore modifié et un nouvel espace mémoire est encore créé.
 Un autre choix aurait été possible mais celui-ci est en cohérence avec le premier traitement observé.
 
-a= 5 4342525176
-a= 6 4342525208 bizarre : a += 1 devrait être effectué en place : cf. plus loin
+a= 5 4341574904
+a= 6 4341574936 bizarre : a += 1 devrait être effectué en place : cf. plus loin
 
-a= 3 4342525112
-b= 1 4342525048
+a= 3 4341574840
+b= 1 4341574776
 pas de surprise
 </pre></div>
 </div>
@@ -1090,9 +1090,9 @@ pas de surprise
 </section>
 </section>
 <section id="affectation-en-python-complements">
-<h3><span class="section-number">6.3.4. </span>Affectation en python : compléments<a class="headerlink" href="#affectation-en-python-complements" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.4. </span>Affectation en python : compléments<a class="headerlink" href="#affectation-en-python-complements" title="Link to this heading">#</a></h3>
 <section id="modification-partielle-vs-modification-complete-d-un-mutable">
-<h4>Modification partielle <em>vs.</em> modification complète d’un mutable<a class="headerlink" href="#modification-partielle-vs-modification-complete-d-un-mutable" title="Permalink to this heading">#</a></h4>
+<h4>Modification partielle <em>vs.</em> modification complète d’un mutable<a class="headerlink" href="#modification-partielle-vs-modification-complete-d-un-mutable" title="Link to this heading">#</a></h4>
 <div class="alert alert-block alert-info">
 <p>On retiendra que la modification totale d’un objet mutable conduit à la création d’un nouvel emplacement en mémoire.</p>
 <p>En revanche, <b>une modification partielle d’un objet mutable provoque un effet de bord</b>.</p>
@@ -1138,28 +1138,28 @@ pas de surprise
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t = l
-[0, 0] 4394912960
-[0, 0] 4394912960
+[0, 0] 4394867648
+[0, 0] 4394867648
 modification partielle de l
-[2, 0] 4394912960
-[2, 0] 4394912960
+[2, 0] 4394867648
+[2, 0] 4394867648
 modification totale de l
-[4, 3] 4394912064
-[2, 0] 4394912960
+[4, 3] 4394867776
+[2, 0] 4394867648
 modifications de l par ses méthodes (aspects POO)
-[3, 4] 4394912064
-[3, 4] 4394912064
-[4, 3] 4394912064
-[4, 3] 4394912064
-[4, 11, 3] 4394912064
-[4, 11, 3] 4394912064
+[3, 4] 4394867776
+[3, 4] 4394867776
+[4, 3] 4394867776
+[4, 3] 4394867776
+[4, 11, 3] 4394867776
+[4, 11, 3] 4394867776
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="comment-dupliquer-re-copier-un-objet-mutable-et-obtenir-2-objets-differents-en-memoire">
-<h4>Comment dupliquer (re-copier) un objet mutable et obtenir 2 objets différents en mémoire ?<a class="headerlink" href="#comment-dupliquer-re-copier-un-objet-mutable-et-obtenir-2-objets-differents-en-memoire" title="Permalink to this heading">#</a></h4>
+<h4>Comment dupliquer (re-copier) un objet mutable et obtenir 2 objets différents en mémoire ?<a class="headerlink" href="#comment-dupliquer-re-copier-un-objet-mutable-et-obtenir-2-objets-differents-en-memoire" title="Link to this heading">#</a></h4>
 <p>Il faut :</p>
 <ul class="simple">
 <li><p>réaliser une copie avec la fonction <code class="docutils literal notranslate"><span class="pre">copy()</span></code> du module <code class="docutils literal notranslate"><span class="pre">copy</span></code></p></li>
@@ -1254,15 +1254,15 @@ l= [0, 0, 0] =/ m= [5, 2, 3]  == mm= [5, 2, 3]  == m_copy= [5, 2, 3]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394894384 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394619056 Jo
 
-4394731264 [&#39;Jo&#39;]
-4394894384 Jo
+4394618496 [&#39;Jo&#39;]
+4394619056 Jo
 
 affectation par référence (pas de duplication)
-4394731264 [&#39;Jo&#39;, &#39;Jack&#39;]
-4394731264 [&#39;Jo&#39;, &#39;Jack&#39;]
-4394904560 Averell
+4394618496 [&#39;Jo&#39;, &#39;Jack&#39;]
+4394618496 [&#39;Jo&#39;, &#39;Jack&#39;]
+4394617456 Averell
 
 Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
@@ -1296,16 +1296,16 @@ Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394894384 Jo
-4394731008 [&#39;Jo&#39;]
-4394894384 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394619056 Jo
+4394658688 [&#39;Jo&#39;]
+4394619056 Jo
 
 affectation avec duplication
-4394731008 [&#39;Jo&#39;]
-4394731264 [&#39;Jo&#39;]
+4394658688 [&#39;Jo&#39;]
+4394618496 [&#39;Jo&#39;]
 
-4394731008 [&#39;Jo&#39;, &#39;Averell&#39;]
-4394731264 [&#39;Jo&#39;, &#39;Jack&#39;]
+4394658688 [&#39;Jo&#39;, &#39;Averell&#39;]
+4394618496 [&#39;Jo&#39;, &#39;Jack&#39;]
 Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
 </div>
@@ -1313,7 +1313,7 @@ Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </section>
 <section id="des-subtilites-pour-x-1-vs-x-x-1">
-<h4>Des subtilités pour <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code><a class="headerlink" href="#des-subtilites-pour-x-1-vs-x-x-1" title="Permalink to this heading">#</a></h4>
+<h4>Des subtilités pour <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code><a class="headerlink" href="#des-subtilites-pour-x-1-vs-x-x-1" title="Link to this heading">#</a></h4>
 <p>La composition d’une affectation et d’un opérateur binaire (ici celui associé au symbole ‘+’)  est appelé une <em>affectation augmentée</em>.</p>
 <p>Le <a class="reference external" href="https://docs.python.org/fr/3/reference/simple_stmts.html#index-6">manuel de référence du python3</a> indique en <strong>section 7.2.1</strong> :</p>
 <blockquote>
@@ -1345,10 +1345,10 @@ Mystère ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4342525016 4342525368
-4342525048 4342525400
-4394626688 4394902528
-4394626688 4394740800
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4341574744 4341575096
+4341574776 4341575128
+4394790976 4394847040
+4394790976 4394863424
 </pre></div>
 </div>
 </div>
@@ -1390,12 +1390,12 @@ Le traitement sur la liste <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4342525080
-id dans f -- t: 4342525144 , u:  4342525080
-4 4342525144
-[10] 4394626688
-id dans f -- t: 4394901120 , u:  4394626688
-[10, 10] 4394626688
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4341574808
+id dans f -- t: 4341574872 , u:  4341574808
+4 4341574872
+[10] 4394790976
+id dans f -- t: 4394854272 , u:  4394790976
+[10, 10] 4394790976
 </pre></div>
 </div>
 </div>
@@ -1422,12 +1422,12 @@ id dans f -- t: 4394901120 , u:  4394626688
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4342525080
-id dans f -- t: 4342525144 , u:  4342525080
-6 4342525208
-[10] 4394620288
-id dans f -- t: 4394903936 , u:  4394620288
-[10, 10, 10] 4394620288
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4341574808
+id dans f -- t: 4341574872 , u:  4341574808
+6 4341574936
+[10] 4394648320
+id dans f -- t: 4394858688 , u:  4394648320
+[10, 10, 10] 4394648320
 </pre></div>
 </div>
 </div>
@@ -1436,7 +1436,7 @@ id dans f -- t: 4394903936 , u:  4394620288
 </section>
 </section>
 <section id="star-fonctions-aspects-avances">
-<h2><span class="section-number">6.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés<a class="headerlink" href="#star-fonctions-aspects-avances" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés<a class="headerlink" href="#star-fonctions-aspects-avances" title="Link to this heading">#</a></h2>
 <div class="alert alert-block alert-success">
     Cette section relève de <b>l'objectif 20</b>
 </div><p>Nous allons étudier plus en détail le passage des paramètres de fonction en python.</p>
@@ -1458,7 +1458,7 @@ id dans f -- t: 4394903936 , u:  4394620288
 <a class="reference internal" href="#revisiter_les_variables_et_l_'_affectation"><span class="xref myst">plus haut</span></a>.
 Ce qui donne les 2 cas suivants.</p>
 <section id="le-parametre-est-de-type-non-mutable">
-<h3><span class="section-number">6.4.1. </span>Le paramètre est de type non-mutable<a class="headerlink" href="#le-parametre-est-de-type-non-mutable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.1. </span>Le paramètre est de type non-mutable<a class="headerlink" href="#le-parametre-est-de-type-non-mutable" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>transmission de la <em>valeur</em> de l’argument effectif</p></li>
 <li><p>argument formel <em>similaire à</em> une variable locale de la fonction</p></li>
@@ -1531,7 +1531,7 @@ False
 <p><strong>Exercice</strong>. Expliquer pourquoi c’est normal !</p>
 </section>
 <section id="le-parametre-de-type-mutable">
-<h3><span class="section-number">6.4.2. </span>Le paramètre de type mutable<a class="headerlink" href="#le-parametre-de-type-mutable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.2. </span>Le paramètre de type mutable<a class="headerlink" href="#le-parametre-de-type-mutable" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>transmission de <em>l’adresse</em> de l’argument effectif</p></li>
 <li><p>l’argument effectif est <em>ainsi</em> la variable extérieure à la fonction</p>
@@ -1573,11 +1573,11 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant appel:
 l= [0, 1] ll= [0, 1] , m= [0, 1] mm= [0, 1]
-id : l= 4394731584 , ll= 4394731584 , m= 4394905344 , mm= 4394874624
+id : l= 4394858240 , ll= 4394858240 , m= 4394846336 , mm= 4394626176
 
 appel avec affectation l = f(l):
 l= [0, 1, 0, 1] ll= [0, 1] , m= [0, 1]
-id : l= 4394865856 , ll= 4394731584 , m= 4394905344
+id : l= 4394867328 , ll= 4394858240 , m= 4394846336
 </pre></div>
 </div>
 </div>
@@ -1637,22 +1637,22 @@ est une fois de plus instructive.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l, ll, m
-[0, 0] &lt;class &#39;list&#39;&gt; 4394986304
-[0, 0] &lt;class &#39;list&#39;&gt; 4394986304
-[0, 0] &lt;class &#39;list&#39;&gt; 4394986240
+[0, 0] &lt;class &#39;list&#39;&gt; 4394921984
+[0, 0] &lt;class &#39;list&#39;&gt; 4394921984
+[0, 0] &lt;class &#39;list&#39;&gt; 4394921920
 
 appel sans affectation du retour: g(l)
 print g(l)= None
 l= [0, 0, 1] ll= [0, 0, 1] , m= [0, 0]
-id= 4394986304 id= 4394986304 , id= 4394986240
+id= 4394921984 id= 4394921984 , id= 4394921920
 
 appel avec affectation: l = g(l)
 l= None ll= [0, 0, 1, 1] , m= [0, 0]
-id= 4342523536 id= 4394986304 , id= 4394986240
+id= 4341573264 id= 4394921984 , id= 4394921920
 
 appel avec affectation m = g(l):
 l= [0, 0, 1] ll= [0, 0, 1, 1] , m= None
-id= 4394876480 id= 4394986304 , id= 4342523536
+id= 4394923008 id= 4394921984 , id= 4341573264
 </pre></div>
 </div>
 </div>
@@ -1729,11 +1729,11 @@ après fonction : a,b = 1 11
 </div>
 </section>
 <section id="optionnel-avoir-les-id-claires">
-<h3><span class="section-number">6.4.3. </span>(Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !<a class="headerlink" href="#optionnel-avoir-les-id-claires" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.3. </span>(Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !<a class="headerlink" href="#optionnel-avoir-les-id-claires" title="Link to this heading">#</a></h3>
 <p>Reprenons les observations précédentes effectuées grâce à pythontutor avec un focus particulier sur cette fonction <code class="docutils literal notranslate"><span class="pre">id()</span></code>.
 Cette fonction peut être très utile pour <em>debugger</em> un développement qui ne fonctionne pas correctement.</p>
 <section id="utilisons-les-id-avec-les-mutables">
-<h4>Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les mutables<a class="headerlink" href="#utilisons-les-id-avec-les-mutables" title="Permalink to this heading">#</a></h4>
+<h4>Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les mutables<a class="headerlink" href="#utilisons-les-id-avec-les-mutables" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fonction et paramètres de type mutable</span>
@@ -1771,31 +1771,31 @@ Cette fonction peut être très utile pour <em>debugger</em> un développement q
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
 l= [0, 0] ll= [0, 0] m= [0, 0]
-@l= 4394976768 @ll= 4394976768 @m= 4394733120
+@l= 4394925056 @ll= 4394925056 @m= 4394923840
 
 appel sans affectation du retour:
-main: @l= 4394976768
-  f avant : @= 4394976768
-  f après : @=  4394990720
-  f avant : @= 4394976768
-  f après : @=  4394990848
-print f(l)= [0, 0, 0, 0] @f(l)= 4394990848
+main: @l= 4394925056
+  f avant : @= 4394925056
+  f après : @=  4394992640
+  f avant : @= 4394925056
+  f après : @=  4394992768
+print f(l)= [0, 0, 0, 0] @f(l)= 4394992768
 l= [0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4394976768 @ll= 4394976768 @m= 4394733120
+@l= 4394925056 @ll= 4394925056 @m= 4394923840
 
 appel avec affectation l = f(l):
-  f avant : @= 4394976768
-  f après : @=  4394876480
-main: @l(après l=f(l))= 4394876480
+  f avant : @= 4394925056
+  f après : @=  4394923008
+main: @l(après l=f(l))= 4394923008
 l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4394876480 @ll= 4394976768 @m= 4394733120
+@l= 4394923008 @ll= 4394925056 @m= 4394923840
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="utilisons-les-id-avec-les-non-mutables">
-<h4>Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les non mutables<a class="headerlink" href="#utilisons-les-id-avec-les-non-mutables" title="Permalink to this heading">#</a></h4>
+<h4>Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les non mutables<a class="headerlink" href="#utilisons-les-id-avec-les-non-mutables" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fonctions et paramètres de type non-mutable</span>
@@ -1837,20 +1837,20 @@ l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4342525016
+u= 0 @u= 4341574744
 
 appel sans affectation du retour:
-  f_r: avant @= 4342525016
-  f_r: après @= 4342525016
-  f_r: avant @= 4342525016
-  f_r: après @= 4342525016
-f(u)= 2 @f(u)= 4342525080
-u= 0 @u= 4342525016
+  f_r: avant @= 4341574744
+  f_r: après @= 4341574744
+  f_r: avant @= 4341574744
+  f_r: après @= 4341574744
+f(u)= 2 @f(u)= 4341574808
+u= 0 @u= 4341574744
 
 appel avec affectation du retour:
-  f_r: avant @= 4342525016
-  f_r: après @= 4342525016
-u après u=f(u)= 2 @u= 4342525080
+  f_r: avant @= 4341574744
+  f_r: après @= 4341574744
+u après u=f(u)= 2 @u= 4341574808
 </pre></div>
 </div>
 </div>
@@ -1884,20 +1884,20 @@ u après u=f(u)= 2 @u= 4342525080
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 1 @u= 4342525048
+u= 1 @u= 4341574776
 
 appel sans affectation du retour:
-  f_x: avant @= 4342525048
-  f_x: après @= 4342525112
-  f_x: avant @= 4342525048
-  f_x: après @= 4342525112
-f(u)= 3 @f(u)= 4342525112
-u= 1 @u= 4342525048
+  f_x: avant @= 4341574776
+  f_x: après @= 4341574840
+  f_x: avant @= 4341574776
+  f_x: après @= 4341574840
+f(u)= 3 @f(u)= 4341574840
+u= 1 @u= 4341574776
 
 appel avec affectation du retour:
-  f_x: avant @= 4342525048
-  f_x: après @= 4342525112
-u après u=f(u)= 3 @u= 4342525112
+  f_x: avant @= 4341574776
+  f_x: après @= 4341574840
+u après u=f(u)= 3 @u= 4341574840
 </pre></div>
 </div>
 </div>
@@ -1931,20 +1931,20 @@ u après u=f(u)= 3 @u= 4342525112
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4342525016
+u= 0 @u= 4341574744
 
 appel sans affectation du retour:
-  f_=: avant @= 4342525016
-  f_=: après @= 4342525080
-  f_=: avant @= 4342525016
-  f_=: après @= 4342525080
-f(u)= 2 @f(u)= 4342525080
-u= 0 @u= 4342525016
+  f_=: avant @= 4341574744
+  f_=: après @= 4341574808
+  f_=: avant @= 4341574744
+  f_=: après @= 4341574808
+f(u)= 2 @f(u)= 4341574808
+u= 0 @u= 4341574744
 
 appel avec affectation du retour:
-  f_=: avant @= 4342525016
-  f_=: après @= 4342525080
-u après u=f(u)= 2 @u= 4342525080
+  f_=: avant @= 4341574744
+  f_=: après @= 4341574808
+u après u=f(u)= 2 @u= 4341574808
 </pre></div>
 </div>
 </div>
@@ -1953,10 +1953,10 @@ u après u=f(u)= 2 @u= 4342525080
 </section>
 </section>
 <section id="les-fonctions-en-python-derniers-complements-faciles">
-<h2><span class="section-number">6.5. </span>Les fonctions en python : derniers compléments faciles<a class="headerlink" href="#les-fonctions-en-python-derniers-complements-faciles" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5. </span>Les fonctions en python : derniers compléments faciles<a class="headerlink" href="#les-fonctions-en-python-derniers-complements-faciles" title="Link to this heading">#</a></h2>
 <p>Deux compléments faciles (arguments nommés et argument avec valeur par défaut) ainsi qu’une courte liste de ce qu’il reste à découvrir … pour les plus curieux.</p>
 <section id="arguments-nommes">
-<h3><span class="section-number">6.5.1. </span>Arguments nommés<a class="headerlink" href="#arguments-nommes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.5.1. </span>Arguments nommés<a class="headerlink" href="#arguments-nommes" title="Link to this heading">#</a></h3>
 <p>Lors de l’<em>appel</em>, nommer les paramètres <em>formels</em> et la valeur correspondante de l’argument (effectif), permet un ordre quelconque de ceux-ci.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1987,7 +1987,7 @@ Bonjour étudiantes et étudiants !
 </div>
 </section>
 <section id="argument-avec-valeur-par-defaut">
-<h3><span class="section-number">6.5.2. </span>Argument avec valeur par défaut<a class="headerlink" href="#argument-avec-valeur-par-defaut" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.5.2. </span>Argument avec valeur par défaut<a class="headerlink" href="#argument-avec-valeur-par-defaut" title="Link to this heading">#</a></h3>
 <p>Les <em>derniers</em> paramètres formels peuvent bénéficier de valeurs par défaut</p>
 <ul class="simple">
 <li><p>derniers : tous à partir d’un rang arbitraire</p></li>
@@ -2039,7 +2039,7 @@ Au revoir les uns, et les autres.
 </div>
 </section>
 <section id="ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">
-<h3><span class="section-number">6.5.3. </span>Ce qu’il reste à voir sur les fonctions en python<a class="headerlink" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.5.3. </span>Ce qu’il reste à voir sur les fonctions en python<a class="headerlink" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Argument de type fonction</p></li>
 <li><p>Nombre variable d’arguments (tuple et dictionnaire)</p></li>
@@ -2048,9 +2048,9 @@ Au revoir les uns, et les autres.
 </section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">6.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Link to this heading">#</a></h2>
 <section id="avoir-les-idees-claires">
-<h3><span class="section-number">6.6.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Les principes du passage de paramètres appelant &lt;-&gt; appelé</p>
 <ul>
@@ -2074,7 +2074,7 @@ Au revoir les uns, et les autres.
 </ul>
 </section>
 <section id="savoir-faire-en-python">
-<h3><span class="section-number">6.6.2. </span>Savoir-faire en python<a class="headerlink" href="#savoir-faire-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.2. </span>Savoir-faire en python<a class="headerlink" href="#savoir-faire-en-python" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fonctions avec arguments nommés, avec paramètres par défaut.</p></li>
 </ul>

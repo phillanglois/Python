@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. Annexe : les booléens en python (&gt;3.6) &#8212; Python</title>
+    <title>10. Annexe : les booléens en python (&gt;3.6) &#8212; Python</title>
   
   
   
@@ -29,42 +28,42 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/a1-booleens';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
-    <link rel="prev" title="8. Modules utiles" href="11-modules-utiles.html" />
+    <link rel="next" title="11. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
+    <link rel="prev" title="9. Modules utiles" href="11-modules-utiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +180,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Prog Python!
+                    Bienvenu en Prog Python !
                 </a>
             </li>
         </ul>
@@ -194,21 +193,22 @@
 <li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">5. Les types composés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">6. Sous-programme et affectation – aspects avancés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-ES-avancees.html">7. Les entrées-sorties (E/S) : aspects avancés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">8. Modules utiles</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">10. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">11. Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-poo.html">8. La programmation orientée objet (POO) en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">9. Modules utiles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">11. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a3-exceptions.html">12. Exceptions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TP</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">12. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">13. Feuille 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">14. Feuille 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">15. Feuille 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/0-installation.html">13. Préparer son ordinateur et travailler avec Python et JupyterLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/1-bases.html">14. Feuille 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/2-knn.html">15. Feuille 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tp/3-env-convexe.html">16. Feuille 3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">16. Memento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/memento.html">17. Memento</a></li>
 </ul>
 
     </div>
@@ -403,12 +403,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">9.1. Synthèse qui suffit en L1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">9.2. Valeurs booléennes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">9.3. Conversion en une valeur booléenne</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">9.4. Objets et booléens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">9.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">9.6. Comparaisons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">10.1. Synthèse qui suffit en L1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">10.2. Valeurs booléennes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">10.3. Conversion en une valeur booléenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">10.4. Objets et booléens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">10.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">10.6. Comparaisons</a></li>
 </ul>
             </nav>
         </div>
@@ -421,7 +421,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="annexe-les-booleens-en-python-3-6">
-<h1><span class="section-number">9. </span>Annexe : les booléens en python (&gt;3.6)<a class="headerlink" href="#annexe-les-booleens-en-python-3-6" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">10. </span>Annexe : les booléens en python (&gt;3.6)<a class="headerlink" href="#annexe-les-booleens-en-python-3-6" title="Link to this heading">#</a></h1>
 <p>Une mise au point sur les booléens en python</p>
 <ul class="simple">
 <li><p>synthétique</p></li>
@@ -429,7 +429,7 @@ document.write(`
 <li><p>avec <strong>ce qui est important à retenir</strong> écrit en <strong>gras</strong>.</p></li>
 </ul>
 <section id="synthese-qui-suffit-en-l1">
-<h2><span class="section-number">9.1. </span>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.1. </span>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Link to this heading">#</a></h2>
 <p>Python définit :</p>
 <ul class="simple">
 <li><p>deux valeurs booléennes <code class="docutils literal notranslate"><span class="pre">False</span></code> et <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
@@ -445,7 +445,7 @@ sauf :</p>
 <p>où elle retourne <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </section>
 <section id="valeurs-booleennes">
-<h2><span class="section-number">9.2. </span>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.2. </span>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>Les <a class="reference external" href="https://docs.python.org/fr/3.7/library/stdtypes.html#truth">valeurs booléennes</a> sont les deux objets constants <strong>False</strong> et <strong>True</strong>.</p>
 </div></blockquote>
@@ -457,7 +457,7 @@ sauf :</p>
 </div></blockquote>
 </section>
 <section id="conversion-en-une-valeur-booleenne">
-<h2><span class="section-number">9.3. </span>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.3. </span>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>La fonction native <strong><code class="docutils literal notranslate"><span class="pre">bool()</span></code></strong> peut être utilisée pour convertir n’importe quelle valeur en booléen <strong>tant que la valeur peut être interprétée en une valeur de vérité</strong>.</p>
 </div></blockquote>
@@ -485,7 +485,7 @@ Quand cette méthode n’est pas définie, <strong><strong>len</strong>() est ap
 </div></blockquote>
 </section>
 <section id="objets-et-booleens">
-<h2><span class="section-number">9.4. </span>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.4. </span>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Link to this heading">#</a></h2>
 <p>Tout objet peut être comparé à une valeur booléenne, typiquement dans une condition if ou while ou comme opérande des opérations booléennes ci-dessous.</p>
 <blockquote>
 <div><p>Par défaut, <strong>tout objet est considéré vrai</strong><br />
@@ -1332,7 +1332,7 @@ class str(object)
 <p>Quizz: On regarde bien les dernières lignes des deux dernières catégories et on explique pourquoi on n’est pas surpris.</p>
 </section>
 <section id="operations-booleennes-and-or-not">
-<h2><span class="section-number">9.5. </span>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.5. </span>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Link to this heading">#</a></h2>
 <p>Ce sont les opérations booléennes, classées par priorité ascendante :</p>
 <blockquote>
 <div><p><strong>x or y</strong> : si x est faux, alors y, sinon x<br />
@@ -1355,7 +1355,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
 <p>Quizz : A votre avis, permuter les opérandes de la condition précédente est sans conséquence ? (True/False :)</p>
 </section>
 <section id="comparaisons">
-<h2><span class="section-number">9.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Link to this heading">#</a></h2>
 <p>Il y a huit opérations de comparaison en Python.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> : égal</p></li>
@@ -1411,7 +1411,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Modules utiles</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Modules utiles</p>
       </div>
     </a>
     <a class="right-next"
@@ -1419,7 +1419,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1439,12 +1439,12 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">9.1. Synthèse qui suffit en L1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">9.2. Valeurs booléennes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">9.3. Conversion en une valeur booléenne</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">9.4. Objets et booléens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">9.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">9.6. Comparaisons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">10.1. Synthèse qui suffit en L1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">10.2. Valeurs booléennes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">10.3. Conversion en une valeur booléenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">10.4. Objets et booléens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">10.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">10.6. Comparaisons</a></li>
 </ul>
   </nav></div>
 
